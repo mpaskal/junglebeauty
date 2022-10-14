@@ -1,23 +1,32 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/home/home.component';
+import Navigation from './components/navigation/navigation.component';
+import Footer from './components/footer/footer.component';
+import './App.css';
+
+const Kittens = () => {
+  return (
+    <div>
+      <h1>Kitten page</h1>
+    </div>
+  );
+};
+
 const App = () => {
-  return <div className="app">
-    <body>
-      <header>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
+  return (
+    <div className='App'>
+      <Navigation/>
+      
+      <div className='page-content'>
+        <Routes>
+          <Route index element={<Home/>}/>
+          <Route path='kittens' element={<Kittens/>}/>
+        </Routes>
+      </div>
 
-      </main>
-      <footer>
-
-      </footer>
-    </body>
-  </div>;
+      <Footer/>
+    </div>
+  );
 };
 
 export default App;

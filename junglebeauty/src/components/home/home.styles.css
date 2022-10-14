@@ -1,0 +1,22 @@
+.home-background {
+    text-align: center;
+    background-color: rgba(20, 120, 70, 0.8);
+    color: white;
+    padding: 15pt;
+    margin-left: 10pt;
+    margin-right: 10pt;
+}
+
+.columns-container {
+    display: flex;
+}
+
+.edge-column {
+    flex: 25%;
+    margin: 15pt;
+}
+
+.centre-column {
+    flex: 50%;
+    margin: 15pt;
+}
