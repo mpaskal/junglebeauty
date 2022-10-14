@@ -16,12 +16,14 @@ const App = () => {
   return (
     <div className='App'>
       <Navigation/>
-
-      <Routes>
-        <Route index element={<Home/>}/>
-        <Route path='kittens' element={<Kittens/>}/>
-      </Routes>
       
+      <div className='page-content'>
+        <Routes>
+          <Route index element={<Home/>}/>
+          <Route path='kittens' element={<Kittens/>}/>
+        </Routes>
+      </div>
+
       <Footer/>
     </div>
   );
