@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/home/home.component';
 import Navigation from './components/navigation/navigation.component';
+import Footer from './components/footer/footer.component';
+import './App.css';
 
 const Kittens = () => {
   return (
@@ -12,12 +14,16 @@ const Kittens = () => {
 
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<Navigation/>}>
+    <div className='App'>
+      <Navigation/>
+
+      <Routes>
         <Route index element={<Home/>}/>
         <Route path='kittens' element={<Kittens/>}/>
-      </Route>
-    </Routes>
+      </Routes>
+      
+      <Footer/>
+    </div>
   );
 };
 
