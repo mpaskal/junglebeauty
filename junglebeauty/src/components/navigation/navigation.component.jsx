@@ -15,7 +15,7 @@ const Navigation = () => {
                     <Link className='nav-link' to='/'>Home</Link>
                     <Link className='nav-link' to='/'>Queens</Link>
                     <Link className='nav-link' to='/'>Kings</Link>
-                    <Link className='nav-link' to='/'>Kittens</Link>
+                    <Link className='nav-link' to='/kittens'>Kittens</Link>
                     <Link className='nav-link' to='/'>News</Link>
                     <Link className='nav-link' to='/'>FAQ</Link>
                     <Link className='nav-link' to='/'>About</Link>
@@ -23,6 +23,7 @@ const Navigation = () => {
                     <Link className='nav-link' to='/'>How to buy</Link>
                 </div>
             </div>
+            <Outlet/>
         </Fragment>
     )
 }
