@@ -6,7 +6,7 @@ import './footer.styles.css';
 const Footer = () => {
     return (
         <div className='footer'>
-            <div className cert-container>
+            <div className='cert-container'>
                 <img className='cert' src={TicaCert}/>
                 <img className='cert' src={BccCert}/>
                 <img className='cert' src={RoyalCaninCert}/>
