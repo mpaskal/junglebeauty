@@ -1,6 +1,6 @@
 .nav-bar {
-  background-color: rgba(0, 10, 0, 0.6);
-  height: 70pt;
+  background-color: rgba(0, 10, 0, 0.7);
+  height: 80pt;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -16,13 +16,17 @@
 }
 
 .logo-img {
-  height: 90%;
+  width: 60pt;
+  height: auto;
 }
 
 .logo-text {
   color: white;
   font-style: italic;
+  height: auto;
+  line-height: normal;
   margin-left: 5pt;
+  padding: 5pt;
 }
 
 .nav-links-container {
