@@ -13,3 +13,96 @@
 .page-content {
    
 }
+
+/* Navigation */
+
+.nav-bar {
+    background-color: rgba(0, 10, 0, 0.7);
+    height: 80pt;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .logo-link {
+    height: 100%;
+    padding: 5pt;
+    display: flex;
+    margin-left: 20pt;
+    text-decoration: none;
+  }
+  
+  .logo-img {
+    width: 60pt;
+    height: auto;
+  }
+  
+  .logo-text {
+    color: white;
+    font-style: italic;
+    height: auto;
+    line-height: normal;
+    margin-left: 5pt;
+    padding: 5pt;
+  }
+  
+  .nav-links-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  
+  }
+    
+  .nav-link {
+    color: lightgrey;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+/* Footer */
+
+.footer {
+    background-color: rgba(0, 10, 0, 0.6);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cert-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cert {
+    
+}
+
+/* Home */
+
+.home-background {
+    text-align: center;
+    background-color: rgba(20, 120, 70, 0.8);
+    color: white;
+    padding: 15pt;
+    margin-left: 10pt;
+    margin-right: 10pt;
+}
+
+.columns-container {
+    display: flex;
+}
+
+.edge-column {
+    flex: 25%;
+    margin: 15pt;
+}
+
+.centre-column {
+    flex: 50%;
+    margin: 15pt;
+}

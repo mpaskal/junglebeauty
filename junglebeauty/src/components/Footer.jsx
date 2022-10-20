@@ -1,7 +1,7 @@
-import BccCert from '../../assets/certifications/BCC-Certified-Breeder.png';
-import RoyalCaninCert from '../../assets/certifications/royalcanin.png';
-import TicaCert from '../../assets/certifications/TICA-75-2.png';
-import './footer.styles.css';
+import BccCert from '../assets/certifications/BCC-Certified-Breeder.png';
+import RoyalCaninCert from '../assets/certifications/royalcanin.png';
+import TicaCert from '../assets/certifications/TICA-75-2.png';
+import './../App.css';
 
 const Footer = () => {
     return (

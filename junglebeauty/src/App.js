@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/home/home.component';
-import Navigation from './components/navigation/navigation.component';
-import Footer from './components/footer/footer.component';
+import Home from './components/Home';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import './App.css';
 
 const Kittens = () => {
