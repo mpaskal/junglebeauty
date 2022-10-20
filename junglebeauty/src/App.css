@@ -1,4 +1,6 @@
 .App {
+    color: white;
+    text-align: center;
     background-image: url('./assets/jungle-background.png');
     background-attachment: fixed;
     background-size: cover;
@@ -74,24 +76,31 @@
 }
 
 .cert-container {
-    margin-top: 10pt;
     margin-left: 100pt;
     margin-right: 100pt;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .cert {
     height: 50pt;
     width: auto;
+    margin: 10pt;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    margin: 10pt;
 }
 
 /* Home */
 
 .home-background {
-    text-align: center;
     background-color: rgba(20, 120, 70, 0.8);
-    color: white;
     padding: 15pt;
     margin-left: 10pt;
     margin-right: 10pt;
