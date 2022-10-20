@@ -74,12 +74,16 @@
 }
 
 .cert-container {
+    margin-top: 10pt;
+    margin-left: 100pt;
+    margin-right: 100pt;
     display: flex;
     justify-content: space-between;
 }
 
 .cert {
-    
+    height: 50pt;
+    width: auto;
 }
 
 /* Home */
