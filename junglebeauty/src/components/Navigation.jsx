@@ -23,7 +23,13 @@ const Navigation = () => {
                         <Link className='nav-link' to='/'>FAQ</Link>
                         <Link className='nav-link' to='/'>About</Link>
                         <Link className='nav-link' to='/'>Contact</Link>
-                        <Link className='nav-link' to='/'>How to buy</Link>
+                        <NavDropdown title='How to buy' id='responsive-navbar-dropdown'>
+                            <Link className='nav-link' to='/'>Why choose JungleBeauty</Link>
+                            <Link className='nav-link' to='/'>Buy-Sell Agreement</Link>
+                            <Link className='nav-link' to='/'>Price</Link>
+                            <Link className='nav-link' to='/'>How to be ready for coming kitten</Link>
+                            <Link className='nav-link' to='/'>How to visit JungleBeauty</Link>
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
                 </Container>
