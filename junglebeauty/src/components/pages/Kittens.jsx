@@ -1,3 +1,4 @@
+import CatProfile from './CatProfile';
 import './../../App.css';
 
 const Kittens = () => {
