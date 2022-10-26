@@ -5,6 +5,7 @@ const Home = () => {
         <div className='page-background'>
             <h1>Hello! We are happy to welcome you to our website!</h1>
             <p>Do you want to have a small and tame leopard at home? You have come to the right place. Welcome to our Junglebeauty Cattery of Bengals. Our cattery is registered in the international felinology system: TICA and certified as a trusted breeder by Bengal Cat Club. Also, we are an official partner of Royal Canin. Our Cattery is located in Kitchener, Ontario, Canada.</p>
+
             <div className='columns-container'>
                 <div className='edge-column'>
                     <p>Our best offers! Please note: we match the price for these kittens! It means if you see the TICA kitten of the same quality, offered with the same options and benefits - we will make our price the same for you!</p>
