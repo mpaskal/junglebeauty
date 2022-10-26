@@ -2,12 +2,31 @@ import { Image } from 'react-bootstrap';
 import './../App.css';
 
 const CatCard = ({ cat }) => {
-    const { id, name, type, colour, gender, adj, status, date, father, mother } = cat;
+    const { id, name, type, colour, sex, adj, status, date, father, mother } = cat;
+    var filepath = `/assets/${type}s`;
+
+    if (type === 'kitten') {
+        filepath += `/${date}`;
+    }
+    filepath += `/${name}/0.png`;
 
     return (
-        <div className='page-background'>
-            <img src={`/assets/${type}s/${date}/${name}/0.png`}/>
-            <h1>{name} collar {gender}</h1>
+        <div className='cat-card'>
+            <img className='cat-img' src={filepath}/>
+            {
+                type === 'kitten' ? 
+                <>
+                <h2>{name} collar {sex}. {date}</h2>
+                <p>Mother: {mother}</p>
+                </>
+                :
+                <>
+                <h2>{name}</h2>
+                <p>{colour} {adj} Bengal</p>
+                <p>{filepath}</p>
+                </>
+            }
+            
         </div>
     )
 }

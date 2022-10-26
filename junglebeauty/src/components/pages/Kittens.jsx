@@ -7,7 +7,7 @@ const Kittens = () => {
   
   return (
     <div className='card-container'>
-      {CatList.map((cat) => {
+      {CatList.filter(cat => cat.type == 'kitten').map((cat) => {
         return (
           <CatCard cat={cat}/>
         )

@@ -119,3 +119,23 @@
     flex: 50%;
     margin: 15pt;
 }
+
+/* Cat Cards */
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  color: green;
+  background-color: white;
+}
+
+.cat-img {
+  height: 100pt;
+  width: auto;
+}
