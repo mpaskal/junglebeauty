@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import { Button, Container, Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import JungleBeautyLogo from '../assets/logo.png';
 import './../App.css';
 
 const Navigation = () => {
@@ -9,7 +8,7 @@ const Navigation = () => {
             <Navbar collapseOnSelect className='nav-bar' expand="lg" variant='light'>
                 <Container>
                     <Navbar.Brand className='logo-link' to='/'>
-                        <img className='logo-img' src={JungleBeautyLogo}/>
+                        <img className='logo-img' src='/assets/logo.png'/>
                         <h1 className='logo-text'>JungleBeauty Bengals</h1>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />

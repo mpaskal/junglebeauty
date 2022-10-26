@@ -1,7 +1,7 @@
 .App {
     color: white;
     text-align: center;
-    background-image: url('./assets/jungle-background.png');
+    background-image: url('../public/assets/jungle-background.png');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,10 +10,18 @@
     left: 0;
     right: 0;
     bottom: 0;
+    overflow-y: scroll !important;
+}
+
+.page-background {
+  background-color: rgba(20, 120, 70, 0.8);
+  padding: 15pt;
+  margin-left: 10pt;
+  margin-right: 10pt;
 }
 
 .page-content {
-   
+
 }
 
 /* Navigation */
@@ -99,13 +107,6 @@
 
 /* Home */
 
-.home-background {
-    background-color: rgba(20, 120, 70, 0.8);
-    padding: 15pt;
-    margin-left: 10pt;
-    margin-right: 10pt;
-}
-
 .columns-container {
     display: flex;
 }
@@ -118,4 +119,24 @@
 .centre-column {
     flex: 50%;
     margin: 15pt;
+}
+
+/* Cat Cards */
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  color: green;
+  background-color: white;
+}
+
+.cat-img {
+  height: 100pt;
+  width: auto;
 }

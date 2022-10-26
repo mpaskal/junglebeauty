@@ -1,6 +1,3 @@
-import BccCert from '../assets/certifications/BCC-Certified-Breeder.png';
-import RoyalCaninCert from '../assets/certifications/royalcanin.png';
-import TicaCert from '../assets/certifications/TICA-75-2.png';
 import { SocialIcon } from 'react-social-icons';
 import './../App.css';
 
@@ -8,9 +5,9 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='cert-container'>
-                <img className='cert' src={TicaCert}/>
-                <img className='cert' src={BccCert}/>
-                <img className='cert' src={RoyalCaninCert}/>
+                <img className='cert' src='/assets/certifications/TICA-75-2.png'/>
+                <img className='cert' src='/assets/certifications/BCC-Certified-Breeder.png'/>
+                <img className='cert' src='/assets/certifications/royalcanin.png'/>
             </div>
             <div className='social-container'>
                 <SocialIcon className='social-icon' url='https://www.instagram.com/junglebeautybengals/' fgColor='white'/>

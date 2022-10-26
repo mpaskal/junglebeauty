@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Yellow",
+        "type": "kitten",
+        "color": "silver",
+        "gender": "male",
+        "adj": "handsome",
+        "status": "available",
+        "date": "2022-04-17",
+        "father": "Merlin",
+        "mother": "Eleonore"
+    },
+    {},
+    {}
+]
