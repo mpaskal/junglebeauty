@@ -5,7 +5,7 @@ const CatProfile= ( {cat} ) => {
 
     return (
         <div>
-
+            <h1>{name}</h1>
         </div>
     );
 }
