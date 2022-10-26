@@ -1,4 +1,4 @@
-import { Image } from 'react-bootstrap';
+import { Image, Card } from 'react-bootstrap';
 import './../App.css';
 
 const CatCard = ({ cat }) => {
@@ -11,23 +11,23 @@ const CatCard = ({ cat }) => {
     filepath += `/${name}/0.png`;
 
     return (
-        <div className='cat-card'>
-            <img className='cat-img' src={filepath}/>
-            {
-                type === 'kitten' ? 
-                <>
-                <h2>{name} collar {sex}. {date}</h2>
-                <p>Mother: {mother}</p>
-                </>
-                :
-                <>
-                <h2>{name}</h2>
-                <p>{colour} {adj} Bengal</p>
-                <p>{filepath}</p>
-                </>
-            }
-            
-        </div>
+        <Card className='cat-card'>
+            <Card.Img className='cat-img' src={filepath}/>
+            <Card.Body>
+                {
+                    type === 'kitten' ? 
+                    <>
+                    <Card.Title>{name} collar {sex}. {date}</Card.Title>
+                    <p>Mother: {mother}</p>
+                    </>
+                    :
+                    <>
+                    <Card.Title>{name}</Card.Title>
+                    <p>{colour} {adj} Bengal</p>
+                    </>
+                }
+            </Card.Body>
+        </Card>
     )
 }
 
