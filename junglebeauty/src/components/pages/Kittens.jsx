@@ -4,7 +4,6 @@ import CatList from '../CatList';
 import './../../App.css';
 
 const Kittens = () => {
-  
   return (
     <div className='card-container'>
       {CatList.filter(cat => cat.type == 'kitten').map((cat) => {
