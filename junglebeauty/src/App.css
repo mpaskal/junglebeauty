@@ -75,9 +75,8 @@
 
 .footer {
     background-color: rgba(0, 10, 0, 0.6);
+    width: 100%;
     position: fixed;
-    left: 0;
-    right: 0;
     bottom: 0;
 }
 
