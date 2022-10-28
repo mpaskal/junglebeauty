@@ -1,20 +1,14 @@
-import { Image, Card } from 'react-bootstrap';
+import { Image, Card, Carousel, CarouselItem } from 'react-bootstrap';
 import './../App.css';
-import { GetCatURL } from './Functions';
+import { GetCatURL, GetCatFilepath } from './Functions';
 
 const CatCard = ({ cat }) => {
     const { id, name, type, colour, sex, adj, status, date, father, mother } = cat;
-    var filepath = `/assets/${type}s`;
-
-    if (type === 'kitten') {
-        filepath += `/${date}`;
-    }
-    filepath += `/${name}/0.png`;
 
     return (
-        <a to={`/${GetCatURL(cat)}`}>
+        <a to={GetCatURL(cat)}>
             <Card className='cat-card'>
-                <Card.Img className='cat-img' src={filepath}/>
+                <Card.Img className='cat-img' src={GetCatFilepath(cat)}/>
                 <Card.Body>
                     {
                         type === 'kitten' ? 

@@ -57,7 +57,7 @@
   .nav-links-container {
     position: fixed;
     right: 0;
-    margin-right: 20pt;
+    margin-right: 40pt;
   }
 
   .nav-link {
@@ -134,6 +134,15 @@
 }
 
 .cat-img {
-  height: 100pt;
-  width: auto;
+  width: 60vw;
+  height: auto;
+}
+
+.cat-text {
+  color:green;
+  background-color: white;
+  width: 60vw;
+  height: auto;
+  margin: auto;
+  padding-bottom: 30pt;
 }

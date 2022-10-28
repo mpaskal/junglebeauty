@@ -10,3 +10,21 @@ export function GetCatURL(cat) {
   
     return identifier;
   }
+
+export function GetCatFilepath(cat) {
+  const { name, type, date } = cat;
+  var filepath = `/assets/${type}s`;
+
+  if (type === 'kitten') {
+    filepath += `/${date}`;
+  }
+  filepath += `/${name}/0.png`;
+
+  return filepath;
+}
+
+export function GetAllImages(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
