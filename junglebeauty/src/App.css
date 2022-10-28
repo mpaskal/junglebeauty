@@ -28,44 +28,38 @@
 
 .nav-bar {
     background-color: rgba(0, 10, 0, 0.7);
-    height: 80pt;
+    height: 60pt;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 25px;
   }
   
   .logo-link {
     height: 100%;
-    padding: 5pt;
     display: flex;
-    margin-left: 20pt;
     text-decoration: none;
   }
   
   .logo-img {
-    width: 60pt;
-    height: auto;
+    height: 50pt;
+    width: auto;
   }
   
   .logo-text {
+    font-size: x-large;
     color: white;
     font-style: italic;
     height: auto;
     line-height: normal;
-    margin-left: 5pt;
+    margin-top: 8pt;
     padding: 5pt;
   }
-  
+
   .nav-links-container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  
+    position: fixed;
+    right: 0;
+    margin-right: 40pt;
   }
-    
+
   .nav-link {
     color: lightgrey;
     padding: 10px 15px;
@@ -73,13 +67,16 @@
     text-decoration: none;
   }
 
+  .nav-link:hover {
+    color: white;
+  }
+
 /* Footer */
 
 .footer {
     background-color: rgba(0, 10, 0, 0.6);
+    width: 100%;
     position: fixed;
-    left: 0;
-    right: 0;
     bottom: 0;
 }
 
@@ -137,6 +134,15 @@
 }
 
 .cat-img {
-  height: 100pt;
-  width: auto;
+  width: 60vw;
+  height: auto;
+}
+
+.cat-text {
+  color:green;
+  background-color: white;
+  width: 60vw;
+  height: auto;
+  margin: auto;
+  padding-bottom: 30pt;
 }
