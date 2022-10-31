@@ -4,10 +4,7 @@ import './../../App.css';
 
 const CatProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date, father, mother } = cat;
-    const images = []
-    
-    {//GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
-    }
+    const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
 
     return (
         <div>
@@ -23,7 +20,7 @@ const CatProfile= ( {cat} ) => {
                             <img className='cat-img' src={image}/>
                         </Carousel.Item>
                     )
-                    })}
+                })}
             </Carousel>
         </div>
     );

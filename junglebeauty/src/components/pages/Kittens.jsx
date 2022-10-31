@@ -16,7 +16,7 @@ const Kittens = () => {
       <Carousel interval={null} slide={false} variant='dark'>
         {CatList.filter(cat => cat.type == 'kitten' && cat.status == 'available').map((cat) => {
           return (
-              <Carousel.Item>
+              <Carousel.Item key={cat.id}>
                 <div onClick={handleShow}>
                   <img className='cat-img' src={GetCatFilepath(cat)}/>
                   <div className='cat-text'>

@@ -54,6 +54,10 @@
     padding: 5pt;
   }
 
+  .nav-toggle {
+    background-color: rgba(0, 10, 0, 0.7);
+  }
+
   .nav-links-container {
     position: fixed;
     right: 0;
@@ -69,6 +73,10 @@
 
   .nav-link:hover {
     color: white;
+  }
+
+  .nav-dropdown {
+    background-color: rgba(0, 10, 0, 0.7);
   }
 
 /* Footer */
