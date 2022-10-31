@@ -102,12 +102,15 @@
 }
 
 .social-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
 }
 
 .social-icon {
-    margin: 10pt;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    color: white;
 }
 
 /* Home */
