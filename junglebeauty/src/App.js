@@ -40,8 +40,8 @@ const App = () => {
           <Route path='price' element={<Price/>}/>
           <Route path='preparing-fpr-coming-kitten' element={<PrepareForKitten/>}/>
           <Route path='visit-junglebeauty' element={<Visit/>}/>
-          {CatList.map((cat) => {
-            <Route path={GetCatURL(cat)} element={<CatProfile cat={cat}/>}/>
+          {CatList.filter(cat => cat.type == 'king' || cat.type == 'queen').map((cat) => {
+            <Route path={`/${cat.type}-${cat.name}`} element={<CatProfile cat={cat}/>}/>
           })}
           
         </Routes>

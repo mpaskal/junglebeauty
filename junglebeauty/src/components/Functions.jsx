@@ -18,7 +18,7 @@ export function GetCatFilepath(cat) {
   if (type === 'kitten') {
     filepath += `/${date}`;
   }
-  filepath += `/${name}/0.png`;
+  filepath += `/${name}/`;
 
   return filepath;
 }
@@ -28,3 +28,15 @@ export function GetAllImages(r) {
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
   return images;
 }
+
+/* export function countImageFiles(cat) {
+  const fs = require('fs');
+  const { name, type, date } = cat;
+  var filepath = `/assets/${type}s`
+
+  if (type === 'kitten') {
+    filepath += `/${date}`;
+  }
+
+  fs.readdir(filepath, (err, files));
+}*/
