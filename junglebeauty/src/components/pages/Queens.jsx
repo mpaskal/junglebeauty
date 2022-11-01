@@ -8,7 +8,7 @@ const Queens = () => {
       <div className='card-container'>
       {CatList.filter(cat => cat.type == 'queen').map((cat) => {
         return (
-          <CatCard cat={cat}/>
+          <CatCard key={cat.id} cat={cat}/>
         )
       })}
     </div>

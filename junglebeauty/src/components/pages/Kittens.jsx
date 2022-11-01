@@ -12,29 +12,27 @@ const Kittens = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <div>
-      <Carousel interval={null} slide={false} variant='dark'>
-        {CatList.filter(cat => cat.type == 'kitten' && cat.status == 'available').map((cat) => {
-          return (
-              <Carousel.Item>
-                <div onClick={handleShow}>
-                  <img className='cat-img' src={GetCatFilepath(cat)}/>
-                  <div className='cat-text'>
-                    <h3>{cat.name} collar {cat.sex == 'male' ? 'boy' : 'girl'}. {cat.date}</h3>
-                  </div>
+    <Carousel interval={null} slide={false} variant='dark'>
+      {CatList.filter(cat => cat.status == 'available').map((cat) => {
+        return (
+            <Carousel.Item key={cat.id}>
+              <div onClick={handleShow}>
+                <img className='cat-img' src={GetCatFilepath(cat) + '0.png'}/>
+                <div className='cat-text'>
+                  <h3>{cat.name} collar {cat.sex == 'male' ? 'boy' : 'girl'}. {cat.date}</h3>
                 </div>
+              </div>
 
-                <Modal show={show} onHide={handleClose}>
-                  <Modal.Header closeButton/>
-                  <Modal.Body>
-                    <CatProfile cat={cat}/>
-                  </Modal.Body>
-                </Modal>
-              </Carousel.Item>
-          )
-        })}
-      </Carousel>
-    </div>
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton/>
+                <Modal.Body>
+                  <CatProfile cat={cat}/>
+                </Modal.Body>
+              </Modal>
+            </Carousel.Item>
+        )
+      })}
+    </Carousel>
   );
 };
 

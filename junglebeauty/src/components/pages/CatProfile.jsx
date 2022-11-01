@@ -1,12 +1,16 @@
 import { Carousel } from 'react-bootstrap';
-import { GetAllImages } from '../Functions';
+import { GetAllImages, GetCatFilepath } from '../Functions';
 import './../../App.css';
 
 const CatProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date, father, mother } = cat;
-    const images = []
-    
-    {//GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
+    const images = [];
+    const filepath = GetCatFilepath(cat);
+    {//const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
+    }
+
+    for (let i = 0; i < 7; i++) {
+        images.push(filepath + i + '.png');
     }
 
     return (
@@ -14,8 +18,6 @@ const CatProfile= ( {cat} ) => {
             <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. {date}</h3>
             <p>Mother: {mother}</p>
             <p>Father: {father}</p>
-
-            <p>gallery does not work yet</p>
             <Carousel>
                 {images.map((image) => {
                     return (
@@ -23,7 +25,7 @@ const CatProfile= ( {cat} ) => {
                             <img className='cat-img' src={image}/>
                         </Carousel.Item>
                     )
-                    })}
+                })}
             </Carousel>
         </div>
     );

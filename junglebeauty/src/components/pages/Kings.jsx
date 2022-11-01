@@ -6,11 +6,11 @@ import './../../App.css';
 const Kings = () => {
     return (
       <div className='card-container'>
-      {CatList.filter(cat => cat.type == 'king').map((cat) => {
-        return (
-          <CatCard cat={cat}/>
-        )
-      })}
+        {CatList.filter(cat => cat.type == 'king').map((cat) => {
+          return (
+            <CatCard key={cat.id} cat={cat}/>
+          )
+        })}
     </div>
     );
   };
