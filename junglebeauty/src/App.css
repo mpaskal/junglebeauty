@@ -27,10 +27,7 @@
 /* Navigation */
 
 .nav-bar {
-    background-color: rgba(0, 10, 0, 0.7);
-    height: 60pt;
-    width: 100%;
-    margin-bottom: 25px;
+    background-color: rgba(0, 10, 0, 0.75) !important;
   }
   
   .logo-link {
@@ -54,29 +51,14 @@
     padding: 5pt;
   }
 
-  .nav-toggle {
-    background-color: rgba(0, 10, 0, 0.7);
-  }
-
-  .nav-links-container {
-    position: fixed;
-    right: 0;
-    margin-right: 40pt;
-  }
-
   .nav-link {
-    color: lightgrey;
+    color: rgb(236, 236, 236) !important;
     padding: 10px 15px;
     cursor: pointer;
     text-decoration: none;
   }
 
-  .nav-link:hover {
-    color: white;
-  }
-
-  .nav-dropdown {
-    background-color: rgba(0, 10, 0, 0.7);
+  .dropdown-link {
   }
 
 /* Footer */
