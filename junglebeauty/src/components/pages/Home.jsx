@@ -1,8 +1,9 @@
+import { Container } from 'react-bootstrap';
 import './../../App.css';
 
 const Home = () => {
     return (
-        <div className='page-background'>
+        <Container fluid className='page-background'>
             <h1>Hello! We are happy to welcome you to our website!</h1>
             <p>Do you want to have a small and tame leopard at home? You have come to the right place. Welcome to our Junglebeauty Cattery of Bengals. Our cattery is registered in the international felinology system: TICA and certified as a trusted breeder by Bengal Cat Club. Also, we are an official partner of Royal Canin. Our Cattery is located in Kitchener, Ontario, Canada.</p>
 
@@ -17,7 +18,7 @@ const Home = () => {
                     <p>Best videos of Junglebeauty Bengals Cattery!</p>
                 </div>
             </div>
-        </div>
+        </Container>
     );
 }
 

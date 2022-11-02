@@ -1,13 +1,20 @@
 import { Carousel } from 'react-bootstrap';
-import { GetAllImages, GetCatFilepath } from '../Functions';
+import { GetAllImages, GetCatFilepath, fileExists } from '../Functions';
 import './../../App.css';
 
 const CatProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date, father, mother } = cat;
     const images = [];
     const filepath = GetCatFilepath(cat);
-    {//const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
+    //const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
+    
+    /*
+    var i = 0;
+    while (fileExists(filepath + i + '.png')) {
+        images.push(filepath + i + '.png');
+        i++;
     }
+    */
 
     for (let i = 0; i < 7; i++) {
         images.push(filepath + i + '.png');

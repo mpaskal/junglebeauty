@@ -29,6 +29,14 @@ export function GetAllImages(r) {
   return images;
 }
 
+export function fileExists(filepath) {
+  try {
+    return require({filepath});
+  } catch (err) {
+    return false;
+  }
+}
+
 /* export function countImageFiles(cat) {
   const fs = require('fs');
   const { name, type, date } = cat;
