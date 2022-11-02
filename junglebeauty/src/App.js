@@ -24,8 +24,6 @@ const App = () => {
   return (
     <div className='App'>
       <Navigation/>
-      
-      <div className='page-content'>
         <Routes>
           <Route index element={<Home/>}/>
           <Route path='queens' element={<Queens/>}/>
@@ -42,11 +40,8 @@ const App = () => {
           <Route path='visit-junglebeauty' element={<Visit/>}/>
           {CatList.filter(cat => cat.type == 'king' || cat.type == 'queen').map((cat) => {
             <Route path={`/${cat.type}-${cat.name}`} element={<CatProfile cat={cat}/>}/>
-          })}
-          
+          })} 
         </Routes>
-      </div>
-
       <Footer/>
     </div>
   );
