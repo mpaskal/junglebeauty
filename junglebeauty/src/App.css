@@ -7,21 +7,21 @@
     background-repeat: no-repeat;
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     overflow-y: scroll !important;
+    height: 100vh;
 }
 
 .page-background {
   background-color: rgba(20, 120, 70, 0.8);
-  padding: 15pt;
-  margin-left: 10pt;
-  margin-right: 10pt;
+  width: 95%;
 }
 
 .page-content {
-
+  margin-top: 20pt;
+  height: 75%;
 }
 
 /* Navigation */
@@ -66,7 +66,6 @@
 .footer {
     background-color: rgba(0, 10, 0, 0.6);
     width: 100%;
-    position: fixed;
     bottom: 0;
 }
 
@@ -95,6 +94,10 @@
     color: white;
 }
 
+a:hover{
+  color: rgba(25, 223, 58, 0.911);
+}
+
 /* Home */
 
 .columns-container {
@@ -103,12 +106,12 @@
 
 .edge-column {
     flex: 25%;
-    margin: 15pt;
+    padding: 15pt;
 }
 
 .centre-column {
     flex: 50%;
-    margin: 15pt;
+    padding: 15pt;
 }
 
 /* Cat Cards */
@@ -120,22 +123,23 @@
 }
 
 .cat-card {
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
+  width: 30vh;
   color: green;
   background-color: white;
+  margin-left: 5vh;
 }
 
 .cat-img {
-  width: 60vw;
-  height: auto;
+  width: 100%;
 }
 
 .cat-text {
   color:green;
   background-color: white;
-  width: 60vw;
-  height: auto;
-  margin: auto;
   padding-bottom: 30pt;
+}
+
+.cat-modal {
+  width: 80vh;
 }

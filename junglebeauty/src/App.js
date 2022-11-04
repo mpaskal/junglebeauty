@@ -24,7 +24,6 @@ const App = () => {
   return (
     <div className='App'>
       <Navigation/>
-      
       <div className='page-content'>
         <Routes>
           <Route index element={<Home/>}/>
@@ -38,15 +37,13 @@ const App = () => {
           <Route path='why-choose-junglebeauty' element={<WhyChoose/>}/>
           <Route path='buy-sell-agreement' element={<BuySellAgreement/>}/>
           <Route path='price' element={<Price/>}/>
-          <Route path='preparing-fpr-coming-kitten' element={<PrepareForKitten/>}/>
+          <Route path='preparing-for-coming-kitten' element={<PrepareForKitten/>}/>
           <Route path='visit-junglebeauty' element={<Visit/>}/>
           {CatList.filter(cat => cat.type == 'king' || cat.type == 'queen').map((cat) => {
-            <Route path={`/${cat.type}-${cat.name}`} element={<CatProfile cat={cat}/>}/>
-          })}
-          
+            <Route key={cat.id} path={`${cat.type}-${cat.name}`} element={<CatProfile cat={cat}/>}/>
+          })} 
         </Routes>
       </div>
-
       <Footer/>
     </div>
   );
