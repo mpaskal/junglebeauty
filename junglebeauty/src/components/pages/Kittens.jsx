@@ -1,6 +1,7 @@
 import { Component, useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
+import CatCardCarousel from '../CatCardCarousel';
 import CatProfile from './CatProfile';
 import CatCard from '../CatCard';
 import CatList from '../CatList';
@@ -13,37 +14,43 @@ const Kittens = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <Carousel responsive={{
-      desktop: {
-        breakpoint: {
-          max: 3000,
-          min: 1024
+    <CatCardCarousel cats={CatList.filter(cat => cat.status == 'available')}/>
+
+    /*
+    <Carousel 
+      infinite
+      responsive={{
+        desktop: {
+          breakpoint: {
+            max: 3000,
+            min: 1024
+          },
+          items: 3,
         },
-        items: 3,
-        partialVisibilityGutter: 40
-      },
-      mobile: {
-        breakpoint: {
-          max: 464,
-          min: 0
+        mobile: {
+          breakpoint: {
+            max: 464,
+            min: 0
+          },
+          items: 1,
+          partialVisibilityGutter: 30
         },
-        items: 1,
-        partialVisibilityGutter: 30
-      },
-      tablet: {
-        breakpoint: {
-          max: 1024,
-          min: 464
-        },
-        items: 2,
-        partialVisibilityGutter: 30
-      }}}>
+        tablet: {
+          breakpoint: {
+            max: 1024,
+            min: 464
+          },
+          items: 2,
+          partialVisibilityGutter: 30    
+        }
+      }}
+      rewind={false}
+      >
+
       {CatList.filter(cat => cat.status == 'available').map((cat) => {
         return (
-          <h1>{cat.name}</h1>
-          /*
-            <Carousel.Item key={cat.id}>
-              <div onClick={handleShow}>
+            <div key={cat.id}>
+              <div className='cat-card' onClick={handleShow}>
                 <img className='cat-img' src={GetCatFilepath(cat) + '0.png'}/>
                 <div className='cat-text'>
                   <h3>{cat.name} collar {cat.sex == 'male' ? 'boy' : 'girl'}. {cat.date}</h3>
@@ -56,11 +63,11 @@ const Kittens = () => {
                   <CatProfile cat={cat}/>
                 </Modal.Body>
               </Modal>
-            </Carousel.Item>
-            */
+            </div>
         )
       })}
     </Carousel>
+    */
   );
 };
 
