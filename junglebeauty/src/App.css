@@ -7,17 +7,16 @@
     background-repeat: no-repeat;
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: 100vh;
     overflow-y: scroll !important;
+    height: 100vh;
 }
 
 .page-background {
   background-color: rgba(20, 120, 70, 0.8);
-  margin-left: 10pt;
-  margin-right: 10pt;
+  width: 95%;
 }
 
 .page-content {
@@ -96,11 +95,7 @@
 }
 
 a:hover{
-  color: red;
-}
-
-.social-icon a::after{
-  color: rgba(20, 120, 70, 0.8);
+  color: rgba(25, 223, 58, 0.911);
 }
 
 /* Home */
@@ -111,12 +106,12 @@ a:hover{
 
 .edge-column {
     flex: 25%;
-    margin: 15pt;
+    padding: 15pt;
 }
 
 .centre-column {
     flex: 50%;
-    margin: 15pt;
+    padding: 15pt;
 }
 
 /* Cat Cards */
@@ -128,19 +123,23 @@ a:hover{
 }
 
 .cat-card {
+  cursor: pointer;
   width: 30vh;
-  display: flex;
-  flex-direction: column;
   color: green;
   background-color: white;
+  margin-left: 5vh;
 }
 
 .cat-img {
- 
+  width: 100%;
 }
 
 .cat-text {
   color:green;
   background-color: white;
   padding-bottom: 30pt;
+}
+
+.cat-modal {
+  width: 80vh;
 }

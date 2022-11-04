@@ -1,4 +1,4 @@
-import { Carousel } from 'react-bootstrap';
+import Carousel from 'react-multi-carousel';
 import { GetAllImages, GetCatFilepath, fileExists } from '../Functions';
 import './../../App.css';
 
@@ -25,12 +25,40 @@ const CatProfile= ( {cat} ) => {
             <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. {date}</h3>
             <p>Mother: {mother}</p>
             <p>Father: {father}</p>
-            <Carousel>
+
+            <Carousel 
+                infinite
+                responsive={{
+                    desktop: {
+                    breakpoint: {
+                        max: 3000,
+                        min: 1024
+                    },
+                    items: 1,
+                    },
+                    mobile: {
+                    breakpoint: {
+                        max: 464,
+                        min: 0
+                    },
+                    items: 1,
+                    partialVisibilityGutter: 30
+                    },
+                    tablet: {
+                    breakpoint: {
+                        max: 1024,
+                        min: 464
+                    },
+                    items: 1,
+                    partialVisibilityGutter: 30    
+                    }
+                }}
+                rewind={false}
+                showDots
+            >
                 {images.map((image) => {
                     return (
-                        <Carousel.Item key={image}>
-                            <img className='cat-img' src={image}/>
-                        </Carousel.Item>
+                        <img className='cat-img' key={image} src={image}/>
                     )
                 })}
             </Carousel>

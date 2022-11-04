@@ -9,40 +9,40 @@ const CatCard = ({ cat }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    var displayName = name;
+    var description;
+
+    if (type == 'kitten') {
+        displayName += ' collar';
+        description = date;
+        if (sex == 'male') {
+            displayName += ' boy';
+        } else {
+            displayName += ' girl';
+        }
+    } else if (type == 'king') {
+        description = colour + ' ' + adj + ' Bengal';
+    } else {
+        description = cattery + ' ' + name + ' ' + date;
+    }
 
     return (
         <>
             <div className='cat-card' onClick={handleShow}>
                 <img className='cat-img' src={GetCatFilepath(cat) + '0.png'}/>
                 <div className='cat-text'>
-                    <h3>{cat.name} collar {cat.sex == 'male' ? 'boy' : 'girl'}. {cat.date}</h3>
+                    <h3>{displayName}</h3>
+                    <p>{description}</p>
                 </div>
             </div>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} size='lg'>
                 <Modal.Header closeButton/>
                 <Modal.Body>
-                <CatProfile cat={cat}/>
+                    <CatProfile cat={cat}/>
                 </Modal.Body>
             </Modal>
         </>
-
-          /*
-        <a to={`/${type}-${name}`}>
-            <Card className='cat-card'>
-                <Card.Img className='cat-img' src={GetCatFilepath(cat) + '0.png'}/>
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    {
-                        type === 'king' ? 
-                        <p>{colour} {adj} Bengal</p>
-                        :
-                        <p>{cattery} {name}, born {date}, {location}</p>
-                    }
-                </Card.Body>
-            </Card>
-        </a>
-        */
     )
 }
 
