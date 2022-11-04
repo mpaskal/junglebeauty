@@ -16,14 +16,13 @@
 
 .page-background {
   background-color: rgba(20, 120, 70, 0.8);
-  padding: 15pt;
   margin-left: 10pt;
   margin-right: 10pt;
-  height: 80%;
 }
 
 .page-content {
-
+  margin-top: 20pt;
+  height: 75%;
 }
 
 /* Navigation */
@@ -129,6 +128,7 @@ a:hover{
 }
 
 .cat-card {
+  width: 30vh;
   display: flex;
   flex-direction: column;
   color: green;
@@ -136,15 +136,11 @@ a:hover{
 }
 
 .cat-img {
-  width: 60vw;
-  height: auto;
+ 
 }
 
 .cat-text {
   color:green;
   background-color: white;
-  width: 60vw;
-  height: auto;
-  margin: auto;
   padding-bottom: 30pt;
 }
