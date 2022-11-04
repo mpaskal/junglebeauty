@@ -28,7 +28,7 @@ const CatProfile= ( {cat} ) => {
             <Carousel>
                 {images.map((image) => {
                     return (
-                        <Carousel.Item>
+                        <Carousel.Item key={image}>
                             <img className='cat-img' src={image}/>
                         </Carousel.Item>
                     )

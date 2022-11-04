@@ -8,10 +8,6 @@ import { GetCatFilepath } from './Functions';
 import './../App.css';
 
 const CatCardCarousel = ({ cats }) => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <Carousel 
       infinite
@@ -46,19 +42,7 @@ const CatCardCarousel = ({ cats }) => {
       {cats.map((cat) => {
         return (
           <div key={cat.id}>
-            <div className='cat-card' onClick={handleShow}>
-              <img className='cat-img' src={GetCatFilepath(cat) + '0.png'}/>
-              <div className='cat-text'>
-                <h3>{cat.name} collar {cat.sex == 'male' ? 'boy' : 'girl'}. {cat.date}</h3>
-              </div>
-            </div>
-
-            <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton/>
-              <Modal.Body>
-                <CatProfile cat={cat}/>
-              </Modal.Body>
-            </Modal>
+            <CatCard cat={cat}/>
           </div>
         )
       })}
