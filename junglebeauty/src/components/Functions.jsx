@@ -23,6 +23,14 @@ export function GetCatFilepath(cat) {
   return filepath;
 }
 
+export function ConvertDate(date) {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const dateValues = date.split('-');
+  var dateString = `${months[parseInt(dateValues[1], 10) - 1]} ${dateValues[2]}, ${dateValues[0]}`;
+
+  return dateString;
+}
+
 export function GetAllImages(r) {
   let images = {};
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });

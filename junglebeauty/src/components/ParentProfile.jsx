@@ -4,7 +4,7 @@ import { GetAllImages, GetCatFilepath, fileExists } from './Functions';
 import './../App.css';
 
 const ParentProfile= ( {cat} ) => {
-    const { id, name, type, colour, sex, adj, status, date, father, mother } = cat;
+    const { id, name, type, colour, sex, adj, status, date } = cat;
     const images = [];
     const filepath = GetCatFilepath(cat);
     //const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
@@ -23,9 +23,12 @@ const ParentProfile= ( {cat} ) => {
 
     return (
         <div>
-            <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. {date}</h3>
-            <p>Mother: {mother}</p>
-            <p>Father: {father}</p>
+            <div>
+                {sex == 'male'
+                    ? ``
+                    : ``
+                }
+            </div>
 
             <Carousel 
                 infinite
@@ -63,6 +66,11 @@ const ParentProfile= ( {cat} ) => {
                     )
                 })}
             </Carousel>
+
+            {sex == 'male'
+                ? <CatCardCarousel cats={CatList.filter(child => child.father == name)}/>
+                : <CatCardCarousel cats={CatList.filter(child => child.mother == name)}/>
+            }
         </div>
     );
 }
