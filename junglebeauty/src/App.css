@@ -20,7 +20,7 @@
 }
 
 .page-content {
-  margin-top: 20pt;
+  margin-top: 30pt;
   height: 75%;
 }
 
@@ -117,14 +117,14 @@ a:hover{
 /* Cat Cards */
 
 .card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 95%;
 }
 
 .cat-card {
+  border-radius: 50%;
   cursor: pointer;
-  width: 30vh;
+  width: 40vh;
   color: green;
   background-color: white;
   margin-left: 5vh;
@@ -137,7 +137,7 @@ a:hover{
 .cat-text {
   color:green;
   background-color: white;
-  padding-bottom: 30pt;
+  padding: 30pt;
 }
 
 .cat-modal {
