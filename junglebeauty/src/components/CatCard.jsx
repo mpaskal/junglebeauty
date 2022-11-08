@@ -10,9 +10,13 @@ const CatCard = ({ cat }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
-    var dateString = ConvertDate(date);
+    var dateString;
     var displayName = name;
     var description;
+
+    if (date) {
+        dateString = ConvertDate(date);
+    }
 
     if (type == 'kitten') {
         displayName += ' collar';

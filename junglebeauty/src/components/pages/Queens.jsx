@@ -6,7 +6,12 @@ import './../../App.css';
 
 const Queens = () => {
     return (
+      <>
+      <div className='page-background'>
+        <h2>Queens of JungleBeauty, TICA and CCA registered!</h2>
+      </div>
       <CatCardCarousel cats={CatList.filter(cat => cat.type == 'queen')}/>
+      </>
 
       /*
       <div className='card-container'>

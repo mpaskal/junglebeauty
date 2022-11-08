@@ -7,7 +7,12 @@ import './../../App.css';
 
 const Kings = () => {
     return (
-      <CatCardCarousel cats={CatList.filter(cat => cat.type == 'king')}/>
+      <>
+        <div className='page-background'>
+          <h2>Kings of JungleBeauty, TICA and CCA registered!</h2>
+        </div>
+        <CatCardCarousel cats={CatList.filter(cat => cat.type == 'king')}/>
+      </>
 
       /*
       <Container fluid>
