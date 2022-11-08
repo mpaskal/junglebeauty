@@ -15,12 +15,15 @@
 }
 
 .page-background {
+  border-radius: 10pt;
   background-color: rgba(20, 120, 70, 0.8);
   width: 95%;
+  padding: 10pt;
+  margin: auto;
 }
 
 .page-content {
-  margin-top: 20pt;
+  margin-top: 30pt;
   height: 75%;
 }
 
@@ -116,18 +119,26 @@ a:hover{
 
 /* Cat Cards */
 
+.cat-card-carousel {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10pt;
+  width: 95%;
+  padding: 10pt;
+  margin: auto;
+  margin-top: 20pt;
+}
+
 .card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  
+  border-radius: 10pt;
+  width: 95%;
 }
 
 .cat-card {
+  border-radius: 50%;
   cursor: pointer;
-  width: 30vh;
   color: green;
   background-color: white;
-  margin-left: 5vh;
+  margin: 10pt;
 }
 
 .cat-img {
@@ -137,7 +148,8 @@ a:hover{
 .cat-text {
   color:green;
   background-color: white;
-  padding-bottom: 30pt;
+  padding: 10pt;
+  font-size: larger;
 }
 
 .cat-modal {

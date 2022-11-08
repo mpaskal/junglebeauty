@@ -9,7 +9,8 @@ import './../App.css';
 
 const CatCardCarousel = ({ cats }) => {
   return (
-    <Carousel 
+    <Carousel className='cat-card-carousel'
+      draggable
       infinite
       responsive={{
         desktop: {

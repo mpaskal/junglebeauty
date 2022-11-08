@@ -10,7 +10,12 @@ import './../../App.css';
 
 const Kittens = () => {
   return (
-    <CatCardCarousel cats={CatList.filter(cat => cat.status == 'available')}/>
+    <>
+      <div className='page-background'>
+        <h2>JungleBeauty's cats available for reservation</h2>
+      </div>
+      <CatCardCarousel cats={CatList.filter(cat => cat.status == 'available')}/>
+    </>
   );
 };
 

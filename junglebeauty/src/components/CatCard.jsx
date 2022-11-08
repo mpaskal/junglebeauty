@@ -1,20 +1,26 @@
 import { Component, useState } from 'react';
 import { Image, Card, Modal, Carousel, CarouselItem } from 'react-bootstrap';
 import CatProfile from './pages/CatProfile';
-import { GetCatURL, GetCatFilepath } from './Functions';
+import { GetCatURL, GetCatFilepath, ConvertDate } from './Functions';
 import './../App.css';
 
 const CatCard = ({ cat }) => {
-    const { id, name, type, colour, sex, adj, status, date, father, mother, cattery, location } = cat;
+    const { id, name, type, colour, sex, adj, date, cattery, location } = cat;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    
+    var dateString;
     var displayName = name;
     var description;
 
+    if (date) {
+        dateString = ConvertDate(date);
+    }
+
     if (type == 'kitten') {
         displayName += ' collar';
-        description = date;
+        description = dateString;
         if (sex == 'male') {
             displayName += ' boy';
         } else {
@@ -23,7 +29,10 @@ const CatCard = ({ cat }) => {
     } else if (type == 'king') {
         description = colour + ' ' + adj + ' Bengal';
     } else {
-        description = cattery + ' ' + name + ' ' + date;
+        description = cattery + ' ' + name + ' ' + dateString;
+        if (location) {
+            description += ', ' + location;
+        }
     }
 
     return (
