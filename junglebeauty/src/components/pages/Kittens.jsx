@@ -12,9 +12,9 @@ const Kittens = () => {
   return (
     <>
       <div className='page-background'>
-        <h2>JungleBeauty's cats available for reservation</h2>
+        <h2>JungleBeauty's kittens available for reservation</h2>
       </div>
-      <CatCardCarousel cats={CatList.filter(cat => cat.status == 'available')}/>
+      <CatCardCarousel cats={CatList.filter(cat => cat.status == 'available').sort((a, b) => a.date > b.date ? 1 : -1)}/>
     </>
   );
 };
