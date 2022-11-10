@@ -1,5 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import CatList from './CatList'
+import CatCardCarousel from './CatCardCarousel';
 import { GetAllImages, GetCatFilepath, fileExists } from './Functions';
 import './../App.css';
 
@@ -25,7 +26,7 @@ const ParentProfile= ( {cat} ) => {
         <div>
             <div>
                 {sex == 'male'
-                    ? ``
+                    ? `${colour} ${adj} Bengal`
                     : ``
                 }
             </div>
