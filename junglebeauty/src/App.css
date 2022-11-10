@@ -31,6 +31,8 @@
 
 .nav-bar {
     background-color: rgba(0, 10, 0, 0.75) !important;
+    position: sticky;
+    top: 0;
   }
   
   .logo-link {
@@ -153,5 +155,5 @@ a:hover{
 }
 
 .cat-modal {
-  width: 80vh;
+  width: 90%;
 }
