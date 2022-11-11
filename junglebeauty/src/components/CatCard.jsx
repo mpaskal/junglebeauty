@@ -1,7 +1,8 @@
 import { Component, useState } from 'react';
 import { Image, Card, Modal, Carousel, CarouselItem } from 'react-bootstrap';
 import CatProfile from './pages/CatProfile';
-import { GetCatURL, GetCatFilepath, ConvertDate } from './Functions';
+import ParentProfile from './ParentProfile';
+import { GetCatURL, GetCatFilepath, GetCatDescription, ConvertDate } from './Functions';
 import './../App.css';
 
 const CatCard = ({ cat }) => {
@@ -10,30 +11,19 @@ const CatCard = ({ cat }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
-    var dateString;
     var displayName = name;
     var description;
 
-    if (date) {
-        dateString = ConvertDate(date);
-    }
-
     if (type == 'kitten') {
         displayName += ' collar';
-        description = dateString;
         if (sex == 'male') {
             displayName += ' boy';
         } else {
             displayName += ' girl';
         }
-    } else if (type == 'king') {
-        description = colour + ' ' + adj + ' Bengal';
-    } else {
-        description = cattery + ' ' + name + ' ' + dateString;
-        if (location) {
-            description += ', ' + location;
-        }
     }
+
+    description = GetCatDescription(cat);
 
     return (
         <>
@@ -48,7 +38,10 @@ const CatCard = ({ cat }) => {
             <Modal show={show} onHide={handleClose} size='lg'>
                 <Modal.Header closeButton/>
                 <Modal.Body>
-                    <CatProfile cat={cat}/>
+                    {type == 'kitten'
+                        ? <CatProfile cat={cat}/>
+                        : <ParentProfile cat={cat}/>
+                    }
                 </Modal.Body>
             </Modal>
         </>

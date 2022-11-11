@@ -23,6 +23,26 @@ export function GetCatFilepath(cat) {
   return filepath;
 }
 
+export function GetCatDescription(cat) {
+  const { name, type, colour, sex, adj, date, cattery, location } = cat;
+  var description;
+
+  if (type == 'kitten') {
+    description = ConvertDate(date);
+  } else {
+    if (sex == 'male') {
+        description = colour + ' ' + adj + ' Bengal';
+    } else {
+        description = cattery + ' ' + name + ' ' + ConvertDate(date);
+        if (location) {
+            description += ', ' + location;
+        }
+    }
+  }
+
+  return description;
+}
+
 export function ConvertDate(date) {
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const dateValues = date.split('-');
