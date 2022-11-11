@@ -33,6 +33,7 @@
     background-color: rgba(0, 10, 0, 0.75) !important;
     position: sticky;
     top: 0;
+    z-index: 1;
   }
   
   .logo-link {
@@ -63,7 +64,12 @@
     text-decoration: none;
   }
 
+  .nav-link.active {
+    color: rgba(25, 223, 58, 0.911) !important;
+  }
+
   .dropdown-link {
+    margin: auto;
   }
 
 /* Footer */

@@ -1,13 +1,15 @@
 import Carousel from 'react-multi-carousel';
 import CatList from './CatList'
 import CatCardCarousel from './CatCardCarousel';
-import { GetAllImages, GetCatFilepath, fileExists } from './Functions';
+import { GetAllImages, GetCatFilepath, GetCatDescription, fileExists } from './Functions';
 import './../App.css';
 
 const ParentProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
     const images = [];
     const filepath = GetCatFilepath(cat);
+
+    var description = GetCatDescription(cat);
     //const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
     
     /*
@@ -25,10 +27,7 @@ const ParentProfile= ( {cat} ) => {
     return (
         <div>
             <div>
-                {sex == 'male'
-                    ? `${colour} ${adj} Bengal`
-                    : ``
-                }
+                <h3>{description}</h3>
             </div>
 
             <Carousel 

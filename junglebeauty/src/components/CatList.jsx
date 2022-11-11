@@ -117,7 +117,7 @@ const CatList = [
         status: 'available',
         date: '2022-05-14',
         father: 'Merlin',
-        mother: 'Lolita',
+        mother: 'Lita',
     }, {
         id: 15,
         name: 'Yellow',
@@ -128,7 +128,7 @@ const CatList = [
         status: 'available',
         date: '2022-05-14',
         father: 'Merlin',
-        mother: 'Lolita',
+        mother: 'Lita',
     }, {
         id: 16,
         name: 'Blue',

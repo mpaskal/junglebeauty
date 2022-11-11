@@ -1,5 +1,8 @@
 import Carousel from 'react-multi-carousel';
+import { Link, NavLink } from "react-router-dom";
 import { GetAllImages, GetCatFilepath, ConvertDate, fileExists } from '../Functions';
+import CatList from '../CatList';
+import ParentProfile from '../ParentProfile';
 import './../../App.css';
 
 const CatProfile= ( {cat} ) => {
@@ -30,8 +33,8 @@ const CatProfile= ( {cat} ) => {
     return (
         <div>
             <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. {dateString}</h3>
-            <p>Mother: {mother}</p>
-            <p>Father: {father}</p>
+            <p>Mother: <Link to='/queens'>{mother}</Link></p>
+            <p>Father: <a>{father}</a></p>
 
             <Carousel 
                 infinite
