@@ -14,24 +14,24 @@ const Navigation = () => {
                     <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                     <Navbar.Collapse id='responsive-navbar-nav'>
                         <Nav className='ml-auto'>
-                            <Link className='nav-link' to='/'>Home</Link>
-                            <Link className='nav-link' to='/queens'>Queens</Link>
-                            <Link className='nav-link' to='/kings'>Kings</Link>
-                            <Link className='nav-link' to='/kittens'>Kittens</Link>
-                            <Link className='nav-link' to='/news'>News</Link>
-                            <Link className='nav-link' to='/faq'>FAQ</Link>
-                            <Link className='nav-link' to='/about-us'>About</Link>
-                            <Link className='nav-link' to='/contact'>Contact</Link>
+                            <NavLink className='nav-link' to='/' end>Home</NavLink>
+                            <NavLink className='nav-link' to='/queens'>Queens</NavLink>
+                            <NavLink className='nav-link' to='/kings'>Kings</NavLink>
+                            <NavLink className='nav-link' to='/kittens'>Kittens</NavLink>
+                            <NavLink className='nav-link' to='/news'>News</NavLink>
+                            <NavLink className='nav-link' to='/faq'>FAQ</NavLink>
+                            <NavLink className='nav-link' to='/about-us'>About</NavLink>
+                            <NavLink className='nav-link' to='/contact'>Contact</NavLink>
                             <NavDropdown title='How to buy'>
-                                <Link className='dropdown-link' to='/why-choose-junglebeauty'>Why choose JungleBeauty</Link>
+                                <NavLink className='dropdown-link' to='/why-choose-junglebeauty'>Why choose JungleBeauty</NavLink>
                                 <NavDropdown.Divider/>
-                                <Link className='dropdown-link' to='/buy-sell-agreement'>Buy-Sell Agreement</Link>
+                                <NavLink className='dropdown-link' to='/buy-sell-agreement'>Buy-Sell Agreement</NavLink>
                                 <NavDropdown.Divider/>
-                                <Link className='dropdown-link' to='/price'>Price</Link>
+                                <NavLink className='dropdown-link' to='/price'>Price</NavLink>
                                 <NavDropdown.Divider/>
-                                <Link className='dropdown-link' to='/preparing-for-coming-kitten'>How to be ready for coming kitten</Link>
+                                <NavLink className='dropdown-link' to='/preparing-for-coming-kitten'>How to be ready for coming kitten</NavLink>
                                 <NavDropdown.Divider/>
-                                <Link className='dropdown-link' to='/visit-junglebeauty'>How to visit JungleBeauty</Link>
+                                <NavLink className='dropdown-link' to='/visit-junglebeauty'>How to visit JungleBeauty</NavLink>
                             </NavDropdown>
                         </Nav>
                 </Navbar.Collapse>
