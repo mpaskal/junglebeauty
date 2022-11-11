@@ -39,9 +39,6 @@ const App = () => {
           <Route path='price' element={<Price/>}/>
           <Route path='preparing-for-coming-kitten' element={<PrepareForKitten/>}/>
           <Route path='visit-junglebeauty' element={<Visit/>}/>
-          {CatList.filter(cat => cat.type == 'king' || cat.type == 'queen').map((cat) => {
-            <Route key={cat.id} path={`${cat.type}-${cat.name}`} element={<CatProfile cat={cat}/>}/>
-          })} 
         </Routes>
       </div>
       <Footer/>
