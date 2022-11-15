@@ -7,10 +7,12 @@ const Navigation = () => {
     return (
         <Navbar collapseOnSelect className='nav-bar' expand="lg" variant='dark' bg='dark'>
             <Container>
-                <Navbar.Brand className='logo-link' to='/'>
-                    <img className='logo-img' src='/assets/logo.png'/>
-                    <h1 className='logo-text'>JungleBeauty Bengals</h1>
-                </Navbar.Brand>
+                <Link to='/'>
+                    <Navbar.Brand className='logo-link'>
+                        <img className='logo-img' src='/assets/logo.png'/>
+                        <h1 className='logo-text'>JungleBeauty Bengals</h1>
+                    </Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='ml-auto'>
