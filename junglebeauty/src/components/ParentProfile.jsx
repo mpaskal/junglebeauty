@@ -10,6 +10,14 @@ const ParentProfile= ( {cat} ) => {
     const filepath = GetCatFilepath(cat);
 
     var description = GetCatDescription(cat);
+    var kittens;
+
+    if (sex == 'male') {
+        kittens = CatList.filter(child => child.father == name)
+    } else {
+        kittens = CatList.filter(child => child.mother == name)
+    }
+
     //const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
     
     /*
@@ -67,9 +75,18 @@ const ParentProfile= ( {cat} ) => {
                 })}
             </Carousel>
 
-            {sex == 'male'
-                ? <CatCardCarousel cats={CatList.filter(child => child.father == name)}/>
-                : <CatCardCarousel cats={CatList.filter(child => child.mother == name)}/>
+            {kittens.length > 0
+                ?
+                    <>
+                        <div>
+                            <h2>{name}'s kittens:</h2>
+                        </div>
+                        <CatCardCarousel cats={kittens}/>
+                    </>
+                :
+                <div>
+                    <h4>{name} has not had kittens yet.</h4>
+                </div>
             }
         </div>
     );

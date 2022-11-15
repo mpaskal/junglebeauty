@@ -33,8 +33,8 @@ const CatProfile= ( {cat} ) => {
     return (
         <div>
             <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. {dateString}</h3>
-            <p>Mother: <Link to='/queens'>{mother}</Link></p>
-            <p>Father: <a>{father}</a></p>
+            <p>Mother: <Link to='/queens' state={mother}>{mother}</Link></p>
+            <p>Father: <Link to='/kings' state={father}>{father}</Link></p>
 
             <Carousel 
                 infinite
