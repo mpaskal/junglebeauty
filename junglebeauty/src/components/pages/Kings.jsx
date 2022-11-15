@@ -17,6 +17,7 @@ const Kings = () => {
 
   if (location.state) {
     fatherName = location.state;
+    window.history.replaceState({}, document.title);
   }
   
     return (

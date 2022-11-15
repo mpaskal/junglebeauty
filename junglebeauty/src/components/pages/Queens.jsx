@@ -17,6 +17,7 @@ const Queens = () => {
 
   if (location.state) {
     motherName = location.state;
+    window.history.replaceState({}, document.title);
   }
   
   return (
