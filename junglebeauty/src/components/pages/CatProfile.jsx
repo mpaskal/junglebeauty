@@ -34,7 +34,7 @@ const CatProfile= ( {cat} ) => {
         <div>
             <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. {dateString}</h3>
             <p>Mother: <Link to='/queens' state={mother}>{mother}</Link></p>
-            <p>Father: <a>{father}</a></p>
+            <p>Father: <Link to='/kings' state={father}>{father}</Link></p>
 
             <Carousel 
                 infinite
