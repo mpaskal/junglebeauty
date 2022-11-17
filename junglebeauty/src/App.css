@@ -167,3 +167,10 @@ a:hover{
 .cat-modal {
   width: 90%;
 }
+
+/* Accordion Menu */
+
+.accordion {
+  width: 95%;
+  margin: auto;
+}

@@ -1,18 +1,10 @@
-import { Accordion } from 'react-bootstrap';
+import AccordionMenu from '../AccordionMenu';
+import NewsList from '../NewsList';
 import './../../App.css';
 
 const News = () => {
   return (
-    <Accordion className='accordion' defaultActiveKey='0'>
-      <Accordion.Item eventKey='0'>
-        <Accordion.Header>
-
-        </Accordion.Header>
-        <Accordion.Body>
-
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+    <AccordionMenu items={NewsList}/>
   );
 };
 
