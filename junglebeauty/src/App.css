@@ -68,8 +68,12 @@
     color: rgba(25, 223, 58, 0.911) !important;
   }
 
+  .nav-dropdown {
+    
+  }
+
   .dropdown-link {
-    margin: auto;
+    margin: auto !important;
   }
 
 /* Footer */
