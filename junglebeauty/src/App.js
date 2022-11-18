@@ -1,23 +1,20 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Home from './components/pages/Home';
-import Queens from './components/pages/Queens';
-import Kings from './components/pages/Kings';
-import Kittens from './components/pages/Kittens';
-import News from './components/pages/News';
-import FAQ from './components/pages/FAQ';
-import About from './components/pages/About';
-import Contact from './components/pages/Contact';
-import WhyChoose from './components/pages/WhyChoose';
-import BuySellAgreement from './components/pages/BuySellAgreement';
-import Price from './components/pages/Price';
-import PrepareForKitten from './components/pages/PrepareForKitten';
-import Visit from './components/pages/Visit';
-import CatProfile from './components/pages/CatProfile';
+import Home from './pages/Home';
+import Queens from './pages/Queens';
+import Kings from './pages/Kings';
+import Kittens from './pages/Kittens';
+import News from './pages/News';
+import FAQ from './pages/FAQ';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import WhyChoose from './pages/WhyChoose';
+import BuySellAgreement from './pages/BuySellAgreement';
+import Price from './pages/Price';
+import PrepareForKitten from './pages/PrepareForKitten';
+import Visit from './pages/Visit';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import CatList from './components/CatList';
-import { GetCatURL } from './components/Functions';
 import './App.css';
 
 const App = () => {

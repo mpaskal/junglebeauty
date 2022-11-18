@@ -1,7 +1,7 @@
 import { Component, useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
-import CatProfile from './pages/CatProfile';
+import CatProfile from './CatProfile';
 import CatCard from './CatCard';
 import CatList from './CatList';
 import { GetCatFilepath } from './Functions';

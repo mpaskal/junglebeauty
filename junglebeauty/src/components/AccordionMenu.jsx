@@ -7,10 +7,9 @@ const AccordionMenu = ({ items }) => {
   return (
     <Accordion className='accordion' defaultActiveKey='0'>
       {items.map((item) => {
-        console.log(item);
         item_id++;
         return (
-            <Accordion.Item eventKey={item_id}>
+            <Accordion.Item eventKey={item_id} key={item_id}>
                 <Accordion.Header>{item.title}</Accordion.Header>
                 <Accordion.Body>{item.body}</Accordion.Body>
             </Accordion.Item>
