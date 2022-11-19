@@ -1,6 +1,5 @@
 .App {
     color: white;
-    text-align: center;
     background-image: url('../public/assets/jungle-background.png');
     background-attachment: fixed;
     background-size: cover;
@@ -15,16 +14,19 @@
 }
 
 .page-background {
+  text-align: center;
   border-radius: 10pt;
   background-color: rgba(20, 120, 70, 0.8);
   width: 95%;
   padding: 10pt;
   margin: auto;
+  margin-bottom: 20pt;
 }
 
 .page-content {
   margin-top: 30pt;
-  height: 75%;
+  min-height: 75%;
+  max-height: auto;
 }
 
 /* Navigation */
@@ -36,45 +38,45 @@
     z-index: 1;
   }
   
-  .logo-link {
-    height: 100%;
-    display: flex;
-    text-decoration: none;
-  }
+.logo-link {
+  height: 100%;
+  display: flex;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 50pt;
+  width: auto;
+}
+
+.logo-text {
+  font-size: x-large;
+  color: white;
+  font-style: italic;
+  height: auto;
+  line-height: normal;
+  margin-top: 8pt;
+  padding: 5pt;
+}
+
+.nav-link {
+  color: rgb(236, 236, 236) !important;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: rgba(25, 223, 58, 0.911) !important;
+}
+
+.nav-dropdown {
   
-  .logo-img {
-    height: 50pt;
-    width: auto;
-  }
-  
-  .logo-text {
-    font-size: x-large;
-    color: white;
-    font-style: italic;
-    height: auto;
-    line-height: normal;
-    margin-top: 8pt;
-    padding: 5pt;
-  }
+}
 
-  .nav-link {
-    color: rgb(236, 236, 236) !important;
-    padding: 10px 15px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  .nav-link.active {
-    color: rgba(25, 223, 58, 0.911) !important;
-  }
-
-  .nav-dropdown {
-    
-  }
-
-  .dropdown-link {
-    margin: auto !important;
-  }
+.dropdown-link {
+  margin: auto !important;
+}
 
 /* Footer */
 
@@ -116,17 +118,23 @@ a:hover{
 /* Home */
 
 .columns-container {
-    display: flex;
+  display: flex; 
 }
 
 .edge-column {
-    flex: 25%;
-    padding: 15pt;
+  flex: 25%;
+  padding: 15pt;
 }
 
 .centre-column {
-    flex: 50%;
-    padding: 15pt;
+  flex: 50%;
+  padding: 15pt;
+}
+
+.list-container {
+  text-align: left;
+  width: fit-content;
+  margin: auto;
 }
 
 /* Cat Cards */
@@ -146,7 +154,6 @@ a:hover{
 }
 
 .cat-card {
-  border-radius: 50%;
   cursor: pointer;
   color: green;
   background-color: white;
@@ -171,6 +178,27 @@ a:hover{
 /* Accordion Menu */
 
 .accordion {
+  border-radius: 10pt;
   width: 95%;
   margin: auto;
+}
+
+.accordion-button {
+  
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white;
+}
+
+.accordion-header-text {
+  color:green;
+  font-size: large;
+  text-align: center;
+  margin: auto;
+}
+
+.accordion-item {
+  color: white;
+  background-color: rgba(0, 10, 0, 0.75);
 }
