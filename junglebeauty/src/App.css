@@ -112,28 +112,36 @@
 }
 
 a:hover{
-  color: rgba(25, 223, 58, 0.911);
+  color: rgb(25, 223, 58);
 }
 
 /* Home */
 
 .columns-container {
-  display: flex; 
+  display: flex;
+  padding: 15pt;
 }
 
 .edge-column {
-  flex: 25%;
-  padding: 15pt;
+  width: 40%; 
 }
 
 .centre-column {
-  flex: 50%;
-  padding: 15pt;
+  width: auto;
 }
 
 .list-container {
   text-align: left;
   width: fit-content;
+  margin: auto;
+}
+
+.text-link {
+  color: rgb(25, 223, 58);
+}
+
+.side-img {
+  width: 90%;
   margin: auto;
 }
 
@@ -157,6 +165,7 @@ a:hover{
   cursor: pointer;
   color: green;
   background-color: white;
+  text-align: center;
   margin: 10pt;
 }
 
@@ -194,8 +203,6 @@ a:hover{
 .accordion-header-text {
   color:green;
   font-size: large;
-  text-align: center;
-  margin: auto;
 }
 
 .accordion-item {

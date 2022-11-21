@@ -1,21 +1,22 @@
+import { useContext } from 'react';
 import { Accordion, Card, useAccordionButton } from 'react-bootstrap';
+import { ConvertDate } from './Functions';
 import './../App.css';
 
 const AccordionMenu = ({ items }) => {
-  var item_id = -1;
+  var itemID = -1;
 
   return (
     <Accordion className='accordion' defaultActiveKey='0' alwaysOpen flush>
       {items.map((item) => {
-        item_id++;
+        itemID++;
         return (
-            <Card key={item_id}>
-                <Card.Header className='accordion-header'>
-                  
-                  <p className='accordion-header-text'>{item.title}</p>
-                </Card.Header>
-                <Card.Body className='accordion-item'>{item.body}</Card.Body>
-            </Card>
+            <Accordion.Item className='accordion-item' eventKey={itemID}>
+                <Accordion.Header className='accordion-header'>
+                  <p className='accordion-header-text'>{item.date ? ConvertDate(item.date) : ''}: {item.title}</p>
+                </Accordion.Header>
+                <Accordion.Body>{item.body}</Accordion.Body>
+            </Accordion.Item>
         )
       })}
     </Accordion>
