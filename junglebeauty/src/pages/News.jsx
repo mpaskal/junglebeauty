@@ -1,5 +1,5 @@
 import AccordionMenu from '../components/AccordionMenu';
-import NewsList from '../components/NewsList';
+import NewsList from '../lists/NewsList';
 import './../App.css';
 
 const News = () => {

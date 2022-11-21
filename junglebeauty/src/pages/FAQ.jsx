@@ -1,5 +1,5 @@
 import AccordionMenu from '../components/AccordionMenu';
-import QuestionList from '../components/QuestionList';
+import QuestionList from '../lists/QuestionList';
 import './../App.css';
 
 const FAQ = () => {

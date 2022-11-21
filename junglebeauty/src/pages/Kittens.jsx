@@ -1,5 +1,5 @@
 import CatCardCarousel from '../components/CatCardCarousel';
-import CatList from '../components/CatList';
+import CatList from '../lists/CatList';
 import './../App.css';
 
 const Kittens = () => {

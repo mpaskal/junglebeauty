@@ -1,7 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import { Link, NavLink } from "react-router-dom";
 import { GetAllImages, GetCatFilepath, ConvertDate, fileExists } from './Functions';
-import CatList from './CatList';
 import ParentProfile from './ParentProfile';
 import './../App.css';
 

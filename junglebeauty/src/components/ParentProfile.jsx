@@ -1,5 +1,5 @@
 import Carousel from 'react-multi-carousel';
-import CatList from './CatList'
+import CatList from '../lists/CatList'
 import CatCardCarousel from './CatCardCarousel';
 import { GetAllImages, GetCatFilepath, GetCatDescription, fileExists } from './Functions';
 import './../App.css';

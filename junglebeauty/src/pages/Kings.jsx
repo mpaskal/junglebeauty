@@ -2,7 +2,7 @@ import { Component, useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import CatCardCarousel from '../components/CatCardCarousel';
-import CatList from '../components/CatList';
+import CatList from '../lists/CatList';
 import ParentProfile from '../components/ParentProfile';
 import './../App.css';
 
