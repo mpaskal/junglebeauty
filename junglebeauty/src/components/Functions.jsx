@@ -44,11 +44,19 @@ export function GetCatDescription(cat) {
 }
 
 export function ConvertDate(date) {
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  const dateValues = date.split('-');
-  var dateString = `${months[parseInt(dateValues[1], 10) - 1]} ${dateValues[2]}, ${dateValues[0]}`;
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  var dateString = new Date(date).toLocaleDateString('en-us', options);
 
   return dateString;
+}
+
+export function GetReleaseDate(date) {
+  const daysToRelease = 84;
+  var releaseDate = new Date(date);
+
+  releaseDate.setDate(releaseDate.getDate() + daysToRelease);
+
+  return releaseDate;
 }
 
 export function GetAllImages(r) {
