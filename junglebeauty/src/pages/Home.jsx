@@ -1,22 +1,53 @@
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { GetCatFilepath } from '../components/Functions';
+import CatList from '../lists/CatList';
+import CatCard from '../components/CatCard';
 import './../App.css';
 
 const Home = () => {
     return (
         <div className='page-background'>
             <h1>Hello! We are happy to welcome you to our website!</h1>
-            <p>Do you want to have a small and tame leopard at home? You have come to the right place. Welcome to our Junglebeauty Cattery of Bengals. Our cattery is registered in the international felinology system: TICA and certified as a trusted breeder by Bengal Cat Club. Also, we are an official partner of Royal Canin. Our Cattery is located in Kitchener, Ontario, Canada.</p>
+            <p>
+                Do you want to have a small and tame leopard at home? You have come to the right place. Welcome to our Junglebeauty Cattery of Bengals. Our cattery is registered in the international felinology system: TICA and certified as a trusted breeder by Bengal Cat Club. Also, we are an official partner of Royal Canin. Our Cattery is located in Kitchener, Ontario, Canada.
+            </p>
 
-            <div className='columns-container'>
-                <div className='edge-column'>
-                    <p>Our best offers! Please note: we match the price for these kittens! It means if you see the TICA kitten of the same quality, offered with the same options and benefits - we will make our price the same for you!</p>
-                </div>
-                <div className='centre-column'>
-                    <p>Here you can buy a Bengal kitten, outwardly similar to a wild inhabitant of the jungle and savannah, but affectionate and tame, like all domestic cats.</p>
-                </div>
-                <div className='edge-column'>
+            <Row className='columns-container'>
+                <Col sm={3}>
+                    <p>
+                        Our best offers! <b>Please note:</b> we match the price for these kittens! It means if you see the TICA kitten of the same quality, offered with the same options and benefits - we will make our price the same for you!
+                    </p>
+                    {CatList.filter(cat => cat.type == 'kitten' && cat.status == 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
+                        return (
+                            <Link to='/kittens' state={cat.id}>
+                                <CatCard cat={cat}/>
+                            </Link>
+                        )
+                    })}
+                </Col>
+                <Col sm={6}>
+                    <p>
+                        Here you can buy a Bengal kitten, outwardly similar to a wild inhabitant of the jungle and savannah, but affectionate and tame, like all domestic cats.
+                    </p><p>
+                        The Junglebeauty Cattery has been breeding Bengal cats since 2018. We have Bengal kittens of both rare and traditional colors. All of them are active, affectionate, friendly with each other and cuddly with people. Our kittens grow up in love, and from an early age, they know how to respond to affection. Of course, the characters of Bengal kittens are different, but in general, they are human-oriented, sociable, and very smart.
+                    </p><p>
+                        If you decide to let a small tame leopard into your house, which will fill it with fun and love, you must understand that you have a huge responsibility. Since we are responsible for those, we have tamed. It is essential for us where our kittens move!
+                    </p><p>
+                        All our kittens are purebred, healthy and socialized, brought up in love and affection.
+                    </p><p>
+                        We will be in touch with you before and after you take your furriend home. Please be advised that not only you choose a kitten in our Cattery, but we are also interested in making our graduates happy. After all, you get not a toy but a living organism that requires care and love.
+                    </p><p>
+                        Do you want to find a healthy, joyful and great companion at your home? Then welcome to us.
+                    </p>
+                    <Link className='text-link' to='why-choose-junglebeauty'>
+                        <h3>So, why buy a Bengal Kitten from Junglebeauty Cattery?</h3>
+                    </Link>
+                </Col>
+                <Col sm={3}>
                     <p>Best videos of Junglebeauty Bengals Cattery!</p>
-                </div>
-            </div>
+                </Col>
+            </Row>
         </div>
     );
 }
