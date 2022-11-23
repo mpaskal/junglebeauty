@@ -19,19 +19,19 @@ const Queens = () => {
   }
   
   return (
-      <>
-        <div className='page-background'>
-          <h2>Queens of JungleBeauty, TICA and CCA registered!</h2>
-        </div>
-        <CatCardCarousel cats={CatList.filter(cat => cat.type == 'queen')}/>
-        
-        <Modal show={show} onHide={handleClose} size='lg'>
-          <Modal.Header closeButton/>
-          <Modal.Body>
-              <ParentProfile cat={CatList.find(cat => cat.name == motherName)}/>
-          </Modal.Body>
-        </Modal>
-      </>
+    <>
+      <div className='page-background'>
+        <h2>Queens of JungleBeauty, TICA and CCA registered!</h2>
+      </div>
+      <CatCardCarousel cats={CatList.filter(cat => cat.type == 'queen')}/>
+      
+      <Modal show={show} onHide={handleClose} size='lg'>
+        <Modal.Header closeButton/>
+        <Modal.Body>
+            <ParentProfile cat={CatList.find(cat => cat.name == motherName)}/>
+        </Modal.Body>
+      </Modal>
+    </>
     );
   };
 
