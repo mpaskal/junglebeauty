@@ -1,11 +1,12 @@
+import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './../App.css';
 
 const WhyChoose = () => {
     return (
       <div className='page-background'>
-          <div className='columns-container'>
-              <div className='centre-column'>
+          <Row className='columns-container'>
+              <Col>
                 <h1>Choice making - why JungleBeauty Bengal Cattery?</h1>
                 <h3>There are many good reasons!</h3>
                 <br/>
@@ -45,8 +46,8 @@ const WhyChoose = () => {
                 </p><p>
                   We know the breed and want only the best for Kitten and you.
                 </p>
-              </div>
-              <div className='edge-column'>
+              </Col>
+              <Col sm={3}>
                 <Link className='text-link' to='/kittens'>
                   <img className='side-img' src={'/assets/kittens/graduated.png'}/>
                   <p>See available kittens</p>
@@ -63,8 +64,8 @@ const WhyChoose = () => {
                 </p><p>
                   From then on, the kitten is reserved for you!
                 </p>
-              </div>
-          </div>
+              </Col>
+          </Row>
         </div>
     );
   };
