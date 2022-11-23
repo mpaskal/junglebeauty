@@ -1,6 +1,5 @@
 .App {
     color: white;
-    text-align: center;
     background-image: url('../public/assets/jungle-background.png');
     background-attachment: fixed;
     background-size: cover;
@@ -15,8 +14,9 @@
 }
 
 .page-background {
+  text-align: center;
   border-radius: 10pt;
-  background-color: rgba(20, 120, 70, 0.8);
+  background-color: rgba(26, 133, 79, 0.85);
   width: 95%;
   padding: 10pt;
   margin: auto;
@@ -24,7 +24,13 @@
 
 .page-content {
   margin-top: 30pt;
-  height: 75%;
+  margin-bottom: 20pt;
+  min-height: 75%;
+  max-height: auto;
+}
+
+a {
+  color: rgb(25, 223, 58);
 }
 
 /* Navigation */
@@ -36,41 +42,45 @@
     z-index: 1;
   }
   
-  .logo-link {
-    height: 100%;
-    display: flex;
-    text-decoration: none;
-  }
+.logo-link {
+  height: 100%;
+  display: flex;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 50pt;
+  width: auto;
+}
+
+.logo-text {
+  font-size: x-large;
+  color: white;
+  font-style: italic;
+  height: auto;
+  line-height: normal;
+  margin-top: 8pt;
+  padding: 5pt;
+}
+
+.nav-link {
+  color: rgb(236, 236, 236) !important;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: rgba(25, 223, 58, 0.911) !important;
+}
+
+.nav-dropdown {
   
-  .logo-img {
-    height: 50pt;
-    width: auto;
-  }
-  
-  .logo-text {
-    font-size: x-large;
-    color: white;
-    font-style: italic;
-    height: auto;
-    line-height: normal;
-    margin-top: 8pt;
-    padding: 5pt;
-  }
+}
 
-  .nav-link {
-    color: rgb(236, 236, 236) !important;
-    padding: 10px 15px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  .nav-link.active {
-    color: rgba(25, 223, 58, 0.911) !important;
-  }
-
-  .dropdown-link {
-    margin: auto;
-  }
+.dropdown-link {
+  margin: auto !important;
+}
 
 /* Footer */
 
@@ -106,23 +116,52 @@
 }
 
 a:hover{
-  color: rgba(25, 223, 58, 0.911);
+  color: rgb(25, 223, 58);
 }
 
 /* Home */
 
 .columns-container {
-    display: flex;
+  display: flex;
+  padding: 15pt;
 }
 
 .edge-column {
-    flex: 25%;
-    padding: 15pt;
+  width: 40%; 
 }
 
 .centre-column {
-    flex: 50%;
-    padding: 15pt;
+  width: auto;
+}
+
+.list-container {
+  text-align: left;
+  width: fit-content;
+  max-width: 60%;
+  margin: auto;
+}
+
+.item-container {
+  display: flex;
+  padding: 10pt;
+}
+
+.side-img {
+  border-radius: 10pt;
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+}
+
+.centre-img {
+  border-radius: 10pt;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-left: 10%;
 }
 
 /* Cat Cards */
@@ -139,14 +178,16 @@ a:hover{
 .card-container {
   border-radius: 10pt;
   width: 95%;
+  margin: auto;
 }
 
 .cat-card {
-  border-radius: 50%;
+  border-radius: 10pt;
   cursor: pointer;
   color: green;
   background-color: white;
-  margin: 10pt;
+  text-align: center;
+  width: 90%;
 }
 
 .cat-img {
@@ -162,4 +203,30 @@ a:hover{
 
 .cat-modal {
   width: 90%;
+}
+
+/* Accordion Menu */
+
+.accordion {
+  border-radius: 10pt;
+  width: 95%;
+  margin: auto;
+}
+
+.accordion-button {
+  
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white;
+}
+
+.accordion-header-text {
+  color:green;
+  font-size: large;
+}
+
+.accordion-item {
+  color: white;
+  background-color: rgba(0, 10, 0, 0.75);
 }

@@ -24,7 +24,7 @@ const Navigation = () => {
                         <NavLink className='nav-link' to='/faq'>FAQ</NavLink>
                         <NavLink className='nav-link' to='/about-us'>About</NavLink>
                         <NavLink className='nav-link' to='/contact'>Contact</NavLink>
-                        <NavDropdown title='How to buy'>
+                        <NavDropdown className='nav-dropdown' variant='dark' title='How to buy'>
                             <NavLink className='dropdown-link' to='/why-choose-junglebeauty'>Why choose JungleBeauty</NavLink>
                             <NavDropdown.Divider/>
                             <NavLink className='dropdown-link' to='/buy-sell-agreement'>Buy-Sell Agreement</NavLink>

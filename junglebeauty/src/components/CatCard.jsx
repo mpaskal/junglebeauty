@@ -1,6 +1,6 @@
 import { Component, useState } from 'react';
 import { Image, Card, Modal, Carousel, CarouselItem } from 'react-bootstrap';
-import CatProfile from './pages/CatProfile';
+import CatProfile from './KittenProfile';
 import ParentProfile from './ParentProfile';
 import { GetCatURL, GetCatFilepath, GetCatDescription, ConvertDate } from './Functions';
 import './../App.css';
