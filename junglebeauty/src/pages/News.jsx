@@ -4,7 +4,7 @@ import './../App.css';
 
 const News = () => {
   return (
-    <AccordionMenu items={NewsList}/>
+    <AccordionMenu items={NewsList.sort((a, b) => a.date > b.date ? -1 : 1)}/>
   );
 };
 
