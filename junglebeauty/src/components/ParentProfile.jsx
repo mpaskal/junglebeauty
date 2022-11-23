@@ -1,4 +1,5 @@
 import Carousel from 'react-multi-carousel';
+import { Accordion } from 'react-bootstrap';
 import CatList from '../lists/CatList'
 import CatCardCarousel from './CatCardCarousel';
 import { GetAllImages, GetCatFilepath, GetCatDescription, fileExists } from './Functions';
@@ -11,12 +12,17 @@ const ParentProfile= ( {cat} ) => {
 
     var description = GetCatDescription(cat);
     var kittens;
+    var availableKittens;
+    var graduatedKittens;
 
     if (sex == 'male') {
-        kittens = CatList.filter(child => child.father == name)
+        kittens = CatList.filter(kitten => kitten.father == name)
     } else {
-        kittens = CatList.filter(child => child.mother == name)
+        kittens = CatList.filter(kitten => kitten.mother == name)
     }
+
+    availableKittens = kittens.filter(kitten => kitten.status = 'available');
+    graduatedKittens = kittens.filter(kitten => kitten.status = 'graduated');
 
     //const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
     
@@ -75,19 +81,38 @@ const ParentProfile= ( {cat} ) => {
                 })}
             </Carousel>
 
-            {kittens.length > 0
-                ?
-                    <>
-                        <div>
-                            <h2>{name}'s kittens:</h2>
-                        </div>
-                        <CatCardCarousel cats={kittens}/>
-                    </>
-                :
-                <div>
-                    <h4>{name} has not had kittens yet.</h4>
-                </div>
-            }
+            <Accordion className='accordion' defaultActiveKey='0' alwaysOpen>
+                {availableKittens.length > 0
+                    ?
+                        <Accordion.Item className='accordion-item' eventKey='0'>
+                            <Accordion.Header className='accordion-header'>
+                                {name}'s available kittens:
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                <div>
+                                    <CatCardCarousel cats={availableKittens}/>
+                                </div>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    :
+                    ''
+                }
+                {graduatedKittens.length > 0
+                    ?
+                        <Accordion.Item className='accordion-item' eventKey='1'>
+                            <Accordion.Header className='accordion-header'>
+                                {name}'s graduated kittens:
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                <CatCardCarousel cats={graduatedKittens}/>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    :
+                    ''
+                }
+              
+                
+            </Accordion>
         </div>
     );
 }
