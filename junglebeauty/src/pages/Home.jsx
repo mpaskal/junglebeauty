@@ -18,13 +18,15 @@ const Home = () => {
                     <p>
                         Our best offers! <b>Please note:</b> we match the price for these kittens! It means if you see the TICA kitten of the same quality, offered with the same options and benefits - we will make our price the same for you!
                     </p>
-                    {CatList.filter(cat => cat.type == 'kitten' && cat.status == 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
-                        return (
-                            <Link to='/kittens' state={cat.id}>
-                                <CatCard cat={cat}/>
-                            </Link>
-                        )
-                    })}
+                    <div className='cat-card-column'>
+                        {CatList.filter(cat => cat.type == 'kitten' && cat.status == 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
+                            return (
+                                <Link to='/kittens' state={cat.id}>
+                                    <CatCard cat={cat}/>
+                                </Link>
+                            )
+                        })}
+                    </div>
                 </Col>
                 <Col sm={6}>
                     <p>
