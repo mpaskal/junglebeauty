@@ -1,3 +1,6 @@
+import CatList from "./CatList";
+import { GetReleaseDate } from "../components/Functions";
+
 const NewsList = [
     {
         title: 'Litter of Lolita',
@@ -6,25 +9,27 @@ const NewsList = [
                 <p>
                 Four kittens are available for reservation.
                 </p><p>
-                Release: ready to go from December 30. They are the best New Year gifts!
+                They are the best New Year gifts!
                 </p><p>
                 King: Julius, Queen: Lolita.
                 </p>
             </>,
-        date: '2022-10-07'
+        date: '2022-10-07',
+        type: 'litter'
     }, {
         title: 'Litter of Bora',
         body: 
             <>
                 <p>
-                Four kittens are available for reservation
+                Four kittens are available for reservation.
                 </p><p>
-                Release: ready to go from December 22. They are the best Christmas gifts!
+                They are the best Christmas gifts!
                 </p><p>
                 King: Merlin, Queen: Bora.
                 </p>
             </>,
-        date: '2022-09-29'
+        date: '2022-09-29',
+        type: 'litter'
     }, {
         title: 'Litter of Elizabeth',
         body: 
@@ -32,30 +37,47 @@ const NewsList = [
                 <p>
                 Four kittens available for reservation.
                 </p><p>
-                Release: ready to go from December 21. They are the best Christmas gifts!
+                They are the best Christmas gifts!
                 </p><p>
                 King: Churchil, Queen: Elizabeth.
                 </p>
             </>,
-        date: '2022-09-28'
+        date: '2022-09-28',
+        type: 'litter'
     }, {
         title: 'Litter of Eleanor',
         body:
             <>
                 <p>
-                King: Merlin, Queen: Eleanor
+                Four kittens are available for reservation.
+                </p><p>
+                King: Merlin, Queen: Eleanore.
                 </p>
             </>,
-        date: '2022-08-16'
+        date: '2022-08-16',
+        type: 'litter'
     }, {
         title: 'Litter of Cleo',
         body:
             <>
                 <p>
                 One boy is available for reservation.
+                </p><p>
+                King: Merlin, Queen: Eleanore.
                 </p>
             </>,
-        date: '2022-07-24'
+        date: '2022-07-24',
+        type: 'litter'
+    }, {
+        title: '',
+        body:
+            <>
+                <p>
+    King: Churchil, Queen: Lita.
+                </p>
+            </>,
+        date: '',
+        type: 'litter'
     }, {
         title: '',
         body:
@@ -64,7 +86,8 @@ const NewsList = [
 
                 </p>
             </>,
-        date: ''
+        date: '',
+        type: 'litter'
     }, {
         title: '',
         body:
@@ -73,7 +96,8 @@ const NewsList = [
 
                 </p>
             </>,
-            date: ''
+        date: '',
+        type: 'litter'
     }, {
         title: '',
         body:
@@ -82,7 +106,8 @@ const NewsList = [
 
                 </p>
             </>,
-        date: ''
+        date: '',
+        type: 'litter'
     }, {
         title: '',
         body:
@@ -91,7 +116,8 @@ const NewsList = [
 
                 </p>
             </>,
-        date: ''
+        date: '',
+        type: 'litter'
     }, {
         title: '',
         body:
@@ -100,7 +126,8 @@ const NewsList = [
 
                 </p>
             </>,
-        date: ''
+        date: '',
+        type: 'litter'
     }, {
         title: '',
         body:
@@ -109,7 +136,8 @@ const NewsList = [
 
                 </p>
             </>,
-        date: ''
+        date: '',
+        type: 'litter'
     }, {
         title: '',
         body:
@@ -118,16 +146,8 @@ const NewsList = [
 
                 </p>
             </>,
-        date: ''
-    }, {
-        title: '',
-        body:
-            <>
-                <p>
-
-                </p>
-            </>,
-        date: ''
+        date: '',
+        type: 'litter'
     }
 
     /*
