@@ -76,7 +76,7 @@ const ParentProfile= ( {cat} ) => {
             >
                 {images.map((image) => {
                     return (
-                        <img className='cat-img' key={image} src={image}/>
+                        <img className='cat-img' key={image} src={image} alt={name}/>
                     )
                 })}
             </Carousel>

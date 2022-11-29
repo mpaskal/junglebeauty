@@ -171,6 +171,10 @@ a:hover{
   margin-left: 10%;
 }
 
+.video-frame {
+  width: 95%;
+}
+
 /* Cat Cards */
 
 .cat-card-carousel {

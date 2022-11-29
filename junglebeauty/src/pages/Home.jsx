@@ -2,7 +2,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { GetCatFilepath } from '../components/Functions';
 import CatList from '../lists/CatList';
+import VideoList from '../lists/VideoList';
 import CatCard from '../components/CatCard';
+import VideoFrame from '../components/VideoFrame';
 import './../App.css';
 
 const Home = () => {
@@ -47,7 +49,19 @@ const Home = () => {
                     </Link>
                 </Col>
                 <Col sm={3}>
-                    <p>Best videos of Junglebeauty Bengals Cattery!</p>
+                    <p>
+                        Best videos of Junglebeauty Bengals Cattery!
+                    </p>
+                    <div className='video-column'>
+                        {VideoList.slice(0, 5).map((video) => {
+                            return (
+                                <>
+                                    <VideoFrame id={video.id}/>
+                                    <p>{video.desc}</p>
+                                </>
+                            )
+                        })}
+                    </div>
                 </Col>
             </Row>
         </div>
