@@ -74,12 +74,17 @@ a {
   color: rgba(25, 223, 58, 0.911) !important;
 }
 
-.nav-dropdown {
-  
+.dropdown-links-container {
+  color: rgb(236, 236, 236);
+  text-align: center;
 }
 
 .dropdown-link {
-  margin: auto !important;
+  color: rgb(236, 236, 236);
+}
+
+.dropdown-menu {
+  background-color: rgba(0, 10, 0, 0.75) !important;
 }
 
 /* Footer */

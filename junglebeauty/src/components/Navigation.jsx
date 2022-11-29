@@ -25,15 +25,17 @@ const Navigation = () => {
                         <NavLink className='nav-link' to='/about-us'>About</NavLink>
                         <NavLink className='nav-link' to='/contact'>Contact</NavLink>
                         <NavDropdown className='nav-dropdown' variant='dark' title='How to buy'>
-                            <NavLink className='dropdown-link' to='/why-choose-junglebeauty'>Why choose JungleBeauty</NavLink>
-                            <NavDropdown.Divider/>
-                            <NavLink className='dropdown-link' to='/buy-sell-agreement'>Buy-Sell Agreement</NavLink>
-                            <NavDropdown.Divider/>
-                            <NavLink className='dropdown-link' to='/price'>Price</NavLink>
-                            <NavDropdown.Divider/>
-                            <NavLink className='dropdown-link' to='/preparing-for-coming-kitten'>How to be ready for coming kitten</NavLink>
-                            <NavDropdown.Divider/>
-                            <NavLink className='dropdown-link' to='/visit-junglebeauty'>How to visit JungleBeauty</NavLink>
+                            <div className='dropdown-links-container'>
+                                <NavLink className='dropdown-link' to='/why-choose-junglebeauty'>Why choose JungleBeauty</NavLink>
+                                <NavDropdown.Divider/>
+                                <NavLink className='dropdown-link' to='/buy-sell-agreement'>Buy-Sell Agreement</NavLink>
+                                <NavDropdown.Divider/>
+                                <NavLink className='dropdown-link' to='/price'>Price</NavLink>
+                                <NavDropdown.Divider/>
+                                <NavLink className='dropdown-link' to='/preparing-for-coming-kitten'>How to be ready for coming kitten</NavLink>
+                                <NavDropdown.Divider/>
+                                <NavLink className='dropdown-link' to='/visit-junglebeauty'>How to visit JungleBeauty</NavLink>
+                            </div>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
