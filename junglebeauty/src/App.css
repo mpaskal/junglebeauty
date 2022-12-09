@@ -20,11 +20,11 @@
   width: 95%;
   padding: 10pt;
   margin: auto;
+  margin-top: 30pt;
+  margin-bottom: 20pt;
 }
 
 .page-content {
-  margin-top: 30pt;
-  margin-bottom: 20pt;
   min-height: 75%;
   max-height: auto;
 }
@@ -74,12 +74,17 @@ a {
   color: rgba(25, 223, 58, 0.911) !important;
 }
 
-.nav-dropdown {
-  
+.dropdown-links-container {
+  color: rgb(236, 236, 236);
+  text-align: center;
 }
 
 .dropdown-link {
-  margin: auto !important;
+  color: rgb(236, 236, 236);
+}
+
+.dropdown-menu {
+  background-color: rgba(0, 10, 0, 0.75) !important;
 }
 
 /* Footer */
@@ -126,8 +131,10 @@ a:hover{
   padding: 15pt;
 }
 
-.edge-column {
-  width: 40%; 
+.cat-card-column {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 10pt;
 }
 
 .centre-column {
@@ -162,6 +169,10 @@ a:hover{
   height: auto;
   object-fit: contain;
   margin-left: 10%;
+}
+
+.video-frame {
+  width: 95%;
 }
 
 /* Cat Cards */
@@ -211,6 +222,8 @@ a:hover{
   border-radius: 10pt;
   width: 95%;
   margin: auto;
+  margin-top: 30pt;
+  margin-bottom: 20pt;
 }
 
 .accordion-button {

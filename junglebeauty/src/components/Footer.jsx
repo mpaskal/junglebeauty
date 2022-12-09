@@ -25,7 +25,7 @@ const Footer = () => {
                 <small>JungleBeautyBengals. Copyright © {new Date().getFullYear()}</small>
             </div>
         </div>
-    )
+    );
 }
 
 export default Footer;

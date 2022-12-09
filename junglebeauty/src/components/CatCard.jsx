@@ -28,7 +28,7 @@ const CatCard = ({ cat }) => {
     return (
         <>
             <div className='cat-card' onClick={handleShow}>
-                <img className='cat-img' src={GetCatFilepath(cat) + '0.png'}/>
+                <img className='cat-img' src={GetCatFilepath(cat) + '0.png'} alt={displayName}/>
                 <div className='cat-text'>
                     <h3>{displayName}</h3>
                     <p>{description}</p>
@@ -45,7 +45,7 @@ const CatCard = ({ cat }) => {
                 </Modal.Body>
             </Modal>
         </>
-    )
+    );
 }
 
 export default CatCard;
