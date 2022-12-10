@@ -29,6 +29,16 @@
   max-height: auto;
 }
 
+.paragraph-variant {
+  text-align: left;
+  width: fit-content;
+  margin: auto;
+}
+
+.paragraph-variant-heading {
+  text-align: center;
+}
+
 a {
   color: rgb(25, 223, 58);
 }
