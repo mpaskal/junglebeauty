@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { collection, query, getDocs } from 'firebase/firestore';
+import { collection, query, getDocs, addDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 
 export function QueryCats(table, predicate) {
@@ -15,36 +15,36 @@ export function QueryCats(table, predicate) {
                 }))
                 setCats(fetchedData);
             })
-    }
+    };
 
     useEffect(()=>{
         fetchCats();
-    }, [])
+    }, []);
 
-/*
-    querySnapshot.forEach((doc) => {
-        if (table == 'kittens') {
-            attributes.name = doc.collar + ' collar';
-            if (doc.sex == 'male') {
-                attributes.name += ' boy';
-            } else {
-                attributes.name += ' girl';
-            }
-        } else {
-            attributes.name = doc.id;
-        }
-        attributes.colour = doc.colour;
-        console.log('look:');
-        console.log(doc.id);
-        console.log(doc.colour);
-        attributes.date = doc.date;
-        attributes.adj = doc.adj;
-        attributes.sex = doc.sex;
-        attributes.father = doc.father;
-        attributes.mother = doc.mother;
-        cats.push(attributes);
-    });
-    */
+    console.log('????');
+    console.log(cats);
 
     return cats;
+}
+
+export function InsertCat(table, cat) {
+    const { name, colour, sex, adj, date, cattery, location, mother, father } = cat;
+
+    const addCat = async () => {
+        await addDoc(collection(db, table), {
+            name: name,
+            colour: colour,
+            sex: sex,
+            adj: adj,
+            date: date,
+            cattery: cattery,
+            location: location,
+            mother: mother,
+            father: father
+       })
+    };
+
+    useEffect(()=>{
+        addCat();
+    }, []);
 }
