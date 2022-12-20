@@ -161,7 +161,6 @@ const CatList = [
         date: '2022-06-25',
         father: 'Churchil',
         mother: 'Lita',
-        release: 'October 20 - October 31',
     }, {
         id: 19,
         name: 'Yellow',
@@ -173,7 +172,6 @@ const CatList = [
         date: '2022-06-25',
         father: 'Churchil',
         mother: 'Lita',
-        release: 'October 20 - October 31',
     }, {
         id: 20,
         name: 'Gold',
@@ -184,7 +182,6 @@ const CatList = [
         date: '2022-07-24',
         father: 'Churchil',
         mother: 'Cleo',
-        release: 'October 16 - November 8',
     }, {
         id: 21,
         name: 'Yellow',
@@ -196,7 +193,6 @@ const CatList = [
         date: '2022-08-16',
         father: 'Merlin',
         mother: 'Eleonore',
-        release: 'November 8 - November 25',
     }, {
         id: 22,
         name: 'White',
@@ -207,7 +203,6 @@ const CatList = [
         date: '2022-08-16',
         father: 'Merlin',
         mother: 'Eleonore',
-        status: 'November 8 - November 25',
     }, {
         id: 23,
         name: 'Orange',
@@ -219,7 +214,6 @@ const CatList = [
         date: '2022-08-16',
         father: 'Merlin',
         mother: 'Eleonore',
-        status: 'November 8 - November 25',
     }, {
         id: 24,
         name: 'Purple',
@@ -231,7 +225,6 @@ const CatList = [
         date: '2022-06-19',
         father: 'Merlin',
         mother: 'Charmy',
-        status: 'November 8 - November 25',
     }, {
         id: 25,
         name: 'Red',

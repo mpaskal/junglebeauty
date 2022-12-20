@@ -1,6 +1,7 @@
 import { Component, useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import { QueryCats } from '../components/DBFunctions';
 import CatCardCarousel from '../components/CatCardCarousel';
 import CatList from '../lists/CatList';
 import ParentProfile from '../components/ParentProfile';
@@ -11,7 +12,13 @@ const Kings = () => {
   const [show, setShow] = useState(location.state ? true : false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);  
+  const cats = QueryCats('kings');
   var fatherName = 'null';
+
+
+
+  
+  console.log(cats);
 
   if (location.state) {
     fatherName = location.state;

@@ -2,9 +2,9 @@ const VideoFrame = ({ id }) => {
     return (
         <iframe className='video-frame'
         src={'https://www.youtube.com/embed/' + id}
-        frameborder='0'
+        frameBorder='0'
         allow='autoplay; encrypted-media'
-        allowfullscreen
+        allowFullScreen
         title='video'
         />
     );
