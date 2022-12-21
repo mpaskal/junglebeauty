@@ -28,20 +28,23 @@ export function QueryCats(table, predicate) {
 }
 
 export function InsertCat(table, cat) {
-    const { name, colour, sex, adj, date, cattery, location, mother, father } = cat;
+    const { name, collar, colour, sex, adj, date, cattery, location, mother, father } = cat;
+    var fields = {};
+
+    if (!name) {
+        name = collar;
+    }
+
+    Object.keys(cat).map((key) => {
+        fields.key = cat[key];
+    });
+
+    console.log(fields);
 
     const addCat = async () => {
         await addDoc(collection(db, table), {
-            name: name,
-            colour: colour,
-            sex: sex,
-            adj: adj,
-            date: date,
-            cattery: cattery,
-            location: location,
-            mother: mother,
-            father: father
-       })
+            name: name
+        })
     };
 
     useEffect(()=>{
