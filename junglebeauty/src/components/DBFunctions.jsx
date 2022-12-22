@@ -14,17 +14,14 @@ export function QueryCats(table, predicate) {
                     ...doc.data(), id:doc.id
                 }))
                 setCats(fetchedData);
-            })
+            }).then((cats) => {
+                return cats;
+            });
     };
 
     useEffect(()=>{
         fetchCats();
     }, []);
-
-    console.log('????');
-    console.log(cats);
-
-    return cats;
 }
 
 export function InsertCat(table, cat) {

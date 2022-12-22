@@ -1,3 +1,4 @@
+import React from 'react';
 import { Component, useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
@@ -11,11 +12,26 @@ const Kings = () => {
   const location = useLocation();
   //const [cats, setCats] = useState([]);
   const [show, setShow] = useState(location.state ? true : false);
-  const cats = QueryCats('kings');
   //const getCats = () => setCats(QueryCats('kings'));
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);  
   var fatherName = 'null';
+  const cats = QueryCats('kings');
+
+/*
+  useEffect(() => {
+    const loadCats = async () => {
+      try {
+        const cats = await QueryCats('kings');
+        setCats(cats);
+      } catch(error) {
+      console.error();
+     }
+    };
+
+    loadCats();
+  }, [])
+  */
 
   console.log(cats);
 
@@ -24,7 +40,7 @@ const Kings = () => {
     window.history.replaceState({}, document.title);
   }
 
-  CatList.filter(cat => cat.type == 'king' || cat.type == 'queen').map((cat) => InsertCat('parents', cat));
+  //CatList.filter(cat => cat.type == 'king' || cat.type == 'queen').map((cat) => InsertCat('parents', cat));
   
   return (
     <>
