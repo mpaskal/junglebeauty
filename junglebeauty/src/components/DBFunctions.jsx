@@ -14,34 +14,34 @@ export function QueryCats(table, predicate) {
                     ...doc.data(), id:doc.id
                 }))
                 setCats(fetchedData);
-            })
+            }).then((cats) => {
+                return cats;
+            });
     };
 
     useEffect(()=>{
         fetchCats();
     }, []);
-
-    console.log('????');
-    console.log(cats);
-
-    return cats;
 }
 
 export function InsertCat(table, cat) {
-    const { name, colour, sex, adj, date, cattery, location, mother, father } = cat;
+    const { name, collar, colour, sex, adj, date, cattery, location, mother, father } = cat;
+    var fields = {};
+
+    if (!name) {
+        name = collar;
+    }
+
+    Object.keys(cat).map((key) => {
+        fields.key = cat[key];
+    });
+
+    console.log(fields);
 
     const addCat = async () => {
         await addDoc(collection(db, table), {
-            name: name,
-            colour: colour,
-            sex: sex,
-            adj: adj,
-            date: date,
-            cattery: cattery,
-            location: location,
-            mother: mother,
-            father: father
-       })
+            name: name
+        })
     };
 
     useEffect(()=>{
