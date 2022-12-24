@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { collection, query, getDocs, addDoc } from 'firebase/firestore';
+import { collection, doc, query, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 
 export function QueryCats(table, predicate) {
@@ -26,22 +26,22 @@ export function QueryCats(table, predicate) {
 
 export function InsertCat(table, cat) {
     const { name, collar, colour, sex, adj, date, cattery, location, mother, father } = cat;
-    var fields = {};
+    var id = name;
 
-    if (!name) {
-        name = collar;
+    if (date) {
+        id = id + '.' + date;
     }
 
-    Object.keys(cat).map((key) => {
-        fields.key = cat[key];
-    });
-
-    console.log(fields);
-
     const addCat = async () => {
-        await addDoc(collection(db, table), {
-            name: name
-        })
+        const docRef = doc(db, table, id);
+
+        await setDoc(docRef, {});
+    
+        Object.keys(cat).map(async (key) => {
+            await updateDoc(docRef, {
+                [key]: cat[key]
+            })
+        });
     };
 
     useEffect(()=>{

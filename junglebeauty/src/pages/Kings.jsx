@@ -40,7 +40,7 @@ const Kings = () => {
     window.history.replaceState({}, document.title);
   }
 
-  //CatList.filter(cat => cat.type == 'king' || cat.type == 'queen').map((cat) => InsertCat('parents', cat));
+  //CatList.filter(cat => cat.type == 'kitten').map((cat) => InsertCat('kittens', cat));
   
   return (
     <>
