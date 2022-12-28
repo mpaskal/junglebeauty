@@ -18,22 +18,16 @@ const Kings = () => {
   var fatherName = 'null';
   const cats = QueryCats('kings');
 
-/*
+  /*
   useEffect(() => {
-    const loadCats = async () => {
-      try {
-        const cats = await QueryCats('kings');
-        setCats(cats);
-      } catch(error) {
-      console.error();
-     }
+    async function getCats() {
+      const queriedCats = await QueryCats('kings');
+      setCats(queriedCats);
     };
 
-    loadCats();
+    getCats();
   }, [])
   */
-
-  console.log(cats);
 
   if (location.state) {
     fatherName = location.state;
