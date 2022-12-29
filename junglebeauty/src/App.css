@@ -13,6 +13,8 @@
     height: 100vh;
 }
 
+/* Basic pages */
+
 .page-background {
   text-align: center;
   border-radius: 10pt;
@@ -41,6 +43,57 @@
 
 a {
   color: rgb(25, 223, 58);
+}
+
+/* Page components */
+
+.columns-container {
+  display: flex;
+  padding: 15pt;
+}
+
+.cat-card-column {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 10pt;
+}
+
+.centre-column {
+  width: auto;
+}
+
+.list-container {
+  text-align: left;
+  width: fit-content;
+  max-width: 60%;
+  margin: auto;
+}
+
+.item-container {
+  display: flex;
+  padding: 10pt;
+}
+
+.side-img {
+  border-radius: 10pt;
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+}
+
+.centre-img {
+  border-radius: 10pt;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-left: 10%;
+}
+
+.video-frame {
+  width: 95%;
 }
 
 /* Navigation */
@@ -134,57 +187,6 @@ a:hover{
   color: rgb(25, 223, 58);
 }
 
-/* Home */
-
-.columns-container {
-  display: flex;
-  padding: 15pt;
-}
-
-.cat-card-column {
-  width: fit-content;
-  margin: auto;
-  margin-bottom: 10pt;
-}
-
-.centre-column {
-  width: auto;
-}
-
-.list-container {
-  text-align: left;
-  width: fit-content;
-  max-width: 60%;
-  margin: auto;
-}
-
-.item-container {
-  display: flex;
-  padding: 10pt;
-}
-
-.side-img {
-  border-radius: 10pt;
-  display: block;
-  max-width: 90%;
-  height: auto;
-  margin: auto;
-  object-fit: contain;
-}
-
-.centre-img {
-  border-radius: 10pt;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin-left: 10%;
-}
-
-.video-frame {
-  width: 95%;
-}
-
 /* Cat Cards */
 
 .cat-card-carousel {
@@ -200,6 +202,7 @@ a:hover{
   border-radius: 10pt;
   width: 95%;
   margin: auto;
+  margin-bottom: 10pt;
 }
 
 .cat-card {
@@ -234,10 +237,6 @@ a:hover{
   margin: auto;
   margin-top: 30pt;
   margin-bottom: 20pt;
-}
-
-.accordion-button {
-  
 }
 
 .accordion-button:not(.collapsed) {
