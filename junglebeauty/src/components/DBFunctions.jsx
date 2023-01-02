@@ -15,6 +15,7 @@ export function QueryCats(table, predicate) {
                 }))
                 setCats(fetchedData);
             }).then((cats) => {
+                console.log(cats);
                 return cats;
             });
     };

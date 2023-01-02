@@ -10,24 +10,23 @@ import './../App.css';
 
 const Kings = () => {
   const location = useLocation();
-  //const [cats, setCats] = useState([]);
+  const [cats, setCats] = useState();
   const [show, setShow] = useState(location.state ? true : false);
   //const getCats = () => setCats(QueryCats('kings'));
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);  
   var fatherName = 'null';
-  const cats = QueryCats('kings');
+  //const cats = QueryCats('kings');
 
-  /*
   useEffect(() => {
-    async function getCats() {
+    const getCats = async () => {
       const queriedCats = await QueryCats('kings');
       setCats(queriedCats);
     };
 
     getCats();
   }, [])
-  */
+  console.log(cats);
 
   if (location.state) {
     fatherName = location.state;
