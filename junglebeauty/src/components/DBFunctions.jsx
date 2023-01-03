@@ -14,15 +14,15 @@ export function QueryCats(table, predicate) {
                     ...doc.data(), id:doc.id
                 }))
                 setCats(fetchedData);
-            }).then((cats) => {
-                console.log(cats);
-                return cats;
-            });
+            })
     };
 
     useEffect(()=>{
         fetchCats();
     }, []);
+
+    console.log(cats);
+    return cats;
 }
 
 export function InsertCat(table, cat) {
