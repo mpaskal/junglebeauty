@@ -16,10 +16,6 @@ const Kittens = () => {
   const getCats = async () => {
     const cats = await QueryCats('kittens', ['status', '==', 'available']);
     setCats(cats);
-    
-    if (location.state) {
-      setShow(true)
-    }
   }
 
   useEffect(() => {
