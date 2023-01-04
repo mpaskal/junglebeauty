@@ -11,21 +11,22 @@ import './../App.css';
 const Kings = () => {
   const location = useLocation();
   const [cats, setCats] = useState();
-  const [show, setShow] = useState(location.state ? true : false);
-  //const getCats = () => setCats(QueryCats('kings'));
+  const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);  
   var fatherName = 'null';
-  //const cats = QueryCats('kings');
+
+  const getCats = async () => {
+    const cats = await QueryCats('parents', ['sex', '==', 'male']);
+    setCats(cats);
+  }
 
   useEffect(() => {
-    const getCats = async () => {
-      const queriedCats = await QueryCats('kings');
-      setCats(queriedCats);
-    };
-
     getCats();
+
+    return () => {};
   }, [])
+  
   console.log(cats);
 
   if (location.state) {
@@ -40,12 +41,12 @@ const Kings = () => {
       <div className='page-background'>
         <h2>Kings of JungleBeauty, TICA and CCA registered!</h2>
       </div>
-      <CatCardCarousel cats={CatList.filter(cat => cat.type == 'king')}/>
+      <CatCardCarousel cats={cats}/>
 
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton/>
         <Modal.Body>
-          <ParentProfile cat={CatList.find(cat => cat.name == fatherName)}/>
+          <ParentProfile cat={cats.find(cat => cat.name == fatherName)}/>
         </Modal.Body>
       </Modal>
     </>

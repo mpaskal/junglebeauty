@@ -1,8 +1,18 @@
 import { useEffect, useState } from 'react';
-import { collection, doc, query, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
+import { collection, doc, query, where, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 
-export function QueryCats(table, predicate) {
+export async function QueryCats(table, predicate = []) {
+    const cats = [];
+    const q = query(collection(db, table), where(predicate[0], predicate[1], predicate[2]));
+
+    const docRefs = await getDocs(q);
+
+    docRefs.forEach(doc => {
+        cats.push({...doc.data(), id: doc.id});
+    })
+    
+    /*
     const [cats, setCats] = useState();
     const attributes = {name:'', collar:'', colour:'', date:'', adj:'', sex:'', father:'', mother:''};
     const q = query(collection(db, table));
@@ -14,15 +24,16 @@ export function QueryCats(table, predicate) {
                     ...doc.data(), id:doc.id
                 }))
                 setCats(fetchedData);
-            }).then((cats) => {
-                console.log(cats);
-                return cats;
-            });
+            })
     };
 
     useEffect(()=>{
         fetchCats();
     }, []);
+
+    console.log(cats);
+    */
+    return cats;
 }
 
 export function InsertCat(table, cat) {
