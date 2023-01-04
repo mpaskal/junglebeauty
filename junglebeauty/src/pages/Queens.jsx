@@ -1,38 +1,54 @@
-import { Component, useEffect, useState } from 'react';
+import React from 'react';
+import { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import { QueryCats } from '../components/DBFunctions';
 import CatCardCarousel from '../components/CatCardCarousel';
-import CatList from '../lists/CatList';
 import ParentProfile from '../components/ParentProfile';
 import './../App.css';
 
 const Queens = () => {
   const location = useLocation();
-  const [show, setShow] = useState(location.state ? true : false);
+  const [cats, setCats] = useState([]);
+  const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);  
-  var motherName = 'null';
+  var parentName = 'null';
+
+  const getCats = async () => {
+    const cats = await QueryCats('parents', ['sex', '==', 'female']);
+    setCats(cats);
+    
+    if (location.state) {
+      setShow(true)
+    }
+  }
+
+  useEffect(() => {
+    getCats();
+
+    return () => {};
+  }, [])
 
   if (location.state) {
-    motherName = location.state;
+    parentName = location.state;
     window.history.replaceState({}, document.title);
   }
-  
+
   return (
     <>
       <div className='page-background'>
         <h2>Queens of JungleBeauty, TICA and CCA registered!</h2>
       </div>
-      <CatCardCarousel cats={CatList.filter(cat => cat.type == 'queen')}/>
-      
+      <CatCardCarousel cats={cats}/>
+
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton/>
         <Modal.Body>
-            <ParentProfile cat={CatList.find(cat => cat.name == motherName)}/>
+          {cats ? <ParentProfile cat={cats.find(cat => cat.name == parentName)}/> : ''}
         </Modal.Body>
       </Modal>
     </>
-    );
-  };
+  );
+};
 
 export default Queens;

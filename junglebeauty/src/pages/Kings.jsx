@@ -12,8 +12,7 @@ const Kings = () => {
   const [cats, setCats] = useState([]);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);  
-  var fatherName = 'null';
+  var parentName = 'null';
 
   const getCats = async () => {
     const cats = await QueryCats('parents', ['sex', '==', 'male']);
@@ -31,7 +30,7 @@ const Kings = () => {
   }, [])
 
   if (location.state) {
-    fatherName = location.state;
+    parentName = location.state;
     window.history.replaceState({}, document.title);
   }
 
@@ -45,7 +44,7 @@ const Kings = () => {
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton/>
         <Modal.Body>
-          {cats ? <ParentProfile cat={cats.find(cat => cat.name == fatherName)}/> : ''}
+          {cats ? <ParentProfile cat={cats.find(cat => cat.name == parentName)}/> : ''}
         </Modal.Body>
       </Modal>
     </>
