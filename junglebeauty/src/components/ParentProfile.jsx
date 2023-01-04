@@ -1,25 +1,31 @@
 import Carousel from 'react-multi-carousel';
+import { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
-import CatList from '../lists/CatList'
 import CatCardCarousel from './CatCardCarousel';
 import { GetAllImages, GetCatFilepath, GetCatDescription, fileExists } from './Functions';
+import { QueryCats } from './DBFunctions';
 import './../App.css';
 
 const ParentProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
+    const [kittens, setKittens] = useState([]);
     const images = [];
     const filepath = GetCatFilepath(cat);
 
     var description = GetCatDescription(cat);
-    var kittens;
     var availableKittens;
     var graduatedKittens;
 
-    if (sex == 'male') {
-        kittens = CatList.filter(kitten => kitten.father == name)
-    } else {
-        kittens = CatList.filter(kitten => kitten.mother == name)
-    }
+    const getCats = async () => {
+        const kittens = await QueryCats('kittens', [sex == 'male' ? 'father' : 'mother', '==', name]);
+        setKittens(kittens);
+      }
+    
+      useEffect(() => {
+        getCats();
+    
+        return () => {};
+      }, [])
 
     availableKittens = kittens.filter(kitten => kitten.status = 'available');
     graduatedKittens = kittens.filter(kitten => kitten.status = 'graduated');
