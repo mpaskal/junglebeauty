@@ -1,7 +1,7 @@
-import Carousel from 'react-multi-carousel';
 import { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import CatCardCarousel from './CatCardCarousel';
+import ImageCarousel from './ImageCarousel';
 import { GetAllImages, GetCatFilepath, GetCatDescription, fileExists } from './Functions';
 import { QueryCats } from './DBFunctions';
 import './../App.css';
@@ -50,42 +50,7 @@ const ParentProfile= ( {cat} ) => {
                 <h3>{description}</h3>
             </div>
 
-            <Carousel 
-                infinite
-                responsive={{
-                    desktop: {
-                    breakpoint: {
-                        max: 3000,
-                        min: 1024
-                    },
-                    items: 1,
-                    },
-                    mobile: {
-                    breakpoint: {
-                        max: 464,
-                        min: 0
-                    },
-                    items: 1,
-                    partialVisibilityGutter: 30
-                    },
-                    tablet: {
-                    breakpoint: {
-                        max: 1024,
-                        min: 464
-                    },
-                    items: 1,
-                    partialVisibilityGutter: 30    
-                    }
-                }}
-                rewind={false}
-                showDots
-            >
-                {images.map((image) => {
-                    return (
-                        <img className='cat-img' key={image} src={image} alt={name}/>
-                    )
-                })}
-            </Carousel>
+            <ImageCarousel images={images} />
 
             <Accordion className='accordion' defaultActiveKey='0' alwaysOpen>
                 {availableKittens.length > 0

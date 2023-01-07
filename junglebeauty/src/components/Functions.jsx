@@ -40,6 +40,8 @@ export function GetCatDescription(cat) {
     }
   }
 
+  description = description.charAt(0).toUpperCase() + description.slice(1);
+
   return description;
 }
 
@@ -59,15 +61,28 @@ export function GetReleaseDate(date) {
   return releaseDate;
 }
 
+/*
 export function GetAllImages(r) {
   let images = {};
   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
   return images;
 }
+*/
 
-export function fileExists(filepath) {
+export function GetAllImages(filepath) {
+  const images = [];
+  var imageCounter = 0;
+  
+  while (FileExists(filepath + imageCounter + '.png')) {
+    images.push(filepath + imageCounter + '.png');
+  }
+
+  return images;
+}
+
+export function FileExists(filepath) {
   try {
-    return require({filepath});
+    return require(`${filepath}`);
   } catch (err) {
     return false;
   }
