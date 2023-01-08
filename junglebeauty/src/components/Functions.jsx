@@ -1,3 +1,5 @@
+import { existsSync } from 'fs';
+
 export function GetCatURL(cat) {
     const { name, type, date } = cat;
     var identifier;
@@ -72,20 +74,20 @@ export function GetAllImages(r) {
 export function GetAllImages(filepath) {
   const images = [];
   var imageCounter = 0;
+  //var image = new File(filepath + imageCounter + '.png');
+
+  console.log('getting here');
   
   while (FileExists(filepath + imageCounter + '.png')) {
     images.push(filepath + imageCounter + '.png');
+    imageCounter++;
   }
 
   return images;
 }
 
 export function FileExists(filepath) {
-  try {
-    return require(`${filepath}`);
-  } catch (err) {
-    return false;
-  }
+  return existsSync(filepath);
 }
 
 /* export function countImageFiles(cat) {
