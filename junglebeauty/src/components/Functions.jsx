@@ -7,12 +7,7 @@ export function GetCatURL(cat) {
 
 export function GetCatFilepath(cat) {
   const { name, type, date } = cat;
-  var filepath = `/assets/${type}s`;
-
-  if (type === 'kitten') {
-    filepath += `/${date}`;
-  }
-  filepath += `/${name}/`;
+  const filepath = `/assets/${type}s/${type == 'kitten' ? `${date}/` : ``}${name}/`;
 
   return filepath;
 }
@@ -25,12 +20,9 @@ export function GetCatDescription(cat) {
     description = ConvertDate(date);
   } else {
     if (sex == 'male') {
-        description = colour + ' ' + adj + ' Bengal';
+      description = `${colour} ${adj} Bengal`;
     } else {
-        description = cattery + ' ' + name + ' ' + ConvertDate(date);
-        if (location) {
-            description += ', ' + location;
-        }
+      description = `${cattery} ${name} ${ConvertDate(date)}${location ? `, ${location}` : ``}`;
     }
   }
 
