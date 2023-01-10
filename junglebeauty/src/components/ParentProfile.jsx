@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
-import { GetAllImages, GetCatFilepath, GetCatDescription, fileExists } from './Functions';
+import { GetAllImages, GetCatDescription, fileExists } from './Functions';
 import { QueryCats } from './DBFunctions';
 import './../App.css';
 
@@ -10,7 +10,6 @@ const ParentProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
     const [kittens, setKittens] = useState([]);
     const images = GetAllImages(cat);
-    const filepath = GetCatFilepath(cat);
 
     var description = GetCatDescription(cat);
     var availableKittens;

@@ -1,12 +1,6 @@
 export function GetCatURL(cat) {
     const { name, type, date } = cat;
-    var identifier;
-  
-    if (type == 'kitten') {
-      identifier = date + '-' + name + '-collar';
-    } else {
-      identifier = type + '-' + name;
-    }
+    const identifier = (type == 'kitten' ? `${date}-${name}-collar` : `${type}-${name}`);
   
     return identifier;
   }
@@ -69,11 +63,10 @@ export function GetAllImages(r) {
 }
 */
 
-export function GetAllImages(filepath) {
+export function GetAllImages(cat) {
+  const filepath = GetCatFilepath(cat);
   const images = [];
   var imageCounter = 0;
-
-  console.log('getting here');
   
   while (imageCounter < 7) {
     images.push(filepath + imageCounter + '.png');

@@ -6,7 +6,7 @@ import './../App.css';
 const KittenProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date, father, mother, price } = cat;
     const filepath = GetCatFilepath(cat);
-    const images = GetAllImages(GetCatFilepath(cat));
+    const images = GetAllImages(cat);
     const birthDate = ConvertDate(date);
     const releaseDate = GetReleaseDate(date);
     const currentDate = new Date();
