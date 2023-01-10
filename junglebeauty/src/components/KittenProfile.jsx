@@ -6,28 +6,10 @@ import './../App.css';
 const KittenProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date, father, mother, price } = cat;
     const filepath = GetCatFilepath(cat);
-    //const images = [];
     const images = GetAllImages(GetCatFilepath(cat));
     const birthDate = ConvertDate(date);
     const releaseDate = GetReleaseDate(date);
     const currentDate = new Date();
-
-    //const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
-    
-    /*
-    var i = 0;
-    while (fileExists(filepath + i + '.png')) {
-        images.push(filepath + i + '.png');
-        i++;
-    }
-    */
-
-    /*
-    for (let i = 0; i < 7; i++) {
-        images.push(filepath + i + '.png');
-    }
-    */
-    
 
     return (
         <div>
