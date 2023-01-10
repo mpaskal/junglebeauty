@@ -2,15 +2,14 @@ import { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
-import { GetAllImages, GetCatFilepath, GetCatDescription, fileExists } from './Functions';
+import { GetAllImages, GetCatDescription, fileExists } from './Functions';
 import { QueryCats } from './DBFunctions';
 import './../App.css';
 
 const ParentProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
     const [kittens, setKittens] = useState([]);
-    const images = [];
-    const filepath = GetCatFilepath(cat);
+    const images = GetAllImages(cat);
 
     var description = GetCatDescription(cat);
     var availableKittens;
@@ -29,20 +28,6 @@ const ParentProfile= ( {cat} ) => {
 
     availableKittens = kittens.filter(kitten => kitten.status = 'available');
     graduatedKittens = kittens.filter(kitten => kitten.status = 'graduated');
-
-    //const images = GetAllImages(require.context(`/assets/${type}s/${date}/${name}`, false, /\.(png|jpe?g|svg)$/));
-    
-    /*
-    var i = 0;
-    while (fileExists(filepath + i + '.png')) {
-        images.push(filepath + i + '.png');
-        i++;
-    }
-    */
-
-    for (let i = 0; i < 7; i++) {
-        images.push(filepath + i + '.png');
-    }
 
     return (
         <div>
