@@ -12,37 +12,12 @@ export async function QueryCats(table, predicate = []) {
         cats.push({...doc.data(), id: doc.id});
     })
     
-    /*
-    const [cats, setCats] = useState();
-    const attributes = {name:'', collar:'', colour:'', date:'', adj:'', sex:'', father:'', mother:''};
-    const q = query(collection(db, table));
-    
-    const fetchCats = async () => {
-        await getDocs(collection(db, table))
-            .then((querySnapshot)=>{
-                const fetchedData = querySnapshot.docs.map((doc) => ({
-                    ...doc.data(), id:doc.id
-                }))
-                setCats(fetchedData);
-            })
-    };
-
-    useEffect(()=>{
-        fetchCats();
-    }, []);
-
-    console.log(cats);
-    */
     return cats;
 }
 
 export function InsertCat(table, cat) {
     const { name, collar, colour, sex, adj, date, cattery, location, mother, father } = cat;
-    var id = name;
-
-    if (date) {
-        id = id + '.' + date;
-    }
+    const id = GetCatID(name, date);
 
     const addCat = async () => {
         const docRef = doc(db, table, id);
@@ -56,7 +31,27 @@ export function InsertCat(table, cat) {
         });
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         addCat();
+    }, []);
+}
+
+export function GetCatID(name, date) {
+    const id = `${name}${date ? `.${date}` : ``}`;
+    
+    return id;
+}
+
+export function UpdateCats(id, table, field, newValue) {
+    const docRef = doc(db, table, id);
+
+    const updateCat = async () => {
+        await updateDoc(docRef, {
+            [field]: [newValue]
+        })
+    };
+
+    useEffect(() => {
+        updateCat();
     }, []);
 }
