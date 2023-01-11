@@ -31,7 +31,7 @@ export function InsertCat(table, cat) {
         });
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         addCat();
     }, []);
 }
@@ -42,6 +42,16 @@ export function GetCatID(name, date) {
     return id;
 }
 
-export function UpdateCats(catID, field, newValue) {
+export function UpdateCats(id, table, field, newValue) {
+    const docRef = doc(db, table, id);
 
+    const updateCat = async () => {
+        await updateDoc(docRef, {
+            [field]: [newValue]
+        })
+    };
+
+    useEffect(() => {
+        updateCat();
+    }, []);
 }
