@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { collection, doc, query, where, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
+import { ref, getStorage, getDownloadURL } from 'firebase/storage';
 import { db } from '../firebase';
 
 export async function QueryCats(table, predicate = []) {
@@ -54,4 +55,11 @@ export function UpdateCats(id, table, field, newValue) {
     useEffect(() => {
         updateCat();
     }, []);
+}
+
+export function GetImage(filepath) {
+    const storage = getStorage();
+    const url = getDownloadURL(ref(storage, 'gs://junglebeauty-fb9a7.appspot.com' + filepath));
+
+    return url;
 }
