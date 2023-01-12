@@ -59,7 +59,7 @@ export function UpdateCats(id, table, field, newValue) {
 
 export function GetImage(filepath) {
     const storage = getStorage();
-    const url = getDownoadURL(ref(storage, filepath));
+    const url = getDownloadURL(ref(storage, filepath));
 
     return url;
 }
