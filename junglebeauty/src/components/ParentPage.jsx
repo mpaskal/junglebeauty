@@ -10,16 +10,23 @@ import './../App.css';
 const ParentPage = ({ sex }) => {
   const location = useLocation();
   const [cats, setCats] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   var parentName = 'null';
 
   const getCats = async () => {
-    const cats = await QueryCats('parents', ['sex', '==', (sex == 'male' ? 'male' : 'female')]);
-    setCats(cats);
+    try {
+      const cats = await QueryCats('parents', ['sex', '==', (sex == 'male' ? 'male' : 'female')]);
+      setCats(cats);
 
-    if (location.state) {
-      setShow(true)
+      if (location.state) {
+        setShow(true)
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -39,6 +46,10 @@ const ParentPage = ({ sex }) => {
       <div className='page-background'>
         <h2>{sex == 'male' ? 'Kings' : 'Queens'} of JungleBeauty, TICA and CCA registered!</h2>
       </div>
+
+      {/* PLACEHOLDER LOADING TEXT */}
+      {loading == true ? <>Loading</> : ''}
+
       <CatCardCarousel cats={cats}/>
 
       <Modal show={show} onHide={handleClose} size='lg'>
