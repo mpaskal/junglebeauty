@@ -17,7 +17,7 @@ const ParentPage = ({ sex }) => {
   const getCats = async () => {
     const cats = await QueryCats('parents', ['sex', '==', (sex == 'male' ? 'male' : 'female')]);
     setCats(cats);
-    
+
     if (location.state) {
       setShow(true)
     }

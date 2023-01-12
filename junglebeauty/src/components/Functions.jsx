@@ -7,7 +7,7 @@ export function GetCatURL(cat) {
 
 export function GetCatFilepath(cat) {
   const { name, type, date } = cat;
-  const filepath = `/assets/${type}s/${type == 'kitten' ? `${date}/` : ``}${name}/`;
+  const filepath = `/${type}s/${type == 'kitten' ? `${date}/` : ``}${name}/`;
 
   return filepath;
 }
