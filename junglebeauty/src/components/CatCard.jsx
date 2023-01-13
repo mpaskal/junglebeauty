@@ -1,14 +1,13 @@
-import { Component, useState, useEffect } from 'react';
-import { Image, Card, Modal, Carousel, CarouselItem } from 'react-bootstrap';
+import { useState } from 'react';
+import { Modal } from 'react-bootstrap';
 import CatProfile from './KittenProfile';
 import ParentProfile from './ParentProfile';
 import CatImage from './CatImage';
-import { GetCatURL, GetCatFilepath, GetCatDescription, ConvertDate } from './Functions';
-import { GetImage } from './DBFunctions';
+import { GetCatFilepath, GetCatDescription } from './Functions';
 import './../App.css';
 
 const CatCard = ({ cat }) => {
-    const { id, name, type, colour, sex, adj, date, cattery, location } = cat;
+    const { name, type, sex, } = cat;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
