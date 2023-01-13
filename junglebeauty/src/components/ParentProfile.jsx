@@ -10,8 +10,8 @@ const ParentProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
     const [kittens, setKittens] = useState([]);
     const images = GetAllImages(cat);
-
-    var description = GetCatDescription(cat);
+    const description = GetCatDescription(cat);
+    
     var availableKittens;
     var graduatedKittens;
 

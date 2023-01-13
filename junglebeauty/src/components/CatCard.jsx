@@ -11,20 +11,8 @@ const CatCard = ({ cat }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    
-    var displayName = name;
-    var description;
-
-    if (type == 'kitten') {
-        displayName += ' collar';
-        if (sex == 'male') {
-            displayName += ' boy';
-        } else {
-            displayName += ' girl';
-        }
-    }
-
-    description = GetCatDescription(cat);
+    const description = GetCatDescription(cat);
+    const displayName = `${name}${type == kitten ? ` ${collar} {${sex == 'male' ? `boy` : `girl`}}` : ``}`;
 
     return (
         <>
