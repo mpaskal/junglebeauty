@@ -32,8 +32,6 @@ const ParentPage = ({ sex }) => {
 
   useEffect(() => {
     getCats();
-
-    return () => {};
   }, [])
 
   if (location.state) {

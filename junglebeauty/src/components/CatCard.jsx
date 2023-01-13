@@ -1,35 +1,23 @@
-import { Component, useState } from 'react';
-import { Image, Card, Modal, Carousel, CarouselItem } from 'react-bootstrap';
+import { useState } from 'react';
+import { Modal } from 'react-bootstrap';
 import CatProfile from './KittenProfile';
 import ParentProfile from './ParentProfile';
-import { GetCatURL, GetCatFilepath, GetCatDescription, ConvertDate } from './Functions';
-import { GetImage } from './DBFunctions';
+import CatImage from './CatImage';
+import { GetCatFilepath, GetCatDescription } from './Functions';
 import './../App.css';
 
 const CatCard = ({ cat }) => {
-    const { id, name, type, colour, sex, adj, date, cattery, location } = cat;
+    const { name, type, sex, } = cat;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    
-    var displayName = name;
-    var description;
-
-    if (type == 'kitten') {
-        displayName += ' collar';
-        if (sex == 'male') {
-            displayName += ' boy';
-        } else {
-            displayName += ' girl';
-        }
-    }
-
-    description = GetCatDescription(cat);
+    const description = GetCatDescription(cat);
+    const displayName = `${name}${type == 'kitten' ? ` collar {${sex == 'male' ? `boy` : `girl`}}` : ``}`;
 
     return (
         <>
             <div className='cat-card' onClick={handleShow}>
-                <img className='cat-img' src={GetImage(GetCatFilepath(cat) + '0.png')} alt={displayName}/>
+                <CatImage className='cat-img' filepath={GetCatFilepath(cat) + '0.png'} alt={displayName}/>
                 <div className='cat-text'>
                     <h3>{displayName}</h3>
                     <p>{description}</p>
