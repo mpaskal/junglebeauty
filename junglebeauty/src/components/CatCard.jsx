@@ -1,7 +1,8 @@
-import { Component, useState } from 'react';
+import { Component, useState, useEffect } from 'react';
 import { Image, Card, Modal, Carousel, CarouselItem } from 'react-bootstrap';
 import CatProfile from './KittenProfile';
 import ParentProfile from './ParentProfile';
+import CatImage from './CatImage';
 import { GetCatURL, GetCatFilepath, GetCatDescription, ConvertDate } from './Functions';
 import { GetImage } from './DBFunctions';
 import './../App.css';
@@ -17,7 +18,7 @@ const CatCard = ({ cat }) => {
     return (
         <>
             <div className='cat-card' onClick={handleShow}>
-                <img className='cat-img' src={GetImage(GetCatFilepath(cat) + '0.png')} alt={displayName}/>
+                <CatImage className='cat-img' filepath={GetCatFilepath(cat) + '0.png'} alt={displayName}/>
                 <div className='cat-text'>
                     <h3>{displayName}</h3>
                     <p>{description}</p>
