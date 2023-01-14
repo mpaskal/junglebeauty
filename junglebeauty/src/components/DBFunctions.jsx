@@ -59,7 +59,7 @@ export function UpdateCats(id, table, field, newValue) {
 
 export async function GetImage(filepath) {
     const storage = getStorage();
-    const url = getDownloadURL(ref(storage, 'gs://junglebeauty-fb9a7.appspot.com' + filepath));
+    const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com${filepath}`));
 
     return url;
 }
