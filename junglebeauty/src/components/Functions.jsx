@@ -1,13 +1,17 @@
-export function GetCatURL(cat) {
-    const { name, type, date } = cat;
+export function GetCatID(cat) {
+    const { name, sex, mother, date } = cat;
+    const type = (mother ? `Kitten` : `${sex == 'male' ? `King` : `Queen`}`);
     const identifier = (type == 'kitten' ? `${date}-${name}-collar` : `${type}-${name}`);
   
     return identifier;
   }
 
 export function GetCatFilepath(cat) {
-  const { name, type, date } = cat;
+  const { name, sex, mother, date } = cat;
+  const type = (mother ? `Kitten` : `${sex == 'male' ? `King` : `Queen`}`);
   const filepath = `/${type}s/${type == 'kitten' ? `${date}/` : ``}${name}/`;
+
+  console.log(filepath);
 
   return filepath;
 }
