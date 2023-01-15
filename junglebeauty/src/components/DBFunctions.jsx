@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { collection, doc, query, where, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { ref, getStorage, getDownloadURL } from 'firebase/storage';
 import { db } from '../firebase';
+import { GetCatFilepath } from './Functions';
 
 export async function QueryCats(table, predicate = []) {
     const cats = [];
@@ -63,3 +64,13 @@ export async function GetImage(filepath) {
 
     return url;
 }
+
+export function GetAllImages(cat) {
+    const storage = getStorage();
+    const filepath = GetCatFilepath(cat);
+    const images = [];
+    
+    
+  
+    return images;
+  }

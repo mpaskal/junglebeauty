@@ -11,8 +11,6 @@ export function GetCatFilepath(cat) {
   const type = (mother ? `Kitten` : `${sex == 'male' ? `King` : `Queen`}`);
   const filepath = `/${type}s/${type == 'kitten' ? `${date}/` : ``}${name}/`;
 
-  console.log(filepath);
-
   return filepath;
 }
 
