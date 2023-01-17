@@ -1,15 +1,26 @@
+import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import { GetAllImages, GetCatFilepath, ConvertDate, GetReleaseDate, fileExists } from './Functions';
+import { GetCatFilepath, ConvertDate, GetReleaseDate } from './Functions';
+import { GetAllImages,  } from './DBFunctions';
 import ImageCarousel from "./ImageCarousel";
 import './../App.css';
 
 const KittenProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date, father, mother, price } = cat;
+    const [images, setImages] = useState([]);
     const filepath = GetCatFilepath(cat);
-    const images = GetAllImages(cat);
     const birthDate = ConvertDate(date);
     const releaseDate = GetReleaseDate(date);
     const currentDate = new Date();
+
+    const getData = async () => {
+        const images = GetAllImages(cat);
+        setImages(images);
+    }
+
+    useEffect(() => {
+        getData();
+    }, [])
 
     return (
         <div>
