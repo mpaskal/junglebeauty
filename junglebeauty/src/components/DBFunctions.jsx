@@ -64,11 +64,14 @@ export async function GetImage(filepath) {
     return url;
 }
 
-export function GetAllImages(filepath) {
+export async function GetAllImages(filepath) {
     const storage = getStorage();
     const images = [];
     
-    
+    const storageRef = await storage.ref().child(filepath).listAll();
+    storageRef.map((image) => {
+        images.push(image);
+    })
   
     return images;
   }
