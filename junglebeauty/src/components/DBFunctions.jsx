@@ -70,7 +70,8 @@ export async function GetAllImages(filepath) {
     
     const storageRef = await storage.ref().child(filepath).listAll();
     storageRef.map((image) => {
-        images.push(image);
+        const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com${image}`));
+        images.push(url);
     })
   
     return images;
