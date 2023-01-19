@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { collection, doc, query, where, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
-import { ref, getStorage, getDownloadURL } from 'firebase/storage';
+import { ref, getStorage, getDownloadURL, listAll } from 'firebase/storage';
 import { db } from '../firebase';
 
 export async function QueryCats(table, predicate = []) {
@@ -65,14 +65,25 @@ export async function GetImage(filepath) {
 }
 
 export async function GetAllImages(filepath) {
+    console.log('what');
     const storage = getStorage();
     const images = [];
+
+    console.log('oh');
+    console.log(images);
     
-    const storageRef = await storage.ref().child(filepath).listAll();
-    storageRef.map((image) => {
+    const storageRef = await ref(storage, filepath);
+    const result = await listAll(storageRef);
+    result.items.map((image) => {
         const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com${image}`));
         images.push(url);
+        console.log(' in here');
+        console.log(image);
+        console.log(url);
     })
+
+    console.log('um?');
+    console.log(images);
   
     return images;
   }

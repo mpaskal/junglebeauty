@@ -3,13 +3,12 @@ import { Accordion } from 'react-bootstrap';
 import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
 import { GetCatDescription } from './Functions';
-import { QueryCats, GetAllImages  } from './DBFunctions';
+import { QueryCats } from './DBFunctions';
 import './../App.css';
 
 const ParentProfile= ( {cat} ) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
     const [kittens, setKittens] = useState([]);
-    const [images, setImages] = useState([]);
     const description = GetCatDescription(cat);
     
     var availableKittens;
@@ -17,13 +16,11 @@ const ParentProfile= ( {cat} ) => {
 
     const getData = async () => {
         const kittens = await QueryCats('kittens', [sex == 'male' ? 'father' : 'mother', '==', name]);
-        const images = GetAllImages(cat);
         setKittens(kittens);
-        setImages(images);
       }
     
     useEffect(() => {
-    getData();
+        getData();
     }, [])
 
     availableKittens = kittens.filter(kitten => kitten.status = 'available');
@@ -35,7 +32,7 @@ const ParentProfile= ( {cat} ) => {
                 <h3>{description}</h3>
             </div>
 
-            <ImageCarousel images={images} />
+            <ImageCarousel cat={cat} />
 
             <Accordion className='accordion' defaultActiveKey='0' alwaysOpen>
                 {availableKittens.length > 0
