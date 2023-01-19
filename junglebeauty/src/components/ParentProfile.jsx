@@ -23,7 +23,7 @@ const ParentProfile= ( {cat} ) => {
       }
     
     useEffect(() => {
-    getData();
+        getData();
     }, [])
 
     availableKittens = kittens.filter(kitten => kitten.status = 'available');
@@ -35,7 +35,7 @@ const ParentProfile= ( {cat} ) => {
                 <h3>{description}</h3>
             </div>
 
-            <ImageCarousel images={images} />
+            <ImageCarousel cat={cat} />
 
             <Accordion className='accordion' defaultActiveKey='0' alwaysOpen>
                 {availableKittens.length > 0

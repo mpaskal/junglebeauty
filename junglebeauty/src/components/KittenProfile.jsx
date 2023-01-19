@@ -30,7 +30,7 @@ const KittenProfile= ( {cat} ) => {
             <p>Date of release: {releaseDate <= currentDate ? 'ready to go!' : ConvertDate(releaseDate)}</p>
             {price ? <p>Price: ${price}</p> : ''}
 
-            <ImageCarousel images={images} />
+            <ImageCarousel cat={cat} />
         </div>
     );
 }
