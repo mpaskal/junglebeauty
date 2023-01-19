@@ -1,16 +1,23 @@
-import { Component, useState } from 'react';
+import { Component, useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import CatProfile from './KittenProfile';
 import CatCard from './CatCard';
 import CatImage from './CatImage';
-import { GetCatFilepath } from './Functions';
+import { GetAllImages } from './DBFunctions';
 import './../App.css';
 
 const ImageCarousel = ({ cat }) => {  
     const [images, setImages] = useState([]);
 
+    const getData = async () => {
+        const images = GetAllImages(cat);
+        setImages(images);
+      }
     
+    useEffect(() => {
+        getData();
+    }, [])
 
     console.log('carousel');
     console.log(images);
