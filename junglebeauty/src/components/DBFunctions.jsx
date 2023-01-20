@@ -65,25 +65,15 @@ export async function GetImage(filepath) {
 }
 
 export async function GetAllImages(filepath) {
-    console.log('what');
     const storage = getStorage();
     const images = [];
-
-    console.log('oh');
-    console.log(images);
     
-    const storageRef = await ref(storage, filepath);
+    const storageRef = ref(storage, filepath);
     const result = await listAll(storageRef);
     result.items.map((image) => {
-        const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com${image}`));
+        const url = getDownloadURL(ref(storage, image));
         images.push(url);
-        console.log(' in here');
-        console.log(image);
-        console.log(url);
     })
 
-    console.log('um?');
-    console.log(images);
-  
     return images;
   }
