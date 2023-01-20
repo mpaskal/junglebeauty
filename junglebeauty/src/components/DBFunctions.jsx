@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { collection, doc, query, where, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { ref, getStorage, getDownloadURL, listAll } from 'firebase/storage';
 import { db } from '../firebase';
@@ -59,31 +59,21 @@ export function UpdateCats(id, table, field, newValue) {
 
 export async function GetImage(filepath) {
     const storage = getStorage();
-    const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com${filepath}`));
+    const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com/${filepath}`));
 
     return url;
 }
 
 export async function GetAllImages(filepath) {
-    console.log('what');
-    const storage = getStorage();
     const images = [];
-
-    console.log('oh');
-    console.log(images);
+    const storage = getStorage();
+    const storageRef = ref(storage, filepath);
     
-    const storageRef = await ref(storage, filepath);
     const result = await listAll(storageRef);
-    result.items.map((image) => {
-        const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com${image}`));
-        images.push(url);
-        console.log(' in here');
-        console.log(image);
-        console.log(url);
+    
+    result.items.forEach(image => {
+        images.push(image.fullPath);
     })
 
-    console.log('um?');
-    console.log(images);
-  
     return images;
   }

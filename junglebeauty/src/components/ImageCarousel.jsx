@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import CatImage from './CatImage';
+import { GetCatFilepath } from './Functions';
 import { GetAllImages } from './DBFunctions';
 import './../App.css';
 
 const ImageCarousel = ({ cat }) => {  
     const [images, setImages] = useState([]);
-
+  
     const getData = async () => {
-        const images = GetAllImages(cat);
+        const images = await GetAllImages(GetCatFilepath(cat));
         setImages(images);
       }
     
@@ -16,10 +17,7 @@ const ImageCarousel = ({ cat }) => {
         getData();
     }, [])
 
-    console.log('carousel');
-    console.log(images);
-
-  return (
+    return (
     <Carousel 
         infinite
         responsive={{
