@@ -2,6 +2,7 @@ import './../App.css';
 
 const BuySellAgreement = () => {
     return (
+      /*
       <div className='page-background'>
         <h1>AGREEMENT to BUY \ SALE</h1>
         <p className='paragraph-variant'>
@@ -31,6 +32,7 @@ const BuySellAgreement = () => {
           <p>Seller Signature ____________________ Date _________________ Printed Name__________________________________</p>
         </p>
       </div>
+      */
     );
   };
 
