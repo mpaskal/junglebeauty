@@ -1,8 +1,15 @@
+import { Document } from 'react-pdf';
 import './../App.css';
 
 const BuySellAgreement = () => {
     return (
-      /*
+      <Document file='./assets/Buy_Sell Agreement.pdf' />
+    );
+  };
+
+export default BuySellAgreement;
+
+/*
       <div className='page-background'>
         <h1>AGREEMENT to BUY \ SALE</h1>
         <p className='paragraph-variant'>
@@ -33,7 +40,3 @@ const BuySellAgreement = () => {
         </p>
       </div>
       */
-    );
-  };
-
-export default BuySellAgreement;
