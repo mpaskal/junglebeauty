@@ -12,7 +12,7 @@ const AccordionMenu = ({ items }) => {
         itemID++;
 
         return (
-            <Accordion.Item className='accordion-item' eventKey={itemID}>
+            <Accordion.Item className='accordion-item' key={itemID} eventKey={itemID}>
                 <Accordion.Header className='accordion-header'>
                   <p className='accordion-header-text'>
                     {item.date ? `${ConvertDate(item.date)}:` : ''} {item.title} {item.type == 'litter' ? `- ready to go from ${ConvertDate(GetReleaseDate(item.date))}` : ''}
