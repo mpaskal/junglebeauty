@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { GetCatFilepath, ConvertDate, GetReleaseDate } from './Functions';
-import { GetAllImages,  } from './DBFunctions';
+import { GetAllImages,  } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
 import './../App.css';
 
