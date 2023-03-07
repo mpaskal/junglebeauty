@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
-import { QueryCats } from '../components/DBFunctions';
+import { QueryCats } from '../components/FirebaseFunctions';
 import CatCardCarousel from '../components/CatCardCarousel';
 import KittenProfile from '../components/KittenProfile';
 import './../App.css';
