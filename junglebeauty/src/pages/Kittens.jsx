@@ -20,8 +20,6 @@ const Kittens = () => {
 
   useEffect(() => {
     getCats();
-
-    return () => {};
   }, [])
 
   if (location.state) {
