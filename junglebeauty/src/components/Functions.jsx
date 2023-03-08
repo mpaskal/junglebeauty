@@ -9,7 +9,7 @@ export function GetCatID(cat) {
 export function GetCatFilepath(cat) {
   const { name, sex, mother, date } = cat;
   const type = (mother ? `Kitten` : `${sex == 'male' ? `King` : `Queen`}`);
-  const filepath = `${type}s/${type == 'kitten' ? `${date}/` : ``}${name}/`;
+  const filepath = `${type}s/${type == 'Kitten' ? `${date}/` : ``}${name}/`;
 
   return filepath;
 }

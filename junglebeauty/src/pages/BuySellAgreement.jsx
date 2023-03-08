@@ -1,9 +1,13 @@
-import { Document } from 'react-pdf';
+import { Document, Page } from 'react-pdf';
 import './../App.css';
 
 const BuySellAgreement = () => {
     return (
-      <Document file='./assets/Buy_Sell Agreement.pdf' />
+      <div>
+        <Document file='/assets/Buy_Sell Agreement.pdf'>
+          <Page pageNumber={1} />
+        </Document>
+      </div>
     );
   };
 

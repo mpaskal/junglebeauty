@@ -8,6 +8,13 @@ import './../App.css';
 const ImageCarousel = ({ cat }) => {  
     const [images, setImages] = useState([]);
   
+    /*
+        result.items.forEach(image => {
+            images.push(image.fullPath);
+        })
+    */
+
+
     const getData = async () => {
         const images = await GetAllImages(GetCatFilepath(cat));
         setImages(images);
@@ -50,7 +57,7 @@ const ImageCarousel = ({ cat }) => {
     >
         {images.map((image) => {
             return (
-                <CatImage filepath={image} />
+                <CatImage key={image} filepath={image} />
             )
         })}
     </Carousel>
