@@ -7,7 +7,10 @@ export function GetCatID(cat) {
   }
 
 export function GetCatFilepath(cat) {
-  const { name, sex, mother, date } = cat;
+  const { id, sex, mother } = cat;
+  const idValues = id.split('.');
+  const name = idValues[0];
+  const date = idValues[1];
   const type = (mother ? `Kitten` : `${sex == 'male' ? `King` : `Queen`}`);
   const filepath = `${type}s/${type == 'Kitten' ? `${date}/` : ``}${name}/`;
 
