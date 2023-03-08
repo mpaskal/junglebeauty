@@ -27,9 +27,7 @@ const Home = () => {
                         {CatList.filter(cat => cat.type == 'kitten' && cat.status == 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
                             return (
                                 <div className='card-container'>
-                                    <Link to='/kittens' state={cat.id}>
-                                        <CatCard cat={cat}/>
-                                    </Link>
+                                    <CatCard cat={cat}/>
                                 </div>
                             )
                         })}

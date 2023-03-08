@@ -5,7 +5,8 @@ import { GetAllImages,  } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
 import './../App.css';
 
-const KittenProfile= ( {cat} ) => {
+const KittenProfile= ({ cat }) => {
+    console.log(cat);
     const { id, name, type, colour, sex, adj, status, date, father, mother, price } = cat;
     const [images, setImages] = useState([]);
     const filepath = GetCatFilepath(cat);
