@@ -1,15 +1,30 @@
+import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { GetCatFilepath } from '../components/Functions';
-import CatList from '../lists/CatList';
+import { QueryCats } from '../components/FirebaseFunctions';
+import CatCardCarousel from '../components/CatCardCarousel';
 import VideoList from '../lists/VideoList';
 import CatCard from '../components/CatCard';
 import VideoFrame from '../components/VideoFrame';
 import './../App.css';
 
 const Home = () => {
+    const [cats, setCats] = useState([]);
+
+    const getCats = async () => {
+        const cats = await QueryCats('kittens', ['status', '==', 'available']);
+        setCats(cats);
+    }
+
+    useEffect(() => {
+        getCats();
+    }, [])
+
     return (
         <div className='page-background'>
+            <CatCardCarousel cats={cats} />
+
             <h1>Hello! We are happy to welcome you to our website!</h1>
             <p>
                 Do you want to have a small and tame leopard at home? You have come to the right place. Welcome to our Junglebeauty Cattery of Bengals. 
@@ -24,7 +39,7 @@ const Home = () => {
                         offered with the same options and benefits - we will make our price the same for you!
                     </p>
                     <div className='cat-card-column'>
-                        {CatList.filter(cat => cat.type == 'kitten' && cat.status == 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
+                        {cats.filter(cat => cat.type == 'kitten' && cat.status == 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
                             return (
                                 <div className='card-container'>
                                     <CatCard cat={cat}/>

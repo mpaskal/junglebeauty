@@ -4,9 +4,9 @@ import { GetCatFilepath, ConvertDate, GetReleaseDate } from './Functions';
 import { GetAllImages,  } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
 import './../App.css';
+import CatImage from './CatImage';
 
 const KittenProfile= ({ cat }) => {
-    console.log(cat);
     const { id, name, type, colour, sex, adj, status, date, father, mother, price } = cat;
     const [images, setImages] = useState([]);
     const filepath = GetCatFilepath(cat);
@@ -15,7 +15,7 @@ const KittenProfile= ({ cat }) => {
     const currentDate = new Date();
 
     const getData = async () => {
-        const images = GetAllImages(cat);
+        const images = await GetAllImages(cat);
         setImages(images);
     }
 
@@ -23,15 +23,25 @@ const KittenProfile= ({ cat }) => {
         getData();
     }, [])
 
+    console.log(cat);
+    console.log(images);
+
     return (
         <div>
             <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. Born {birthDate}.</h3>
-            <p>Mother: <Link to='/queens' state={mother}>{mother}</Link></p>
-            <p>Father: <Link to='/kings' state={father}>{father}</Link></p>
+            <p>Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link></p>
             <p>Date of release: {releaseDate <= currentDate ? 'ready to go!' : ConvertDate(releaseDate)}</p>
             {price ? <p>Price: ${price}</p> : ''}
 
             <ImageCarousel cat={cat} />
+
+            <div className='kitten-image-container'>
+                {images.map((image) => {
+                    return (
+                        <CatImage key={image} filepath={image} />
+                    );
+                })}
+            </div>
         </div>
     );
 }
