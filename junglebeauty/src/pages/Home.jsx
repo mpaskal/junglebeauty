@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { GetCatFilepath } from '../components/Functions';
 import { QueryCats } from '../components/FirebaseFunctions';
+import CatCardCarousel from '../components/CatCardCarousel';
 import VideoList from '../lists/VideoList';
 import CatCard from '../components/CatCard';
 import VideoFrame from '../components/VideoFrame';
@@ -22,6 +23,8 @@ const Home = () => {
 
     return (
         <div className='page-background'>
+            <CatCardCarousel cats={cats} />
+
             <h1>Hello! We are happy to welcome you to our website!</h1>
             <p>
                 Do you want to have a small and tame leopard at home? You have come to the right place. Welcome to our Junglebeauty Cattery of Bengals. 
