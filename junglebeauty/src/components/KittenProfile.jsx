@@ -4,6 +4,7 @@ import { GetCatFilepath, ConvertDate, GetReleaseDate } from './Functions';
 import { GetAllImages,  } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
 import './../App.css';
+import CatImage from './CatImage';
 
 const KittenProfile= ({ cat = [] }) => {
     console.log(cat);
@@ -31,6 +32,14 @@ const KittenProfile= ({ cat = [] }) => {
             {price ? <p>Price: ${price}</p> : ''}
 
             <ImageCarousel cat={cat} />
+
+            <div className='kitten-image-container'>
+                {images.map((image) => {
+                    return (
+                        <CatImage image={image} />
+                    );
+                })}
+            </div>
         </div>
     );
 }
