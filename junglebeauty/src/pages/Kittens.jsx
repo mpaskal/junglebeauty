@@ -46,7 +46,7 @@ const Kittens = () => {
       <div className='gallery-container'>
         {cats.map((cat) => {
           return (
-            <CatCard cat={cat} />
+            <CatCard key={cat.id} cat={cat} />
           );
         })}
       </div>
