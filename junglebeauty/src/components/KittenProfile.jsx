@@ -15,13 +15,16 @@ const KittenProfile= ({ cat }) => {
     const currentDate = new Date();
 
     const getData = async () => {
-        const images = GetAllImages(cat);
+        const images = await GetAllImages(cat);
         setImages(images);
     }
 
     useEffect(() => {
         getData();
     }, [])
+
+    console.log(cat);
+    console.log(images);
 
     return (
         <div>
