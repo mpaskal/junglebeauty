@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { QueryCats } from '../components/FirebaseFunctions';
+import CatCard from '../components/CatCard';
 import CatCardCarousel from '../components/CatCardCarousel';
 import KittenProfile from '../components/KittenProfile';
 import './../App.css';
@@ -41,6 +42,14 @@ const Kittens = () => {
             <KittenProfile cat={cats.find(cat => cat.id == kittenID)}/>
         </Modal.Body>
       </Modal>
+
+      <div className='gallery-container'>
+        {cats.map((cat) => {
+          return (
+            <CatCard cat={cat} />
+          );
+        })}
+      </div>
     </>
   );
 };
