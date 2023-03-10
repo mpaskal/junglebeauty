@@ -36,7 +36,7 @@ const KittenProfile= ({ cat = [] }) => {
             <div className='kitten-image-container'>
                 {images.map((image) => {
                     return (
-                        <CatImage image={image} />
+                        <CatImage key={image} filepath={image} />
                     );
                 })}
             </div>
