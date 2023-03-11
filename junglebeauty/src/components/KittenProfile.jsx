@@ -6,7 +6,7 @@ import ImageCarousel from "./ImageCarousel";
 import './../App.css';
 import CatImage from './CatImage';
 
-const KittenProfile= ({ cat }) => {
+const KittenProfile= ({ cat = [] }) => {
     const { id, name, type, colour, sex, adj, status, date, father, mother, price } = cat;
     const [images, setImages] = useState([]);
     const filepath = GetCatFilepath(cat);

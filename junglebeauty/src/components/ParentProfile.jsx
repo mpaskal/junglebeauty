@@ -6,7 +6,7 @@ import { GetCatDescription } from './Functions';
 import { QueryCats } from './FirebaseFunctions';
 import './../App.css';
 
-const ParentProfile= ( {cat} ) => {
+const ParentProfile= ({ cat = [] }) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
     const [kittens, setKittens] = useState([]);
     const description = GetCatDescription(cat);
