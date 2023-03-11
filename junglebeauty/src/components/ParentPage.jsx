@@ -14,15 +14,19 @@ const ParentPage = ({ sex }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   var parentName = 'null';
+  var cat = [];
 
   const getCats = async () => {
     try {
       const cats = await QueryCats('parents', ['sex', '==', (sex == 'male' ? 'male' : 'female')]);
       setCats(cats);
 
+      console.log('getCats: ' + cat);
+
       if (location.state) {
-        setShow(true)
+        setShow(true);
       }
+
     } catch (error) {
       console.error(error);
     } finally {
@@ -32,11 +36,13 @@ const ParentPage = ({ sex }) => {
 
   useEffect(() => {
     getCats();
-  }, [])
+  }, []);
 
   if (location.state) {
     parentName = location.state;
     window.history.replaceState({}, document.title);
+    cat = cats.find(cat => cat.name == parentName);
+    console.log('location.state: ' + cat);
   }
 
   return (
@@ -53,7 +59,7 @@ const ParentPage = ({ sex }) => {
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton/>
         <Modal.Body>
-          {cats && <ParentProfile cat={cats.find(cat => cat.name == parentName)}/>}
+          {cats && <ParentProfile cat={cat}/>}
         </Modal.Body>
       </Modal>
     </>
