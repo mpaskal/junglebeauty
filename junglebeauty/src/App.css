@@ -187,7 +187,7 @@ a:hover{
   color: rgb(25, 223, 58);
 }
 
-/* Cat Cards */
+/* Cat cards */
 
 .cat-card-carousel {
   background-color: rgba(0, 0, 0, 0.4);
@@ -228,7 +228,7 @@ a:hover{
   width: 90%;
 }
 
-/* Accordion Menu */
+/* Accordion menu */
 
 .accordion {
   border-radius: 10pt;
@@ -250,4 +250,11 @@ a:hover{
 .accordion-item {
   color: white;
   background-color: rgba(0, 10, 0, 0.75);
+}
+
+/* Kitten gallery */
+
+.gallery-container {
+  display: flex;
+  padding: 10pt;
 }
