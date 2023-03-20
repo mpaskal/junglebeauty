@@ -208,7 +208,6 @@ a:hover{
 .cat-card {
   border-radius: 10pt;
   cursor: pointer;
-  color: green;
   background-color: white;
   text-align: center;
   width: 90%;
@@ -255,6 +254,10 @@ a:hover{
 /* Kitten gallery */
 
 .gallery-container {
-  display: flex;
-  padding: 10pt;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10pt;
+  width: 95%;
+  margin: auto;
+  margin-top: 20pt;
 }
