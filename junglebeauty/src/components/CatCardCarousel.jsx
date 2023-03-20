@@ -37,6 +37,7 @@ const CatCardCarousel = ({ cats }) => {
         }
       }}
       rewind={false}
+      showDots
       >
 
       {cats.map((cat) => {
