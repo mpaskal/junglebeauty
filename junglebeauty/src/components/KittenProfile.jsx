@@ -15,7 +15,7 @@ const KittenProfile= ({ cat = [] }) => {
     const currentDate = new Date();
 
     const getData = async () => {
-        const images = await GetAllImages(cat);
+        const images = await GetAllImages(GetCatFilepath(cat));
         setImages(images);
     }
 
@@ -27,15 +27,17 @@ const KittenProfile= ({ cat = [] }) => {
     console.log(images);
 
     return (
-        <div>
-            <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. Born {birthDate}.</h3>
-            <p>Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link></p>
-            <p>Date of release: {releaseDate <= currentDate ? 'ready to go!' : ConvertDate(releaseDate)}</p>
-            {price ? <p>Price: ${price}</p> : ''}
+        <div className='kitten-columns-container'>
+            <div>
+                <h3>{name} collar {sex == 'male' ? 'boy' : 'girl'}. Born {birthDate}.</h3>
+                <p>Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link></p>
+                <p>Date of release: {releaseDate <= currentDate ? 'ready to go!' : ConvertDate(releaseDate)}</p>
+                {price ? <p>Price: ${price}</p> : ''}
 
-            <ImageCarousel cat={cat} />
+                <ImageCarousel cat={cat} />
+            </div>
 
-            <div className='kitten-image-container'>
+            <div className='kitten-images-container'>
                 {images.map((image) => {
                     return (
                         <CatImage key={image} filepath={image} />
