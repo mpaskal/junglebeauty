@@ -10,7 +10,7 @@ const CatCardCarousel = ({ cats, autoplay = false }) => {
   return (
     <Carousel className='cat-card-carousel'
       autoPlay={autoplay}
-      autoPlaySpeed={4000}
+      autoPlaySpeed={5000}
       draggable
       infinite
       responsive={{
