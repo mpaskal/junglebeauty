@@ -6,9 +6,11 @@ import CatCard from './CatCard';
 import { GetCatFilepath } from './Functions';
 import './../App.css';
 
-const CatCardCarousel = ({ cats }) => {  
+const CatCardCarousel = ({ cats, autoplay = false }) => {  
   return (
     <Carousel className='cat-card-carousel'
+      autoPlay={autoplay}
+      autoPlaySpeed={4000}
       draggable
       infinite
       responsive={{
