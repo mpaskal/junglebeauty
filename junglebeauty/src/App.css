@@ -227,6 +227,19 @@ a:hover{
   width: 90%;
 }
 
+.kitten-columns-container {
+  display: grid;
+  grid-template-columns: 60% auto;
+}
+
+.kitten-images-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5pt;
+  width: 95%;
+  margin: auto;
+}
+
 /* Accordion menu */
 
 .accordion {
