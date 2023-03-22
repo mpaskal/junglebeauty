@@ -9,7 +9,7 @@ const EmailForm = () => {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        setNewCat({ ...newCat, [name]: value });
+        setEmail({ ...email, [name]: value });
     }
 
     const handleSend = async () => {
