@@ -23,7 +23,7 @@ const Home = () => {
 
     return (
         <div className='page-background'>
-            <CatCardCarousel cats={cats} />
+            <CatCardCarousel cats={cats} autoplay={true} />
 
             <h1>Hello! We are happy to welcome you to our website!</h1>
             <p>

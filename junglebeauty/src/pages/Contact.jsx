@@ -1,3 +1,4 @@
+import EmailForm from '../components/EmailForm';
 import './../App.css';
 
 const Contact = () => {
@@ -9,9 +10,7 @@ const Contact = () => {
         <p>
           Please contact us by email:
           <br/>
-          <a className='text-link' href={'mailto:junglebeautybengals@gmail.com'}>
-            junglebeautybengals@gmail.com
-          </a>
+          <EmailForm />
         </p>
         
         <p>
