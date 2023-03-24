@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import { InsertCat, UpdateCat, UpdateChildren, DeleteCat } from './FirebaseFunctions';
 import ImageCarousel from './ImageCarousel';
 import './../App.css';
@@ -13,7 +13,7 @@ const EmailForm = () => {
     }
 
     const handleSend = async () => {
-
+        alert('Email sent!');
     }
 
     return (
@@ -37,11 +37,17 @@ const EmailForm = () => {
                         <br />
                         <input name='subject' defaultValue={''} onChange={handleChange} />
                     </label>
+                    <br />
+                    <label className='form-label'>
+                        Message:
+                        <br />
+                        <textarea name='message' defaultValue={''} onChange={handleChange} />
+                    </label>
                 </div>
             </form>
 
             <div className='buttons-container'>
-                <button type='button' onClick={handleSend}>Send</button>
+                <Button type='button' onClick={handleSend}>Send</Button>
             </div>
         </div>
     );
