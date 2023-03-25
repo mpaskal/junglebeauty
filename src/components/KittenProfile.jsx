@@ -24,9 +24,6 @@ const KittenProfile= ({ cat = [] }) => {
         getData();
     }, [])
 
-    console.log(cat);
-    console.log(images);
-
     return (
         <div className='kitten-columns-container'>
             <div>
