@@ -4,7 +4,7 @@ import { send } from 'emailjs-com';
 import './../App.css';
 
 const EmailForm = () => {
-    const [email, setEmail] = useState([]);
+    const [email, setEmail] = useState({to_email: 'junglebeautymailer@gmail.com', from_email: '', from_name: '', message: ''});
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -35,13 +35,13 @@ const EmailForm = () => {
                     <label className='form-label'>
                         Name:
                         <br />
-                        <input name='user_name' type='text' defaultValue={''} required onChange={handleChange} />
+                        <input name='from_name' type='text' defaultValue={''} required onChange={handleChange} />
                     </label>
                     <br />
                     <label className='form-label'>
                         Email address:
                         <br />
-                        <input name='user_email' type='email' defaultValue={''} required onChange={handleChange} />
+                        <input name='from_email' type='email' defaultValue={''} required onChange={handleChange} />
                     </label>
                     <br />
                     <label className='form-label'>
