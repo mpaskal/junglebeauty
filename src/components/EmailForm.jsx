@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import { InsertCat, UpdateCat, UpdateChildren, DeleteCat } from './FirebaseFunctions';
-import ImageCarousel from './ImageCarousel';
+import { send } from 'emailjs-com';
 import './../App.css';
 
 const EmailForm = () => {
@@ -12,30 +11,43 @@ const EmailForm = () => {
         setEmail({ ...email, [name]: value });
     }
 
-    const handleSend = async () => {
-        alert('Email sent!');
-    }
+    const handleSend = (e) => {
+        e.preventDefault();
+        send(
+            'service_b7v6hjo',
+            'template_iq9hi46',
+            email,
+            '7PX90rf6YM9qXhPH7'
+            )
+        .then((response) => {
+            console.log('Email sent', response.status, response.text);
+            alert('Email sent!');
+        })
+        .catch((err) => {
+            console.log('Sending failed', err);
+        });
+    };
 
     return (
         <div className='form-container'>
-            <form>  
+            <form onSubmit={handleSend}>  
                 <div>
                     <label className='form-label'>
                         Name:
                         <br />
-                        <input name='name' type='text' defaultValue={''} onChange={handleChange} />
+                        <input name='user_name' type='text' defaultValue={''} required onChange={handleChange} />
                     </label>
                     <br />
                     <label className='form-label'>
                         Email address:
                         <br />
-                        <input name='emailAddress' type='email' defaultValue={''} onChange={handleChange} />
+                        <input name='user_email' type='email' defaultValue={''} required onChange={handleChange} />
                     </label>
                     <br />
                     <label className='form-label'>
                         Subject:
                         <br />
-                        <input name='subject' defaultValue={''} onChange={handleChange} />
+                        <input name='subject' defaultValue={''} required onChange={handleChange} />
                     </label>
                     <br />
                     <label className='form-label'>
@@ -44,11 +56,10 @@ const EmailForm = () => {
                         <textarea name='message' defaultValue={''} onChange={handleChange} />
                     </label>
                 </div>
+                <div className='buttons-container'>
+                    <Button type='submit'>Send</Button>
+                </div>
             </form>
-
-            <div className='buttons-container'>
-                <Button type='button' onClick={handleSend}>Send</Button>
-            </div>
         </div>
     );
 };
