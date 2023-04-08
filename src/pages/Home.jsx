@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { CatsProvider, useCats } from '../contexts/CatsContext';
 import { GetCatFilepath } from '../components/Functions';
 import { QueryCats } from '../components/FirebaseFunctions';
 import CatCardCarousel from '../components/CatCardCarousel';
@@ -10,16 +11,7 @@ import VideoFrame from '../components/VideoFrame';
 import './../App.css';
 
 const Home = () => {
-    const [cats, setCats] = useState([]);
-
-    const getCats = async () => {
-        const cats = await QueryCats('kittens', ['status', '==', 'available']);
-        setCats(cats);
-    }
-
-    useEffect(() => {
-        getCats();
-    }, [])
+    const cats = useCats().kittens.filter((cat) => cat.status == 'available');
 
     return (
         <div className='page-background'>
