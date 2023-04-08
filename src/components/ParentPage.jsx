@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import { useCats } from '../contexts/CatsContext';
 import { QueryCats } from './FirebaseFunctions';
 import CatCardCarousel from '../components/CatCardCarousel';
 import ParentProfile from '../components/ParentProfile';
@@ -9,16 +10,17 @@ import './../App.css';
 
 const ParentPage = ({ sex }) => {
   const location = useLocation();
-  const [cats, setCats] = useState([]);
   const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
+  const cats = useCats().parents.filter((cat) => cat.sex == {sex});
   var parentName = 'null';
   var cat = [];
 
+  /*
   const getCats = async () => {
     try {
-      const cats = await QueryCats('parents', ['sex', '==', (sex == 'male' ? 'male' : 'female')]);
+      const cats = await QueryCats('parents', ['sex', '==', {sex}]);
       setCats(cats);
 
       console.log('getCats: ' + cat);
@@ -33,6 +35,7 @@ const ParentPage = ({ sex }) => {
       setLoading(false);
     }
   }
+  */
 
   useEffect(() => {
     getCats();
