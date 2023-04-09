@@ -35,11 +35,11 @@ const ParentPage = ({ sex }) => {
       setLoading(false);
     }
   }
-  */
 
   useEffect(() => {
     getCats();
   }, []);
+  */
 
   if (location.state) {
     parentName = location.state;
