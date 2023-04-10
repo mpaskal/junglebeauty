@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import { useCats } from '../contexts/CatsContext';
 import { QueryCats } from '../components/FirebaseFunctions';
 import CatCard from '../components/CatCard';
 import CatCardCarousel from '../components/CatCardCarousel';
@@ -9,19 +10,10 @@ import './../App.css';
 
 const Kittens = () => {
   const location = useLocation();
-  const [cats, setCats] = useState([]);
   const [show, setShow] = useState(location.state ? true : false);
   const handleClose = () => setShow(false); 
   var kittenID = 'null';
-
-  const getCats = async () => {
-    const cats = await QueryCats('kittens', ['status', '==', 'available']);
-    setCats(cats);
-  }
-
-  useEffect(() => {
-    getCats();
-  }, [])
+  const cats = useCats().kittens.filter((cat) => cat.status == 'available');
 
   if (location.state) {
     kittenID = location.state;
