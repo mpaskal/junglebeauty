@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
+import { useCats } from '../contexts/CatsContext';
 import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
 import { GetCatDescription } from './Functions';
@@ -8,12 +9,12 @@ import './../App.css';
 
 const ParentProfile= ({ cat = [] }) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
-    const [kittens, setKittens] = useState([]);
-    const description = GetCatDescription(cat);
-    
+    const kittens = useCats().kittens.filter((kitten) => (sex == 'male' ? kitten.father : kitten.mother) == name);
+    const description = GetCatDescription(cat);  
     var availableKittens;
     var graduatedKittens;
 
+    /*
     const getData = async () => {
         const kittens = await QueryCats('kittens', [sex == 'male' ? 'father' : 'mother', '==', name]);
         setKittens(kittens);
@@ -22,6 +23,7 @@ const ParentProfile= ({ cat = [] }) => {
     useEffect(() => {
         getData();
     }, [])
+    */
 
     availableKittens = kittens.filter(kitten => kitten.status = 'available');
     graduatedKittens = kittens.filter(kitten => kitten.status = 'graduated');
