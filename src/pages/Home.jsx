@@ -11,7 +11,12 @@ import VideoFrame from '../components/VideoFrame';
 import './../App.css';
 
 const Home = () => {
-    const cats = useCats().kittens.filter((cat) => cat.status == 'available');
+    var cats = useCats();
+    if (cats) {
+        cats = cats.kittens.filter((cat) => cat.status == 'available');
+    } else {
+        cats = [];
+    }
 
     return (
         <div className='page-background'>
