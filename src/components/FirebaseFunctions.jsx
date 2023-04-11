@@ -3,15 +3,25 @@ import { collection, doc, query, where, getDocs, addDoc, setDoc, updateDoc } fro
 import { ref, getStorage, getDownloadURL, listAll } from 'firebase/storage';
 import { db } from '../firebase';
 
+const storage = getStorage();
+
 export async function QueryCats(table, predicate = []) {
     const cats = [];
-    const q = query(collection(db, table), where(predicate[0], predicate[1], predicate[2]));
+    var q;
+
+    if (predicate.length == 0) {
+        q = query(collection(db, table));
+    } else {
+        q = query(collection(db, table), where(...predicate));
+    }
 
     const docRefs = await getDocs(q);
 
     docRefs.forEach(doc => {
         cats.push({...doc.data(), id: doc.id});
     })
+
+    console.log(cats);
     
     return cats;
 }
@@ -58,7 +68,6 @@ export function UpdateCats(id, table, field, newValue) {
 }
 
 export async function GetImage(filepath) {
-    const storage = getStorage();
     const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com/${filepath}`));
 
     return url;
@@ -66,7 +75,6 @@ export async function GetImage(filepath) {
 
 export async function GetAllImages(filepath) {
     const images = [];
-    const storage = getStorage();
     const storageRef = ref(storage, filepath);
     
     const result = await listAll(storageRef);
