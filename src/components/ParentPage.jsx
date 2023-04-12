@@ -13,9 +13,15 @@ const ParentPage = ({ sex }) => {
   const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const cats = useCats().parents.filter((cat) => cat.sex == {sex});
   var parentName = 'null';
   var cat = [];
+  var cats = useCats();
+
+  if (cats) {
+      cats = cats.parents.filter((cat) => cat.sex == {sex});
+  } else {
+      cats = [];
+  }
 
   /*
   const getCats = async () => {
