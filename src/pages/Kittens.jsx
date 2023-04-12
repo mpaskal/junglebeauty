@@ -13,7 +13,13 @@ const Kittens = () => {
   const [show, setShow] = useState(location.state ? true : false);
   const handleClose = () => setShow(false); 
   var kittenID = 'null';
-  const cats = useCats().kittens.filter((cat) => cat.status == 'available');
+  var cats = useCats();
+  
+  if (cats) {
+      cats = cats.kittens.filter((cat) => cat.status == 'available');
+  } else {
+      cats = [];
+  }
 
   if (location.state) {
     kittenID = location.state;
