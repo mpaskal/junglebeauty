@@ -7,10 +7,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const BuySellAgreement = () => {
     return (
-      <div>
-        <Document file='/assets/Buy_Sell Agreement.pdf'>
-          <Page pageNumber={1} />
-        </Document>
+      <div className='pdf-container'>
+          <Document file='/assets/Buy_Sell Agreement.pdf'>
+            <Page pageNumber={1} />
+          </Document>
       </div>
     );
   };
