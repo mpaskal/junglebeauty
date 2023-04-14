@@ -3,14 +3,14 @@ import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
-import { getCatDescription } from './Functions';
+import { GetCatDescription } from './Functions';
 import { QueryCats } from './FirebaseFunctions';
 import './../App.css';
 
 const ParentProfile= ({ cat = [] }) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
     const kittens = useCats().kittens.filter((kitten) => (sex == 'male' ? kitten.father : kitten.mother) == name);
-    const description = getCatDescription(cat);  
+    const description = GetCatDescription(cat);  
     var availableKittens;
     var graduatedKittens;
 

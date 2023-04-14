@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Accordion, Card, useAccordionButton } from 'react-bootstrap';
-import { convertDate, getReleaseDate } from './Functions';
+import { ConvertDate, GetReleaseDate } from './Functions';
 import './../App.css';
 
 const AccordionMenu = ({ items }) => {
@@ -15,9 +15,9 @@ const AccordionMenu = ({ items }) => {
             <Accordion.Item className='accordion-item' key={itemID} eventKey={itemID}>
                 <Accordion.Header className='accordion-header'>
                   <p className='accordion-header-text'>
-                    {item.date && `${convertDate(item.date)}: `} 
+                    {item.date && `${ConvertDate(item.date)}: `} 
                     {item.title} 
-                    {item.type == 'litter' && ` - ready to go from ${convertDate(getReleaseDate(item.date))}`}
+                    {item.type == 'litter' && ` - ready to go from ${ConvertDate(GetReleaseDate(item.date))}`}
                   </p>
                 </Accordion.Header>
                 <Accordion.Body>

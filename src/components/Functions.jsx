@@ -1,4 +1,4 @@
-export function getCatID(cat) {
+export function GetCatID(cat) {
     const { name, sex, mother, date } = cat;
     const type = (mother ? `Kitten` : `${sex == 'male' ? `King` : `Queen`}`);
     const identifier = (type == 'kitten' ? `${date}-${name}-collar` : `${type}-${name}`);
@@ -6,7 +6,7 @@ export function getCatID(cat) {
     return identifier;
   }
 
-export function getCatFilepath(cat) {
+export function GetCatFilepath(cat) {
   const { id, sex, mother } = cat;
   const idValues = id.split('.');
   const name = idValues[0];
@@ -17,17 +17,17 @@ export function getCatFilepath(cat) {
   return filepath;
 }
 
-export function getCatDescription(cat) {
+export function GetCatDescription(cat) {
   const { name, type, colour, sex, adj, date, cattery, location } = cat;
   var description;
 
   if (type == 'kitten') {
-    description = convertDate(date);
+    description = ConvertDate(date);
   } else {
     if (sex == 'male') {
       description = `${colour} ${adj} Bengal`;
     } else {
-      description = `${cattery} ${name} ${convertDate(date)}${location ? `, ${location}` : ``}`;
+      description = `${cattery} ${name} ${ConvertDate(date)}${location ? `, ${location}` : ``}`;
     }
   }
 
@@ -36,14 +36,14 @@ export function getCatDescription(cat) {
   return description;
 }
 
-export function convertDate(date) {
+export function ConvertDate(date) {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
   var dateString = new Date(date).toLocaleDateString('en-us', options);
 
   return dateString;
 }
 
-export function getReleaseDate(date) {
+export function GetReleaseDate(date) {
   const daysToRelease = 84;
   var releaseDate = new Date(date);
 

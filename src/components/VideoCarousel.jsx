@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import VideoFrame from './VideoFrame';
-import { getCatFilepath } from './Functions';
+import { GetCatFilepath } from './Functions';
 import { GetAllImages } from './FirebaseFunctions';
 import './../App.css';
 

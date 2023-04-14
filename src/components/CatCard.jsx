@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import CatProfile from './KittenProfile';
 import ParentProfile from './ParentProfile';
 import CatImage from './CatImage';
-import { getCatFilepath, getCatDescription } from './Functions';
+import { GetCatFilepath, GetCatDescription } from './Functions';
 import './../App.css';
 
 const CatCard = ({ cat }) => {
@@ -11,13 +11,13 @@ const CatCard = ({ cat }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const description = getCatDescription(cat);
+    const description = GetCatDescription(cat);
     const displayName = `${name}${type == 'kitten' ? ` collar ${sex == 'male' ? `boy` : `girl`}` : ``}`;
 
     return (
         <>
             <div className='cat-card' onClick={handleShow}>
-                <CatImage className='cat-img' filepath={getCatFilepath(cat) + '0.png'} alt={displayName}/>
+                <CatImage className='cat-img' filepath={GetCatFilepath(cat) + '0.png'} alt={displayName}/>
                 <div className='cat-text'>
                     <h3>{displayName}</h3>
                     <p>{description}</p>
