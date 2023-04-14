@@ -63,7 +63,7 @@ const ParentPage = ({ sex }) => {
       {/* PLACEHOLDER LOADING TEXT */}
       {loading == true && <>Loading</>}
 
-      <CatCardCarousel cats={cats.sort((a, b) => a.status > b.status ? -1 : 1)}/>
+      <CatCardCarousel cats={cats.sort((a, b) => a.date > b.date ? 1 : -1)}/>
 
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton/>
@@ -74,5 +74,7 @@ const ParentPage = ({ sex }) => {
     </>
   );
 };
+
+//cats={cats.sort((a, b) => a.status > b.status ? -1 : 1)
 
 export default ParentPage;
