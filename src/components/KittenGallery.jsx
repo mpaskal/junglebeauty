@@ -11,6 +11,7 @@ import './../App.css';
 const KittenGallery = () => {
   const location = useLocation();
   const [show, setShow] = useState(location.state ? true : false);
+  const [filters, setFilters] = useState([]);
   const handleClose = () => setShow(false); 
   var kittenID = 'null';
   var cats = useCats();
@@ -36,7 +37,29 @@ const KittenGallery = () => {
               </p>
             </Accordion.Header>
             <Accordion.Body>
+              <label>
+                Available kittens:
+                <input type="checkbox" name="available" value="available" checked />
+              </label>
+              <label>
+                Reserved kittens:
+                <input type="checkbox" name="reserved" value="reserved" />
+              </label>
+              <label>
+                Graduated kittens:
+                <input type="checkbox" name="graduated" value="graduated" />
+              </label>
               
+              <br/>
+
+              <label>
+                Silver:
+                <input type="checkbox" name="silver" value="silver" />
+              </label>
+              <label>
+                Brown:
+                <input type="checkbox" name="brown" value="brown" />
+              </label>
             </Accordion.Body>
         </Accordion.Item>
       </Accordion>
