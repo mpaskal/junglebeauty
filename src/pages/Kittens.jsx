@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import { QueryCats } from '../components/FirebaseFunctions';
 import CatCard from '../components/CatCard';
@@ -40,6 +41,19 @@ const Kittens = () => {
             <KittenProfile cat={cats.find(cat => cat.id == kittenID)}/>
         </Modal.Body>
       </Modal>
+
+      <Accordion className='accordion'>
+        <Accordion.Item className='accordion-item'>
+            <Accordion.Header className='accordion-header'>
+              <p className='accordion-header-text'>
+                Filter kittens
+              </p>
+            </Accordion.Header>
+            <Accordion.Body>
+              
+            </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
 
       <div className='gallery-container'>
         {cats.map((cat) => {
