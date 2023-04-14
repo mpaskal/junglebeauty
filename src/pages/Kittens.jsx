@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import { QueryCats } from '../components/FirebaseFunctions';
 import CatCard from '../components/CatCard';
 import CatCardCarousel from '../components/CatCardCarousel';
 import KittenProfile from '../components/KittenProfile';
+import KittenGallery from '../components/KittenGallery';
 import './../App.css';
 
 const Kittens = () => {
@@ -34,20 +36,14 @@ const Kittens = () => {
 
       <CatCardCarousel cats={cats.sort((a, b) => a.date > b.date ? -1 : 1)}/>
 
+      <KittenGallery />
+
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton/>
         <Modal.Body>
             <KittenProfile cat={cats.find(cat => cat.id == kittenID)}/>
         </Modal.Body>
       </Modal>
-
-      <div className='gallery-container'>
-        {cats.map((cat) => {
-          return (
-            <CatCard key={cat.id} cat={cat} />
-          );
-        })}
-      </div>
     </>
   );
 };

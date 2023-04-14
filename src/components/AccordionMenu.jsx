@@ -15,7 +15,9 @@ const AccordionMenu = ({ items }) => {
             <Accordion.Item className='accordion-item' key={itemID} eventKey={itemID}>
                 <Accordion.Header className='accordion-header'>
                   <p className='accordion-header-text'>
-                    {item.date ? `${ConvertDate(item.date)}:` : ''} {item.title} {item.type == 'litter' ? `- ready to go from ${ConvertDate(GetReleaseDate(item.date))}` : ''}
+                    {item.date && `${ConvertDate(item.date)}: `} 
+                    {item.title} 
+                    {item.type == 'litter' && ` - ready to go from ${ConvertDate(GetReleaseDate(item.date))}`}
                   </p>
                 </Accordion.Header>
                 <Accordion.Body>
