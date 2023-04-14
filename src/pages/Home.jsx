@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CatsProvider, useCats } from '../contexts/CatsContext';
-import { GetCatFilepath } from '../components/Functions';
+import { getCatFilepath } from '../components/Functions';
 import { QueryCats } from '../components/FirebaseFunctions';
 import CatCardCarousel from '../components/CatCardCarousel';
 import VideoList from '../lists/VideoList';
