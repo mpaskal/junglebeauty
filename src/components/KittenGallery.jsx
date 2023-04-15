@@ -29,8 +29,8 @@ const KittenGallery = () => {
   
   return (
     <>
-      <Accordion className='accordion'>
-        <Accordion.Item className='accordion-item'>
+      <Accordion className='filter-accordion' defaultActiveKey='1'>
+        <Accordion.Item className='accordion-item' eventKey='0'>
             <Accordion.Header className='accordion-header'>
               <p className='accordion-header-text'>
                 Filter kittens
@@ -38,26 +38,26 @@ const KittenGallery = () => {
             </Accordion.Header>
             <Accordion.Body>
               <label>
-                Available kittens:
+                {`Available kittens: `}
                 <input type="checkbox" name="available" value="available" checked />
               </label>
               <label>
-                Reserved kittens:
+                {`Reserved kittens: `}
                 <input type="checkbox" name="reserved" value="reserved" />
               </label>
               <label>
-                Graduated kittens:
+                {`Graduated kittens: `}
                 <input type="checkbox" name="graduated" value="graduated" />
               </label>
               
               <br/>
 
               <label>
-                Silver:
+                {`Silver: `}
                 <input type="checkbox" name="silver" value="silver" />
               </label>
               <label>
-                Brown:
+                {`Brown: `}
                 <input type="checkbox" name="brown" value="brown" />
               </label>
             </Accordion.Body>
