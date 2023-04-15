@@ -45,6 +45,10 @@ a {
   color: rgb(25, 223, 58);
 }
 
+label {
+  padding-left: 10pt;
+}
+
 /* Page components */
 
 .columns-container {
@@ -280,4 +284,8 @@ a:hover{
 .pdf-container {
   margin: auto;
   margin-top: 20pt;
+}
+
+.filter-accordion {
+  width: 50%;
 }
