@@ -7,17 +7,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const BuySellAgreement = () => {
     return (
+      /*
       <div className='pdf-container'>
           <Document file='/assets/Buy_Sell Agreement.pdf'>
             <Page pageNumber={1} />
           </Document>
       </div>
-    );
-  };
+      */
 
-export default BuySellAgreement;
-
-/*
       <div className='page-background'>
         <h1>AGREEMENT to BUY \ SALE</h1>
         <p className='paragraph-variant'>
@@ -47,4 +44,7 @@ export default BuySellAgreement;
           <p>Seller Signature ____________________ Date _________________ Printed Name__________________________________</p>
         </p>
       </div>
-      */
+    );
+  };
+
+export default BuySellAgreement;
