@@ -45,6 +45,10 @@ a {
   color: rgb(25, 223, 58);
 }
 
+label {
+  padding-left: 10pt;
+}
+
 /* Page components */
 
 .columns-container {
