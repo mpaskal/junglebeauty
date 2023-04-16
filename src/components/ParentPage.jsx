@@ -22,30 +22,6 @@ const ParentPage = ({ sex }) => {
     cats = [];
   }
 
-  /*
-  const getCats = async () => {
-    try {
-      const cats = await QueryCats('parents', ['sex', '==', {sex}]);
-      setCats(cats);
-
-      console.log('getCats: ' + cat);
-
-      if (location.state) {
-        setShow(true);
-      }
-
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    getCats();
-  }, []);
-  */
-
   if (location.state) {
     parentName = location.state;
     window.history.replaceState({}, document.title);
