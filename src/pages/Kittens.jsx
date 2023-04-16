@@ -1,10 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
-import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
-import { QueryCats } from '../components/FirebaseFunctions';
-import CatCard from '../components/CatCard';
 import CatCardCarousel from '../components/CatCardCarousel';
 import KittenProfile from '../components/KittenProfile';
 import KittenGallery from '../components/KittenGallery';

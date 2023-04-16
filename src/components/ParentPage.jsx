@@ -1,9 +1,8 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { useCats } from '../contexts/CatsContext';
-import { QueryCats } from './FirebaseFunctions';
 import CatCardCarousel from '../components/CatCardCarousel';
 import ParentProfile from '../components/ParentProfile';
 import './../App.css';
@@ -22,30 +21,6 @@ const ParentPage = ({ sex }) => {
   } else {
     cats = [];
   }
-
-  /*
-  const getCats = async () => {
-    try {
-      const cats = await QueryCats('parents', ['sex', '==', {sex}]);
-      setCats(cats);
-
-      console.log('getCats: ' + cat);
-
-      if (location.state) {
-        setShow(true);
-      }
-
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    getCats();
-  }, []);
-  */
 
   if (location.state) {
     parentName = location.state;
