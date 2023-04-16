@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
 import { GetCatDescription } from './Functions';
-import { QueryCats } from './FirebaseFunctions';
 import './../App.css';
 
 const ParentProfile= ({ cat = [] }) => {
