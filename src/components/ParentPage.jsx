@@ -1,9 +1,8 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { useCats } from '../contexts/CatsContext';
-import { QueryCats } from './FirebaseFunctions';
 import CatCardCarousel from '../components/CatCardCarousel';
 import ParentProfile from '../components/ParentProfile';
 import './../App.css';
