@@ -11,7 +11,7 @@ import './../App.css';
 const KittenGallery = () => {
   const location = useLocation();
   const [show, setShow] = useState(location.state ? true : false);
-  const [filters, setFilters] = useState([]);
+  const [filters, setFilters] = useState({});
   const handleClose = () => setShow(false); 
   var kittenID = 'null';
   var cats = useCats();
@@ -26,6 +26,10 @@ const KittenGallery = () => {
     kittenID = location.state;
     window.history.replaceState({}, document.title);
   }
+
+  const handleChange = () => {
+    
+  }
   
   return (
     <>
@@ -39,26 +43,26 @@ const KittenGallery = () => {
             <Accordion.Body>
               <label>
                 {`Available kittens: `}
-                <input type="checkbox" name="available" value="available" checked />
+                <input type="checkbox" name="available" value="available" onChange={handleChange} checked />
               </label>
               <label>
                 {`Reserved kittens: `}
-                <input type="checkbox" name="reserved" value="reserved" />
+                <input type="checkbox" name="reserved" value="reserved" onChange={handleChange} />
               </label>
               <label>
                 {`Graduated kittens: `}
-                <input type="checkbox" name="graduated" value="graduated" />
+                <input type="checkbox" name="graduated" value="graduated" onChange={handleChange} />
               </label>
               
               <br/>
 
               <label>
                 {`Silver: `}
-                <input type="checkbox" name="silver" value="silver" />
+                <input type="checkbox" name="silver" value="silver" onChange={handleChange} />
               </label>
               <label>
                 {`Brown: `}
-                <input type="checkbox" name="brown" value="brown" />
+                <input type="checkbox" name="brown" value="brown" onChange={handleChange} />
               </label>
             </Accordion.Body>
         </Accordion.Item>
