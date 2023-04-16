@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCard from './CatCard';
-import CatCardCarousel from './CatCardCarousel';
 import KittenProfile from './KittenProfile';
 import './../App.css';
 
@@ -28,7 +27,7 @@ const KittenGallery = () => {
   }
 
   const handleChange = () => {
-    
+
   }
   
   return (
