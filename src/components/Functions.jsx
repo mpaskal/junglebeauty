@@ -25,9 +25,9 @@ export function GetCatDescription(cat) {
     description = ConvertDate(date);
   } else {
     if (sex == 'male') {
-      description = `${colour} ${adj} Bengal`;
+      description = `${adj} ${colour} Bengal`;
     } else {
-      description = `${cattery} ${name} ${ConvertDate(date)}${location ? `, ${location}` : ``}`;
+      description = `Born ${ConvertDate(date)} at ${cattery}${location && `, ${location}`}`;
     }
   }
 
