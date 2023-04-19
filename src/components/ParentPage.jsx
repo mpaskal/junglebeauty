@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { useCats } from '../contexts/CatsContext';
@@ -13,7 +13,7 @@ const ParentPage = ({ sex }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   var parentName = 'null';
-  var cat = [];
+  var cat = null;
   var cats = useCats();
 
   if (cats) {
@@ -26,8 +26,14 @@ const ParentPage = ({ sex }) => {
     parentName = location.state;
     window.history.replaceState({}, document.title);
     cat = cats.find(cat => cat.name == parentName);
-    console.log('location.state: ' + cat);
+    console.log('location.state: ' + cat.name);
   }
+
+  useEffect(() => {
+    if (cat) {
+      setShow(true);
+    }
+  }, [])
 
   return (
     <>
