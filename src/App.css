@@ -274,6 +274,7 @@ a:hover{
 .accordion-header-text {
   color:green;
   font-size: large;
+  font-weight: bold;
 }
 
 .accordion-item {
