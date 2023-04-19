@@ -193,13 +193,16 @@ a:hover{
 
 /* Cat cards */
 
+.cat-card-carousel-container {
+  width: 95%;
+  padding: 10pt;
+  margin-top: 20pt;
+}
+
 .cat-card-carousel {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10pt;
-  width: 95%;
-  padding: 10pt;
   margin: auto;
-  margin-top: 20pt;
 }
 
 .card-container {
@@ -217,14 +220,23 @@ a:hover{
   width: 90%;
 }
 
+.cat-img-container {
+  width: 90%;
+  margin: auto;
+}
+
 .cat-img {
+  border-radius: 10pt;
+  margin-top: 10pt;
   width: 100%;
 }
 
 .cat-text {
   color:green;
-  background-color: white;
   font-size: larger;
+  font-weight: bolder;
+  padding-top: 5pt;
+  padding-bottom: 5pt;
 }
 
 .cat-modal {
@@ -265,6 +277,7 @@ a:hover{
 .accordion-header-text {
   color:green;
   font-size: large;
+  font-weight: bold;
 }
 
 .accordion-item {

@@ -6,9 +6,11 @@ import CatCard from './CatCard';
 import { GetCatFilepath } from './Functions';
 import './../App.css';
 
-const CatCardCarousel = ({ cats, autoplay = false }) => {  
+const CatCardCarousel = ({ cats, autoplay = false, contained = true }) => {  
+  console.log(contained);
+
   return (
-    <Carousel className='cat-card-carousel'
+    <Carousel className={`cat-card-carousel ${contained && `cat-card-carousel-container`}`}
       autoPlay={autoplay}
       autoPlaySpeed={5000}
       draggable
