@@ -40,7 +40,7 @@ const ParentProfile= ({ cat = [] }) => {
                     ?
                         <Accordion.Item className='accordion-item' eventKey='0'>
                             <Accordion.Header className='accordion-header'>
-                                {name}'s available kittens:
+                                <h5 className='accordion-header-text'>{name}'s available kittens:</h5>
                             </Accordion.Header>
                             <Accordion.Body>
                                 <div>
@@ -55,7 +55,7 @@ const ParentProfile= ({ cat = [] }) => {
                     ?
                         <Accordion.Item className='accordion-item' eventKey='1'>
                             <Accordion.Header className='accordion-header'>
-                                {name}'s graduated kittens:
+                            <h5 className='accordion-header-text'>{name}'s graduated kittens:</h5>
                             </Accordion.Header>
                             <Accordion.Body>
                                 <CatCardCarousel cats={graduatedKittens}/>
