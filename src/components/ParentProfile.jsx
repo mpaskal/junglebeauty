@@ -58,7 +58,7 @@ const ParentProfile= ({ cat = [] }) => {
                             <h5 className='accordion-header-text'>{name}'s graduated kittens:</h5>
                             </Accordion.Header>
                             <Accordion.Body>
-                                <CatCardCarousel cats={graduatedKittens}/>
+                                <CatCardCarousel cats={graduatedKittens} contained={false}/>
                             </Accordion.Body>
                         </Accordion.Item>
                     :
