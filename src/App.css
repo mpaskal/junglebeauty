@@ -217,10 +217,15 @@ a:hover{
   width: 90%;
 }
 
+.cat-img-container {
+  width: 90%;
+  margin: auto;
+}
+
 .cat-img {
   border-radius: 10pt;
   margin-top: 10pt;
-  width: 90%;
+  width: 100%;
 }
 
 .cat-text {
