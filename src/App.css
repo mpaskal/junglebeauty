@@ -218,13 +218,17 @@ a:hover{
 }
 
 .cat-img {
-  width: 100%;
+  border-radius: 10pt;
+  margin-top: 10pt;
+  width: 90%;
 }
 
 .cat-text {
   color:green;
-  background-color: white;
   font-size: larger;
+  font-weight: bolder;
+  padding-top: 5pt;
+  padding-bottom: 5pt;
 }
 
 .cat-modal {
