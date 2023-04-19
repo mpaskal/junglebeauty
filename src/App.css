@@ -193,13 +193,16 @@ a:hover{
 
 /* Cat cards */
 
+.cat-card-carousel-container {
+  width: 95%;
+  padding: 10pt;
+  margin-top: 20pt;
+}
+
 .cat-card-carousel {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10pt;
-  width: 95%;
-  padding: 10pt;
   margin: auto;
-  margin-top: 20pt;
 }
 
 .card-container {
