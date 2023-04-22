@@ -227,6 +227,7 @@ a:hover{
 
 .cat-img {
   border-radius: 10pt;
+  cursor: pointer;
   margin-top: 10pt;
   width: 100%;
 }
