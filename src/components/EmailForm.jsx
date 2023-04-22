@@ -57,7 +57,7 @@ const EmailForm = () => {
                     </label>
                 </div>
                 <div className='buttons-container'>
-                    <Button type='submit'>Send</Button>
+                    <Button type='submit' className='form-button'>Send</Button>
                 </div>
             </form>
         </div>
