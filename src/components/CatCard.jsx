@@ -18,7 +18,7 @@ const CatCard = ({ cat }) => {
         <>
             <div className='cat-card' onClick={handleShow}>
                 <div className='cat-img-container'>
-                    <CatImage filepath={GetCatFilepath(cat) + '0.png'} alt={displayName}/>
+                    <CatImage filepath={GetCatFilepath(cat) + '0.png'} clickable={false} alt={displayName}/>
                 </div>
                 <div className='cat-text'>
                     <h3>{displayName}</h3>
