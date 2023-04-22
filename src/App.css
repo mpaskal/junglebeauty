@@ -307,3 +307,14 @@ a:hover{
 .filter-accordion {
   width: 50%;
 }
+
+.form-container {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10pt;
+}
+
+.form-button {
+  background-color: green;
+  border: none;
+}
