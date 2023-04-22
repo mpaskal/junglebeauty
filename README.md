@@ -3,6 +3,13 @@ Open the directory where the project will be
 Open Git bash, navigate to the directory
 Clone the project in the directory: git clone https://github.com/mpaskal/junglebeauty.git (more details https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
+Run the following commands to install packages:
+#### npm i -D react-router-dom 
+#### npm i react-bootstrap bootstrap
+#### npm i react-multi-carousel
+#### npm i react-pdf
+#### npm i firebase
+#### npm i emailjs-com
 
 ## Available Scripts
 
