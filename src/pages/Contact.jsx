@@ -7,11 +7,8 @@ const Contact = () => {
         <div className='page-background'>
           <h1>JungleBeauty Bengals: vivid piece of jungle beauty in your home</h1>
           <br/>
-          <p>
-            Please contact us by email:
-            <br/>
-            <EmailForm />
-          </p>
+          <p>Please contact us by email:</p>
+          <EmailForm />
           
           <p>
             Start chatting on Skype:
