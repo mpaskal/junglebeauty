@@ -100,6 +100,28 @@ label {
   width: 95%;
 }
 
+.pdf-container {
+  margin: auto;
+  margin-top: 20pt;
+}
+
+.filter-accordion {
+  width: 50%;
+}
+
+/* Email Form */
+
+.form-container {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10pt;
+}
+
+.form-button {
+  background-color: green;
+  border: none;
+}
+
 /* Navigation */
 
 .nav-bar {
@@ -295,26 +317,4 @@ a:hover{
   width: 95%;
   margin: auto;
   margin-top: 20pt;
-}
-
-/* Other */
-
-.pdf-container {
-  margin: auto;
-  margin-top: 20pt;
-}
-
-.filter-accordion {
-  width: 50%;
-}
-
-.form-container {
-  width: 50%;
-  margin: auto;
-  margin-bottom: 10pt;
-}
-
-.form-button {
-  background-color: green;
-  border: none;
 }
