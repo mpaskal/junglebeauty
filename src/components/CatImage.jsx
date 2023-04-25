@@ -9,13 +9,13 @@ const CatImage = ({ filepath, clickable = true }) => {
     const handleShow = () => setShow(true);
 
     const getImage = async () => {
-        const image = await GetImage(filepath);
-        setImage(image);
-      }
-    
-      useEffect(() => {
-        getImage();
-      }, [])
+      const image = await GetImage(filepath);
+      setImage(image);
+    }
+  
+    useEffect(() => {
+      getImage();
+    }, [])
 
     return (
       <>
@@ -24,7 +24,7 @@ const CatImage = ({ filepath, clickable = true }) => {
         <Modal show={show} onHide={handleClose} size='lg'>
             <Modal.Header closeButton/>
             <Modal.Body>
-            <img className='cat-img' src={image} />
+              <img className='cat-img' src={image} />
             </Modal.Body>
         </Modal>
       </>
