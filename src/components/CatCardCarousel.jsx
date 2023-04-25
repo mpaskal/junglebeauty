@@ -1,9 +1,5 @@
-import { Component, useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
-import CatProfile from './KittenProfile';
 import CatCard from './CatCard';
-import { GetCatFilepath } from './Functions';
 import './../App.css';
 
 const CatCardCarousel = ({ cats, autoplay = false, contained = true }) => {  
