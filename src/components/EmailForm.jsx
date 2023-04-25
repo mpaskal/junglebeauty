@@ -19,12 +19,11 @@ const EmailForm = () => {
             email,
             '7PX90rf6YM9qXhPH7'
             )
-        .then((response) => {
-            console.log('Email sent', response.status, response.text);
-            alert('Email sent!');
+        .then(() => {
+            alert(`Thank you for reaching out! We will get back to you as soon as possible.`);
         })
         .catch((err) => {
-            console.log('Sending failed', err);
+            alert(`We're sorry, this email could not be sent.`);
         });
     };
 
