@@ -36,8 +36,7 @@ const ParentProfile= ({ cat = [] }) => {
             <ImageCarousel cat={cat} />
 
             <Accordion className='accordion' defaultActiveKey='0' alwaysOpen>
-                {availableKittens.length > 0
-                    ?
+                {availableKittens.length > 0 &&
                         <Accordion.Item className='accordion-item' eventKey='0'>
                             <Accordion.Header className='accordion-header'>
                                 <h5 className='accordion-header-text'>{name}'s available kittens:</h5>
@@ -48,23 +47,17 @@ const ParentProfile= ({ cat = [] }) => {
                                 </div>
                             </Accordion.Body>
                         </Accordion.Item>
-                    :
-                    ''
                 }
-                {graduatedKittens.length > 0
-                    ?
-                        <Accordion.Item className='accordion-item' eventKey='1'>
-                            <Accordion.Header className='accordion-header'>
-                            <h5 className='accordion-header-text'>{name}'s graduated kittens:</h5>
-                            </Accordion.Header>
-                            <Accordion.Body>
-                                <CatCardCarousel cats={graduatedKittens} contained={false}/>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    :
-                    ''
+                {graduatedKittens.length > 0 &&
+                    <Accordion.Item className='accordion-item' eventKey='1'>
+                        <Accordion.Header className='accordion-header'>
+                        <h5 className='accordion-header-text'>{name}'s graduated kittens:</h5>
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            <CatCardCarousel cats={graduatedKittens} contained={false}/>
+                        </Accordion.Body>
+                    </Accordion.Item>
                 }
-              
                 
             </Accordion>
         </div>
