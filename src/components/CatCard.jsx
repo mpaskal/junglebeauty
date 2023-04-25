@@ -6,7 +6,7 @@ import CatImage from './CatImage';
 import { GetCatFilepath, GetCatDescription } from './Functions';
 import './../App.css';
 
-const CatCard = ({ cat }) => {
+const CatCard = ({ cat, size = 'large' }) => {
     const { name, type, sex, } = cat;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -21,8 +21,14 @@ const CatCard = ({ cat }) => {
                     <CatImage filepath={GetCatFilepath(cat) + '0.png'} clickable={false} alt={displayName}/>
                 </div>
                 <div className='cat-text'>
-                    <h3>{displayName}</h3>
-                    <h4>{description}</h4>
+                    {size == 'large' ?
+                        <>
+                            <h3>{displayName}</h3>
+                            <h4>{description}</h4>
+                        </>
+                    :
+                        <h4>{displayName}</h4>
+                    }
                 </div>
             </div>
 
