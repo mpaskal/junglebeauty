@@ -70,7 +70,7 @@ const KittenGallery = () => {
       <div className='gallery-container'>
         {cats.map((cat) => {
           return (
-            <CatCard key={cat.id} cat={cat} />
+            <CatCard key={cat.id} cat={cat} size='small' />
           );
         })}
       </div>
