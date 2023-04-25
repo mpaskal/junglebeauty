@@ -9,22 +9,24 @@ const AccordionMenu = ({ items }) => {
   return (
     <Accordion className='accordion' alwaysOpen flush>
       {items.map((item) => {
-        itemID++;
+        if (item.title && item.body) {
+          itemID++;
 
-        return (
-            <Accordion.Item className='accordion-item' key={itemID} eventKey={itemID}>
-                <Accordion.Header className='accordion-header'>
-                  <p className='accordion-header-text'>
-                    {item.date && `${ConvertDate(item.date)}: `} 
-                    {item.title} 
-                    {item.type == 'litter' && ` - ready to go from ${ConvertDate(GetReleaseDate(item.date))}`}
-                  </p>
-                </Accordion.Header>
-                <Accordion.Body>
-                  {item.body}
-                </Accordion.Body>
-            </Accordion.Item>
-        )
+          return (
+              <Accordion.Item className='accordion-item' key={itemID} eventKey={itemID}>
+                  <Accordion.Header className='accordion-header'>
+                    <p className='accordion-header-text'>
+                      {item.date && `${ConvertDate(item.date)}: `} 
+                      {item.title} 
+                      {item.type == 'litter' && ` - ready to go from ${ConvertDate(GetReleaseDate(item.date))}`}
+                    </p>
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    {item.body}
+                  </Accordion.Body>
+              </Accordion.Item>
+          )
+        }
       })}
     </Accordion>
   );
