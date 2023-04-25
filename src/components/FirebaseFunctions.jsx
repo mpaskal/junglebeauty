@@ -27,7 +27,7 @@ export async function QueryCats(table, predicate = []) {
 }
 
 export function InsertCat(table, cat) {
-    const { name, collar, colour, sex, adj, date, cattery, location, mother, father } = cat;
+    const { name, date } = cat;
     const id = GetCatID(name, date);
 
     const addCat = async () => {
