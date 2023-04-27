@@ -26,8 +26,9 @@ const KittenGallery = () => {
     window.history.replaceState({}, document.title);
   }
 
-  const handleChange = () => {
-
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setEmail({ ...filters, [name]: value });
   }
   
   return (
@@ -42,26 +43,26 @@ const KittenGallery = () => {
             <Accordion.Body>
               <label>
                 {`Available kittens: `}
-                <input type="checkbox" name="available" value="available" onChange={handleChange} checked />
+                <input type="checkbox" name="status" value="available" onChange={handleChange} checked />
               </label>
               <label>
                 {`Reserved kittens: `}
-                <input type="checkbox" name="reserved" value="reserved" onChange={handleChange} />
+                <input type="checkbox" name="status" value="reserved" onChange={handleChange} />
               </label>
               <label>
                 {`Graduated kittens: `}
-                <input type="checkbox" name="graduated" value="graduated" onChange={handleChange} />
+                <input type="checkbox" name="status" value="graduated" onChange={handleChange} />
               </label>
               
               <br/>
 
               <label>
                 {`Silver: `}
-                <input type="checkbox" name="silver" value="silver" onChange={handleChange} />
+                <input type="checkbox" name="colour" value="silver" onChange={handleChange} />
               </label>
               <label>
                 {`Brown: `}
-                <input type="checkbox" name="brown" value="brown" onChange={handleChange} />
+                <input type="checkbox" name="colour" value="brown" onChange={handleChange} />
               </label>
             </Accordion.Body>
         </Accordion.Item>
