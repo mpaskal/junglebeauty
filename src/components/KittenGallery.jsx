@@ -9,21 +9,13 @@ import './../App.css';
 
 const KittenGallery = () => {
   const location = useLocation();
-  const [show, setShow] = useState(location.state ? true : false);
   const [filters, setFilters] = useState({});
-  const handleClose = () => setShow(false); 
-  var kittenID = 'null';
   var cats = useCats();
   
   if (cats) {
       cats = cats.kittens.filter((cat) => cat.status == 'available');
   } else {
       cats = [];
-  }
-
-  if (location.state) {
-    kittenID = location.state;
-    window.history.replaceState({}, document.title);
   }
 
   const handleChange = (event) => {
@@ -75,13 +67,6 @@ const KittenGallery = () => {
           );
         })}
       </div>
-
-      <Modal show={show} onHide={handleClose} size='lg'>
-        <Modal.Header closeButton/>
-        <Modal.Body>
-            <KittenProfile cat={cats.find(cat => cat.id == kittenID)}/>
-        </Modal.Body>
-      </Modal>
     </>
   );
 };
