@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCard from './CatCard';
-import KittenProfile from './KittenProfile';
 import './../App.css';
 
 const KittenGallery = () => {
