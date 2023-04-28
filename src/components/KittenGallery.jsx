@@ -7,8 +7,13 @@ import './../App.css';
 
 const KittenGallery = () => {
   const location = useLocation();
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: []});
   var cats = useCats();
+  var filteredCats = cats.filter((cat) => 
+    filters.colour.includes(cat.colour)
+    && filters.father.includes(cat.father)
+    && filters.mother.includes(cat.mother)
+    && filters.status.includes(cat.status));
   
   if (cats) {
       cats = cats.kittens.filter((cat) => cat.status == 'available');
@@ -59,7 +64,7 @@ const KittenGallery = () => {
       </Accordion>
 
       <div className='gallery-container'>
-        {cats.map((cat) => {
+        {filteredCats.map((cat) => {
           return (
             <CatCard key={cat.id} cat={cat} size='small' />
           );
