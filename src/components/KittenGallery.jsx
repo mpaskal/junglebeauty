@@ -17,6 +17,7 @@ const KittenGallery = () => {
   
   if (cats) {
       cats = cats.kittens.filter((cat) => cat.status == 'available');
+      setFilters({colour: ['silver', 'brown'], father: [cats.parents.filter((cat) => cat.sex == 'male')], mother: [cats.parents.filter((cat) => cat.sex == 'female')], status: ['available']});
   } else {
       cats = [];
   }
