@@ -18,7 +18,7 @@ const KittenGallery = () => {
   }
 
   useEffect(() => {
-    setFilters({colour: ['silver', 'brown'], father: parents.filter((cat) => cat.sex == 'male'), mother: parents.filter((cat) => cat.sex == 'female'), status: ['available']});
+    setFilters({colour: ['silver', 'brown'], father: parents.filter((cat) => cat.sex == 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex == 'female').map((cat) => {return cat.name}), status: ['available']});
   }, [])
 
   const handleChange = (event) => {
