@@ -18,7 +18,7 @@ const KittenGallery = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setEmail({ ...filters, [name]: value });
+    setFilters({ ...filters, [name]: value });
   }
   
   return (
