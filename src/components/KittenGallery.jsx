@@ -9,23 +9,24 @@ const KittenGallery = () => {
   const location = useLocation();
   const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: []});
   var cats = useCats();
-  var filteredCats = cats.filter((cat) => 
-    filters.colour.includes(cat.colour)
-    && filters.father.includes(cat.father)
-    && filters.mother.includes(cat.mother)
-    && filters.status.includes(cat.status));
+  var kittens = [];
+  var parents = [];
   
   if (cats) {
-      cats = cats.kittens.filter((cat) => cat.status == 'available');
-      setFilters({colour: ['silver', 'brown'], father: [cats.parents.filter((cat) => cat.sex == 'male')], mother: [cats.parents.filter((cat) => cat.sex == 'female')], status: ['available']});
-  } else {
-      cats = [];
+      kittens = cats.kittens.filter((cat) => cat.status == 'available');
+      parents = cats.parents;
   }
+
+  useEffect(() => {
+    setFilters({colour: ['silver', 'brown'], father: parents.filter((cat) => cat.sex == 'male'), mother: parents.filter((cat) => cat.sex == 'female'), status: ['available']});
+  }, [])
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFilters({ ...filters, [name]: value });
   }
+
+  console.log(filters);
   
   return (
     <>
@@ -65,7 +66,11 @@ const KittenGallery = () => {
       </Accordion>
 
       <div className='gallery-container'>
-        {filteredCats.map((cat) => {
+        {kittens.filter((cat) => 
+          filters.colour.includes(cat.colour)
+          && filters.father.includes(cat.father)
+          && filters.mother.includes(cat.mother)
+          && filters.status.includes(cat.status)).map((cat) => {
           return (
             <CatCard key={cat.id} cat={cat} size='small' />
           );
