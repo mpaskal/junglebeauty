@@ -61,6 +61,45 @@ const KittenGallery = () => {
                 {`Brown: `}
                 <input type="checkbox" name="colour" value="brown" onChange={handleChange} checked />
               </label>
+
+              <br/>
+              
+              <div className='parent-accordions-container'>
+                <Accordion defaultActiveKey='1'>
+                  <Accordion.Item eventKey='0'>
+                    <Accordion.Header>
+                      <p>Father</p>
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      {parents.filter((cat) => cat.sex == 'male').map((cat) => {
+                        return (
+                          <label>
+                            {`${cat.name}: `}
+                            <input type="checkbox" name="father" value={cat.name} onChange={handleChange} checked />
+                          </label>
+                        )
+                      })}
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+                <Accordion defaultActiveKey='1'>
+                  <Accordion.Item eventKey='0'>
+                    <Accordion.Header>
+                      <p>Mother</p>
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      {parents.filter((cat) => cat.sex == 'female').map((cat) => {
+                        return (
+                          <label>
+                            {`${cat.name}: `}
+                            <input type="checkbox" name="mother" value={cat.name} onChange={handleChange} checked />
+                          </label>
+                        )
+                      })}
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </div>
             </Accordion.Body>
         </Accordion.Item>
       </Accordion>
