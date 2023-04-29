@@ -55,11 +55,11 @@ const KittenGallery = () => {
 
               <label>
                 {`Silver: `}
-                <input type="checkbox" name="colour" value="silver" onChange={handleChange} />
+                <input type="checkbox" name="colour" value="silver" onChange={handleChange} checked />
               </label>
               <label>
                 {`Brown: `}
-                <input type="checkbox" name="colour" value="brown" onChange={handleChange} />
+                <input type="checkbox" name="colour" value="brown" onChange={handleChange} checked />
               </label>
             </Accordion.Body>
         </Accordion.Item>
