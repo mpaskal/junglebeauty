@@ -10,7 +10,7 @@ const Checkbox = ({ label, name, value, defaultCheck = false }) => {
     return (
         <label>
             {`${label}: `}
-            <input type='checkbox' name={name} value={value} checked={defaultCheck} onChange={handleChange} />
+            <input type='checkbox' name={name} value={value} checked={checked} onChange={handleChange} />
         </label>
     )
 }
