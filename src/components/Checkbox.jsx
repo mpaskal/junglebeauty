@@ -9,7 +9,7 @@ const Checkbox = ( label, name, value, defaultCheck = false ) => {
 
     return (
         <label>
-            <p>{label}</p>
+            {label}
             <input type='checkbox' name={name} value={value} checked={defaultCheck} onChange={handleChange} />
         </label>
     )
