@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCard from './CatCard';
+import Checkbox from './Checkbox';
 import './../App.css';
 
 const KittenGallery = () => {
@@ -38,32 +39,14 @@ const KittenGallery = () => {
               </p>
             </Accordion.Header>
             <Accordion.Body>
-              <label>
-                {`Available kittens: `}
-                <input type="checkbox" name="status" value="available" onChange={handleChange} checked />
-              </label>
-              <label>
-                {`Reserved kittens: `}
-                <input type="checkbox" name="status" value="reserved" onChange={handleChange} />
-              </label>
-              <label>
-                {`Graduated kittens: `}
-                <input type="checkbox" name="status" value="graduated" onChange={handleChange} />
-              </label>
-              
+              <Checkbox label='Available kittens' name='status' value='available' defaultCheck />
+              <Checkbox label='Reserved kittens' name='status' value='reserved' />
+              <Checkbox label='Graduated kittens' name='status' value='graduated' />
               <br/>
-
-              <label>
-                {`Silver: `}
-                <input type="checkbox" name="colour" value="silver" onChange={handleChange} checked />
-              </label>
-              <label>
-                {`Brown: `}
-                <input type="checkbox" name="colour" value="brown" onChange={handleChange} checked />
-              </label>
-
+              <Checkbox label='Silver' name='colour' value='silver' defaultCheck />
+              <Checkbox label='Brown' name='colour' value='brown' defaultCheck />
               <br/>
-              
+  
               <div className='parent-accordions-container'>
                 <Accordion defaultActiveKey='1'>
                   <Accordion.Item eventKey='0'>
@@ -73,10 +56,7 @@ const KittenGallery = () => {
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex == 'male').map((cat) => {
                         return (
-                          <label>
-                            {`${cat.name}: `}
-                            <input type="checkbox" name="father" value={cat.name} onChange={handleChange} checked />
-                          </label>
+                          <Checkbox label={cat.name} name='father' value={cat.name} defaultCheck />
                         )
                       })}
                     </Accordion.Body>
@@ -90,10 +70,7 @@ const KittenGallery = () => {
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex == 'female').map((cat) => {
                         return (
-                          <label>
-                            {`${cat.name}: `}
-                            <input type="checkbox" name="mother" value={cat.name} onChange={handleChange} checked />
-                          </label>
+                          <Checkbox label={cat.name} name='mother' value={cat.name} defaultCheck />
                         )
                       })}
                     </Accordion.Body>
