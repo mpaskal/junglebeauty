@@ -39,12 +39,12 @@ const KittenGallery = () => {
               </p>
             </Accordion.Header>
             <Accordion.Body>
-              <Checkbox label='Available kittens' name='status' value='available' defaultCheck />
-              <Checkbox label='Reserved kittens' name='status' value='reserved' />
-              <Checkbox label='Graduated kittens' name='status' value='graduated' />
+              <Checkbox label='Available kittens' name='status' value='available' changeHandler={handleChange} defaultCheck />
+              <Checkbox label='Reserved kittens' name='status' value='reserved' changeHandler={handleChange} />
+              <Checkbox label='Graduated kittens' name='status' value='graduated' changeHandler={handleChange} />
               <br/>
-              <Checkbox label='Silver' name='colour' value='silver' defaultCheck />
-              <Checkbox label='Brown' name='colour' value='brown' defaultCheck />
+              <Checkbox label='Silver' name='colour' value='silver' changeHandler={handleChange} defaultCheck />
+              <Checkbox label='Brown' name='colour' value='brown' changeHandler={handleChange} defaultCheck />
               <br/>
   
               <div className='parent-accordions-container'>
@@ -56,7 +56,7 @@ const KittenGallery = () => {
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex == 'male').map((cat) => {
                         return (
-                          <Checkbox label={cat.name} name='father' value={cat.name} defaultCheck />
+                          <Checkbox label={cat.name} name='father' value={cat.name} changeHandler={handleChange} defaultCheck />
                         )
                       })}
                     </Accordion.Body>
@@ -70,7 +70,7 @@ const KittenGallery = () => {
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex == 'female').map((cat) => {
                         return (
-                          <Checkbox label={cat.name} name='mother' value={cat.name} defaultCheck />
+                          <Checkbox label={cat.name} name='mother' value={cat.name} changeHandler={handleChange} defaultCheck />
                         )
                       })}
                     </Accordion.Body>
