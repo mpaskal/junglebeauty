@@ -3,9 +3,9 @@ import { useState } from "react";
 const Checkbox = ({ label, name, value, changeHandler, defaultCheck = false }) => {
     const [checked, setChecked] = useState(defaultCheck);
 
-    const handleChange = () => {
+    const handleChange = (event) => {
         setChecked(!checked);
-        changeHandler();
+        changeHandler(event);
     }
 
     return (
