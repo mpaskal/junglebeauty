@@ -7,7 +7,6 @@ import Checkbox from './Checkbox';
 import './../App.css';
 
 const KittenGallery = () => {
-  const location = useLocation();
   const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: []});
   var cats = useCats();
   var kittens = [];
