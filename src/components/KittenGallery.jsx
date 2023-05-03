@@ -24,7 +24,13 @@ const KittenGallery = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFilters({ ...filters, [name]: value});
+    var filterArray = filters[name];
+    if (filterArray.includes(value)) {
+      filterArray = filterArray.filter(item => item != value);
+    } else {
+      filterArray.push(value);
+    }
+    setFilters({ ...filters, [name]: filterArray});
   }
 
   console.log(filters);
