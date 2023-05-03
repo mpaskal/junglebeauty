@@ -117,6 +117,10 @@ label {
   width: 45%;
 }
 
+.checkbox {
+  color: green;
+}
+
 /* Email Form */
 
 .form-container {

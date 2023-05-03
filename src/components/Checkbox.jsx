@@ -11,7 +11,7 @@ const Checkbox = ({ label, name, value, changeHandler, defaultCheck = false }) =
     return (
         <label>
             {`${label}: `}
-            <input type='checkbox' name={name} value={value} checked={checked} onChange={handleChange} />
+            <input type='checkbox' className='checkbox' name={name} value={value} checked={checked} onChange={handleChange} />
         </label>
     )
 }
