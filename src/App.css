@@ -308,7 +308,7 @@ a:hover{
 
 .gallery-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 25% 25% 25% 25%;
   gap: 10pt;
   width: 95%;
   margin: auto;
