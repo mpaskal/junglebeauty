@@ -109,6 +109,14 @@ label {
   width: 50%;
 }
 
+.parent-accordions-container {
+  display: flex;
+}
+
+.parent-accordion {
+  width: 45%;
+}
+
 /* Email Form */
 
 .form-container {
