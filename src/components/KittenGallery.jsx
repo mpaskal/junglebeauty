@@ -24,7 +24,7 @@ const KittenGallery = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFilters({ ...filters, [name]: value });
+    setFilters({ ...filters, [name]: value});
   }
 
   console.log(filters);
@@ -48,7 +48,7 @@ const KittenGallery = () => {
               <br/>
   
               <div className='parent-accordions-container'>
-                <Accordion defaultActiveKey='1'>
+                <Accordion className='parent-accordion' defaultActiveKey='1'>
                   <Accordion.Item eventKey='0'>
                     <Accordion.Header>
                       <p>Father</p>
@@ -62,7 +62,7 @@ const KittenGallery = () => {
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>
-                <Accordion defaultActiveKey='1'>
+                <Accordion className='parent-accordion' defaultActiveKey='1'>
                   <Accordion.Item eventKey='0'>
                     <Accordion.Header>
                       <p>Mother</p>
