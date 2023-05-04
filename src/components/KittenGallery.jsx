@@ -91,10 +91,12 @@ const KittenGallery = () => {
           filters.colour.includes(cat.colour)
           && filters.father.includes(cat.father)
           && filters.mother.includes(cat.mother)
-          && filters.status.includes(cat.status)).map((cat) => {
-          return (
-            <CatCard key={cat.id} cat={cat} size='small' />
-          );
+          && filters.status.includes(cat.status))
+          .sort((a, b) => a.status > b.status || a.date > b.date ? 1 : -1)
+          .map((cat) => {
+            return (
+              <CatCard key={cat.id} cat={cat} size='small' />
+            );
         })}
       </div>
     </>
