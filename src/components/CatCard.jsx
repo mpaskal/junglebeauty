@@ -23,7 +23,7 @@ const CatCard = ({ cat, size = 'large' }) => {
                 <div className='cat-text'>
                     {size == 'large' ?
                         <>
-                            <h3>{displayName}</h3>
+                            <h3><b>{displayName}</b></h3>
                             <h4>{description}</h4>
                         </>
                     :
