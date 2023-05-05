@@ -20,14 +20,15 @@ export function GetCatFilepath(cat) {
 export function GetCatDescription(cat) {
   const { name, type, colour, sex, adj, date, cattery, location } = cat;
   var description;
-
+  console.log(name);
+console.log(location == undefined);
   if (type == 'kitten') {
     description = ConvertDate(date);
   } else {
     if (sex == 'male') {
       description = `${adj} ${colour} Bengal`;
     } else {
-      description = `Born ${ConvertDate(date)} at ${cattery} cattery${location && `, ${location}`}`;
+      description = `Born ${ConvertDate(date)}${cattery != undefined ? ` at ${cattery} cattery${location != undefined ? `, ${location}` : ''}` : ''}`;
     }
   }
 
