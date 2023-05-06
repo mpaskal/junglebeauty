@@ -19,7 +19,7 @@ const CatImage = ({ filepath, clickable = true }) => {
 
     return (
       <>
-        <img className='cat-img' src={image} onClick={clickable && handleShow} />
+        <img className='cat-img' src={image} onClick={clickable ? handleShow : undefined} />
 
         <Modal show={show} onHide={handleClose} size='lg'>
             <Modal.Header closeButton/>
