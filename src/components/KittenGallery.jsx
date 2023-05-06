@@ -61,7 +61,7 @@ const KittenGallery = () => {
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex == 'male').map((cat) => {
                         return (
-                          <Checkbox label={cat.name} name='father' value={cat.name} changeHandler={handleChange} defaultCheck />
+                          <Checkbox key={cat.id} label={cat.name} name='father' value={cat.name} changeHandler={handleChange} defaultCheck />
                         )
                       })}
                     </Accordion.Body>
@@ -75,7 +75,7 @@ const KittenGallery = () => {
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex == 'female').map((cat) => {
                         return (
-                          <Checkbox label={cat.name} name='mother' value={cat.name} changeHandler={handleChange} defaultCheck />
+                          <Checkbox key={cat.id} label={cat.name} name='mother' value={cat.name} changeHandler={handleChange} defaultCheck />
                         )
                       })}
                     </Accordion.Body>
