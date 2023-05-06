@@ -20,8 +20,7 @@ export function GetCatFilepath(cat) {
 export function GetCatDescription(cat) {
   const { name, type, colour, sex, adj, date, cattery, location } = cat;
   var description;
-  console.log(name);
-console.log(location == undefined);
+
   if (type == 'kitten') {
     description = ConvertDate(date);
   } else {
