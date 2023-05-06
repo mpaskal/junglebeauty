@@ -13,7 +13,7 @@ const KittenGallery = () => {
   var parents = [];
   
   if (cats) {
-      kittens = cats.kittens.filter((cat) => cat.status == 'available');
+      kittens = cats.kittens;
       parents = cats.parents;
   }
 
