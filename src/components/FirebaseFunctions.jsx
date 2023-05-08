@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { collection, doc, query, where, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { ref, getStorage, getDownloadURL, listAll } from 'firebase/storage';
-import { db } from '../firebase';
-
-const storage = getStorage();
+import { db, storage } from '../firebase';
 
 export async function QueryCats(table, predicate = []) {
     const cats = [];
