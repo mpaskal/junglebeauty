@@ -17,6 +17,8 @@ export function CatsProvider({ children }) {
         getCats();
     }, []);
 
+    console.log(cats);
+
     return (
         <CatsContext.Provider value={cats}>
             {children}
