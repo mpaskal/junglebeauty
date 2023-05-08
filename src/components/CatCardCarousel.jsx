@@ -3,7 +3,6 @@ import CatCard from './CatCard';
 import './../App.css';
 
 const CatCardCarousel = ({ cats, autoplay = false, contained = true }) => {  
-  console.log(contained);
 
   return (
     <Carousel className={`cat-card-carousel ${contained && `cat-card-carousel-container`}`}
