@@ -39,7 +39,7 @@ const Home = () => {
                         {cats.filter(cat => cat.type == 'kitten' && cat.status == 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
                             return (
                                 <div key={cat.id} className='card-container'>
-                                    <CatCard cat={cat}/>
+                                    <CatCard cat={cat} size='small'/>
                                 </div>
                             )
                         })}
