@@ -7,10 +7,10 @@ import Checkbox from './Checkbox';
 import './../App.css';
 
 const KittenGallery = () => {
-  const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: []});
   var cats = useCats();
   var kittens = [];
   var parents = [];
+  const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: []});
   
   if (cats) {
       kittens = cats.kittens;
@@ -19,7 +19,7 @@ const KittenGallery = () => {
 
   useEffect(() => {
     setFilters({colour: ['silver', 'brown'], father: parents.filter((cat) => cat.sex == 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex == 'female').map((cat) => {return cat.name}), status: ['available']});
-  }, [])
+  }, [cats])
 
   const handleChange = (event) => {
     const { name, value } = event.target;
