@@ -69,17 +69,12 @@ const QuestionList = [
         </>
     }, {
         title: `How the deposit works`,
-        body: [<p>oy</p>],
+        body:
+            <p>
+            Deposit has two purposes - to reserve the kitten and to be used for neutering. Our Junglebeauty Bengals Cattery takes the deposit CAD 400. We do not support backdoor breeding and try to eliminate it the best way we can. If we will not be able to do neutering with our clinic then you have to do it with your vet and deposit will be returned to you in full upon the proof of neutering/ spaying.
+            </p>
     }, {
         title: `Tips to contact us and choose a kitten`,
-        body:
-            <>
-                <p>
-                Deposit has two purposes - to reserve the kitten and to be used for neutering. Our Junglebeauty Bengals Cattery takes the deposit CAD 400. We do not support backdoor breeding and try to eliminate it the best way we can. If we will not be able to do neutering with our clinic then you have to do it with your vet and deposit will be returned to you in full upon the proof of neutering/ spaying.
-                </p>
-            </>
-    }, {
-        title: `How the waiting list works`,
         body:
             <>
                 <p>
@@ -87,7 +82,7 @@ const QuestionList = [
                 </p>
             </>
     }, {
-        title: `Procedure to reserve a kitten`,
+        title: `How the waiting list works`,
         body:
             <>
                 <p>
@@ -98,6 +93,18 @@ const QuestionList = [
                 We will notify people from the waiting list before advertising. So you will have a priority to choose if you will be interested at that time. If you did not pay to be in the waiting list, we will wait 24 hours for your reply after notification, then discard your name from the list if we do not get any reply from you. Please tell us how would you like to be notified - email or text message over the phone. If your name is discarded from the waiting list you will not have a priority to choose a kitten however you are welcome to contact us for the available kittens.
                 </p><p>
                 In case you are registered for the waiting list with CAD100, it will be subtracted from reservation fee which is normally CAD 300 for the pet. We will wait for your reply within 3 days and you will always have a priority to choose from available kittens. However if you do not reply within 3 days the first priority to pick the kitten maybe given to the next interested person.
+                </p>
+            </>
+    }, {
+        title: `Procedure to reserve a kitten`,
+        body:
+            <>
+                <p>
+                We have <b>Buy & Sell Agreement</b> form for that.
+                </p><p>
+                You will need to sign it before transferring the deposit so please get familiar with it first.
+                </p><p>
+                We will sign the agreement when we get the deposit and will send the full signed copy to you. It is a proof that kitten is reserved for you which means he / she will not be offered to somebody else.
                 </p>
             </>
     }
