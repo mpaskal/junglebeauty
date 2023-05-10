@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { GetCatFilepath, ConvertDate, GetReleaseDate } from './Functions';
-import { GetAllImages, GetImage  } from './FirebaseFunctions';
+import { GetAllImages } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
 import VideoCarousel from './VideoCarousel';
 import './../App.css';
 import CatImage from './CatImage';
 
 const KittenProfile= ({ cat = [] }) => {
-    const { id, name, type, colour, sex, adj, status, date, father, mother, price, videos } = cat;
+    const { name, sex, date, father, mother, price, videos } = cat;
     const [images, setImages] = useState([]);
-    const filepath = GetCatFilepath(cat);
     const birthDate = ConvertDate(date);
     const releaseDate = GetReleaseDate(date);
     const currentDate = new Date();

@@ -1,6 +1,5 @@
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Accordion, Card, useAccordionButton } from 'react-bootstrap';
+import { Accordion } from 'react-bootstrap';
 import { ConvertDate, GetReleaseDate } from './Functions';
 import './../App.css';
 

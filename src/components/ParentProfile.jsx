@@ -6,7 +6,7 @@ import { GetCatDescription } from './Functions';
 import './../App.css';
 
 const ParentProfile= ({ cat = [] }) => {
-    const { id, name, type, colour, sex, adj, status, date } = cat;
+    const { name, sex } = cat;
     const kittens = useCats().kittens.filter((kitten) => (sex === 'male' ? kitten.father : kitten.mother) === name);
     const description = GetCatDescription(cat);  
     var availableKittens = [];

@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import { collection, doc, query, where, getDocs, addDoc, setDoc, updateDoc } from 'firebase/firestore';
-import { ref, getStorage, getDownloadURL, listAll } from 'firebase/storage';
+import { useEffect } from 'react';
+import { collection, doc, query, where, getDocs, setDoc, updateDoc } from 'firebase/firestore';
+import { ref, getDownloadURL, listAll } from 'firebase/storage';
 import { db, storage } from '../firebase';
 
 export async function QueryCats(table, predicate = []) {
     const cats = [];
     var q;
 
-    if (predicate.length == 0) {
+    if (predicate.length === 0) {
         q = query(collection(db, table));
     } else {
         q = query(collection(db, table), where(...predicate));

@@ -1,9 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { CatsProvider, useCats } from '../contexts/CatsContext';
-import { GetCatFilepath } from '../components/Functions';
-import { QueryCats } from '../components/FirebaseFunctions';
+import { useCats } from '../contexts/CatsContext';
 import CatCardCarousel from '../components/CatCardCarousel';
 import VideoList from '../lists/VideoList';
 import CatCard from '../components/CatCard';
@@ -13,7 +10,7 @@ import './../App.css';
 const Home = () => {
     var cats = useCats();
     if (cats) {
-        cats = cats.kittens.filter((cat) => cat.status == 'available');
+        cats = cats.kittens.filter((cat) => cat.status === 'available');
     } else {
         cats = [];
     }
@@ -36,7 +33,7 @@ const Home = () => {
                         offered with the same options and benefits - we will make our price the same for you!
                     </p>
                     <div className='cat-card-column'>
-                        {cats.filter(cat => cat.type == 'kitten' && cat.status == 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
+                        {cats.filter(cat => cat.type === 'kitten' && cat.status === 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
                             return (
                                 <div key={cat.id} className='card-container'>
                                     <CatCard cat={cat} size='small'/>

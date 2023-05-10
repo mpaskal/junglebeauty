@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCard from './CatCard';
