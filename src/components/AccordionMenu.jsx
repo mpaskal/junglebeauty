@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { Accordion, Card, useAccordionButton } from 'react-bootstrap';
 import { ConvertDate, GetReleaseDate } from './Functions';
 import './../App.css';
@@ -23,6 +24,7 @@ const AccordionMenu = ({ items }) => {
                   </Accordion.Header>
                   <Accordion.Body>
                     {item.body}
+                    {(item.king && item.queen) && <p>King: <Link to='/kings' state={item.king}>{item.king}</Link>, Queen: <Link to='/queens' state={item.queen}>{item.queen}</Link></p>}
                   </Accordion.Body>
               </Accordion.Item>
           )
