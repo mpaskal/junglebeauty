@@ -18,7 +18,7 @@ const KittenGallery = () => {
   }
 
   useEffect(() => {
-    setFilters({colour: ['silver', 'brown'], father: parents.filter((cat) => cat.sex == 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex == 'female').map((cat) => {return cat.name}), status: ['available']});
+    setFilters({colour: ['silver', 'brown'], father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: ['available']});
   }, [cats])
 
   const handleChange = (event) => {
@@ -59,7 +59,7 @@ const KittenGallery = () => {
                       <p>Father</p>
                     </Accordion.Header>
                     <Accordion.Body>
-                      {parents.filter((cat) => cat.sex == 'male').map((cat) => {
+                      {parents.filter((cat) => cat.sex === 'male').map((cat) => {
                         return (
                           <Checkbox key={cat.id} label={cat.name} name='father' value={cat.name} changeHandler={handleChange} defaultCheck />
                         )
@@ -73,7 +73,7 @@ const KittenGallery = () => {
                       <p>Mother</p>
                     </Accordion.Header>
                     <Accordion.Body>
-                      {parents.filter((cat) => cat.sex == 'female').map((cat) => {
+                      {parents.filter((cat) => cat.sex === 'female').map((cat) => {
                         return (
                           <Checkbox key={cat.id} label={cat.name} name='mother' value={cat.name} changeHandler={handleChange} defaultCheck />
                         )

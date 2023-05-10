@@ -15,7 +15,7 @@ const Kittens = () => {
   var cats = useCats();
   
   if (cats) {
-      cats = cats.kittens.filter((cat) => cat.status == 'available');
+      cats = cats.kittens.filter((cat) => cat.status === 'available');
   } else {
       cats = [];
   }
@@ -38,7 +38,7 @@ const Kittens = () => {
       <Modal show={show} onHide={handleClose} size='lg'>
         <Modal.Header closeButton/>
         <Modal.Body>
-            <KittenProfile cat={cats.find(cat => cat.id == kittenID)}/>
+            <KittenProfile cat={cats.find(cat => cat.id === kittenID)}/>
         </Modal.Body>
       </Modal>
     </>

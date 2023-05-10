@@ -7,14 +7,14 @@ import './../App.css';
 
 const ParentProfile= ({ cat = [] }) => {
     const { id, name, type, colour, sex, adj, status, date } = cat;
-    const kittens = useCats().kittens.filter((kitten) => (sex == 'male' ? kitten.father : kitten.mother) == name);
+    const kittens = useCats().kittens.filter((kitten) => (sex === 'male' ? kitten.father : kitten.mother) === name);
     const description = GetCatDescription(cat);  
     var availableKittens = [];
     var graduatedKittens = [];
 
     /*
     const getData = async () => {
-        const kittens = await QueryCats('kittens', [sex == 'male' ? 'father' : 'mother', '==', name]);
+        const kittens = await QueryCats('kittens', [sex === 'male' ? 'father' : 'mother', '==', name]);
         setKittens(kittens);
       }
     
@@ -23,8 +23,8 @@ const ParentProfile= ({ cat = [] }) => {
     }, [])
     */
 
-    availableKittens = kittens.filter(kitten => kitten.status == 'available');
-    graduatedKittens = kittens.filter(kitten => kitten.status == 'graduated');
+    availableKittens = kittens.filter(kitten => kitten.status === 'available');
+    graduatedKittens = kittens.filter(kitten => kitten.status === 'graduated');
 
     return (
         <div>

@@ -19,7 +19,7 @@ const AccordionMenu = ({ items }) => {
                     <p className='accordion-header-text'>
                       {item.date && `${ConvertDate(item.date)}: `} 
                       {item.title} 
-                      {(item.type == 'litter' && item.date) && ` - ready to go from ${ConvertDate(GetReleaseDate(item.date))}`}
+                      {(item.type === 'litter' && item.date) && ` - ready to go from ${ConvertDate(GetReleaseDate(item.date))}`}
                     </p>
                   </Accordion.Header>
                   <Accordion.Body>

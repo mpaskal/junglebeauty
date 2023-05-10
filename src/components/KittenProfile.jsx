@@ -28,7 +28,7 @@ const KittenProfile= ({ cat = [] }) => {
         <>
             <div className='kitten-columns-container'>
                 <div className='profile-info-container'>
-                    <h2>{name} collar {sex == 'male' ? 'boy' : 'girl'}</h2>
+                    <h2>{name} collar {sex === 'male' ? 'boy' : 'girl'}</h2>
                     <h4>Born {birthDate}</h4>
                     <p>Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link></p>
                     <p>Date of release: {releaseDate <= currentDate ? 'ready to go!' : ConvertDate(releaseDate)}</p>

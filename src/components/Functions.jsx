@@ -1,7 +1,7 @@
 export function GetCatID(cat) {
     const { name, sex, mother, date } = cat;
-    const type = (mother ? `Kitten` : `${sex == 'male' ? `King` : `Queen`}`);
-    const identifier = (type == 'kitten' ? `${date}-${name}-collar` : `${type}-${name}`);
+    const type = (mother ? `Kitten` : `${sex === 'male' ? `King` : `Queen`}`);
+    const identifier = (type === 'kitten' ? `${date}-${name}-collar` : `${type}-${name}`);
   
     return identifier;
   }
@@ -11,8 +11,8 @@ export function GetCatFilepath(cat) {
   const idValues = id.split('.');
   const name = idValues[0];
   const date = idValues[1];
-  const type = (mother ? `Kitten` : `${sex == 'male' ? `King` : `Queen`}`);
-  const filepath = `${type}s/${type == 'Kitten' ? `${date}/` : ``}${name}/`;
+  const type = (mother ? `Kitten` : `${sex === 'male' ? `King` : `Queen`}`);
+  const filepath = `${type}s/${type === 'Kitten' ? `${date}/` : ``}${name}/`;
 
   return filepath;
 }
@@ -21,10 +21,10 @@ export function GetCatDescription(cat) {
   const { name, type, colour, sex, adj, date, cattery, location } = cat;
   var description;
 
-  if (type == 'kitten') {
+  if (type === 'kitten') {
     description = ConvertDate(date);
   } else {
-    if (sex == 'male') {
+    if (sex === 'male') {
       description = `${adj} ${colour} Bengal`;
     } else {
       description = `Born ${ConvertDate(date)}${cattery != undefined ? ` at ${cattery} cattery${location != undefined ? `, ${location}` : ''}` : ''}`;

@@ -12,7 +12,7 @@ const CatCard = ({ cat, size = 'large' }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const description = GetCatDescription(cat);
-    const displayName = `${name}${type == 'kitten' ? ` collar ${sex == 'male' ? `boy` : `girl`}` : ``}`;
+    const displayName = `${name}${type === 'kitten' ? ` collar ${sex === 'male' ? `boy` : `girl`}` : ``}`;
 
     return (
         <>
@@ -21,7 +21,7 @@ const CatCard = ({ cat, size = 'large' }) => {
                     <CatImage filepath={GetCatFilepath(cat) + '0.png'} clickable={false} alt={displayName}/>
                 </div>
                 <div className='cat-text'>
-                    {size == 'large' ?
+                    {size === 'large' ?
                         <>
                             <h3><b>{displayName}</b></h3>
                             <h4>{description}</h4>
@@ -35,7 +35,7 @@ const CatCard = ({ cat, size = 'large' }) => {
             <Modal show={show} onHide={handleClose} size='lg'>
                 <Modal.Header closeButton/>
                 <Modal.Body>
-                    {type == 'kitten'
+                    {type === 'kitten'
                         ? <CatProfile cat={cat}/>
                         : <ParentProfile cat={cat}/>
                     }

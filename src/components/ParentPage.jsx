@@ -16,7 +16,7 @@ const ParentPage = ({ sex }) => {
   var cats = useCats();
 
   if (cats) {
-    cats = cats.parents.filter((cat) => cat.sex == sex);
+    cats = cats.parents.filter((cat) => cat.sex === sex);
   } else {
     cats = [];
   }
@@ -24,7 +24,7 @@ const ParentPage = ({ sex }) => {
   if (location.state) {
     parentName = location.state;
     window.history.replaceState({}, document.title);
-    cat = cats.find(cat => cat.name == parentName);
+    cat = cats.find(cat => cat.name === parentName);
   }
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const ParentPage = ({ sex }) => {
   return (
     <>
       <div className='page-background'>
-        <h2>{sex == 'male' ? 'Kings' : 'Queens'} of JungleBeauty, TICA and CCA registered!</h2>
+        <h2>{sex === 'male' ? 'Kings' : 'Queens'} of JungleBeauty, TICA and CCA registered!</h2>
       </div>
 
       <CatCardCarousel cats={cats.sort((a, b) => a.date > b.date ? 1 : -1)}/>
