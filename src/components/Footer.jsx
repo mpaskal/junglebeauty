@@ -6,19 +6,20 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='cert-container'>
-                <img className='cert' src='/assets/certifications/TICA-75-2.png'/>
-                <img className='cert' src='/assets/certifications/BCC-Certified-Breeder.png'/>
-                <img className='cert' src='/assets/certifications/royalcanin.png'/>
+                <img className='cert' src='/assets/certifications/TICA-75-2.png' />
+                <img className='cert' src='/assets/certifications/CCA_logo_h75.png' />
+                <img className='cert' src='/assets/certifications/BCC-Certified-Breeder.png' />
+                <img className='cert' src='/assets/certifications/royalcanin.png' />
             </div>
             <div className='social-container'>
                 <a className='social-icon' href='https://www.instagram.com/junglebeautybengals' target='_blank' rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faInstagram}/>
+                    <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a className='social-icon' href='https://www.facebook.com/junglebeautybengals' target='_blank' rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faFacebook}/>
+                    <FontAwesomeIcon icon={faFacebook} />
                 </a>
                 <a className='social-icon' href='https://www.youtube.com/channel/UC5BbWtEY3t_uSvq6EZag9iA' target='_blank' rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faYoutube}/>
+                    <FontAwesomeIcon icon={faYoutube} />
                 </a>
             </div>
             <div>
