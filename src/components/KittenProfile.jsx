@@ -25,26 +25,28 @@ const KittenProfile= ({ cat = [] }) => {
     }, [])
 
     return (
-        <div className='kitten-columns-container'>
-            <div className='profile-info-container'>
-                <h2>{name} collar {sex == 'male' ? 'boy' : 'girl'}</h2>
-                <h4>Born {birthDate}</h4>
-                <p>Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link></p>
-                <p>Date of release: {releaseDate <= currentDate ? 'ready to go!' : ConvertDate(releaseDate)}</p>
-                {price ? <p>Price: ${price}</p> : ''}
+        <>
+            <div className='kitten-columns-container'>
+                <div className='profile-info-container'>
+                    <h2>{name} collar {sex == 'male' ? 'boy' : 'girl'}</h2>
+                    <h4>Born {birthDate}</h4>
+                    <p>Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link></p>
+                    <p>Date of release: {releaseDate <= currentDate ? 'ready to go!' : ConvertDate(releaseDate)}</p>
+                    {price ? <p>Price: ${price}</p> : ''}
 
-                <ImageCarousel cat={cat} />
-                <VideoCarousel videos={videos} />
-            </div>
+                    <ImageCarousel cat={cat} />
+                </div>
 
-            <div className='kitten-images-container'>
-                {images.map((image) => {
-                    return (
-                        <CatImage key={image} filepath={image} />
-                    );
-                })}
+                <div className='kitten-images-container'>
+                    {images.map((image) => {
+                        return (
+                            <CatImage key={image} filepath={image} />
+                        );
+                    })}
+                </div>
             </div>
-        </div>
+            <VideoCarousel videos={videos} />
+        </>
     );
 }
 
