@@ -258,6 +258,8 @@ a:hover{
   padding-bottom: 5pt;
 }
 
+/* Cat profile modal */
+
 .cat-modal {
   width: 90%;
 }
@@ -269,6 +271,7 @@ a:hover{
 .profile-info-container {
   width: 60%;
   margin: auto;
+  text-align: center;
 }
 
 .kitten-images-container {
