@@ -26,7 +26,6 @@ const ParentPage = ({ sex }) => {
     parentName = location.state;
     window.history.replaceState({}, document.title);
     cat = cats.find(cat => cat.name == parentName);
-    console.log('location.state: ' + cat.name);
   }
 
   useEffect(() => {
