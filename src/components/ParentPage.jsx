@@ -9,7 +9,6 @@ import './../App.css';
 
 const ParentPage = ({ sex }) => {
   const location = useLocation();
-  const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   var parentName = 'null';
@@ -39,9 +38,6 @@ const ParentPage = ({ sex }) => {
       <div className='page-background'>
         <h2>{sex == 'male' ? 'Kings' : 'Queens'} of JungleBeauty, TICA and CCA registered!</h2>
       </div>
-
-      {/* PLACEHOLDER LOADING TEXT */}
-      {loading == true && <>Loading</>}
 
       <CatCardCarousel cats={cats.sort((a, b) => a.date > b.date ? 1 : -1)}/>
 
