@@ -10,12 +10,12 @@ const NewsList = [
                 Four kittens are available for reservation.
                 </p><p>
                 They are the best New Year gifts!
-                </p><p>
-                King: Julius, Queen: Lolita.
                 </p>
             </>,
         date: '2022-10-07',
-        type: 'litter'
+        type: 'litter',
+        king: 'Julius',
+        queen: 'Lolita'
     }, {
         title: 'Litter of Bora',
         body: 
@@ -24,12 +24,12 @@ const NewsList = [
                 Four kittens are available for reservation.
                 </p><p>
                 They are the best Christmas gifts!
-                </p><p>
-                King: Merlin, Queen: Bora.
                 </p>
             </>,
         date: '2022-09-29',
-        type: 'litter'
+        type: 'litter',
+        king: 'Merlin',
+        queen: 'Bora'
     }, {
         title: 'Litter of Elizabeth',
         body: 
@@ -38,48 +38,147 @@ const NewsList = [
                 Four kittens available for reservation.
                 </p><p>
                 They are the best Christmas gifts!
-                </p><p>
-                King: Churchil, Queen: Elizabeth.
                 </p>
             </>,
         date: '2022-09-28',
-        type: 'litter'
+        type: 'litter',
+        king: 'Churchil',
+        queen: 'Elizabeth'
     }, {
-        title: 'Litter of Eleanor',
+        title: 'Litter of Eleonore',
         body:
             <>
                 <p>
                 Four kittens are available for reservation.
-                </p><p>
-                King: Merlin, Queen: Eleanore.
                 </p>
             </>,
         date: '2022-08-16',
-        type: 'litter'
+        type: 'litter',
+        king: 'Merlin',
+        queen: 'Eleonore'
+    }, {
+        title: 'Litter of Ariel',
+        body:
+            <>
+                <p>
+                    Three kittens are available for reservation.
+                </p>
+            </>,
+        date: '2023-03-02',
+        type: 'litter',
+        king: 'Julius',
+        queen: 'Ariel'
     }, {
         title: 'Litter of Cleo',
         body:
             <>
                 <p>
-                One boy is available for reservation.
-                </p><p>
-                King: Merlin, Queen: Eleanore.
+                    Five kittens are available for reservation.
                 </p>
             </>,
-        date: '2022-07-24',
-        type: 'litter'
-    },
-
-    /*
-    {
-        title: ``,
+        date: '2023-02-20',
+        type: 'litter',
+        king: 'Churchil',
+        queen: 'Cleo'
+    }, {
+        title: 'Litter of Bella',
+        body:
+            <>
+                <p>
+                    Three kittens are available for reservation.
+                </p>
+            </>,
+        date: '2023-01-27',
+        type: 'litter',
+        king: 'Merlin',
+        queen: 'Bella'
+    }, {
+        title: 'Litter of Eleonore',
+        body:
+            <>
+                <p>
+                    One kitten is available for reservation.
+                </p>
+            </>,
+        date: '2023-01-15',
+        type: 'litter',
+        king: 'Merlin',
+        queen: 'Eleonore'
+    }, {
+        title: 'Litter of Gloria',
+        body:
+            <>
+                <p>
+                    Three kittens (one girl and two boys) are available for reservation.
+                </p>
+            </>,
+        date: '2022-11-24',
+        type: 'litter',
+        king: 'Merlin',
+        queen: 'Gloria'
+    }, {
+        title: 'Litter of Lita',
+        body:
+            <>
+                <p>
+                    Two kittens (girl and boy) are available for reservation.
+                </p>
+            </>,
+        date: '',
+        type: 'litter',
+        king: '',
+        queen: ''
+    }, {
+        title: '',
         body:
             <>
                 <p>
 
                 </p>
             </>,
-        date: ``
+        date: '',
+        type: 'litter',
+        king: '',
+        queen: ''
+    }, {
+        title: '',
+        body:
+            <>
+                <p>
+
+                </p>
+            </>,
+        date: '',
+        type: 'litter',
+        king: '',
+        queen: ''
+    }, {
+        title: '',
+        body:
+            <>
+                <p>
+
+                </p>
+            </>,
+        date: '',
+        type: 'litter',
+        king: '',
+        queen: ''
+    }
+
+    /*
+    {
+        title: '',
+        body:
+            <>
+                <p>
+
+                </p>
+            </>,
+        date: '',
+        type: '',
+        king: '',
+        queen: ''
     }
     */
 ];
