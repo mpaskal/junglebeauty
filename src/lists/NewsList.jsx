@@ -124,46 +124,34 @@ const NewsList = [
                     Two kittens (girl and boy) are available for reservation.
                 </p>
             </>,
-        date: '',
+        date: '2022-11-16',
         type: 'litter',
-        king: '',
-        queen: ''
+        king: 'Merlin',
+        queen: 'Lita'
     }, {
-        title: '',
+        title: 'Litter of Charmy',
         body:
             <>
                 <p>
-
+                    Two kittens (boy and girl) are available for reservation.
                 </p>
             </>,
-        date: '',
+        date: '2022-11-05',
         type: 'litter',
-        king: '',
-        queen: ''
+        king: 'Merlin',
+        queen: 'Charmy'
     }, {
-        title: '',
+        title: 'Litter of Cleo',
         body:
             <>
                 <p>
-
+                    Litter of Cleo. Three boys are available for reservation.
                 </p>
             </>,
-        date: '',
+        date: '2022-10-27',
         type: 'litter',
-        king: '',
-        queen: ''
-    }, {
-        title: '',
-        body:
-            <>
-                <p>
-
-                </p>
-            </>,
-        date: '',
-        type: 'litter',
-        king: '',
-        queen: ''
+        king: 'Churchil',
+        queen: 'Cleo'
     }
 
     /*
