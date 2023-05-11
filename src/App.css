@@ -97,7 +97,7 @@ label {
 }
 
 .video-frame {
-  width: 95%;
+  width: 100%;
 }
 
 .pdf-container {
@@ -332,4 +332,10 @@ a:hover{
 
 .checkbox {
   accent-color: green;
+}
+
+.video-carousel-container {
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
 }
