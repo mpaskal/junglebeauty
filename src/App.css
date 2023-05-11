@@ -1,5 +1,16 @@
+:root {
+  --background-green: rgba(26, 133, 79, 0.85);
+  --link-green: rgb(25, 223, 58);
+  --link-active-green: rgba(25, 223, 58, 0.911);
+  --accent-green: rgb(4, 110, 27);
+  --nav-black: rgba(0, 10, 0, 0.75);
+  --nav-white: rgb(236, 236, 236);
+  --text-white: rgb(250, 250, 250);
+  --carousel-black: rgba(0, 10, 0, 0.4);
+}
+
 .App {
-    color: white;
+    color: var(--text-white);
     background-image: url('../public/assets/jungle-background.png');
     background-attachment: fixed;
     background-size: cover;
@@ -18,7 +29,7 @@
 .page-background {
   text-align: center;
   border-radius: 10pt;
-  background-color: rgba(26, 133, 79, 0.85);
+  background-color: var(--background-green);
   width: 95%;
   padding: 10pt;
   margin: auto;
@@ -42,7 +53,7 @@
 }
 
 a {
-  color: rgb(25, 223, 58);
+  color: var(--link-green);
 }
 
 label {
@@ -114,14 +125,14 @@ label {
 }
 
 .form-button {
-  background-color: green;
+  background-color: var(--accent-green);
   border: none;
 }
 
 /* Navigation */
 
 .nav-bar {
-    background-color: rgba(0, 10, 0, 0.75) !important;
+    background-color: var(--nav-black) !important;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -140,7 +151,7 @@ label {
 
 .logo-text {
   font-size: x-large;
-  color: white;
+  color: var(--nav-white);
   font-style: italic;
   height: auto;
   line-height: normal;
@@ -149,33 +160,33 @@ label {
 }
 
 .nav-link {
-  color: rgb(236, 236, 236) !important;
+  color: var(--nav-white) !important;
   padding: 10px 15px;
   cursor: pointer;
   text-decoration: none;
 }
 
 .nav-link.active {
-  color: rgba(25, 223, 58, 0.911) !important;
+  color: var(--link-active-green) !important;
 }
 
 .dropdown-links-container {
-  color: rgb(236, 236, 236);
+  color: var(--nav-white);
   text-align: center;
 }
 
 .dropdown-link {
-  color: rgb(236, 236, 236);
+  color: var(--nav-white);
 }
 
 .dropdown-menu {
-  background-color: rgba(0, 10, 0, 0.75) !important;
+  background-color: var(--nav-black) !important;
 }
 
 /* Footer */
 
 .footer {
-    background-color: rgba(0, 10, 0, 0.6);
+    background-color: var(--nav-black);
     width: 100%;
     bottom: 0;
 }
@@ -202,11 +213,11 @@ label {
 .social-icon {
     margin-left: 5pt;
     margin-right: 5pt;
-    color: white;
+    color: var(--text-white);
 }
 
 a:hover{
-  color: rgb(25, 223, 58);
+  color: var(--link-active-green);
 }
 
 /* Cat cards */
@@ -218,7 +229,7 @@ a:hover{
 }
 
 .cat-card-carousel {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--carousel-black);
   border-radius: 10pt;
   margin: auto;
 }
@@ -233,7 +244,7 @@ a:hover{
 .cat-card {
   border-radius: 10pt;
   cursor: pointer;
-  background-color: white;
+  background-color: var(--text-white);
   text-align: center;
   width: 90%;
 }
@@ -251,7 +262,7 @@ a:hover{
 }
 
 .cat-text {
-  color:green;
+  color: var(--accent-green);
   font-size: larger;
   font-weight: bolder;
   padding-top: 5pt;
@@ -293,18 +304,18 @@ a:hover{
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: white;
+  background-color: var(--text-white);
 }
 
 .accordion-header-text {
-  color:green;
+  color:var(--accent-green);
   font-size: large;
   font-weight: bold;
 }
 
 .accordion-item {
-  color: white;
-  background-color: rgba(0, 10, 0, 0.75);
+  color: var(--text-white);
+  background-color: var(--nav-black);
 }
 
 /* Kitten gallery */
@@ -331,7 +342,7 @@ a:hover{
 }
 
 .checkbox {
-  accent-color: green;
+  accent-color: var(--accent-green);
 }
 
 .video-carousel-container {
