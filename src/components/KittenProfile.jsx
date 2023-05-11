@@ -44,7 +44,9 @@ const KittenProfile= ({ cat = [] }) => {
                     })}
                 </div>
             </div>
-            <VideoCarousel videos={videos} />
+            <div className='video-carousel-container'>
+                <VideoCarousel videos={videos} />
+            </div>
         </>
     );
 }
