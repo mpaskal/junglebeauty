@@ -56,6 +56,10 @@ a {
   color: var(--link-green);
 }
 
+a:hover{
+  color: var(--link-active-green);
+}
+
 label {
   padding-left: 10pt;
 }
@@ -114,19 +118,6 @@ label {
 .pdf-container {
   margin: auto;
   margin-top: 20pt;
-}
-
-/* Email Form */
-
-.form-container {
-  width: 50%;
-  margin: auto;
-  margin-bottom: 10pt;
-}
-
-.form-button {
-  background-color: var(--accent-green);
-  border: none;
 }
 
 /* Navigation */
@@ -213,10 +204,6 @@ label {
     margin-left: 5pt;
     margin-right: 5pt;
     color: var(--text-white);
-}
-
-a:hover{
-  color: var(--link-active-green);
 }
 
 /* Cat cards */
@@ -348,4 +335,22 @@ a:hover{
   width: 50%;
   margin: auto;
   margin-top: 2%;
+}
+
+/* Email Form */
+
+.form-container {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10pt;
+}
+
+.form-button {
+  background-color: var(--accent-green);
+  border: none;
+  border-radius: 10px;
+}
+
+.form-button:hover {
+  background-color: var(--link-active-green);
 }
