@@ -340,12 +340,18 @@ label {
 /* Email Form */
 
 .form-container {
-  width: 50%;
   margin: auto;
   margin-bottom: 10pt;
 }
 
+.form-input {
+  width: 200pt;
+  margin: auto;
+  border-radius: 10px;
+}
+
 .form-button {
+  width: 100pt;
   background-color: var(--accent-green);
   border: none;
   border-radius: 10px;
