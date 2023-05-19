@@ -7,7 +7,7 @@ import { GetCatFilepath, GetCatDescription } from './Functions';
 import './../App.css';
 
 const CatCard = ({ cat, size = 'large' }) => {
-    const { name, type, sex, } = cat;
+    const { name, type, sex, desc } = cat;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -25,9 +25,13 @@ const CatCard = ({ cat, size = 'large' }) => {
                         <>
                             <h3><b>{displayName}</b></h3>
                             <h4>{description}</h4>
+                            <p>{desc}</p>
                         </>
                     :
-                        <h4>{displayName}</h4>
+                        <>
+                            <h4><b>{displayName}</b></h4>
+                            <h5>{description}</h5>
+                        </>
                     }
                 </div>
             </div>
