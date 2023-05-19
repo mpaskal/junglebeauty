@@ -235,7 +235,7 @@ label {
   cursor: pointer;
   background-color: var(--text-white);
   text-align: center;
-  width: 90%;
+  width: 280pt;
 }
 
 .cat-img-container {
