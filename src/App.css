@@ -231,7 +231,7 @@ label {
 }
 
 .cat-card {
-  border-radius: 10pt;
+  border-radius: 15pt;
   cursor: pointer;
   background-color: var(--text-white);
   text-align: center;
