@@ -35,7 +35,7 @@ const ParentProfile= ({ cat = [] }) => {
 
             <ImageCarousel cat={cat} />
 
-            <Accordion className='accordion' defaultActiveKey={0, 1} alwaysOpen>
+            <Accordion className='accordion' defaultActiveKey={[0, 1]} alwaysOpen>
                 {availableKittens.length > 0 &&
                     <Accordion.Item className='accordion-item' eventKey={0}>
                         <Accordion.Header className='accordion-header'>
