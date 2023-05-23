@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Accordion } from 'react-bootstrap';
+import { Accordion, Button } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCard from './CatCard';
 import Checkbox from './Checkbox';
@@ -22,14 +22,14 @@ const KittenGallery = () => {
   }, [cats])
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    var filterArray = filters[name];
+    const { category, value } = event.target;
+    var filterArray = filters[category];
     if (filterArray.includes(value)) {
       filterArray = filterArray.filter(item => item != value);
     } else {
       filterArray.push(value);
     }
-    setFilters({ ...filters, [name]: filterArray});
+    setFilters({ ...filters, [category]: filterArray});
   }
 
   const toggleAll = () => {
@@ -52,12 +52,12 @@ const KittenGallery = () => {
               </p>
             </Accordion.Header>
             <Accordion.Body>
-              <Checkbox label='Available kittens' name='status' value='available' changeHandler={handleChange} defaultCheck />
-              <Checkbox label='Reserved kittens' name='status' value='reserved' changeHandler={handleChange} />
-              <Checkbox label='Graduated kittens' name='status' value='graduated' changeHandler={handleChange} />
+              <Checkbox label='Available kittens' category='status' value='available' handleChange={handleChange} checked={filters['status'].includes('available')} />
+              <Checkbox label='Reserved kittens' category='status' value='reserved' handleChange={handleChange} checked={filters['status'].includes('reserved')} />
+              <Checkbox label='Graduated kittens' category='status' value='graduated' handleChange={handleChange} checked={filters['status'].includes('graduated')} />
               <br/>
-              <Checkbox label='Silver' name='colour' value='silver' changeHandler={handleChange} defaultCheck />
-              <Checkbox label='Brown' name='colour' value='brown' changeHandler={handleChange} defaultCheck />
+              <Checkbox label='Silver' category='colour' value='silver' handleChange={handleChange} checked={filters['colour'].includes('silver')} />
+              <Checkbox label='Brown' category='colour' value='brown' handleChange={handleChange} checked={filters['colour'].includes('brown')} />
               <br/>
   
               <div className='parent-accordions-container'>
@@ -69,7 +69,7 @@ const KittenGallery = () => {
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex === 'male').map((cat) => {
                         return (
-                          <Checkbox key={cat.id} label={cat.name} name='father' value={cat.name} changeHandler={handleChange} defaultCheck />
+                          <Checkbox key={cat.id} label={cat.name} category='father' value={cat.name} handleChange={handleChange} checked={filters['father'].includes(cat.name)} />
                         )
                       })}
                     </Accordion.Body>
@@ -83,7 +83,7 @@ const KittenGallery = () => {
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex === 'female').map((cat) => {
                         return (
-                          <Checkbox key={cat.id} label={cat.name} name='mother' value={cat.name} changeHandler={handleChange} defaultCheck />
+                          <Checkbox key={cat.id} label={cat.name} category='mother' value={cat.name} handleChange={handleChange} checked={filters['mother'].includes(cat.name)} />
                         )
                       })}
                     </Accordion.Body>
