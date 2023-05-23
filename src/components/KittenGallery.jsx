@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Accordion, Button } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
-import { Capitalize } from './Functions';
+import { capitalize } from './Functions';
 import CatCard from './CatCard';
 import Checkbox from './Checkbox';
 import './../App.css';
@@ -57,13 +57,13 @@ const KittenGallery = () => {
             <Accordion.Body>
               {statuses.map((status) => {
                 return (
-                  <Checkbox label={Capitalize(status)} name='status' value={status} handleChange={handleChange} checked={filters['status'].includes(status)} />
+                  <Checkbox label={capitalize(status)} name='status' value={status} handleChange={handleChange} checked={filters['status'].includes(status)} />
                 )
               })}
               <br/>
               {colours.map((colour) => {
                 return (
-                  <Checkbox label={Capitalize(colour)} name='colour' value={colour} handleChange={handleChange} checked={filters['colour'].includes(colour)} />
+                  <Checkbox label={capitalize(colour)} name='colour' value={colour} handleChange={handleChange} checked={filters['colour'].includes(colour)} />
                 )
               })}
               <br/>

@@ -2,13 +2,13 @@ import { Accordion } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
-import { GetCatDescription } from './Functions';
+import { getCatDescription } from './Functions';
 import './../App.css';
 
 const ParentProfile= ({ cat = [] }) => {
     const { name, sex } = cat;
     const kittens = useCats().kittens.filter((kitten) => (sex === 'male' ? kitten.father : kitten.mother) === name);
-    const description = GetCatDescription(cat);  
+    const description = getCatDescription(cat);  
     var availableKittens = [];
     var graduatedKittens = [];
 
