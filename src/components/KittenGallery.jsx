@@ -31,6 +31,10 @@ const KittenGallery = () => {
     setFilters({ ...filters, [name]: filterArray});
   }
 
+  const toggleAll = () => {
+
+  }
+
   console.log(filters);
   
   return (
@@ -80,6 +84,10 @@ const KittenGallery = () => {
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>
+              </div>
+
+              <div className='buttons-container'>
+                <Button className='form-button' onClick={toggleAll}>Check/Uncheck All</Button>
               </div>
             </Accordion.Body>
         </Accordion.Item>
