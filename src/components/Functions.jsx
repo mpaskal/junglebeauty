@@ -1,3 +1,7 @@
+export function Capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 export function GetCatID(cat) {
     const { name, sex, mother, date } = cat;
     const type = (mother ? `Kitten` : `${sex === 'male' ? `King` : `Queen`}`);
@@ -31,7 +35,7 @@ export function GetCatDescription(cat) {
     }
   }
 
-  description = description.charAt(0).toUpperCase() + description.slice(1);
+  description = Capitalize(description);
 
   return description;
 }
