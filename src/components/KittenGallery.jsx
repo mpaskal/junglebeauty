@@ -10,6 +10,7 @@ const KittenGallery = () => {
   var kittens = [];
   var parents = [];
   const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: []});
+  const [allCheck, setAllCheck] = useState();
   
   if (cats) {
       kittens = cats.kittens;
@@ -32,7 +33,11 @@ const KittenGallery = () => {
   }
 
   const toggleAll = () => {
-
+    if (!allCheck) {
+      setAllCheck(true);
+    } else {
+      setAllCheck(false);
+    }
   }
 
   console.log(filters);
