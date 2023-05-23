@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Accordion, Button } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
+import { Capitalize } from './Functions';
 import CatCard from './CatCard';
 import Checkbox from './Checkbox';
 import './../App.css';
@@ -10,6 +11,8 @@ const KittenGallery = () => {
   var kittens = [];
   var parents = [];
   const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: []});
+  const colours = ['silver', 'brown'];
+  const statuses = ['available', 'reserved', 'graduated'];
   
   if (cats) {
       kittens = cats.kittens;
@@ -17,13 +20,13 @@ const KittenGallery = () => {
   }
 
   useEffect(() => {
-    setFilters({colour: ['silver', 'brown'], father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: ['available']});
+    setFilters({colour: colours, father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: ['available']});
   }, [cats])
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     var filterArray = filters[name];
-    
+
     if (filterArray.includes(value)) {
       filterArray = filterArray.filter(item => item != value);
     } else {
@@ -36,7 +39,7 @@ const KittenGallery = () => {
     if (filters['colour'].length > 0 || filters['father'].length > 0 || filters['mother'].length > 0 || filters['status'].length > 0) {
       setFilters({colour: [], father: [], mother: [], status: []});
     } else {
-      setFilters({colour: ['silver', 'brown'], father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: ['available']});
+      setFilters({colour: colours, father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: statuses});
     }
   }
 
@@ -52,12 +55,17 @@ const KittenGallery = () => {
               </p>
             </Accordion.Header>
             <Accordion.Body>
-              <Checkbox label='Available kittens' name='status' value='available' handleChange={handleChange} checked={filters['status'].includes('available')} />
-              <Checkbox label='Reserved kittens' name='status' value='reserved' handleChange={handleChange} checked={filters['status'].includes('reserved')} />
-              <Checkbox label='Graduated kittens' name='status' value='graduated' handleChange={handleChange} checked={filters['status'].includes('graduated')} />
+              {statuses.map((status) => {
+                return (
+                  <Checkbox label={Capitalize(status)} name='status' value={status} handleChange={handleChange} checked={filters['status'].includes(status)} />
+                )
+              })}
               <br/>
-              <Checkbox label='Silver' name='colour' value='silver' handleChange={handleChange} checked={filters['colour'].includes('silver')} />
-              <Checkbox label='Brown' name='colour' value='brown' handleChange={handleChange} checked={filters['colour'].includes('brown')} />
+              {colours.map((colour) => {
+                return (
+                  <Checkbox label={Capitalize(colour)} name='colour' value={colour} handleChange={handleChange} checked={filters['colour'].includes(colour)} />
+                )
+              })}
               <br/>
   
               <div className='parent-accordions-container'>
