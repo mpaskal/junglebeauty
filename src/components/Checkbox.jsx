@@ -1,17 +1,10 @@
 import { useState } from "react";
 
-const Checkbox = ({ label, name, value, changeHandler, defaultCheck = false }) => {
-    const [checked, setChecked] = useState(defaultCheck);
-
-    const handleChange = (event) => {
-        setChecked(!checked);
-        changeHandler(event);
-    }
-
+const Checkbox = ({ label, category, value, handleChange, checked }) => {
     return (
         <label>
             {`${label}: `}
-            <input type='checkbox' className='checkbox' name={name} value={value} checked={checked} onChange={handleChange} />
+            <input type='checkbox' className='checkbox' name={category} value={value} checked={checked} onChange={handleChange} />
         </label>
     )
 }
