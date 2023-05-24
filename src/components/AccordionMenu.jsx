@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Accordion } from 'react-bootstrap';
-import { ConvertDate, GetReleaseDate } from './Functions';
+import { convertDate, getReleaseDate } from './Functions';
 import './../App.css';
 
 const AccordionMenu = ({ items }) => {
@@ -16,9 +16,9 @@ const AccordionMenu = ({ items }) => {
               <Accordion.Item className='accordion-item' key={itemID} eventKey={itemID}>
                   <Accordion.Header className='accordion-header'>
                     <p className='accordion-header-text'>
-                      {item.date && `${ConvertDate(item.date)}: `} 
+                      {item.date && `${convertDate(item.date)}: `} 
                       {item.title} 
-                      {(item.type === 'litter' && item.date) && ` - ready to go from ${ConvertDate(GetReleaseDate(item.date))}`}
+                      {(item.type === 'litter' && item.date) && ` - ready to go from ${convertDate(getReleaseDate(item.date))}`}
                     </p>
                   </Accordion.Header>
                   <Accordion.Body>
