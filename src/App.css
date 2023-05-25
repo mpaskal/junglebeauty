@@ -182,13 +182,17 @@ label {
     background-color: var(--nav-black);
     width: 100%;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cert-container {
-    margin-left: 100pt;
-    margin-right: 100pt;
     display: flex;
     justify-content: center;
+    width: 90%;
+    margin: auto;
+    overflow-x: scroll;
 }
 
 .cert {
