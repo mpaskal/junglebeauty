@@ -327,6 +327,8 @@ label {
 
 .filter-accordion {
   width: 50%;
+  min-width: 200pt;
+  text-align: center;
 }
 
 .parent-accordions-container {
@@ -335,6 +337,8 @@ label {
 
 .parent-accordion {
   width: 45%;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
 }
 
 .checkbox {
