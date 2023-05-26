@@ -10,9 +10,10 @@ const KittenGallery = () => {
   var cats = useCats();
   var kittens = [];
   var parents = [];
-  const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: []});
+  const [filters, setFilters] = useState({colour: [], father: [], mother: [], status: [], sex: []});
   const colours = ['silver', 'brown'];
   const statuses = ['available', 'reserved', 'graduated'];
+  const sexes = ['male', 'female'];
   
   if (cats) {
       kittens = cats.kittens;
@@ -20,7 +21,7 @@ const KittenGallery = () => {
   }
 
   useEffect(() => {
-    setFilters({colour: colours, father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: ['available']});
+    setFilters({colour: colours, father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: ['available'], sex: sexes});
   }, [cats])
 
   const handleChange = (event) => {
@@ -37,9 +38,9 @@ const KittenGallery = () => {
 
   const toggleAll = () => {
     if (filters['colour'].length > 0 || filters['father'].length > 0 || filters['mother'].length > 0 || filters['status'].length > 0) {
-      setFilters({colour: [], father: [], mother: [], status: []});
+      setFilters({colour: [], father: [], mother: [], status: [], sex: []});
     } else {
-      setFilters({colour: colours, father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: statuses});
+      setFilters({colour: colours, father: parents.filter((cat) => cat.sex === 'male').map((cat) => {return cat.name}), mother: parents.filter((cat) => cat.sex === 'female').map((cat) => {return cat.name}), status: statuses, sex: sexes});
     }
   }
 
@@ -64,6 +65,12 @@ const KittenGallery = () => {
               {colours.map((colour) => {
                 return (
                   <Checkbox label={capitalize(colour)} name='colour' value={colour} handleChange={handleChange} checked={filters['colour'].includes(colour)} />
+                )
+              })}
+              <br/>
+              {sexes.map((sex) => {
+                return (
+                  <Checkbox label={capitalize(sex)} name='sex' value={sex} handleChange={handleChange} checked={filters['sex'].includes(sex)} />
                 )
               })}
   
@@ -110,7 +117,8 @@ const KittenGallery = () => {
           filters.colour.includes(cat.colour)
           && filters.father.includes(cat.father)
           && filters.mother.includes(cat.mother)
-          && filters.status.includes(cat.status))
+          && filters.status.includes(cat.status)
+          && filters.sex.includes(cat.sex))
           .sort((a, b) => a.status > b.status || a.date > b.date ? 1 : -1)
           .map((cat) => {
             return (
