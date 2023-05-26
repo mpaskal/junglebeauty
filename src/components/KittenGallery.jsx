@@ -66,7 +66,6 @@ const KittenGallery = () => {
                   <Checkbox label={capitalize(colour)} name='colour' value={colour} handleChange={handleChange} checked={filters['colour'].includes(colour)} />
                 )
               })}
-              <br/>
   
               <div className='parent-accordions-container'>
                 <Accordion className='parent-accordion'>
