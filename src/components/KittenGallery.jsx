@@ -69,10 +69,10 @@ const KittenGallery = () => {
               <br/>
   
               <div className='parent-accordions-container'>
-                <Accordion className='parent-accordion' defaultActiveKey='1'>
-                  <Accordion.Item eventKey='0'>
-                    <Accordion.Header>
-                      <p>Father</p>
+                <Accordion className='parent-accordion'>
+                  <Accordion.Item eventKey={0}>
+                    <Accordion.Header className='accordion-header'>
+                      <p className='accordion-header-text'>Father</p>
                     </Accordion.Header>
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex === 'male').map((cat) => {
@@ -83,10 +83,10 @@ const KittenGallery = () => {
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>
-                <Accordion className='parent-accordion' defaultActiveKey='1'>
-                  <Accordion.Item eventKey='0'>
-                    <Accordion.Header>
-                      <p>Mother</p>
+                <Accordion className='parent-accordion'>
+                  <Accordion.Item eventKey={0}>
+                    <Accordion.Header className='accordion-header'>
+                      <p className='accordion-header-text'>Mother</p>
                     </Accordion.Header>
                     <Accordion.Body>
                       {parents.filter((cat) => cat.sex === 'female').map((cat) => {
