@@ -50,7 +50,7 @@ const WhyChoose = () => {
                       </p><p>
                         You will get a <Link className='text-link' to='/price'>health warranty</Link> for the Kitten.
                       </p><p>
-                        Your furriend will not die suddenly from the congenital disorder at the age of 2-3 years.
+                        Your furry friend is guaranteed against congenital disorders for the first 2 years.
                       </p>
                     </Accordion.Body>
                   </Accordion.Item>
@@ -61,11 +61,11 @@ const WhyChoose = () => {
                     </Accordion.Header>
                     <Accordion.Body>
                       <p>
-                        All our kittens come to the forever home after spaying/neutering procedures.
+                        All our kittens go to their forever home after spaying/neutering procedures.
                       </p><p>
-                        We do it at respectful vet clinics at the when the kitten's age is 11-14 weeks old. It is a very safe and painless surgery.
+                        We do it at respectful vet clinics when the kitten's age is 11-14 weeks old. It is a very safe and painless surgery.
                       </p><p>
-                        Then our kittens grow without any sexual behaviour or unpleasant actions like yelling, making markers, and illnesses specific to Bengal female cats like pyometra.
+                        Then our kittens grow without any sexual behaviour or unpleasant actions like yelling, marking territory, and illnesses specific to Bengal female cats like pyometra.
                       </p>
                     </Accordion.Body>
                   </Accordion.Item>
@@ -92,9 +92,9 @@ const WhyChoose = () => {
                 </Link>
                 <h3>How to reserve a kitten</h3>
                 <p>
-                  After you have looked at the kitten online and made a choice, you will inform us that you are ready to reserve them.
+                  After you have looked at the kitten online and made a choice, please inform us that you are ready to reserve them.
                 </p><p>
-                  Then we send a Deposit Agreement to your email box. The agreement contains the name of the TICA registered Junglebeauty Cattery and name, date of birth, gender, breed, price, dates of release of the kitten, and parties responsibilities.
+                  Then we send a Deposit Agreement to your email box. The agreement contains the name of the TICA registered Junglebeauty Cattery and name, date of birth, gender, breed, price, dates of release of the kitten, and parties' responsibilities.
                 </p><p>
                   After you sign the Agreement, you have to send it to us.
                 </p><p>
