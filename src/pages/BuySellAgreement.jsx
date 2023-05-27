@@ -14,6 +14,12 @@ const BuySellAgreement = () => {
           </Document>
       </div>
       */
+     <>
+      <div className='page-background'>
+        <p>
+          Below is an example of the contract which you will sign if you choose to purchase one of our kittens.
+        </p>
+      </div>
 
       <div className='page-background'>
         <h1>AGREEMENT to BUY \ SALE</h1>
@@ -44,6 +50,7 @@ const BuySellAgreement = () => {
           <p>Seller Signature ____________________ Date _________________ Printed Name__________________________________</p>
         </p>
       </div>
+      </>
     );
   };
 
