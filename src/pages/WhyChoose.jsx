@@ -78,7 +78,7 @@ const WhyChoose = () => {
                       <p>
                         We stay in touch with our customers after they take home a kitten and are ready to answer any questions.
                       </p><p>
-                        We know the breed and want only the best for Kitten and you.
+                        We know the breed and want only the best for the kitten and you.
                       </p>
                     </Accordion.Body>
                   </Accordion.Item>
