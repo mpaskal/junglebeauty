@@ -11,7 +11,7 @@ const PrepareForKitten = () => {
             <Row className='item-container'>
               <Col>
                 You need a carrier for the kitten to bring them home safely and take them to the vet clinic later on.
-                We recommend having a carrier of the size for the full grown cat. It can be a soft carrier or a plastic carrier. We suggest having a double door carrier; here is an example:
+                We recommend having a carrier big enough for a full grown cat. It can be a soft carrier or a plastic carrier. We suggest having a double door carrier; here is an example:
                 <p/>
               </Col>
               <Col xl={3}>
@@ -23,7 +23,7 @@ const PrepareForKitten = () => {
               <Col>
                 You need a litter box for the kitten. For example:
                 <p/>
-                Note: our kittens are trained to use different litter boxes - from simple tray to top open and house-like.
+                Note: our kittens are trained to use different litter boxes - from simple tray to open top to enclosed.
                 <p/>
               </Col>
               <Col xl={3}>
@@ -73,7 +73,7 @@ const PrepareForKitten = () => {
           </li><li>
             <Row className='item-container'>
               <Col>
-              Kittens like Cat Drinking Fountain. Many cats and especially Bengals love running water. That is why they prefer to drink from the tap or fountains. Also it encourages them to drink more which is very important for cat health. Just do not forget to refresh the water every 1-2 days. For example:
+              Kittens like the Cat Drinking Fountain. Many cats and especially Bengals love running water. That is why they prefer to drink from the tap or fountains. It also encourages them to drink more which is very important for cat health. Just do not forget to refresh the water every 1-2 days. For example:
                 <p/>
               </Col>
               <Col xl={3}>
@@ -143,7 +143,7 @@ const PrepareForKitten = () => {
           </li><li>
             <Row className='item-container'>
               <Col>
-                Exercise wheel is one of the most popular items for Bengals. They absolutely love it. However, you can buy it later on when the kitten is over one year old. For example:
+                The exercise wheel is one of the most popular items for Bengals. They absolutely love it. However, you can buy it later on when the kitten is over one year old. For example:
                 <p/>
               </Col>
               <Col xl={3}>
@@ -189,16 +189,16 @@ const PrepareForKitten = () => {
           </Row>
           </li>
         </ol>
-        <h2>How kittens were fed</h2>
+        <h2>How our kittens are fed</h2>
         <ol className='list-container'>
           <li>
-            Water was available at all times.
+            Water is available at all times.
           </li><li>
-            Dry food was available at all times.
+            Dry food is available at all times.
           </li><li>
-            Canned food was given as is and given 3 times per day (3-4 soup spoons per portion).
+            Canned food is given as is and given 3 times per day (3-4 soup spoons per portion).
           </li><li>
-            Raw food was given 3 times per day. Total amount is approximately 10% of kitten's weight per day. For example, if the kitten weighs 2kg, you can give them 200 grams per day divided into 3 portions for breakfast, lunch, and dinner.
+            Raw food is given 3 times per day. Total amount is approximately 10% of kitten's weight per day. For example, if the kitten weighs 2kg, you can give them 200 grams per day divided into 3 portions for breakfast, lunch, and dinner.
           </li><li>
             We would recommend not feeding the kitten with canned and raw food at the same time. Please choose which diet you want to proceed with.
           </li>
