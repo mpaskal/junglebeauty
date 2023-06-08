@@ -31,7 +31,7 @@ export function getCatDescription(cat) {
     if (sex === 'male') {
       description = `${adj} ${colour} Bengal`;
     } else {
-      description = `Born ${convertDate(date)}${cattery != undefined ? ` at ${cattery} cattery${location != undefined ? `, ${location}` : ''}` : ''}`;
+      description = `Born ${convertDate(date)}${cattery ? ` at ${cattery} cattery${location ? `, ${location}` : ''}` : ''}`;
     }
   }
 
