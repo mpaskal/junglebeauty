@@ -21,8 +21,6 @@ export async function QueryCats(table, predicate = []) {
             cats.push({...cat, id: doc.id});
         }
     })
-
-    console.log(cats);
     
     return cats;
 }
