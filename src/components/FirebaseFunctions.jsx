@@ -77,7 +77,6 @@ export async function GetImage(filepath) {
 export async function GetAllImages(filepath) {
     const images = [];
     const storageRef = ref(storage, filepath);
-    
     const result = await listAll(storageRef);
     
     result.items.forEach(image => {
@@ -86,3 +85,11 @@ export async function GetAllImages(filepath) {
 
     return images;
   }
+
+export async function GetFirstImage(filepath) {
+    const storageRef = ref(storage, filepath);
+    const result = await listAll(storageRef);
+    const image = result.items[0].fullPath;
+
+    return image;
+}
