@@ -16,7 +16,10 @@ export async function QueryCats(table, predicate = []) {
     const docRefs = await getDocs(q);
 
     docRefs.forEach(doc => {
-        cats.push({...doc.data(), id: doc.id});
+        const cat = doc.data();
+        if (cat.show != 'false') {
+            cats.push({...cat, id: doc.id});
+        }
     })
 
     console.log(cats);
