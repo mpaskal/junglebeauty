@@ -119,7 +119,7 @@ const KittenGallery = () => {
           && filters.mother.includes(cat.mother)
           && filters.status.includes(cat.status)
           && filters.sex.includes(cat.sex))
-          .sort((a, b) => a.status > b.status || a.date > b.date ? 1 : -1)
+          .sort((a, b) => a.date > b.date ? -1 : 1)
           .map((cat) => {
             return (
               <CatCard key={cat.id} cat={cat} size='small' />
