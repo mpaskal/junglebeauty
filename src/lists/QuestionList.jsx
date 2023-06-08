@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const QuestionList = [
     {
         title: `Why can Bengals attack people?`,
