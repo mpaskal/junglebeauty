@@ -7,7 +7,8 @@ import { getCatFilepath, getCatDescription } from './Functions';
 import './../App.css';
 
 const CatCard = ({ cat, size = 'large' }) => {
-    const { name, type, sex, desc } = cat;
+    const { name, sex, desc, mother } = cat;
+    const type = `${mother ? 'kitten' : 'parent'}`;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
