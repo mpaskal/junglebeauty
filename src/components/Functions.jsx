@@ -22,7 +22,8 @@ export function getCatFilepath(cat) {
 }
 
 export function getCatDescription(cat) {
-  const { type, colour, sex, adj, date, cattery, location } = cat;
+  const { colour, sex, adj, date, mother, cattery, location } = cat;
+  const type = (mother ? `kitten` : `${sex == 'male' ? `king` : `queen`}`);
   var description;
 
   if (type === 'kitten') {
