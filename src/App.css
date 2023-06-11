@@ -244,15 +244,17 @@ label {
 }
 
 .cat-img-container {
-  width: 90%;
-  margin: auto;
+  
 }
 
 .cat-img {
+  width: 90%;
+  max-height: 60%;
+  object-fit: none;
+  margin: auto;
   border-radius: 10pt;
   cursor: pointer;
   margin-top: 10pt;
-  width: 100%;
 }
 
 .cat-text {
