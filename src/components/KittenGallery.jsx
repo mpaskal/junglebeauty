@@ -58,19 +58,19 @@ const KittenGallery = () => {
             <Accordion.Body>
               {statuses.map((status) => {
                 return (
-                  <Checkbox label={capitalize(status)} name='status' value={status} handleChange={handleChange} checked={filters['status'].includes(status)} />
+                  <Checkbox key={status} label={capitalize(status)} name='status' value={status} handleChange={handleChange} checked={filters['status'].includes(status)} />
                 )
               })}
               <br/>
               {colours.map((colour) => {
                 return (
-                  <Checkbox label={capitalize(colour)} name='colour' value={colour} handleChange={handleChange} checked={filters['colour'].includes(colour)} />
+                  <Checkbox key={colour} label={capitalize(colour)} name='colour' value={colour} handleChange={handleChange} checked={filters['colour'].includes(colour)} />
                 )
               })}
               <br/>
               {sexes.map((sex) => {
                 return (
-                  <Checkbox label={capitalize(sex)} name='sex' value={sex} handleChange={handleChange} checked={filters['sex'].includes(sex)} />
+                  <Checkbox key={sex} label={capitalize(sex)} name='sex' value={sex} handleChange={handleChange} checked={filters['sex'].includes(sex)} />
                 )
               })}
   
