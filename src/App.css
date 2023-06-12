@@ -116,6 +116,7 @@ label {
 
 .video-frame {
   width: 100%;
+  aspect-ratio: 3 / 2;
 }
 
 .pdf-container {
@@ -346,8 +347,8 @@ label {
   accent-color: var(--accent-green);
 }
 
-.video-carousel-container {
-  width: 50%;
+.video-frame-container {
+  width: 80%;
   margin: auto;
   margin-top: 2%;
 }
