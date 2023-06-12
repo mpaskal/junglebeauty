@@ -4,11 +4,12 @@ import { getCatFilepath, convertDate, getReleaseDate } from './Functions';
 import { GetAllImages } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
 import VideoCarousel from './VideoCarousel';
+import VideoFrame from './VideoFrame';
 import './../App.css';
 import CatImage from './CatImage';
 
 const KittenProfile= ({ cat = [] }) => {
-    const { name, sex, date, father, mother, price, videos } = cat;
+    const { name, sex, date, father, mother, price, video } = cat;
     const [images, setImages] = useState([]);
     const birthDate = convertDate(date);
     const releaseDate = getReleaseDate(date);
@@ -34,6 +35,11 @@ const KittenProfile= ({ cat = [] }) => {
                     {price ? <p>Price: ${price}</p> : ''}
 
                     <ImageCarousel cat={cat} />
+                    {video &&
+                        <div className='video-frame-container'>
+                            <VideoFrame id={video} />
+                        </div>
+                    }
                 </div>
 
                 <div className='kitten-images-container'>
@@ -44,9 +50,7 @@ const KittenProfile= ({ cat = [] }) => {
                     })}
                 </div>
             </div>
-            <div className='video-carousel-container'>
-                <VideoCarousel videos={videos} />
-            </div>
+            
         </>
     );
 }
