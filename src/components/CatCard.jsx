@@ -19,7 +19,7 @@ const CatCard = ({ cat, size = 'large' }) => {
         <>
             <div className='cat-card' onClick={handleShow}>
                 <div className='cat-img-container'>
-                    <CatImage filepath={getCatFilepath(cat) + '0.png'} clickable={false} alt={displayName}/>
+                    <CatImage filepath={getCatFilepath(cat) + '0.png'} card={true} alt={displayName}/>
                 </div>
                 <div className='cat-text'>
                     {size === 'large' ?
