@@ -242,6 +242,12 @@ label {
   text-align: center;
   width: 90%;
   margin-left: 5pt;
+  transition: margin 0.25s;
+}
+
+.cat-card:hover {
+  margin-top: -5pt;
+  margin-bottom: 5pt;
 }
 
 .cat-img {
