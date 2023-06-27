@@ -328,6 +328,7 @@ label {
   grid-template-columns: 24% 24% 24% 24%;
   gap: 15pt;
   width: 95%;
+  justify-content: center;
   margin: auto;
   margin-top: 20pt;
   margin-bottom: 20pt;
