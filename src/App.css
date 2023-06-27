@@ -290,8 +290,6 @@ label {
 .kitten-images-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 5pt;
-  width: 35%;
   margin: auto;
 }
 
