@@ -325,7 +325,7 @@ label {
 
 .gallery-container {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 24% 24% 24% 24%;
   gap: 15pt;
   width: 95%;
   margin: auto;
