@@ -305,8 +305,13 @@ label {
   margin-bottom: 20pt;
 }
 
-.accordion-button:not(.collapsed) {
+.accordion-button {
   background-color: var(--text-white);
+  transition: padding 0.25s;
+}
+
+.accordion-button:hover {
+  padding-left: 20pt;
 }
 
 .accordion-header-text {
