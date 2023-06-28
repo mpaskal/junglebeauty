@@ -7,7 +7,7 @@ const AccordionMenu = ({ items }) => {
   var itemID = -1;
 
   return (
-    <Accordion className='accordion' alwaysOpen flush>
+    <Accordion className='accordion' alwaysOpen>
       {items.map((item) => {
         if (item.title && item.body) {
           itemID++;
