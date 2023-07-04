@@ -5,21 +5,20 @@ import { db, storage } from '../firebase';
 
 export async function QueryCats(table, predicate = []) {
     const cats = [];
+    const collectionRef = collection(db, table);
+    const queryArgs = [collectionRef, where('show', '==', 'true')];
     var q;
 
-    if (predicate.length === 0) {
-        q = query(collection(db, table));
-    } else {
-        q = query(collection(db, table), where(...predicate));
+    if (predicate.length === 3) {
+        queryArgs.push(where(...predicate));   
     }
 
+    q = query(...queryArgs);
     const docRefs = await getDocs(q);
 
     docRefs.forEach(doc => {
         const cat = doc.data();
-        if (cat.show != 'false') {
-            cats.push({...cat, id: doc.id});
-        }
+        cats.push({...cat, id: doc.id});
     })
     
     return cats;
