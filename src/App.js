@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import { CatsProvider } from './contexts/CatsContext';
 import Home from './pages/Home';
@@ -20,29 +21,31 @@ import './App.css';
 
 const App = () => {
   return (
-    <CatsProvider>
-      <div className='App'>
-        <Navigation/>
-        <div className='page-content'>
-          <Routes>
-            <Route index element={<Home/>}/>
-            <Route path='queens' element={<Queens/>}/>
-            <Route path='kings' element={<Kings/>}/>
-            <Route path='kittens' element={<Kittens/>}/>
-            <Route path='news' element={<News/>}/>
-            <Route path='faq' element={<FAQ/>}/>
-            <Route path='about-us' element={<About/>}/>
-            <Route path='contact' element={<Contact/>}/>
-            <Route path='why-choose-junglebeauty' element={<WhyChoose/>}/>
-            <Route path='buy-sell-agreement' element={<BuySellAgreement/>}/>
-            <Route path='price' element={<Price/>}/>
-            <Route path='preparing-for-coming-kitten' element={<PrepareForKitten/>}/>
-            <Route path='visit-junglebeauty' element={<Visit/>}/>
-          </Routes>
+    <BrowserRouter>
+      <CatsProvider>
+        <div className='App'>
+          <Navigation/>
+          <div className='page-content'>
+            <Routes>
+              <Route index element={<Home/>}/>
+              <Route path='queens' element={<Queens/>}/>
+              <Route path='kings' element={<Kings/>}/>
+              <Route path='kittens' element={<Kittens/>}/>
+              <Route path='news' element={<News/>}/>
+              <Route path='faq' element={<FAQ/>}/>
+              <Route path='about-us' element={<About/>}/>
+              <Route path='contact' element={<Contact/>}/>
+              <Route path='why-choose-junglebeauty' element={<WhyChoose/>}/>
+              <Route path='buy-sell-agreement' element={<BuySellAgreement/>}/>
+              <Route path='price' element={<Price/>}/>
+              <Route path='preparing-for-coming-kitten' element={<PrepareForKitten/>}/>
+              <Route path='visit-junglebeauty' element={<Visit/>}/>
+            </Routes>
+          </div>
+          <Footer/>
         </div>
-        <Footer/>
-      </div>
-    </CatsProvider>
+      </CatsProvider>
+    </BrowserRouter>
   );
 };
 
