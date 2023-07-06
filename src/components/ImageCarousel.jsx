@@ -7,13 +7,6 @@ import './../App.css';
 
 const ImageCarousel = ({ cat }) => {  
     const [images, setImages] = useState([]);
-  
-    /*
-        result.items.forEach(image => {
-            images.push(image.fullPath);
-        })
-    */
-
 
     const getData = async () => {
         const images = await GetAllImages(getCatFilepath(cat));
