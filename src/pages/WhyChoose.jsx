@@ -87,7 +87,7 @@ const WhyChoose = () => {
               </Col>
               <Col sm={3}>
                 <Link className='text-link' to='/kittens'>
-                  <img className='side-img' src={'/assets/kittens/graduated.png'}/>
+                  <img className='side-img' src={'/assets/kittens/graduated.png'} alt='Brown Bengal kitten sitting on a cat tree'/>
                   <p>See available kittens</p>
                 </Link>
                 <h3>How to reserve a kitten</h3>
