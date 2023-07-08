@@ -11,7 +11,7 @@ const ImageCarousel = ({ cat }) => {
     const getData = async () => {
         const images = await GetAllImages(getCatFilepath(cat));
         setImages(images);
-      }
+    }
     
     useEffect(() => {
         getData();
