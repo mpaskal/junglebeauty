@@ -33,7 +33,7 @@ const Home = () => {
                         offered with the same options and benefits - we will make our price the same for you!
                     </p>
                     <div className='cat-card-column'>
-                        {cats.filter(cat => cat.type === 'kitten' && cat.status === 'available').sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
+                        {cats.sort((a, b) => a.date > b.date ? -1 : 1).slice(0, 5).map((cat) => {
                             return (
                                 <div key={cat.id} className='card-container'>
                                     <CatCard cat={cat} size='small'/>
