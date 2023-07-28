@@ -1,8 +1,5 @@
-import { useState, useEffect } from 'react';
 import { Accordion, Button } from 'react-bootstrap';
-import { useCats } from '../contexts/CatsContext';
 import { capitalize } from './Functions';
-import CatCard from './CatCard';
 import Checkbox from './Checkbox';
 import './../App.css';
 
