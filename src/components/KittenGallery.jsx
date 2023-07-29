@@ -27,7 +27,7 @@ const KittenGallery = () => {
     var filterArray = filters[name];
 
     if (filterArray.includes(value)) {
-      filterArray = filterArray.filter(item => item != value);
+      filterArray = filterArray.filter(item => item !== value);
     } else {
       filterArray.push(value);
     }
