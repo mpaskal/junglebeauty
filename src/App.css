@@ -89,8 +89,9 @@ label {
 
 .list-container {
   text-align: left;
-  width: fit-content;
-  max-width: 60%;
+  width: 60%;
+  max-width: fit-content;
+  min-width: 300pt;
   margin: auto;
 }
 
