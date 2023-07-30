@@ -5,7 +5,7 @@ import './../App.css';
 
 const Navigation = () => {
     return (
-        <Navbar collapseOnSelect className='nav-bar' expand='false' variant='dark' bg='dark'>
+        <Navbar collapseOnSelect className='nav-bar' expand='xl' variant='dark' bg='dark'>
             <Container>
                 <Link to='/'>
                     <Navbar.Brand className='logo-link'>
