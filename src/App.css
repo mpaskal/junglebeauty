@@ -282,19 +282,24 @@ label {
 }
 
 .kitten-columns-container {
-  display: flex;
+  text-align: center;
 }
 
 .profile-info-container {
-  width: 60%;
+  display: flex;
+}
+
+.carousel-container {
+  width: 100%;
   margin: auto;
-  text-align: center;
+  margin-bottom: 10pt;
 }
 
 .kitten-images-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   margin: auto;
+  margin-bottom: 10pt;
   row-gap: 2%;
 }
 
