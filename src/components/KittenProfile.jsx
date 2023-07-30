@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import { Row, Col } from 'react-bootstrap';
 import { getCatFilepath, convertDate, getReleaseDate } from './Functions';
 import { GetAllImages } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
@@ -27,13 +28,22 @@ const KittenProfile= ({ cat = [] }) => {
     return (
         <>
             <div className='kitten-columns-container'>
-                <div className='profile-info-container'>
-                    <h2>{name} collar {sex === 'male' ? 'boy' : 'girl'}</h2>
-                    <h4>Born {birthDate}</h4>
-                    <p>Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link></p>
-                    <p>Date of release: {releaseDate <= currentDate ? 'ready to go!' : convertDate(releaseDate)}</p>
-                    {price ? <p>Price: ${price}</p> : ''}
+                <Row className='profile-info-container'>
+                    <Col sm={5}>
+                        <h2>{name} collar {sex === 'male' ? 'boy' : 'girl'}</h2>
+                        <h4>Born {birthDate}</h4>
+                    </Col>
+                    <Col sm={5}>
+                        <p>
+                            Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link>
+                            <br />
+                            Date of release: {releaseDate <= currentDate ? 'ready to go!' : convertDate(releaseDate)}
+                        </p>
+                        {price ? <p>Price: ${price}</p> : ''}
+                    </Col>
+                </Row>
 
+                <div className='carousel-container'>
                     <ImageCarousel cat={cat} />
                     {video &&
                         <div className='video-frame-container'>
