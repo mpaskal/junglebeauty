@@ -50,6 +50,7 @@
 
 .paragraph-variant {
   text-align: left;
+  line-height: 24pt;
   width: fit-content;
   margin: auto;
 }
