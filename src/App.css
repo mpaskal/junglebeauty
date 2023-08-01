@@ -251,8 +251,8 @@ label {
 }
 
 .cat-card:hover {
-  margin-top: -10pt;
-  margin-bottom: 10pt;
+  margin-top: -5pt;
+  margin-bottom: 5pt;
 }
 
 .cat-img {
@@ -321,7 +321,7 @@ label {
 }
 
 .accordion-button:hover {
-  padding-left: 20pt;
+  padding-left: 10pt;
 }
 
 .accordion-header-text {
