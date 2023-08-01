@@ -283,13 +283,12 @@ label {
   width: 90%;
 }
 
-.kitten-columns-container {
+.cat-columns-container {
   text-align: center;
 }
 
 .profile-info-container {
   display: flex;
-  text-align: center;
 }
 
 .carousel-container {
