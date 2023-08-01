@@ -321,7 +321,8 @@ label {
 }
 
 .accordion-button:hover {
-  padding-left: 10pt;
+  padding-left: 20pt;
+  
 }
 
 .accordion-header-text {
