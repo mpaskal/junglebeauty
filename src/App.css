@@ -325,9 +325,13 @@ label {
   
 }
 
+.accordion-button:not(.collapsed) {
+  background-color: var(--text-white);
+}
+
 .accordion-header-text {
   margin-bottom: 0rem;
-  color:var(--accent-green);
+  color: var(--accent-green);
   font-size: large;
   font-weight: bold;
 }
