@@ -4,58 +4,52 @@ import { GetReleaseDate } from "../components/Functions";
 const NewsList = [
     {
         title: 'Litter of Lolita',
-        body: 
-            <>
-                <p>
-                Four kittens are available for reservation.
-                </p><p>
-                They are the best New Year gifts!
-                </p>
-            </>,
-        date: '2022-10-07',
-        type: 'litter',
-        king: 'Julius',
-        queen: 'Lolita'
-    }, {
-        title: 'Litter of Bora',
-        body: 
-            <>
-                <p>
-                Four kittens are available for reservation.
-                </p><p>
-                They are the best Christmas gifts!
-                </p>
-            </>,
-        date: '2022-09-29',
-        type: 'litter',
-        king: 'Merlin',
-        queen: 'Bora'
-    }, {
-        title: 'Litter of Elizabeth',
-        body: 
-            <>
-                <p>
-                Four kittens available for reservation.
-                </p><p>
-                They are the best Christmas gifts!
-                </p>
-            </>,
-        date: '2022-09-28',
-        type: 'litter',
-        king: 'Churchil',
-        queen: 'Elizabeth'
-    }, {
-        title: 'Litter of Eleonore',
         body:
             <>
                 <p>
-                Four kittens are available for reservation.
+                    One melanistic male kitten is available for reservation.
                 </p>
             </>,
-        date: '2022-08-16',
+        date: '2023-04-12',
         type: 'litter',
-        king: 'Merlin',
-        queen: 'Eleonore'
+        king: 'Caesarus',
+        queen: 'Lolita'
+    }, {
+        title: 'Litter of Lita',
+        body:
+            <>
+                <p>
+                    Two female and one male kittens are available for reservation.
+                </p>
+            </>,
+        date: '2023-04-02',
+        type: 'litter',
+        king: 'Churchil',
+        queen: 'Lita'
+    }, {
+        title: 'Litter of Bora',
+        body:
+            <>
+                <p>
+                    Two female and one male kittens are available for reservation.
+                </p>
+            </>,
+        date: '2023-03-27',
+        type: 'litter',
+        king: 'Churchil',
+        queen: 'Bora'
+    }, {
+        title: 'Litter of Beatrice',
+        body:
+            <>
+                <p>
+                    One female and one male kittens are available for reservation.
+                </p>
+            </>,
+        date: '2023-03-21',
+        type: 'litter',
+        king: 'Richard',
+        queen: 'Beatrice'
     }, {
         title: 'Litter of Ariel',
         body:
@@ -152,6 +146,60 @@ const NewsList = [
         type: 'litter',
         king: 'Churchil',
         queen: 'Cleo'
+    }, {
+        title: 'Litter of Lolita',
+        body: 
+            <>
+                <p>
+                Four kittens are available for reservation.
+                </p><p>
+                They are the best New Year gifts!
+                </p>
+            </>,
+        date: '2022-10-07',
+        type: 'litter',
+        king: 'Julius',
+        queen: 'Lolita'
+    }, {
+        title: 'Litter of Bora',
+        body: 
+            <>
+                <p>
+                Four kittens are available for reservation.
+                </p><p>
+                They are the best Christmas gifts!
+                </p>
+            </>,
+        date: '2022-09-29',
+        type: 'litter',
+        king: 'Merlin',
+        queen: 'Bora'
+    }, {
+        title: 'Litter of Elizabeth',
+        body: 
+            <>
+                <p>
+                Four kittens available for reservation.
+                </p><p>
+                They are the best Christmas gifts!
+                </p>
+            </>,
+        date: '2022-09-28',
+        type: 'litter',
+        king: 'Churchil',
+        queen: 'Elizabeth'
+    }, {
+        title: 'Litter of Eleonore',
+        body:
+            <>
+                <p>
+                Four kittens are available for reservation.
+                </p>
+            </>,
+        date: '2022-08-16',
+        type: 'litter',
+        king: 'Merlin',
+        queen: 'Eleonore'
     }
 
     /*
