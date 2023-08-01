@@ -1,6 +1,3 @@
-import CatList from "./CatList";
-import { GetReleaseDate } from "../components/Functions";
-
 const NewsList = [
     {
         title: 'Litter of Lolita',
