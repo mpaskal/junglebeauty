@@ -1,4 +1,4 @@
-import { Accordion } from 'react-bootstrap';
+import { Accordion, Row, Col } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
@@ -28,10 +28,14 @@ const ParentProfile= ({ cat = [] }) => {
 
     return (
         <div>
-            <div className='profile-info-container'>
-                <h2>{name}</h2>
-                <h3>{description}</h3>
-            </div>
+            <Row className='profile-info-container'>
+                <Col sm={5}>
+                    <h2>{name}</h2>
+                </Col>
+                <Col sm={5}>
+                    <h3>{description}</h3>
+                </Col>
+            </Row>
 
             <ImageCarousel cat={cat} />
 
