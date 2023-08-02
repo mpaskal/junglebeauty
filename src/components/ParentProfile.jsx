@@ -23,11 +23,11 @@ const ParentProfile= ({ cat = [] }) => {
     }, [])
     */
 
-    availableKittens = kittens.filter(kitten => kitten.status === 'available');
-    graduatedKittens = kittens.filter(kitten => kitten.status === 'graduated');
+    availableKittens = kittens.filter(kitten => kitten.status === 'available').sort((a, b) => a.date > b.date ? -1 : 1);
+    graduatedKittens = kittens.filter(kitten => kitten.status === 'graduated').sort((a, b) => a.date > b.date ? -1 : 1);
 
     return (
-        <div>
+        <div className='cat-columns-container'>
             <Row className='profile-info-container'>
                 <Col sm={5}>
                     <h2>{name}</h2>
@@ -59,7 +59,7 @@ const ParentProfile= ({ cat = [] }) => {
                         </Accordion.Header>
                         <Accordion.Body>
                             <div>
-                                <CatCardCarousel cats={graduatedKittens} contained={false}/>
+                                <CatCardCarousel cats={graduatedKittens}/>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
