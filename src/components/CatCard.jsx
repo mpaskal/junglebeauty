@@ -30,7 +30,7 @@ const CatCard = ({ cat, size = 'large' }) => {
                         </>
                     :
                         <>
-                            <h4><b>{displayName}</b></h4>
+                            <h5><b>{displayName}</b></h5>
                             <h5>{description}</h5>
                         </>
                     }
