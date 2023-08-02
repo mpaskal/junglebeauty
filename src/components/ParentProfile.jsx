@@ -12,17 +12,6 @@ const ParentProfile= ({ cat = [] }) => {
     var availableKittens = [];
     var graduatedKittens = [];
 
-    /*
-    const getData = async () => {
-        const kittens = await QueryCats('kittens', [sex === 'male' ? 'father' : 'mother', '==', name]);
-        setKittens(kittens);
-      }
-    
-    useEffect(() => {
-        getData();
-    }, [])
-    */
-
     availableKittens = kittens.filter(kitten => kitten.status === 'available').sort((a, b) => a.date > b.date ? -1 : 1);
     graduatedKittens = kittens.filter(kitten => kitten.status === 'graduated').sort((a, b) => a.date > b.date ? -1 : 1);
 
