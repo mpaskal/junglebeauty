@@ -21,8 +21,8 @@ const ParentProfile= ({ cat = [] }) => {
                 <Col sm={5}>
                     <h2>{name}</h2>
                 </Col>
-                <Col sm={5}>
-                    <h3>{description}</h3>
+                <Col sm={5} className='cat-info-right-col'>
+                    <h4>{description}</h4>
                 </Col>
             </Row>
 
