@@ -2,7 +2,7 @@ import Carousel from 'react-multi-carousel';
 import CatCard from './CatCard';
 import './../App.css';
 
-const CatCardCarousel = ({ cats, autoplay = false, contained = true }) => {  
+const CatCardCarousel = ({ cats, autoplay = false, contained = true, small = false }) => {  
 
   return (
     <Carousel className={`cat-card-carousel ${contained && `cat-card-carousel-container`}`}
@@ -42,7 +42,7 @@ const CatCardCarousel = ({ cats, autoplay = false, contained = true }) => {
       {cats.map((cat) => {
         return (
           <div key={cat.id}>
-            <CatCard cat={cat}/>
+            <CatCard cat={cat} size={small ? 'small' : 'large'} />
           </div>
         )
       })}
