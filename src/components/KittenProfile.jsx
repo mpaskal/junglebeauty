@@ -33,12 +33,12 @@ const KittenProfile= ({ cat = [] }) => {
                         <h2>{name} collar {sex === 'male' ? 'boy' : 'girl'}</h2>
                         <h4>Born {birthDate}</h4>
                     </Col>
-                    <Col sm={5}>
-                        <p>
+                    <Col sm={5} className='cat-info-right-col'>
+                        <h5>
                             Mother: <Link to='/queens' state={mother}>{mother}</Link>, Father: <Link to='/kings' state={father}>{father}</Link>
                             <br />
                             Date of release: {releaseDate <= currentDate ? 'ready to go!' : convertDate(releaseDate)}
-                        </p>
+                        </h5>
                         {price ? <p>Price: ${price}</p> : ''}
                     </Col>
                 </Row>
