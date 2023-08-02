@@ -36,7 +36,7 @@ const ParentProfile= ({ cat = [] }) => {
                         </Accordion.Header>
                         <Accordion.Body>
                             <div>
-                                <CatCardCarousel cats={availableKittens}/>
+                                <CatCardCarousel cats={availableKittens} small={true}/>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -48,7 +48,7 @@ const ParentProfile= ({ cat = [] }) => {
                         </Accordion.Header>
                         <Accordion.Body>
                             <div>
-                                <CatCardCarousel cats={graduatedKittens}/>
+                                <CatCardCarousel cats={graduatedKittens} small={true}/>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
