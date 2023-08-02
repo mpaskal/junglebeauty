@@ -27,7 +27,7 @@ const KittenProfile= ({ cat = [] }) => {
 
     return (
         <>
-            <div className='kitten-columns-container'>
+            <div className='cat-columns-container'>
                 <Row className='profile-info-container'>
                     <Col sm={5}>
                         <h2>{name} collar {sex === 'male' ? 'boy' : 'girl'}</h2>
