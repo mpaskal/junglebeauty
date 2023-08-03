@@ -21,10 +21,10 @@ const CatImage = ({ filepath, card = false }) => {
       <>
         <img className={`cat-img ${card && 'card-image'}`} src={image} alt={filepath} onClick={card ? undefined : handleShow} />
 
-        <Modal show={show} onHide={handleClose} size='lg'>
+        <Modal show={show} onHide={handleClose} size='xl'>
             <Modal.Header closeButton/>
             <Modal.Body>
-              <img className='cat-img' src={image} />
+              <img className='cat-img modal-img' src={image} />
             </Modal.Body>
         </Modal>
       </>
