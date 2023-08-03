@@ -26,19 +26,19 @@ const App = () => {
           <Navigation />
           <div className='page-content'>
             <Routes>
-              <Route index element={<Home />}/>
-              <Route path='queens' element={<Queens />}/>
-              <Route path='kings' element={<Kings />}/>
-              <Route path='kittens' element={<Kittens />}/>
-              <Route path='news' element={<News />}/>
-              <Route path='faq' element={<FAQ />}/>
-              <Route path='about-us' element={<About />}/>
-              <Route path='contact' element={<Contact />}/>
-              <Route path='why-choose-junglebeauty' element={<WhyChoose />}/>
-              <Route path='buy-sell-agreement' element={<BuySellAgreement />}/>
-              <Route path='price' element={<Price />}/>
-              <Route path='preparing-for-coming-kitten' element={<PrepareForKitten />}/>
-              <Route path='visit-junglebeauty' element={<Visit />}/>
+              <Route exact index element={<Home />}/>
+              <Route exact path='queens' element={<Queens />}/>
+              <Route exact path='kings' element={<Kings />}/>
+              <Route exact path='kittens' element={<Kittens />}/>
+              <Route exact path='news' element={<News />}/>
+              <Route exact path='faq' element={<FAQ />}/>
+              <Route exact path='about-us' element={<About />}/>
+              <Route exact path='contact' element={<Contact />}/>
+              <Route exact path='why-choose-junglebeauty' element={<WhyChoose />}/>
+              <Route exact path='buy-sell-agreement' element={<BuySellAgreement />}/>
+              <Route exact path='price' element={<Price />}/>
+              <Route exact path='preparing-for-coming-kitten' element={<PrepareForKitten />}/>
+              <Route exact path='visit-junglebeauty' element={<Visit />}/>
             </Routes>
           </div>
           <Footer />
