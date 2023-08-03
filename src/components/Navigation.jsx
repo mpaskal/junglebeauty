@@ -1,11 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import './../App.css';
 
 const Navigation = () => {
+    const [expanded, setExpanded] = useState(false);
+    const handleToggle = () => setExpanded(!expanded);
+
     return (
-        <Navbar collapseOnSelect className='nav-bar' expand='xl' variant='dark' bg='dark'>
+        <Navbar expanded={expanded} onToggle={handleToggle} collapseOnSelect className='nav-bar' expand='xl' variant='dark' bg='dark'>
             <Container>
                 <Link to='/'>
                     <Navbar.Brand className='logo-link'>
@@ -16,25 +20,25 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='ml-auto'>
-                        <NavLink exact className='nav-link' as={Link} to='/' eventKey='0'>Home</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/queens' eventKey='1'>Queens</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/kings' eventKey='2'>Kings</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/kittens' eventKey='3'>Kittens</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/news' eventKey='4'>News</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/faq' eventKey='5'>FAQ</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/about-us' eventKey='6'>About</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/contact' eventKey='7'>Contact</NavLink>
+                        <NavLink exact className='nav-link' as={Link} to='/' onClick={handleToggle}>Home</NavLink>
+                        <NavLink exact className='nav-link' as={Link} to='/queens' onClick={handleToggle}>Queens</NavLink>
+                        <NavLink exact className='nav-link' as={Link} to='/kings' onClick={handleToggle}>Kings</NavLink>
+                        <NavLink exact className='nav-link' as={Link} to='/kittens' onClick={handleToggle}>Kittens</NavLink>
+                        <NavLink exact className='nav-link' as={Link} to='/news' onClick={handleToggle}>News</NavLink>
+                        <NavLink exact className='nav-link' as={Link} to='/faq' onClick={handleToggle}>FAQ</NavLink>
+                        <NavLink exact className='nav-link' as={Link} to='/about-us' onClick={handleToggle}>About</NavLink>
+                        <NavLink exact className='nav-link' as={Link} to='/contact' onClick={handleToggle}>Contact</NavLink>
                         <NavDropdown className='nav-dropdown' variant='dark' title='How to buy'>
                             <div className='dropdown-links-container'>
-                                <NavLink exact className='dropdown-link' as={Link} to='/why-choose-junglebeauty' eventKey='7'>Why choose JungleBeauty</NavLink>
+                                <NavLink exact className='dropdown-link' as={Link} to='/why-choose-junglebeauty' onClick={handleToggle}>Why choose JungleBeauty</NavLink>
                                 <NavDropdown.Divider/>
-                                <NavLink exact className='dropdown-link' as={Link} to='/buy-sell-agreement' eventKey='8'>Buy-Sell Agreement</NavLink>
+                                <NavLink exact className='dropdown-link' as={Link} to='/buy-sell-agreement' onClick={handleToggle}>Buy-Sell Agreement</NavLink>
                                 <NavDropdown.Divider/>
-                                <NavLink exact className='dropdown-link' as={Link} to='/price' eventKey='9'>Price</NavLink>
+                                <NavLink exact className='dropdown-link' as={Link} to='/price' onClick={handleToggle}>Price</NavLink>
                                 <NavDropdown.Divider/>
-                                <NavLink exact className='dropdown-link' as={Link} to='/preparing-for-coming-kitten' eventKey='10'>How to be ready for coming kitten</NavLink>
+                                <NavLink exact className='dropdown-link' as={Link} to='/preparing-for-coming-kitten' onClick={handleToggle}>How to be ready for coming kitten</NavLink>
                                 <NavDropdown.Divider/>
-                                <NavLink exact className='dropdown-link' as={Link} to='/visit-junglebeauty' eventKey='11'>How to visit JungleBeauty</NavLink>
+                                <NavLink exact className='dropdown-link' as={Link} to='/visit-junglebeauty' onClick={handleToggle}>How to visit JungleBeauty</NavLink>
                             </div>
                         </NavDropdown>
                     </Nav>
