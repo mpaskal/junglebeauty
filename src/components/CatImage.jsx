@@ -9,7 +9,12 @@ const CatImage = ({ filepath, card = false }) => {
     const handleShow = () => setShow(true);
 
     const getImage = async () => {
-      const image = await GetImage(filepath);
+      var image;
+      try {
+        image = await GetImage(filepath);
+      } catch {
+        image = await GetImage('logo.png');
+      }
       setImage(image);
     }
   
