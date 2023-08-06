@@ -195,7 +195,7 @@ label {
 
 .cert-container {
     display: flex;
-    justify-content: center;
+    justify-content: safe center;
     width: 90%;
     margin: auto;
     overflow-x: scroll;
