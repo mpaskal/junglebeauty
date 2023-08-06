@@ -13,7 +13,7 @@ const Navigation = () => {
             <Container>
                 <Link to='/'>
                     <Navbar.Brand className='logo-link'>
-                        <img className='logo-img' src='/assets/logo.png'/>
+                        <img className='logo-img' src='/assets/logo.png' alt='Junglebeauty logo'/>
                         <h1 className='logo-text'>JungleBeauty Bengals</h1>
                     </Navbar.Brand>
                 </Link>
