@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import { CatsProvider } from './contexts/CatsContext';
 import Home from './pages/Home';
 import Queens from './pages/Queens';
@@ -16,11 +15,13 @@ import PrepareForKitten from './pages/PrepareForKitten';
 import Visit from './pages/Visit';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ScrollToTop from './hooks/ScrollToTop';
 import './App.css';
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <CatsProvider>
         <div className='App'>
           <Navigation />
