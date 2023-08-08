@@ -336,7 +336,6 @@ label {
 
 .accordion-button:hover {
   padding-left: 20pt;
-  
 }
 
 .accordion-button:not(.collapsed) {
@@ -350,9 +349,13 @@ label {
   font-weight: bold;
 }
 
+.empty-accordion {
+  background-color: red !important;
+}
+
 .accordion-selection-count {
   margin-bottom: 0rem;
-  margin-left: 25%;
+  margin-left: 10pt;
 }
 
 .accordion-item {
@@ -375,16 +378,16 @@ label {
 
 .filter-accordion {
   width: 50%;
-  min-width: 200pt;
+  min-width: 300pt;
   text-align: center;
 }
 
 .parent-accordions-container {
-  display: flex;
+  justify-content: center;
 }
 
 .parent-accordion {
-  width: 45%;
+  width: 100%;
   margin-top: 5pt;
   margin-bottom: 5pt;
 }
