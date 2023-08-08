@@ -350,6 +350,11 @@ label {
   font-weight: bold;
 }
 
+.accordion-selection-count {
+  margin-bottom: 0rem;
+  margin-left: 25%;
+}
+
 .accordion-item {
   color: var(--text-white);
   background-color: var(--background-black);
