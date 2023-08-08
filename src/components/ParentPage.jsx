@@ -16,7 +16,7 @@ const ParentPage = ({ sex }) => {
   var cats = useCats();
 
   if (cats) {
-    cats = cats.parents.filter((cat) => cat.sex === sex);
+    cats = cats.parents.filter((cat) => cat.sex === sex && cat.show !== 'false');
   } else {
     cats = [];
   }
