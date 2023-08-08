@@ -9,7 +9,7 @@ export function CatsProvider({ children }) {
 
     const getCats = async () => {
         const parents = await QueryCats('parents');
-        const kittens = await QueryCats('kittens');
+        const kittens = await QueryCats('kittens', ['show', '==', 'true']);
         
         setCats({parents, kittens});
         setLoading(false);
