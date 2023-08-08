@@ -40,7 +40,8 @@ const FilterAccordion = ({ handleChange, toggleAll, filters, options }) => {
                     <Accordion className='parent-accordion'>
                     <Accordion.Item eventKey={0}>
                         <Accordion.Header className='accordion-header'>
-                        <p className='accordion-header-text'>Father</p>
+                            <p className='accordion-header-text'>Father</p>
+                            <p className='accordion-selection-count'>Selected: {filters['father'].length}</p>
                         </Accordion.Header>
                         <Accordion.Body>
                         {parents.filter((cat) => cat.sex === 'male').map((cat) => {
@@ -54,7 +55,8 @@ const FilterAccordion = ({ handleChange, toggleAll, filters, options }) => {
                     <Accordion className='parent-accordion'>
                     <Accordion.Item eventKey={0}>
                         <Accordion.Header className='accordion-header'>
-                        <p className='accordion-header-text'>Mother</p>
+                            <p className='accordion-header-text'>Mother</p>
+                            <p className='accordion-selection-count'>Selected: {filters['mother'].length}</p>
                         </Accordion.Header>
                         <Accordion.Body>
                         {parents.filter((cat) => cat.sex === 'female').map((cat) => {
