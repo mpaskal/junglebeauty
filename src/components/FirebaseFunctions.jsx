@@ -6,7 +6,7 @@ import { db, storage } from '../firebase';
 export async function QueryCats(table, predicate = []) {
     const cats = [];
     const collectionRef = collection(db, table);
-    const queryArgs = [collectionRef, where('show', '==', 'true')];
+    const queryArgs = [collectionRef];
     var q;
 
     if (predicate.length === 3) {
