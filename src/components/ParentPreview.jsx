@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Accordion, Row, Col } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
-import CatCardCarousel from './CatCardCarousel';
 import ImageCarousel from './ImageCarousel';
-import { getCatDescription } from './Functions';
 import './../App.css';
 
 const ParentPreview= ({ parentName }) => {
