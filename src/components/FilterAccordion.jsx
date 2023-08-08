@@ -1,4 +1,5 @@
-import { Accordion, Button } from 'react-bootstrap';
+import { useState } from 'react';
+import { Accordion, Button, Row, Col } from 'react-bootstrap';
 import { capitalize } from './Functions';
 import Checkbox from './Checkbox';
 import './../App.css';
@@ -13,9 +14,9 @@ const FilterAccordion = ({ handleChange, toggleAll, filters, options }) => {
         <Accordion className='filter-accordion' defaultActiveKey='1'>
             <Accordion.Item className='accordion-item' eventKey='0'>
                 <Accordion.Header className='accordion-header'>
-                <p className='accordion-header-text'>
-                    Filter kittens
-                </p>
+                    <p className='accordion-header-text'>
+                        Filter kittens
+                    </p>
                 </Accordion.Header>
                 <Accordion.Body>
                 {statuses.map((status) => {
@@ -36,38 +37,45 @@ const FilterAccordion = ({ handleChange, toggleAll, filters, options }) => {
                     )
                 })}
     
-                <div className='parent-accordions-container'>
-                    <Accordion className='parent-accordion'>
-                    <Accordion.Item eventKey={0}>
-                        <Accordion.Header className='accordion-header'>
-                            <p className='accordion-header-text'>Father</p>
-                            <p className='accordion-selection-count'>Selected: {filters['father'].length}</p>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                        {parents.filter((cat) => cat.sex === 'male').map((cat) => {
-                            return (
-                            <Checkbox key={cat.id} label={cat.name} name='father' value={cat.name} handleChange={handleChange} checked={filters['father'].includes(cat.name)} />
-                            )
-                        })}
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    </Accordion>
-                    <Accordion className='parent-accordion'>
-                    <Accordion.Item eventKey={0}>
-                        <Accordion.Header className='accordion-header'>
-                            <p className='accordion-header-text'>Mother</p>
-                            <p className='accordion-selection-count'>Selected: {filters['mother'].length}</p>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                        {parents.filter((cat) => cat.sex === 'female').map((cat) => {
-                            return (
-                            <Checkbox key={cat.id} label={cat.name} name='mother' value={cat.name} handleChange={handleChange} checked={filters['mother'].includes(cat.name)} />
-                            )
-                        })}
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    </Accordion>
-                </div>
+                <Row className='parent-accordions-container'>
+                    <Col sm={6}>
+                        <Accordion className='parent-accordion'>
+                            <Accordion.Item eventKey={0}>
+                                <Accordion.Header>
+                                    <p className='accordion-header-text'>
+                                        Fathers ({filters['father'].length} selected)
+                                    </p>
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                {parents.filter((cat) => cat.sex === 'male').map((cat) => {
+                                    return (
+                                    <Checkbox key={cat.id} label={cat.name} name='father' value={cat.name} handleChange={handleChange} checked={filters['father'].includes(cat.name)} />
+                                    )
+                                })}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey={1}></Accordion.Item>
+                        </Accordion>
+                    </Col>
+                    <Col sm={6}>
+                        <Accordion className='parent-accordion'>
+                            <Accordion.Item eventKey={0}>
+                                <Accordion.Header>
+                                <p className='accordion-header-text'>
+                                        Mothers ({filters['mother'].length} selected)
+                                    </p>
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                {parents.filter((cat) => cat.sex === 'female').map((cat) => {
+                                    return (
+                                    <Checkbox key={cat.id} label={cat.name} name='mother' value={cat.name} handleChange={handleChange} checked={filters['mother'].includes(cat.name)} />
+                                    )
+                                })}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            </Accordion>
+                    </Col>
+                </Row>
 
                 <div className='buttons-container'>
                     <Button className='form-button' onClick={toggleAll}>Check/Uncheck All</Button>
