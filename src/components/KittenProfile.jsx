@@ -40,18 +40,10 @@ const KittenProfile= ({ cat = [] }) => {
         <>
             <div className='cat-columns-container'>
                 <Row className='profile-info-container'>
-                    <Col sm={5}>
-                        <h2>{name} collar {sex === 'male' ? 'boy' : 'girl'}</h2>
                         <h4>Born {birthDate}</h4>
-                    </Col>
-                    <Col sm={5} className='cat-info-right-col'>
-                        <h5>
-                            Mother: <Link onClick={() => openParentPreview(mother)}>{mother}</Link>, Father: <Link onClick={() => openParentPreview(father)}>{father}</Link>
-                            <br />
-                            Date of release: {releaseDate <= currentDate ? 'ready to go!' : convertDate(releaseDate)}
-                        </h5>
+                        <h5>Mother: <Link onClick={() => openParentPreview(mother)}>{mother}</Link>, Father: <Link onClick={() => openParentPreview(father)}>{father}</Link></h5>
+                        <h5>Date of release: {releaseDate <= currentDate ? 'ready to go!' : convertDate(releaseDate)}</h5>
                         {price ? <p>Price: ${price}</p> : ''}
-                    </Col>
                 </Row>
 
                 <div className='carousel-container'>
@@ -73,7 +65,11 @@ const KittenProfile= ({ cat = [] }) => {
             </div>
             
             <Modal show={show} onHide={handleClose} size='lg'>
-                <Modal.Header closeButton/>
+            <Modal.Header className='profile-title' closeButton>
+                    <Modal.Title>
+                        <h2>{previewParent}</h2>
+                    </Modal.Title>
+                </Modal.Header>
                 <Modal.Body>
                     <ParentPreview parentName={previewParent}/>
                 </Modal.Body>
