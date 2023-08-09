@@ -81,8 +81,7 @@ const FilterAccordion = ({ handleChange, toggleAll, filters, options }) => {
                     <Button className='form-button' onClick={toggleAll}>Check/Uncheck All</Button>
                 </div>
 
-                {(filters['colour'].length === 0 || filters['father'].length === 0 || filters['mother'].length === 0 || filters['status'].length === 0)
-                    &&
+                {(filters['colour'].length === 0 || filters['father'].length === 0 || filters['mother'].length === 0 || filters['status'].length === 0) &&
                     <>
                         <br />
                         <p>Select at least one category in each row and parent menu to display kittens.</p>
