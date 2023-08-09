@@ -298,9 +298,7 @@ label {
 }
 
 .profile-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
 }
 
 .cat-columns-container {
