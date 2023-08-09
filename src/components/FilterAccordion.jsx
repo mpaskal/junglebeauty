@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Accordion, Button, Row, Col } from 'react-bootstrap';
+import { Accordion, Alert, Button, Row, Col } from 'react-bootstrap';
 import { capitalize } from './Functions';
 import Checkbox from './Checkbox';
 import './../App.css';
@@ -80,6 +80,15 @@ const FilterAccordion = ({ handleChange, toggleAll, filters, options }) => {
                 <div className='buttons-container'>
                     <Button className='form-button' onClick={toggleAll}>Check/Uncheck All</Button>
                 </div>
+
+                {(filters['colour'].length === 0 || filters['father'].length === 0 || filters['mother'].length === 0 || filters['status'].length === 0)
+                    &&
+                    <>
+                        <br />
+                        <p>Select at least one category in each row and parent menu to display kittens.</p>
+                    </>
+                }
+
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
