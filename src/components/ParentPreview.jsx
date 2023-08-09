@@ -15,8 +15,6 @@ const ParentPreview= ({ parentName }) => {
 
     return (
         <div className='cat-columns-container'>
-            <h2>{name}</h2>
-
             <ImageCarousel cat={cat} />
 
             <br />
