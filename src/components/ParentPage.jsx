@@ -42,7 +42,11 @@ const ParentPage = ({ sex }) => {
       <CatCardCarousel cats={cats.sort((a, b) => a.date > b.date ? 1 : -1)}/>
 
       <Modal show={show} onHide={handleClose} size='lg'>
-        <Modal.Header closeButton/>
+      <Modal.Header className='profile-title' closeButton>
+                    <Modal.Title>
+                        <h2>{cat && cat.name}</h2>
+                    </Modal.Title>
+                </Modal.Header>
         <Modal.Body>
           {cats && <ParentProfile cat={cat}/>}
         </Modal.Body>
