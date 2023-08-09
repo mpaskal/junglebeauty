@@ -18,42 +18,51 @@ const ImageCarousel = ({ cat }) => {
     }, [])
 
     return (
-    <Carousel 
-        infinite
-        responsive={{
-            desktop: {
-            breakpoint: {
-                max: 3000,
-                min: 1024
-            },
-            items: 1,
-            },
-            mobile: {
-            breakpoint: {
-                max: 464,
-                min: 0
-            },
-            items: 1,
-            partialVisibilityGutter: 30
-            },
-            tablet: {
-            breakpoint: {
-                max: 1024,
-                min: 464
-            },
-            items: 1,
-            partialVisibilityGutter: 30    
+        <>
+            <Carousel 
+                infinite
+                responsive={{
+                    desktop: {
+                    breakpoint: {
+                        max: 3000,
+                        min: 1024
+                    },
+                    items: 1,
+                    },
+                    mobile: {
+                    breakpoint: {
+                        max: 464,
+                        min: 0
+                    },
+                    items: 1,
+                    partialVisibilityGutter: 30
+                    },
+                    tablet: {
+                    breakpoint: {
+                        max: 1024,
+                        min: 464
+                    },
+                    items: 1,
+                    partialVisibilityGutter: 30    
+                    }
+                }}
+                rewind={false}
+                showDots
+            >
+                {images.map((image) => {
+                    return (
+                        <CatImage key={image} filepath={image} />
+                    )
+                })}
+            </Carousel>
+
+            {images.length === 0 &&
+                <>
+                    <CatImage filepath={'logo.png'} placeholder={true} />
+                    <h4>This cat hasn't starred in any photos yet.</h4>
+                </>
             }
-        }}
-        rewind={false}
-        showDots
-    >
-        {images.map((image) => {
-            return (
-                <CatImage key={image} filepath={image} />
-            )
-        })}
-    </Carousel>
+        </>
   );
 };
 
