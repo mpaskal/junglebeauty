@@ -262,15 +262,20 @@ label {
   cursor: pointer;
 }
 
+.placeholder-img {
+  width: 40%;
+  min-width: 200pt;
+  cursor: default;
+}
+
 .modal-img {
   margin-left: 5%;
   margin-right: 5%;
 }
 
-.card-image {
+.card-img {
   aspect-ratio: 5 / 4;
   object-fit: cover;
-  width: 90%;
   margin-top: 5%;
 }
 
@@ -290,6 +295,12 @@ label {
 
 .cat-modal {
   width: 90%;
+}
+
+.profile-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cat-columns-container {
