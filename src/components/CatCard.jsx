@@ -38,7 +38,11 @@ const CatCard = ({ cat, size = 'large' }) => {
             </div>
 
             <Modal show={show} onHide={handleClose} size='lg'>
-                <Modal.Header closeButton/>
+                <Modal.Header className='profile-title' closeButton>
+                    <Modal.Title>
+                        <h2>{displayName}</h2>
+                    </Modal.Title>
+                </Modal.Header>
                 <Modal.Body>
                     {type === 'kitten'
                         ? <CatProfile cat={cat}/>
