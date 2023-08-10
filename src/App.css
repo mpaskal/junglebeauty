@@ -460,9 +460,23 @@ label {
   background-color: var(--accent-green);
   margin-top: 10pt;
   border: none;
-  border-radius: 10px;
+  border-radius: 10pt;
 }
 
 .form-button:hover {
   background-color: var(--link-active-green);
+}
+
+.form-alert {
+  color: var(--text-black);
+  background-color: var(--text-white);
+  border-radius: 15pt;
+}
+
+.form-alert-button {
+  color: var(--text-white) !important;
+  background-color: var(--accent-green) !important;
+  padding-left: 20pt !important;
+  padding-right: 20pt !important;
+  border-radius: 10pt !important;
 }
