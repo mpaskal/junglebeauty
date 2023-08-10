@@ -1,7 +1,12 @@
 import { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Alert } from 'react-bootstrap';
+import { Swal } from 'sweetalert2';
 import { send } from 'emailjs-com';
 import './../App.css';
+
+const SERVICE_ID = process.env.SERVICE_ID;
+const TEMPLATE_ID = process.env.TEMPLATE_ID;
+const USER_ID = process.env.USER_ID;
 
 const EmailForm = () => {
     const [email, setEmail] = useState({to_email: 'junglebeautymailer@gmail.com', from_email: '', from_name: '', message: ''});
@@ -14,10 +19,10 @@ const EmailForm = () => {
     const handleSend = (e) => {
         e.preventDefault();
         send(
-            'service_b7v6hjo',
-            'template_iq9hi46',
+            SERVICE_ID,
+            TEMPLATE_ID,
             email,
-            '7PX90rf6YM9qXhPH7'
+            USER_ID
             )
         .then(() => {
             alert(`Thank you for reaching out! We will get back to you as soon as possible.`);
