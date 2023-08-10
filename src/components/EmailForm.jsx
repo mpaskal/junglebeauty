@@ -34,19 +34,19 @@ const EmailForm = () => {
                     <label className='form-label'>
                         Name:
                         <br />
-                        <input className='form-input' name='from_name' type='text' defaultValue={''} required onChange={handleChange} />
+                        <input className='form-input' name='from_name' type='text' placeholder='Name...' required onChange={handleChange} />
                     </label>
                     <br />
                     <label className='form-label'>
                         Email address:
                         <br />
-                        <input className='form-input' name='from_email' type='email' defaultValue={''} required onChange={handleChange} />
+                        <input className='form-input' name='from_email' type='email' placeholder='Email...' required onChange={handleChange} />
                     </label>
                     <br />
                     <label className='form-label'>
                         Message:
                         <br />
-                        <textarea className='form-input' name='message' defaultValue={''} onChange={handleChange} />
+                        <textarea className='form-input' name='message' placeholder='Message...' onChange={handleChange} />
                     </label>
                 </div>
                 <div className='buttons-container'>
