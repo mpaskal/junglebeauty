@@ -12,3 +12,4 @@ This is the website of the Junglebeauty Bengal Cattery, replicating and building
 - Cats data is stored in a Firestore database, and images are loaded from Firebase cloud storage. Both systems use the [Firebase Javascript SDK](https://github.com/firebase/firebase-js-sdk).
 - Sending emails written in the contact form to the owner is accomplished using [EmailJS](https://www.emailjs.com/).
 - Social media icons are implemented using [Font Awesome](https://github.com/FortAwesome/react-fontawesome).
+- Contact form popups are implemented using [SweetAlert2](https://github.com/sweetalert2/sweetalert2).
