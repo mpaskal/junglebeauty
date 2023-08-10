@@ -140,6 +140,10 @@ label {
   }
   
 .logo-link {
+  text-decoration: none;
+}
+
+.logo-brand {
   height: 100%;
   display: flex;
   text-decoration: none;

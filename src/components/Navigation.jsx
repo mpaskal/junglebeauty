@@ -11,8 +11,8 @@ const Navigation = () => {
     return (
         <Navbar expanded={expanded} onToggle={handleToggle} collapseOnSelect className='nav-bar' expand='xl' variant='dark' bg='dark'>
             <Container>
-                <Link to='/'>
-                    <Navbar.Brand className='logo-link'>
+                <Link className='logo-link' to='/'>
+                    <Navbar.Brand className='logo-brand'>
                         <img className='logo-img' src='/assets/logo.png' alt='Junglebeauty logo'/>
                         <h1 className='logo-text'>JungleBeauty Bengals</h1>
                     </Navbar.Brand>
