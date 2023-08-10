@@ -17,7 +17,7 @@ const ParentProfile= ({ cat = [] }) => {
 
     return (
         <div className='cat-columns-container'>
-                    <h4>{description}</h4>
+            <h4>{description}</h4>
 
             <ImageCarousel cat={cat} />
 
