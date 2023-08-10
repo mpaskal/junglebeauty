@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Modal, Button, Alert } from 'react-bootstrap';
-import { Swal } from 'sweetalert2';
 import { send } from 'emailjs-com';
+import Swal from 'sweetalert2';
 import './../App.css';
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -26,16 +26,20 @@ const EmailForm = () => {
             USER_ID
             )
         .then(() => {
-            // Swal.fire({
-            //     icon: 'success',
-            //     title: 'Thank you for reaching out! We will get back to you as soon as possible.',
-            //     color: '#FAFAFA',
-            //     confirmButtonColor: '#046E1B'
-            // })
-            alert('success')
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank you for reaching out!',
+                text: 'We will get back to you as soon as possible.',
+                customClass: {popup: 'form-alert', confirmButton: 'form-alert-button'}
+            })
         })
         .catch((err) => {
-            alert(`We're sorry, this email could not be sent.`);
+            Swal.fire({
+                icon: 'warning',
+                title: 'Something went wrong.',
+                text: `We're sorry, this email could not be sent.`,
+                customClass: {popup: 'form-alert', confirmButton: 'form-alert-button'}
+            })
         });
     };
 
