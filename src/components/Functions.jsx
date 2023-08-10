@@ -56,3 +56,12 @@ export function getReleaseDate(date) {
 
   return releaseDate;
 }
+
+export function filterKittens(kittens, filters) {
+  return kittens.filter((cat) => 
+    filters.colour.includes(cat.colour)
+    && filters.father.includes(cat.father)
+    && filters.mother.includes(cat.mother)
+    && filters.status.includes(cat.status)
+    && filters.sex.includes(cat.sex));
+}
