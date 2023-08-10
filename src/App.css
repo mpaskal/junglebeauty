@@ -421,7 +421,7 @@ label {
   text-align: center;
   border-radius: 20pt;
   color: var(--text-black);
-  background-color: var(--nav-white);
+  background-color: var(--text-white);
 }
 
 .selection-warning {
