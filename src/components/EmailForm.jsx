@@ -44,12 +44,6 @@ const EmailForm = () => {
                     </label>
                     <br />
                     <label className='form-label'>
-                        Subject:
-                        <br />
-                        <input className='form-input' name='subject' defaultValue={''} required onChange={handleChange} />
-                    </label>
-                    <br />
-                    <label className='form-label'>
                         Message:
                         <br />
                         <textarea className='form-input' name='message' defaultValue={''} onChange={handleChange} />
