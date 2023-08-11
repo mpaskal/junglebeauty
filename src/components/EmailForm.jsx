@@ -44,32 +44,26 @@ const EmailForm = () => {
     };
 
     return (
-        <div className='form-container'>
             <form onSubmit={handleSend}>  
-                <div>
+                <div className='form-container'>
                     <label className='form-label'>
                         Name:
-                        <br />
                         <input className='form-input' name='from_name' type='text' placeholder='Name...' required onChange={handleChange} />
                     </label>
-                    <br />
                     <label className='form-label'>
                         Email address:
-                        <br />
                         <input className='form-input' name='from_email' type='email' placeholder='Email...' required onChange={handleChange} />
                     </label>
-                    <br />
                     <label className='form-label'>
                         Message:
-                        <br />
                         <textarea className='form-input' name='message' placeholder='Message...' onChange={handleChange} />
                     </label>
+                
+                    <div className='buttons-container'>
+                        <Button type='submit' className='form-button'>Send</Button>
+                    </div>
                 </div>
-                <div className='buttons-container'>
-                    <Button type='submit' className='form-button'>Send</Button>
-                </div>
-            </form>
-        </div>
+            </form> 
     );
 };
 
