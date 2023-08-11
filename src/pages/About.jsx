@@ -4,7 +4,7 @@ const About = () => {
     return (
       <div className='page-background'>
         <h1>JungleBeauty Bengals: vivid piece of jungle beauty in your home</h1>
-        <br/>
+        <br />
         <p>
           Junglebeauty is a TICA REGISTERED in-home cattery located in the KW area, Ontario, Canada. We focus on high quality brown spotted Bengals 
           with three distinct colours and on exceptional silver spotted Bengals. Two colours of small and medium sized rosettes give the cat a wild-like 

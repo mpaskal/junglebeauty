@@ -10,7 +10,7 @@ const WhyChoose = () => {
               <Col>
                 <h1>Choice making - why JungleBeauty Bengal Cattery?</h1>
                 <h3>There are many good reasons!</h3>
-                <br/>
+                <br />
                 <Accordion className='accordion' alwaysOpen flush>
                   <Accordion.Item className='accordion-item' eventKey={0}>
                     <Accordion.Header className='accordion-header'>

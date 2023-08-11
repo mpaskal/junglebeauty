@@ -5,7 +5,7 @@ const PrepareForKitten = () => {
     return (
       <div className='page-background'>
         <h1>How to be ready for your new kitten from JungleBeauty Bengals Cattery</h1>
-        <br/>
+        <br />
         <ol className='list-container'>
           <li>
             <Row className='item-container'>

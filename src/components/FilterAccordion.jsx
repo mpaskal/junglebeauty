@@ -24,13 +24,13 @@ const FilterAccordion = ({ handleChange, toggleAll, filters, options }) => {
                     <Checkbox key={status} label={capitalize(status)} name='status' value={status} handleChange={handleChange} checked={filters['status'].includes(status)} />
                     )
                 })}
-                <br/>
+                <br />
                 {colours.map((colour) => {
                     return (
                     <Checkbox key={colour} label={capitalize(colour)} name='colour' value={colour} handleChange={handleChange} checked={filters['colour'].includes(colour)} />
                     )
                 })}
-                <br/>
+                <br />
                 {sexes.map((sex) => {
                     return (
                     <Checkbox key={sex} label={capitalize(sex)} name='sex' value={sex} handleChange={handleChange} checked={filters['sex'].includes(sex)} />

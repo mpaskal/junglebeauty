@@ -6,7 +6,7 @@ const Visit = () => {
         <h1>How to visit JungleBeauty Bengal Cattery</h1>
         <h3>We are always happy to meet our customers in our home.</h3>
         <h3>To visit our cattery in person and see the kittens, we ask you to do the following:</h3>
-        <br/>
+        <br />
         <ol className='list-container'>
           <li>
             Please write a letter telling us a little about yourself and your experience with cats, especially Bengals. Also, please describe what kind of kitten you are looking for by colour, character and temperament.
@@ -24,7 +24,7 @@ const Visit = () => {
             After three days from the moment of booking a kitten, the deposit amount is not refundable.
           </li>
         </ol>
-        <br/>
+        <br />
         <p>
           Thus, visiting our cattery is impossible without a preliminary online meeting and making a deposit.
         </p><p>

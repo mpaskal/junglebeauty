@@ -6,20 +6,21 @@ const Contact = () => {
       <>
         <div className='page-background'>
           <h1>JungleBeauty Bengals: vivid piece of jungle beauty in your home</h1>
-          <br/>
+          <br />
           <p>Please contact us by email:</p>
+          
           <EmailForm />
           
           <p>
             Start chatting on Skype:
-            <br/>
+            <br />
             <a className='text-link' href={'skype:JungleBeautyBengals?chat'}>
               JungleBeautyBengals
             </a>
           </p>
           <p>
             Find us on Instagram:
-            <br/>
+            <br />
             <a className='text-link' href={'https://www.instagram.com/junglebeautybengals/'}>
               junglebeautybengals
             </a>  
