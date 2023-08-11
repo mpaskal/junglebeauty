@@ -349,6 +349,10 @@ label {
   row-gap: 2%;
 }
 
+.preview-link {
+  padding-top: 10pt;
+}
+
 /* Accordion menu */
 
 .accordion {
