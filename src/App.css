@@ -308,9 +308,19 @@ label {
   width: 90%;
 }
 
-.profile-title {
-  margin: auto;
+.profile-header {
+  display: grid !important;
 }
+
+.profile-title {
+  justify-self: center;
+  color: red;
+}
+
+/* .btn-close {
+  justify-self: right;
+  background-color: red;
+} */
 
 .cat-columns-container {
   text-align: center;
@@ -443,11 +453,20 @@ label {
 .form-container {
   margin: auto;
   margin-bottom: 10pt;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5pt;
 }
 
 .form-input {
   width: 200pt;
   margin: auto;
+  margin-top: 2pt;
   padding: 2pt;
   padding-left: 4pt;
   padding-right: 4pt;
@@ -459,6 +478,7 @@ label {
   padding-right: 20pt;
   background-color: var(--accent-green);
   margin-top: 10pt;
+  margin-bottom: 15pt;
   border: none;
   border-radius: 10pt;
 }
