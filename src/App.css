@@ -309,18 +309,25 @@ label {
 }
 
 .profile-header {
-  display: grid !important;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-title {
-  justify-self: center;
-  color: red;
+  margin: auto;
+  padding-left: 19%;
 }
 
-/* .btn-close {
+@media (width <= 60.5rem) {
+  .profile-title {
+    margin: auto;
+    padding-left: 17%;
+  }
+}
+
+.btn-close {
   justify-self: right;
-  background-color: red;
-} */
+}
 
 .cat-columns-container {
   text-align: center;
