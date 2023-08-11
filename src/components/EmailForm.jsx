@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Modal, Button, Alert } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { send } from 'emailjs-com';
 import Swal from 'sweetalert2';
 import './../App.css';
