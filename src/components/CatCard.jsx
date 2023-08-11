@@ -38,8 +38,8 @@ const CatCard = ({ cat, size = 'large' }) => {
             </div>
 
             <Modal show={show} onHide={handleClose} size='lg'>
-                <Modal.Header className='profile-title' closeButton>
-                    <Modal.Title>
+                <Modal.Header className='profile-header' closeButton>
+                    <Modal.Title className='profile-title'>
                         <h2>{displayName}</h2>
                     </Modal.Title>
                 </Modal.Header>
