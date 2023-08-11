@@ -17,9 +17,8 @@ const ParentPreview= ({ parentName }) => {
         <div className='cat-columns-container'>
             <ImageCarousel cat={cat} />
 
-            <br />
             <Link to={sex === 'male' ? '/kings' : '/queens'} state={name}>
-                <h4>
+                <h4 className='preview-link'>
                     Click here to see {name}'s kittens
                 </h4>
             </Link>
