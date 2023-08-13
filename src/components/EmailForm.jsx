@@ -14,7 +14,6 @@ const EmailForm = () => {
     const handleChange = (event) => {
         const { name, value } = event.target;
         setEmail({ ...email, [name]: value });
-        console.log(process.env.REACT_APP_SERVICE_ID)
     }
 
     const handleSend = (e) => {
