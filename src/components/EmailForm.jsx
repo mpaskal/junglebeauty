@@ -44,25 +44,23 @@ const EmailForm = () => {
     };
 
     return (
-            <form onSubmit={handleSend}>  
-                <div className='form-container'>
-                    <label className='form-label' for='from_name'>Name:</label>
-                    <input className='form-input' id='from_name' name='from_name' type='text' placeholder='Name...' required onChange={handleChange} />
-                    
-                    <label className='form-label' id='from_email'>Email address:</label>
-                    <input className='form-input' id='from_email' name='from_email' type='email' placeholder='Email...' required onChange={handleChange} />
-                    
-                    <label className='form-label' for='subject'>Subject:</label>
-                    <input className='form-input' id='subject' name='subject' type='text' placeholder='Subject...' onChange={handleChange} />
+        <form className='form-container' onSubmit={handleSend}>  
+            <label className='form-label' for='from_name'>Name:</label>
+            <input className='form-input' id='from_name' name='from_name' type='text' placeholder='Name...' required onChange={handleChange} />
+            
+            <label className='form-label' id='from_email'>Email address:</label>
+            <input className='form-input' id='from_email' name='from_email' type='email' placeholder='Email...' required onChange={handleChange} />
+            
+            <label className='form-label' for='subject'>Subject:</label>
+            <input className='form-input' id='subject' name='subject' type='text' placeholder='Subject...' onChange={handleChange} />
 
-                    <label className='form-label' for='message'>Message:</label>
-                    <textarea className='form-input' id='message' name='message' placeholder='Message...' onChange={handleChange} />
-                
-                    <div className='buttons-container'>
-                        <Button type='submit' className='form-button'>Send</Button>
-                    </div>
-                </div>
-            </form> 
+            <label className='form-label' for='message'>Message:</label>
+            <textarea className='form-input' id='message' name='message' placeholder='Message...' onChange={handleChange} />
+        
+            <div className='buttons-container'>
+                <Button type='submit' className='form-button'>Send</Button>
+            </div>
+        </form> 
     );
 };
 
