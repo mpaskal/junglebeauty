@@ -462,22 +462,20 @@ label {
 /* Email Form */
 
 .form-container {
-  margin: auto;
+  margin-top: -10pt;
   margin-bottom: 10pt;
   display: flex;
   flex-direction: column;
 }
 
 .form-label {
-  display: flex;
-  flex-direction: column;
-  padding-top: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 5pt;
 }
 
 .form-input {
   width: 200pt;
   margin: auto;
-  margin-top: 2pt;
   padding: 2pt;
   padding-left: 4pt;
   padding-right: 4pt;
@@ -488,7 +486,7 @@ label {
   padding-left: 20pt;
   padding-right: 20pt;
   background-color: var(--accent-green);
-  margin-top: 10pt;
+  margin-top: 15pt;
   margin-bottom: 15pt;
   border: none;
   border-radius: 10pt;
