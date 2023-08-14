@@ -36,7 +36,7 @@ const ParentPage = ({ sex }) => {
   return (
     <>
       <div className='page-background'>
-        <h2>{sex === 'male' ? 'Kings' : 'Queens'} of JungleBeauty, TICA and CCA registered!</h2>
+        <h1 className='page-subheader'>{sex === 'male' ? 'Kings' : 'Queens'} of JungleBeauty, TICA and CCA registered!</h1>
       </div>
 
       <CatCardCarousel cats={cats.sort((a, b) => a.date > b.date ? 1 : -1)}/>
