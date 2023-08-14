@@ -28,7 +28,7 @@ const Kittens = () => {
   return (
     <>
       <div className='page-background'>
-        <h2>JungleBeauty's kittens available for reservation</h2>
+        <h1 className='page-subheader'>JungleBeauty's kittens available for reservation</h1>
       </div>
 
       <CatCardCarousel cats={cats.sort((a, b) => a.date > b.date ? -1 : 1)}/>
