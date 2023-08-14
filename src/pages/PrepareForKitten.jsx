@@ -4,8 +4,7 @@ import './../App.css';
 const PrepareForKitten = () => {
     return (
       <div className='page-background'>
-        <h1>How to be ready for your new kitten from JungleBeauty Bengals Cattery</h1>
-        <br />
+        <h1 className='page-header padded-header'>How to be ready for your new kitten from JungleBeauty Bengals Cattery</h1>
         <ol className='list-container'>
           <li>
             <Row className='item-container'>
