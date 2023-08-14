@@ -5,9 +5,8 @@ const Contact = () => {
     return (
       <>
         <div className='page-background'>
-          <h1>JungleBeauty Bengals: vivid piece of jungle beauty in your home</h1>
-          <br />
-          <p>Please contact us by email:</p>
+          <h1 className='page-header padded-header'>JungleBeauty Bengals: vivid piece of jungle beauty in your home</h1>
+          <h2 className='page-subheader padded-header'>Please contact us by email:</h2>
           
           <EmailForm />
           
