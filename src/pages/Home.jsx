@@ -19,7 +19,7 @@ const Home = () => {
         <div className='page-background'>
             <CatCardCarousel cats={cats} autoplay={true} />
 
-            <h1>Hello! We are happy to welcome you to our website!</h1>
+            <h1 className='page-header padded-header'>Hello! We are happy to welcome you to our website!</h1>
             <p>
                 Do you want to have a small and tame leopard at home? You have come to the right place. Welcome to our Junglebeauty Bengal Cattery. 
                 Our cattery is registered in the international felinology system TICA and certified as a trusted breeder by Bengal Cat Club. Also, we 
@@ -45,23 +45,28 @@ const Home = () => {
                 <Col sm={6}>
                     <p>
                         Here you can buy a Bengal kitten, outwardly similar to a wild inhabitant of the jungle and savannah, but affectionate and tame, like all domestic cats.
-                    </p><p>
+                    </p>
+                    <p>
                         The Junglebeauty Cattery has been breeding Bengal cats since 2018. We have Bengal kittens of both rare and traditional colors. All of them are active, 
                         affectionate, friendly with each other and cuddly with people. Our kittens grow up in love, and from an early age, they know how to respond to affection. 
                         Of course, the characters of Bengal kittens are different, but in general, they are human-oriented, sociable, and very smart.
-                    </p><p>
+                    </p>
+                    <p>
                         If you decide to let a small tame leopard into your house, which will fill it with fun and love, you are taking on a great responsibility. 
                         Since we are responsible for those we have tamed, we care about where our kittens move!
-                    </p><p>
+                    </p>
+                    <p>
                         All our kittens are purebred, healthy and socialized, brought up in love and affection.
-                    </p><p>
+                    </p>
+                    <p>
                         We will be in touch with you before and after you take your furry friend home. Please be advised that we are interested in
                         making our graduated kittens happy. After all, they are not a toy but a living being that requires care and love.
-                    </p><p>
+                    </p>
+                    <p>
                         Do you want to find a healthy, joyful and great companion for your home? Then welcome to our cattery.
                     </p>
                     <Link className='text-link' to='why-choose-junglebeauty'>
-                        <h3>So, why buy a Bengal Kitten from Junglebeauty Cattery?</h3>
+                        <h2 className='page-subheader'>So, why buy a Bengal Kitten from Junglebeauty Cattery?</h2>
                     </Link>
                 </Col>
                 <Col sm={3}>
