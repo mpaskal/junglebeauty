@@ -44,6 +44,19 @@
   margin-bottom: 20pt;
 }
 
+.page-header {
+  padding-left: 20pt;
+  padding-right: 20pt; 
+}
+
+.page-subheader {
+  font-size: x-large;
+}
+
+.padded-header {
+  padding-bottom: 10pt;
+}
+
 .page-content {
   min-height: 75%;
   max-height: auto;
@@ -76,7 +89,6 @@ label {
 
 .columns-container {
   display: flex;
-  padding: 15pt;
 }
 
 .cat-card-column {
@@ -95,6 +107,7 @@ label {
   max-width: fit-content;
   min-width: 300pt;
   margin: auto;
+  margin-bottom: 30pt;
 }
 
 .item-container {
