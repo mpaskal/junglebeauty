@@ -24,45 +24,10 @@ export async function QueryCats(table, predicate = []) {
     return cats;
 }
 
-export function InsertCat(table, cat) {
-    const { name, date } = cat;
-    const id = GetCatID(name, date);
-
-    const addCat = async () => {
-        const docRef = doc(db, table, id);
-
-        await setDoc(docRef, {});
-    
-        Object.keys(cat).map(async (key) => {
-            await updateDoc(docRef, {
-                [key]: cat[key]
-            })
-        });
-    };
-
-    useEffect(() => {
-        addCat();
-    }, []);
-}
-
 export function GetCatID(name, date) {
     const id = `${name}${date ? `.${date}` : ``}`;
     
     return id;
-}
-
-export function UpdateCats(id, table, field, newValue) {
-    const docRef = doc(db, table, id);
-
-    const updateCat = async () => {
-        await updateDoc(docRef, {
-            [field]: [newValue]
-        })
-    };
-
-    useEffect(() => {
-        updateCat();
-    }, []);
 }
 
 export async function GetImage(filepath) {
