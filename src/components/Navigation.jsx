@@ -28,8 +28,8 @@ const Navigation = () => {
                         <NavLink exact className='nav-link' as={Link} to='/faq' onClick={handleToggle}>FAQ</NavLink>
                         <NavLink exact className='nav-link' as={Link} to='/about-us' onClick={handleToggle}>About</NavLink>
                         <NavLink exact className='nav-link' as={Link} to='/contact' onClick={handleToggle}>Contact</NavLink>
-                        <NavDropdown className='nav-dropdown' variant='dark' title='How to buy'>
-                            <div className='dropdown-links-container'>
+                        <NavDropdown className='nav-dropdown' title='How to buy'>
+                          
                                 <NavLink exact className='dropdown-link' as={Link} to='/why-choose-junglebeauty' onClick={handleToggle}>Why choose JungleBeauty</NavLink>
                                 <NavDropdown.Divider/>
                                 <NavLink exact className='dropdown-link' as={Link} to='/buy-sell-agreement' onClick={handleToggle}>Buy-Sell Agreement</NavLink>
@@ -39,7 +39,7 @@ const Navigation = () => {
                                 <NavLink exact className='dropdown-link' as={Link} to='/preparing-for-coming-kitten' onClick={handleToggle}>How to be ready for coming kitten</NavLink>
                                 <NavDropdown.Divider/>
                                 <NavLink exact className='dropdown-link' as={Link} to='/visit-junglebeauty' onClick={handleToggle}>How to visit JungleBeauty</NavLink>
-                            </div>
+                     
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
