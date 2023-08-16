@@ -24,13 +24,13 @@ export async function queryCats(table, predicate = []) {
     return cats;
 }
 
-export async function GetImage(filepath) {
+export async function getImage(filepath) {
     const url = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com/${filepath}`));
 
     return url;
 }
 
-export async function GetAllImages(filepath) {
+export async function getAllImages(filepath) {
     const images = [];
     const storageRef = ref(storage, filepath);
     const result = await listAll(storageRef);
@@ -42,7 +42,7 @@ export async function GetAllImages(filepath) {
     return images;
   }
 
-export async function GetFirstImage(filepath) {
+export async function getFirstImage(filepath) {
     const storageRef = ref(storage, filepath);
     const result = await listAll(storageRef);
     const image = result.items[0].fullPath;
