@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Row, Col, Modal } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
 import { getCatFilepath, convertDate, getReleaseDate } from './Functions';
-import { GetAllImages } from './FirebaseFunctions';
+import { getAllImages } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
 import VideoCarousel from './VideoCarousel';
 import VideoFrame from './VideoFrame';
@@ -23,7 +23,7 @@ const KittenProfile= ({ cat = [] }) => {
     const currentDate = new Date();
 
     const getData = async () => {
-        const images = await GetAllImages(getCatFilepath(cat));
+        const images = await getAllImages(getCatFilepath(cat));
         setImages(images);
     }
 

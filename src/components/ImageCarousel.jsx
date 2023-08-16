@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import CatImage from './CatImage';
 import { getCatFilepath } from './Functions';
-import { GetAllImages } from './FirebaseFunctions';
+import { getAllImages } from './FirebaseFunctions';
 import './../App.css';
 
 const ImageCarousel = ({ cat }) => {  
     const [images, setImages] = useState([]);
 
     const getData = async () => {
-        const images = await GetAllImages(getCatFilepath(cat));
+        const images = await getAllImages(getCatFilepath(cat));
         setImages(images);
     }
     

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
-import { GetImage } from './FirebaseFunctions';
+import { getImage } from './FirebaseFunctions';
 
 const CatImage = ({ filepath, card = false, placeholder = false }) => {
     const [image, setImage] = useState();
@@ -8,18 +8,18 @@ const CatImage = ({ filepath, card = false, placeholder = false }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const getImage = async () => {
+    const downloadImage = async () => {
       var image;
       try {
-        image = await GetImage(filepath);
+        image = await getImage(filepath);
       } catch {
-        image = await GetImage('logo.png');
+        image = await getImage('logo.png');
       }
       setImage(image);
     }
   
     useEffect(() => {
-      getImage();
+      downloadImage();
     }, [])
 
     return (
