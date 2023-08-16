@@ -3,7 +3,7 @@ import { collection, doc, query, where, getDocs, setDoc, updateDoc } from 'fireb
 import { ref, getDownloadURL, listAll } from 'firebase/storage';
 import { db, storage } from '../firebase';
 
-export async function QueryCats(table, predicate = []) {
+export async function queryCats(table, predicate = []) {
     const cats = [];
     const collectionRef = collection(db, table);
     const queryArgs = [collectionRef];
@@ -22,12 +22,6 @@ export async function QueryCats(table, predicate = []) {
     })
     
     return cats;
-}
-
-export function GetCatID(name, date) {
-    const id = `${name}${date ? `.${date}` : ``}`;
-    
-    return id;
 }
 
 export async function GetImage(filepath) {
