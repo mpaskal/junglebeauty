@@ -188,16 +188,16 @@ label {
   color: var(--link-active-green) !important;
 }
 
-.dropdown-links-container {
+.dropdown-menu {
+  background-color: var(--nav-black);
   text-align: center;
+  padding-left: 5pt;
+  padding-right: 5pt;
 }
 
 .dropdown-link {
   color: var(--nav-white);
-}
-
-.dropdown-menu {
-  background-color: var(--nav-black) !important;
+  text-decoration: none;
 }
 
 /* Footer */
