@@ -214,11 +214,8 @@ label {
 .cert-container {
   display: flex;
   justify-content: safe center;
-  width: 90%;
   margin: auto;
-  overflow-x: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  flex-wrap: wrap;
 }
 
 .cert-container::-webkit-scrollbar {
