@@ -6,6 +6,8 @@ import Kings from './pages/Kings';
 import Kittens from './pages/Kittens';
 import News from './pages/News';
 import FAQ from './pages/FAQ';
+import Articles from './pages/Articles';
+import AboutBengals from './pages/AboutBengals';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import WhyChoose from './pages/WhyChoose';
@@ -33,6 +35,8 @@ const App = () => {
               <Route exact path='kittens' element={<Kittens />}/>
               <Route exact path='news' element={<News />}/>
               <Route exact path='faq' element={<FAQ />}/>
+              <Route exact path='articles' element={<Articles />}/>
+              <Route exact path='about-bengals' element={<AboutBengals />}/>
               <Route exact path='about-us' element={<About />}/>
               <Route exact path='contact' element={<Contact />}/>
               <Route exact path='why-choose-junglebeauty' element={<WhyChoose />}/>
