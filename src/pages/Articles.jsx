@@ -1,5 +1,5 @@
 import AccordionMenu from '../components/AccordionMenu';
-import QuestionList from '../lists/QuestionList';
+import ArticleList from '../lists/ArticleList';
 import './../App.css';
 
 const Articles = () => {
@@ -9,7 +9,7 @@ const Articles = () => {
             <h1 className='page-subheader'>Useful articles written by Junglebeauty Bengal Cattery</h1>
         </div>
 
-        <AccordionMenu items={QuestionList}/>
+        <AccordionMenu items={ArticleList}/>
     </>
   );
 };
