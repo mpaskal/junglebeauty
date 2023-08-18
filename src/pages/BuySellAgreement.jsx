@@ -21,8 +21,8 @@ const BuySellAgreement = () => {
 
       <div className='page-background'>
         <h1>AGREEMENT to BUY \ SALE</h1>
-        <p className='paragraph-variant'>
-          <h3 className='paragraph-variant-heading'>I. Date and Parties</h3>
+        <p className='contract-paragraph'>
+          <h3 className='contract-heading'>I. Date and Parties</h3>
           THIS AGREEMENT made on the _______________________________ , between:
           <br />
           Name: ______________________________ Address: _______________________________________________________
@@ -40,7 +40,7 @@ const BuySellAgreement = () => {
           Email for e-transfer: ______________________________
           <br />
           (Hereinafter known as the “Seller”).
-          <h3 className='paragraph-variant-heading'>II. Purchase Price & Description</h3>
+          <h3 className='contract-heading'>II. Purchase Price & Description</h3>
           The Buyer agrees to purchase, for the sum of CAD 1200 - 2600. , the following Kitten from the Seller:
           <br />
           Name (if any): ___________________________
@@ -54,7 +54,7 @@ const BuySellAgreement = () => {
           Color: Brown/Silver Spotted Tabby
           <br />
           State of Health: Healthy
-          <h3 className='paragraph-variant-heading'>III. Date of Sale</h3>
+          <h3 className='contract-heading'>III. Date of Sale</h3>
           The sale of the Kitten shall occur on the age from 12 to 16 weeks old, __________________________________________ (but not earlier than notified by breeder).
           <br />
           ☐ - A deposit (from the Buyer to the Seller) is being made in the amount of CAD 400 (towards the spay/neutering) on the date of this agreement. Seller will do the spay/neutering in one of the available clinics and the deposit will be used for that, certificate/proof will be provided. Having this deposit paid means the Buyer agrees to sign this agreement. Should the Buyer, after having paid the deposit, decide against purchasing the Kitten, the Buyer forfeits the deposit. If the Seller fails to provide the Kitten within the specified range of dates (or on the agreed time), the deposit must be returned.
