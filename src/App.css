@@ -62,15 +62,23 @@
   max-height: auto;
 }
 
-.paragraph-variant {
+.contract-paragraph {
   text-align: left;
   line-height: 24pt;
   width: fit-content;
   margin: auto;
 }
 
-.paragraph-variant-heading {
+.contract-variant {
   text-align: center;
+}
+
+.paragraph-variant {
+  text-align: left;
+  width: fit-content;
+  max-width: 80rem;
+  margin: auto;
+  margin-bottom: 15pt;
 }
 
 a {
