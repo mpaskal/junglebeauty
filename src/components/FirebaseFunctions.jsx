@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { collection, doc, query, where, getDocs, setDoc, updateDoc } from 'firebase/firestore';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 import { ref, getDownloadURL, listAll } from 'firebase/storage';
 import { db, storage } from '../firebase';
 
