@@ -49,3 +49,12 @@ export async function getFirstImage(filepath) {
 
     return image;
 }
+
+export async function getList(listName) {
+    const list = getDownloadURL(ref(storage, `gs://junglebeauty-fb9a7.appspot.com/Lists/${listName}`))
+        .then(url => fetch(url))
+        .then(result => result.json())
+        .then(data => {return data});
+
+    return list;
+}
