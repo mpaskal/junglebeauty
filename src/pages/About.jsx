@@ -2,7 +2,7 @@ import './../App.css';
 
 const About = () => {
     return (
-      <div className='page-background'>
+      <div className='page-background paragraph-container'>
         <h1 className='page-header padded-header'>JungleBeauty Bengals: vivid piece of jungle beauty in your home</h1>
         <p>
           Junglebeauty is a TICA REGISTERED in-home cattery located in the KW area, Ontario, Canada. We focus on high quality brown spotted Bengals 

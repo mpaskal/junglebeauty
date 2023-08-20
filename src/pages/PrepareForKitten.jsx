@@ -3,7 +3,7 @@ import './../App.css';
 
 const PrepareForKitten = () => {
     return (
-      <div className='page-background'>
+      <div className='page-background paragraph-container'>
         <h1 className='page-header padded-header'>How to be ready for your new kitten from JungleBeauty Bengals Cattery</h1>
         <ol className='list-container'>
           <li>

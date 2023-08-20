@@ -3,7 +3,7 @@ import './../App.css';
 const Price = () => {
     return (
       <div>
-        <div className='page-background'>
+        <div className='page-background paragraph-container'>
           <h1 className='page-header padded-header'>The price for a kitten is 1200 - 2600 CAD.</h1>
           <h2 className='page-subheader padded-header'>What the price includes:</h2>
           <ul className='list-container'>
@@ -24,7 +24,7 @@ const Price = () => {
             <li>30 days free pet insurance with Trupanion</li>
           </ul>
         </div>
-        <div className='page-background'>
+        <div className='page-background paragraph-container'>
           <h1 className='page-header padded-header'>General health guarantee</h1>
           <p>
             The Seller will provide Purchaser with documented vaccinations, deworming, and veterinarian records.
@@ -45,7 +45,7 @@ const Price = () => {
             After the 72 hour period, the Seller can no longer guarantee the Kitten’s health, except for birth defects.
           </p>
         </div>
-        <div className='page-background'>
+        <div className='page-background paragraph-container'>
           <h1 className='page-header padded-header'>Genetic health guarantee</h1>
           <p>
             The Seller guarantees the Kitten against lethal genetic or congenital defects for 24 months following the date of purchase.

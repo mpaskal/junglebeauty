@@ -3,9 +3,9 @@ import './../App.css';
 const AboutBengals = () => {
     return (
         <>
-            <div className='page-background'>
+            <div className='page-background paragraph-container'>
                 <h1 className='page-header padded-header'>Specific Features of Bengal Cats</h1>
-                <p className='paragraph-variant'>
+                <p>
                     The Bengal is a domestic cat breed created by breeding an Asian leopard cat with a domestic cat. The result is a highly intelligent, energetic feline with a striking coat pattern. 
                     Here are ten specific features of Bengals that make them a unique and fascinating breed and what we see every day watching our Bengal kittens and cats in our Junglebeauty Cattery:
                 </p>
@@ -46,11 +46,11 @@ const AboutBengals = () => {
                     </li>
                 </ul>
                 <h2 className='page-subheader'>Intelligence</h2>
-                <p className='paragraph-variant'>
+                <p>
                     Bengals are a highly intelligent breed of cat that are known for their quick learning and curious nature. They are very active and playful cats that need plenty of mental 
                     stimulation, and their intelligence makes them a joy to be around.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Here are a few of the key features of Bengals' intelligence:
                 </p>
                 <ul className='list-container'>
@@ -76,11 +76,11 @@ const AboutBengals = () => {
                     </li>
                 </ul>
                 <h2 className='page-subheader'>Vocalization</h2>
-                <p className='paragraph-variant'>
+                <p>
                     Bengals are known for their vocalization skills and use a wide range of sounds to communicate with their owners and other cats. They are very social cats that enjoy interacting with 
                     their owners and other pets, and their vocalization skills make them easy to understand.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Here are a few of the key features of Bengals' vocalization skills:
                 </p>
                 <ul className='list-container'>
@@ -105,94 +105,94 @@ const AboutBengals = () => {
             </div>    
             <div className='page-background'>
                 <h1 className='page-header padded-header'>History of the Bengal Breed</h1>
-                <p className='paragraph-variant'>
+                <p>
                     There are more than 30 different breeds of domestic cats, plus many mixes of those breeds. Among those mixed breeds are several designer, or hybrid, cats. Breeders create
                     designer cats to look like a wildcat but have the personality of a domestic cat.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     One of the most popular designer cats is the Bengal cat. It is cross between a wildcat called the Asian leopard cat and a domestic house cat. Bengal kittens and cats have several 
                     specific features. The name Bengal comes from the Asian leopard cat’s scientific name, Felis bengalensis, because they were discovered in the Bay of Bengal in Asia. 
                 </p>
                 <h2 className='page-subheader'>Asian Leopard Cat</h2>
-                <p className='paragraph-variant'>
+                <p>
                     Asian leopard cats are native to southern Asia. They are found from southern India eastward through Thailand, Malaysia and into China. In China they are called "money cats" because their 
                     spots look like Chinese coins.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Asian leopard cats often live near water in jungles, brush, forests, or plains. They are shy and skilled nocturnal hunters. Their diet includes rodents and small birds, occasionally 
                     venturing into farmyards to prey on domestic chickens.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     These small wildcats weigh around 10-12 pounds. They have longer legs and bodies then domestic cats. To see better at night, they have large eyes. Most Asian leopard cats are tan 
                     to orange colored and look like pint-sized leopard. Their coats are marked with stripes, solid spots, and doughnut-holed spots called rosettes. Jaguars wear rosettes, too. They have 
                     dark spots and a white belly.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Asian leopard cats are excellent swimmers and climbers. Mrs. Mill writes: “Assumed to be vicious by people who have never encountered one, ALCs instead are afraid of humans. For 
                     countless centuries they have been hunted with traps and spears. … It is not in the nature of the tiny ALC TO ATTACK WHEN UNPROVOKED. They just want to be left alone. “Wild” does 
                     not mean vicious… They need not be feared if allowed their privacy. And their hybrid offspring are not more dangerous nor unpredictable than they are.”
                 </p>
                 <h2 className='page-subheader'>A New Mix</h2>
-                <p className='paragraph-variant'>
+                <p>
                     The Bengal cat is a relatively new hybrid breed of cat which exhibits the “wild” markings (such as large spots, rosettes and a light/white belly), and body structure reminiscent of 
                     the wild Asian Leopard Cat.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Bengal cats first became popular because they have a desirable “wild” appearances with a gentle domestic cat temperament, provided by at least four generations from the original crossing 
                     between a domestic feline and an Asian Leopard Cat. Several domestic cat breeds have been ancestors of the Bengal cat. These include the Egyptian mau, the Abyssinian and the Burmese.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     The name Bengal was derived from the name of the Asian Leopard Cat (ALC) and not from the more widely known Bengal tiger species, which is unrelated to the Bengal’s ancestry.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     The first mention of a cross between an Asian Leopard Cat and a domestic cat was in 1889. Harrison Weir wrote in “Our Cats and All About Them”: “There is a rich-coloured brown tabby 
                     hybrid to be seen at the Zoological Society Gardens in Regent’s Park, between the wild cat of Bengal and tabby she-cat. It is handsome, but very wild. These hybrids, I am told, will 
                     breed again with tame variety, or with others.” The mention of a confirmed ALC/domestic cross was in 1934 in a Belgian scientific journal, and in 1941 a Japanese cat publication printed 
                     an article about one that was kept as a pet. 
                 </p>
                 <h2 className='page-subheader'>Birth of Bengals</h2>
-                <p className='paragraph-variant'>
+                <p>
                     Credit for the modern Bengal cat breed goes to Jean Sudgen Mill.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     She submitted a term paper for her genetics class at UC Davis on the subject of cross breeding cats in 1946. Mill had accomplished this as part of her studies and did not realize that 
                     she had just set the foundation for the development of a new breed of cat.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     She had acquired an Asian Leopard Cat in the late 1950’s. In 1963, she crossed this wild female Leopard Cat with a shorthaired, solid black domestic tomcat. A spotted daughter from that 
                     mating, called Kiki, grew up and had kittens of her own, more spotted and solid offspring. However, the line was discontinued in 1966 when Mill had to give up breeding cats.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     The 1960s was a period when many well known breeders, including Jean Sugden, produced ALC/domestic crosses, but records indicate that none of them took it past the F2 stage. Several zoos 
                     in Europe also produced a number of F1 ALC crosses. During this period there was an epidemic of feline leukemia virus and it became known that many wild cats seemed to have a natural 
                     immunity to the disease. As a result, Loyola University would start a research program in the 1970s to investigate if this natural immunity could be bred in or replicated.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Throughout the 1960s and 1970s there was a great deal of activity with hybrids, but there was no sufficient effort to create an actual breed from them. A number of Cat Clubs formed that 
                     focused on hybrids. Club newsletters detailing the production of Bengals and Safaris started being published and members of these clubs bred some second and third generation Bengals. 
                     These were registered with the America Cat Fancies Association (ACFA) in 1977 as experimental and were shown at several ACFA cat shows throughout the 1970s
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Around this time, Jean Mill resurfaced again, and the following quote explains her increased interest in renewing her breeding efforts. “ … I deliberately crossed leopard cats with 
                     domestic cats for several important reasons. At that time, wild cats have been exploited for the fur market. Nursing female leopard cats defending their nests were shot for their pelts, 
                     and the cubs were shipped off to pet stores worldwide. Unsuspecting cat lovers brought them, unaware of the danger, their unpleasant elimination habits and the unsuitability of keeping 
                     wild cats as pets. Most of the wild kittens from this era ended up in zoos or escaped onto city streets. I hoped that by putting a leopard coat on a domestic cat, the pet trade could be 
                     safely satisfied. If fashionable women could be dissuaded from wearing furs that look like friend’s pet, the diminished demand would result in less poaching of wild species.”
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     She contacted Dr. Willard Centerwall in Riverside who had produced a number of F1s using domestic tabbies at Loma Linda Medical Center. In the late 1960’s, Dr. Willard Centerwall, a 
                     professor of pediatrics and of maternal and child health, studied feline genetics as a scientific hobby. Although Centerwall published several studies of small wild cats, his work 
                     with Asian Leopard Cats intersected with research on immunocompromised individuals. That project was built on a foundation of comparative gene mapping of humans and cats. Centerwall was 
                     particularly interested in the Asian Leopard Cat’s lack of a gene for contracting feline leukemia. Centerwall was curious if the native immunity of the ALC to leukemia could be passed 
                     on to hybrid offspring. To conduct his tests, Centerwall only needed to collect blood from the hybrid cats. The animals then required homes.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     In 1980, Mill met Centerwall and adopted several of his female hybrids from his Leopard Cat and domestic shorthair crosses, and was able to continue her interrupted efforts to “put the 
                     gorgeous coat on a new, domestic breed of cat”. It was determined that the males from these first generations were always sterile. Fortunately, ALC/domestic cat crosses are fertile in 
                     the female sex. Mill wrote: “It was then necessary to breed them to another friendly domestic tomcat, thereby diluting the wild inheritance by another half.” Second-generation kittens were 
                     much less shy and were considerably more outgoing and friendly. Most of the males, too, proved after many trials also to be sterile.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Jean Mill decided to not use local domestics to create her first Bengals. She felt the Asian Leopard Cat was a genetically superior animal and wished to avoid weakening this element. 
                     Around 1982, the Mills made a trip to India where a zoo curator showed them a feral Indian Mau, having fantastic glittered orange coat with deep brown rosettes. This was how the famous 
                     rosetted domestic cat called “Millwood Tory of Delhi” came to be found in virtually all Bengal pedigrees. Over the years, Mrs. Mill combined her hybrids with other breeds, including the 
@@ -200,18 +200,18 @@ const AboutBengals = () => {
                     rightly considered to be the true originator of the Bengal cat.
                 </p>
                 <h2 className='page-subheader'>Recognition of Bengals</h2>
-                <p className='paragraph-variant'>
+                <p>
                     In 1983, Mrs. Mill registered these cats with The International Cat Association, TICA, as well as their offspring by a brown spotted domestic tabby, Millwood Finally Found.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Millwood Penny Ante, a second-generation kitten and other early kittens, were first exhibited at the TICA cat show in 1985, showing with exhibition-only 
                     status. The public reaction was overwhelming, as crowds gathered in awe over this magnificent new creation.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Soon afterward, Bengals were permitted to compete in the New Breed and Color classes where they were handled by the judges. A standard was written to describe in detail the features to 
                     be rewarded in the show rings, and those to be penalized. The new Bengal cat’s breed had been born! It was not until 1992, however, that TICA admitted the breed into Championship status.
                 </p>
-                <p className='paragraph-variant'>
+                <p>
                     Other breeders were establishing their bloodlines, and registering them with TICA. In the 1980s, Dr. Gregg and Elizabeth Kent, who had been hybridizing the Asian Leopard Cat for a 
                     number of years, used an Egyptian Mau queen with a male Leopard Cat. They were so successful that some pedigreed Bengals today still trace their origin to the Kents' cats. Another 
                     breeder who made notable contribution to the breed was Ethel Hauser. There are at present, other Leopard Cats being used in various breeding programs. This will aid significantly in 

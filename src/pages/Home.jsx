@@ -16,7 +16,7 @@ const Home = () => {
     }
 
     return (
-        <div className='page-background'>
+        <div className='page-background paragraph-container'>
             <CatCardCarousel cats={cats} autoplay={true} />
 
             <h1 className='page-header padded-header'>Hello! We are happy to welcome you to our website!</h1>
@@ -42,7 +42,7 @@ const Home = () => {
                         })}
                     </div>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} className='paragraph-container'>
                     <p>
                         Here you can buy a Bengal kitten, outwardly similar to a wild inhabitant of the jungle and savannah, but affectionate and tame, like all domestic cats.
                     </p>
