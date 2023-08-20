@@ -336,13 +336,6 @@ label {
   padding-left: 19%;
 }
 
-@media (width <= 60.5rem) {
-  .profile-title {
-    margin: auto;
-    padding-left: 17%;
-  }
-}
-
 .btn-close {
   justify-self: right;
 }
@@ -429,7 +422,7 @@ label {
 
 .gallery-container {
   display: grid;
-  grid-template-columns: 24% 24% 24% 24%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15pt;
   width: 95%;
   justify-content: center;
@@ -529,4 +522,22 @@ label {
   padding-left: 20pt !important;
   padding-right: 20pt !important;
   border-radius: 10pt !important;
+}
+
+@media (width <= 60.5rem) {
+  .profile-title {
+    margin: auto;
+    padding-left: 17%;
+  }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10pt;
+    width: 95%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+  }
 }
