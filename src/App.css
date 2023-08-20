@@ -44,6 +44,14 @@
   margin-bottom: 20pt;
 }
 
+.paragraph-container > p {
+  text-align: left;
+  width: fit-content;
+  max-width: 80rem;
+  margin: auto;
+  margin-bottom: 15pt;
+}
+
 .page-header {
   padding-left: 20pt;
   padding-right: 20pt; 
@@ -71,14 +79,6 @@
 
 .contract-variant {
   text-align: center;
-}
-
-.paragraph-variant {
-  text-align: left;
-  width: fit-content;
-  max-width: 80rem;
-  margin: auto;
-  margin-bottom: 15pt;
 }
 
 a {
