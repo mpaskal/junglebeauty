@@ -421,6 +421,8 @@ label {
 .accordion-item {
   color: var(--text-white);
   background-color: var(--background-black);
+  text-align: left;
+  margin-bottom: -10pt;
 }
 
 /* Kitten gallery */
