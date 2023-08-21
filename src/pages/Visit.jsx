@@ -2,7 +2,7 @@ import './../App.css';
 
 const Visit = () => {
     return (
-      <div className='page-background'>
+      <div className='page-background paragraph-container'>
         <h1 className='page-header padded-header'>How to visit JungleBeauty Bengal Cattery</h1>
         <h2 className='page-subheader'>We are always happy to meet our customers in our home.</h2>
         <h2 className='page-subheader padded-header'>To visit our cattery in person and see the kittens, we ask you to do the following:</h2>
