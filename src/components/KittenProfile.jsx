@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Row, Col, Modal } from 'react-bootstrap';
 import { useCats } from '../contexts/CatsContext';
-import { getCatFilepath, convertDate, getReleaseDate } from './Functions';
+import { getCatFilepath, convertDate, getReleaseDate, capitalize } from './Functions';
 import { getAllImages } from './FirebaseFunctions';
 import ImageCarousel from "./ImageCarousel";
 import VideoCarousel from './VideoCarousel';
@@ -12,7 +12,7 @@ import CatImage from './CatImage';
 import ParentPreview from './ParentPreview';
 
 const KittenProfile= ({ cat = [] }) => {
-    const { name, sex, date, father, mother, price, video } = cat;
+    const { name, adj, sex, date, father, mother, price, video } = cat;
     const [images, setImages] = useState([]);
     const [show, setShow] = useState(false);
     const [previewParent, setPreviewParent] = useState();
@@ -40,7 +40,7 @@ const KittenProfile= ({ cat = [] }) => {
         <>
             <div className='cat-columns-container'>
                 <Row className='profile-info-container'>
-                        <h4>Born {birthDate}</h4>
+                        <h4>{capitalize(adj)} {sex === 'male' ? 'boy' : 'girl'} born {birthDate}</h4>
                         <h5>Mother: <Link onClick={() => openParentPreview(mother)}>{mother}</Link>, Father: <Link onClick={() => openParentPreview(father)}>{father}</Link></h5>
                         <h5>Date of release: {releaseDate <= currentDate ? 'ready to go!' : convertDate(releaseDate)}</h5>
                         {price ? <p>Price: ${price}</p> : ''}
