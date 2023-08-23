@@ -43,7 +43,7 @@ export function getCatDescription(cat) {
 
 export function convertDate(date) {
   const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
-  var dateString = new Date(date + 'T00:00:00').toLocaleDateString('en-us', options);
+  var dateString = new Date(date).toLocaleDateString('en-us', options);
 
   return dateString;
 }
