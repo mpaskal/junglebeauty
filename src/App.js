@@ -29,21 +29,21 @@ const App = () => {
           <Navigation />
           <div className='page-content'>
             <Routes>
-              <Route exact index element={<Home />}/>
-              <Route exact path='queens' element={<Queens />}/>
-              <Route exact path='kings' element={<Kings />}/>
-              <Route exact path='kittens' element={<Kittens />}/>
-              <Route exact path='news' element={<News />}/>
-              <Route exact path='faq' element={<FAQ />}/>
-              <Route exact path='articles' element={<Articles />}/>
-              <Route exact path='about-bengals' element={<AboutBengals />}/>
-              <Route exact path='about-us' element={<About />}/>
-              <Route exact path='contact' element={<Contact />}/>
-              <Route exact path='why-choose-junglebeauty' element={<WhyChoose />}/>
-              <Route exact path='buy-sell-agreement' element={<BuySellAgreement />}/>
-              <Route exact path='price' element={<Price />}/>
-              <Route exact path='preparing-for-coming-kitten' element={<PrepareForKitten />}/>
-              <Route exact path='visit-junglebeauty' element={<Visit />}/>
+              <Route exact index element={<Home />} />
+              <Route exact path='queens' element={<Queens />} />
+              <Route exact path='kings' element={<Kings />} />
+              <Route exact path='kittens' element={<Kittens />} />
+              <Route exact path='news' element={<News />} />
+              <Route exact path='faq' element={<FAQ />} />
+              <Route exact path='articles' element={<Articles />} />
+              <Route exact path='about-bengals' element={<AboutBengals />} />
+              <Route exact path='about-us' element={<About />} />
+              <Route exact path='contact' element={<Contact />} />
+              <Route exact path='why-choose-junglebeauty' element={<WhyChoose />} />
+              <Route exact path='buy-sell-agreement' element={<BuySellAgreement />} />
+              <Route exact path='price' element={<Price />} />
+              <Route exact path='preparing-for-coming-kitten' element={<PrepareForKitten />} />
+              <Route exact path='visit-junglebeauty' element={<Visit />} />
             </Routes>
           </div>
           <Footer />
