@@ -20,30 +20,30 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='ml-auto'>
-                        <NavLink exact className='nav-link' as={Link} to='/' onClick={handleToggle}>Home</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/queens' onClick={handleToggle}>Queens</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/kings' onClick={handleToggle}>Kings</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/kittens' onClick={handleToggle}>Kittens</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/news' onClick={handleToggle}>News</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/about-us' onClick={handleToggle}>About</NavLink>
-                        <NavLink exact className='nav-link' as={Link} to='/contact' onClick={handleToggle}>Contact</NavLink>
+                        <NavLink exact className='nav-link' as={Link} onClick={handleToggle} to='/'>Home</NavLink>
+                        <NavLink exact className='nav-link' as={Link} onClick={handleToggle} to='/queens'>Queens</NavLink>
+                        <NavLink exact className='nav-link' as={Link} onClick={handleToggle} to='/kings'>Kings</NavLink>
+                        <NavLink exact className='nav-link' as={Link} onClick={handleToggle} to='/kittens'>Kittens</NavLink>
+                        <NavLink exact className='nav-link' as={Link} onClick={handleToggle} to='/news'>News</NavLink>
+                        <NavLink exact className='nav-link' as={Link} onClick={handleToggle} to='/about-us'>About</NavLink>
+                        <NavLink exact className='nav-link' as={Link} onClick={handleToggle} to='/contact'>Contact</NavLink>
                         <NavDropdown className='nav-dropdown' title='Info'>
-                            <NavLink exact className='dropdown-link' as={Link} to='/faq' onClick={handleToggle}>FAQ</NavLink>
+                            <NavLink exact className='dropdown-link' as={Link} onClick={handleToggle} to='/faq'>FAQ</NavLink>
                             <NavDropdown.Divider/>
-                            <NavLink exact className='dropdown-link' as={Link} to='/articles' onClick={handleToggle}>Our Articles</NavLink>
+                            <NavLink exact className='dropdown-link' as={Link} onClick={handleToggle} to='/articles'>Our Articles</NavLink>
                             <NavDropdown.Divider/>
-                            <NavLink exact className='dropdown-link' as={Link} to='/about-bengals' onClick={handleToggle}>About the Bengal Breed</NavLink>
+                            <NavLink exact className='dropdown-link' as={Link} onClick={handleToggle} to='/about-bengals'>About the Bengal Breed</NavLink>
                         </NavDropdown>
                         <NavDropdown className='nav-dropdown' title='How to buy'>
-                            <NavLink exact className='dropdown-link' as={Link} to='/why-choose-junglebeauty' onClick={handleToggle}>Why choose JungleBeauty</NavLink>
+                            <NavLink exact className='dropdown-link' as={Link} onClick={handleToggle} to='/why-choose-junglebeauty'>Why choose JungleBeauty</NavLink>
                             <NavDropdown.Divider/>
-                            <NavLink exact className='dropdown-link' as={Link} to='/buy-sell-agreement' onClick={handleToggle}>Buy-Sell Agreement</NavLink>
+                            <NavLink exact className='dropdown-link' as={Link} onClick={handleToggle} to='/buy-sell-agreement'>Buy-Sell Agreement</NavLink>
                             <NavDropdown.Divider/>
-                            <NavLink exact className='dropdown-link' as={Link} to='/price' onClick={handleToggle}>Price</NavLink>
+                            <NavLink exact className='dropdown-link' as={Link} onClick={handleToggle} to='/price'>Price</NavLink>
                             <NavDropdown.Divider/>
-                            <NavLink exact className='dropdown-link' as={Link} to='/preparing-for-coming-kitten' onClick={handleToggle}>How to be ready for coming kitten</NavLink>
+                            <NavLink exact className='dropdown-link' as={Link} onClick={handleToggle} to='/preparing-for-coming-kitten'>How to be ready for coming kitten</NavLink>
                             <NavDropdown.Divider/>
-                            <NavLink exact className='dropdown-link' as={Link} to='/visit-junglebeauty' onClick={handleToggle}>How to visit JungleBeauty</NavLink>
+                            <NavLink exact className='dropdown-link' as={Link} onClick={handleToggle} to='/visit-junglebeauty'>How to visit JungleBeauty</NavLink>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
