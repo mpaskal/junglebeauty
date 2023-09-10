@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { getList } from "./FirebaseFunctions";
 import VideoFrame from "./VideoFrame";
 
@@ -18,7 +19,7 @@ const VideoColumn = () => {
             {videos.slice(0, 5).map((video) => {
                 return (
                     <>
-                        <VideoFrame key={video.id} id={video.video-id}/>
+                        <VideoFrame key={video.id} id={video['video-id']} />
                         <p>{video.desc}</p>
                     </>
                 )
