@@ -2,9 +2,7 @@ import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useCats } from '../contexts/CatsContext';
 import CatCardCarousel from '../components/CatCardCarousel';
-import VideoList from '../lists/VideoList';
 import CatCard from '../components/CatCard';
-import VideoFrame from '../components/VideoFrame';
 import VideoColumn from '../components/VideoColumn';
 import './../App.css';
 
