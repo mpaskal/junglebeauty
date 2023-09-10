@@ -5,6 +5,7 @@ import CatCardCarousel from '../components/CatCardCarousel';
 import VideoList from '../lists/VideoList';
 import CatCard from '../components/CatCard';
 import VideoFrame from '../components/VideoFrame';
+import VideoColumn from '../components/VideoColumn';
 import './../App.css';
 
 const Home = () => {
@@ -73,16 +74,7 @@ const Home = () => {
                     <p>
                         Best videos of Junglebeauty Bengals Cattery!
                     </p>
-                    <div className='video-column'>
-                        {VideoList.slice(0, 5).map((video) => {
-                            return (
-                                <>
-                                    <VideoFrame key={video.id} id={video.id}/>
-                                    <p>{video.desc}</p>
-                                </>
-                            )
-                        })}
-                    </div>
+                    <VideoColumn />
                 </Col>
             </Row>
         </div>
