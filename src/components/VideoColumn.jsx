@@ -17,11 +17,11 @@ const VideoColumn = () => {
     return (
         <div className='video-column'>
             {videos.slice(0, 5).map((video) => {
-                return (
-                    <>
-                        <VideoFrame key={video.id} id={video['video-id']} />
+                return ( 
+                    <div key={video.id}>
+                        <VideoFrame id={video['video-id']} />
                         <p>{video.desc}</p>
-                    </>
+                    </div>
                 )
             })}
         </div>
