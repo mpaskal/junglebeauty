@@ -17,7 +17,7 @@ const WhyChoose = () => {
               </Col>
               <Col sm={3}>
                 <Link className='text-link' to='/kittens'>
-                  <img className='side-img' src={'/assets/kittens/graduated.png'} alt='Brown Bengal kitten sitting on a cat tree'/>
+                  <img className='side-img' src={'/assets/Kittens/graduated.png'} alt='Brown Bengal kitten sitting on a cat tree'/>
                   <p>See available kittens</p>
                 </Link>
                 <h2 className='page-subheader padded-header'>How to reserve a kitten</h2>
