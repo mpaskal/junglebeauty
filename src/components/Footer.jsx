@@ -7,16 +7,16 @@ const Footer = () => {
         <div className='footer'>
             <div className='cert-container'>
                 <a href='https://tica.org/bengal-breeders?view=article&id=2253:cattery-junglebeauty&catid=97' target='_blank' rel="noopener noreferrer">
-                    <img className='cert' src='/assets/certifications/TICA-75-2.png' />
+                    <img className='cert' src='/assets/certifications/TICA-75-2.png' alt='TICA certification' />
                 </a>
                 <a href='https://www.cca-afc.com/Breeds/Breeders' target='_blank' rel="noopener noreferrer">
-                  <img className='cert' src='/assets/certifications/CCA_logo_h75.png' />
+                  <img className='cert' src='/assets/certifications/CCA_logo_h75.png' alt='CCA-AFC certification' />
                 </a>
                 <a href='https://bengalcatclub.com/bengal-cat-breeders/canada-ontario/' target='_blank' rel="noopener noreferrer">
-                    <img className='cert' src='/assets/certifications/BCC-Certified-Breeder.png' />
+                    <img className='cert' src='/assets/certifications/BCC-Certified-Breeder.png' alt='Bengal Cat Club certification' />
                 </a>
                 <a href='https://royalcanin.com/' target='_blank' rel="noopener noreferrer">
-                    <img className='cert' src='/assets/certifications/royalcanin.png' />
+                    <img className='cert' src='/assets/certifications/royalcanin.png' alt='Royal Canin certification' />
                 </a>
             </div>
             <div className='social-container'>
