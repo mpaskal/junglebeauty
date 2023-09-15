@@ -113,7 +113,6 @@ label {
 .list-container {
   text-align: left;
   width: 60%;
-  max-width: fit-content;
   min-width: 300pt;
   margin: auto;
   margin-bottom: 30pt;
@@ -121,7 +120,6 @@ label {
 
 .item-container {
   display: flex;
-  padding: 10pt;
 }
 
 .side-img {
@@ -130,7 +128,15 @@ label {
   max-width: 90%;
   height: auto;
   margin: auto;
+  margin-bottom: 20pt;
   object-fit: contain;
+}
+
+.bottom-img {
+  width: 30%;
+  min-width: 100pt;
+  margin: 10pt;
+  margin-bottom: 30pt;
 }
 
 .centre-img {
