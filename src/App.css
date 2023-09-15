@@ -411,10 +411,6 @@ label {
   font-weight: bold;
 }
 
-.empty-accordion {
-  background-color: red !important;
-}
-
 .accordion-selection-count {
   margin-bottom: 0rem;
   margin-left: 10pt;
