@@ -18,7 +18,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/top-load%20carrier.jpg' alt='Top-load cat carrier'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -32,7 +33,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/cat_litter_box.jpg' alt='Litter box'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -43,7 +45,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/ococat.jpg' alt='Bag of ökocat litter'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -54,7 +57,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/scratchinPost.jpg' alt='Scratching post'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -65,7 +69,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/sleepingBed.jpg' alt='Cat bed'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -76,7 +81,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/ceramic bowls for kitten.jpg' alt='Ceramic food and water bowls on a stand'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -87,7 +93,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/cat_water_fountain.jpg' alt='Cat drinking from a water fountain'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -98,7 +105,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/kitten_toys.jpg' alt='Feather and fuzzy worm toys, wand toys with feathers on strings, and a tube for cats to crawl through'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -109,7 +117,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/laser_toy.jpg' alt='Laser pointer'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -120,7 +129,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/cat_tree.jpg' alt='Cat lying on top of multi-level cat tree'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -131,7 +141,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/heating_pad.jpg' alt='Puppy lying on heating pad'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -142,7 +153,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/CatBrush.jpg' alt='Cat being brushed'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -153,7 +165,8 @@ const PrepareForKitten = () => {
                 <img className='side-img' src='/assets/site/ready/toenailClipper.jpg' alt='Toenail clipper'/>
               </Col>
             </Row>
-          </li><li>
+          </li>
+          <li>
             <Row className='item-container'>
               <Col>
                 <p>
@@ -173,25 +186,28 @@ const PrepareForKitten = () => {
             <p>
               Dry Royal Canin: Mother and Baby Cat and Kitten formulas - will be provided from us at first.
             </p>
-            <br />
-            <img className='side-img' src='/assets/site/ready/royal_canin_mother_baby_cat.jpg' alt='Bag of Royal Canin Mother & Baby Cat dry food'/>
-            <img className='side-img' src='/assets/site/ready/royal_canin_kitten.jpg' alt='Bag of Royal Canin Kitten dry food'/>
+            <div className='item-container'>
+              <img className='side-img bottom-img' src='/assets/site/ready/royal_canin_mother_baby_cat.jpg' alt='Bag of Royal Canin Mother & Baby Cat dry food'/>
+              <img className='side-img bottom-img' src='/assets/site/ready/royal_canin_kitten.jpg' alt='Bag of Royal Canin Kitten dry food'/>
+            </div>
           </li>
           <li>
             <p>
               Canned Royal Canin: Mother and Baby Cat and Kitten formulas - samples will be provided by us for the first few days.
             </p>
-            <br />
-            <img className='side-img' src='/assets/site/ready/wet_mother_baby.jpg' alt='Can of Royal Canin Mother & Baby Cat wet food'/>
-            <img className='side-img' src='/assets/site/ready/wet_kitten.jpg' alt='Can of Royal Canin Kitten wet food'/>
+            <div className='item-container'>
+              <img className='side-img bottom-img' src='/assets/site/ready/wet_mother_baby.jpg' alt='Can of Royal Canin Mother & Baby Cat wet food'/>
+              <img className='side-img bottom-img' src='/assets/site/ready/wet_kitten.jpg' alt='Can of Royal Canin Kitten wet food'/>
+            </div>
           </li>
           <li>
             <p>
               Our kittens have tried the raw diet which is recommended for Bengal Cats. We will share more details on pick up time. Food samples will be provided. We recommend Big Country Raw with Pure Chicken and IronWillRaw with Basic Chicken.
             </p>
-            <br />
-            <img className='side-img' src='/assets/site/ready/BigCountryRaw_PureChicken.jpg' alt='Box of Big Country Raw Chicken'/>
-            <img className='side-img' src='/assets/site/ready/IronWillRaw.jpg' alt='Box of Iron Will Raw Chicken'/>
+            <div className='item-container'>
+              <img className='side-img bottom-img' src='/assets/site/ready/BigCountryRaw_PureChicken.jpg' alt='Box of Big Country Raw Chicken'/>
+              <img className='side-img bottom-img' src='/assets/site/ready/IronWillRaw.jpg' alt='Box of Iron Will Raw Chicken'/>
+            </div>
           </li>
         </ol>
         <h2>How our kittens are fed</h2>
