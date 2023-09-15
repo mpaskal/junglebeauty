@@ -386,7 +386,7 @@ label {
   max-width: 80rem;
   margin: auto;
   margin-top: 30pt;
-  margin-bottom: 20pt;
+  margin-bottom: 30pt;
 }
 
 .accordion-button {
@@ -424,7 +424,7 @@ label {
   color: var(--text-white);
   background-color: var(--background-black);
   text-align: left;
-  margin-bottom: -10pt;
+  margin-bottom: 0pt;
 }
 
 /* Kitten gallery */
