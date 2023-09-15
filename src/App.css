@@ -97,6 +97,7 @@ label {
 
 .columns-container {
   display: flex;
+  margin-top: 30pt;
 }
 
 .cat-card-column {
