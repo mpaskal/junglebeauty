@@ -14,7 +14,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/top-load%20carrier.jpg' alt='Top-load cat carrier'/>
+                <img className='side-img' src='/assets/Site/Ready/top-load%20carrier.jpg' alt='Top-load cat carrier'/>
               </Col>
             </Row>
           </li><li>
@@ -26,7 +26,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/cat_litter_box.jpg' alt='Litter box'/>
+                <img className='side-img' src='/assets/Site/Ready/cat_litter_box.jpg' alt='Litter box'/>
               </Col>
             </Row>
           </li><li>
@@ -36,7 +36,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/ococat.jpg' alt='Bag of ökocat litter'/>
+                <img className='side-img' src='/assets/Site/Ready/ococat.jpg' alt='Bag of ökocat litter'/>
               </Col>
             </Row>
           </li><li>
@@ -46,7 +46,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/scratchinPost.jpg' alt='Scratching post'/>
+                <img className='side-img' src='/assets/Site/Ready/scratchinPost.jpg' alt='Scratching post'/>
               </Col>
             </Row>
           </li><li>
@@ -56,7 +56,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/sleepingBed.jpg' alt='Cat bed'/>
+                <img className='side-img' src='/assets/Site/Ready/sleepingBed.jpg' alt='Cat bed'/>
               </Col>
             </Row>
           </li><li>
@@ -66,7 +66,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/ceramic bowls for kitten.jpg' alt='Ceramic food and water bowls on a stand'/>
+                <img className='side-img' src='/assets/Site/Ready/ceramic bowls for kitten.jpg' alt='Ceramic food and water bowls on a stand'/>
               </Col>
             </Row>
           </li><li>
@@ -76,7 +76,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/cat_water_fountain.jpg' alt='Cat drinking from a water fountain'/>
+                <img className='side-img' src='/assets/Site/Ready/cat_water_fountain.jpg' alt='Cat drinking from a water fountain'/>
               </Col>
             </Row>
           </li><li>
@@ -86,7 +86,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/kitten_toys.jpg' alt='Feather and fuzzy worm toys, wand toys with feathers on strings, and a tube for cats to crawl through'/>
+                <img className='side-img' src='/assets/Site/Ready/kitten_toys.jpg' alt='Feather and fuzzy worm toys, wand toys with feathers on strings, and a tube for cats to crawl through'/>
               </Col>
             </Row>
           </li><li>
@@ -96,7 +96,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/laser_toy.jpg' alt='Laser pointer'/>
+                <img className='side-img' src='/assets/Site/Ready/laser_toy.jpg' alt='Laser pointer'/>
               </Col>
             </Row>
           </li><li>
@@ -106,7 +106,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/cat_tree.jpg' alt='Cat lying on top of multi-level cat tree'/>
+                <img className='side-img' src='/assets/Site/Ready/cat_tree.jpg' alt='Cat lying on top of multi-level cat tree'/>
               </Col>
             </Row>
           </li><li>
@@ -116,7 +116,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/heating_pad.jpg' alt='Puppy lying on heating pad'/>
+                <img className='side-img' src='/assets/Site/Ready/heating_pad.jpg' alt='Puppy lying on heating pad'/>
               </Col>
             </Row>
           </li><li>
@@ -126,7 +126,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/CatBrush.jpg' alt='Cat being brushed'/>
+                <img className='side-img' src='/assets/Site/Ready/CatBrush.jpg' alt='Cat being brushed'/>
               </Col>
             </Row>
           </li><li>
@@ -136,7 +136,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-                <img className='side-img' src='/assets/site/ready/toenailClipper.jpg' alt='Toenail clipper'/>
+                <img className='side-img' src='/assets/Site/Ready/toenailClipper.jpg' alt='Toenail clipper'/>
               </Col>
             </Row>
           </li><li>
@@ -146,7 +146,7 @@ const PrepareForKitten = () => {
                 <p/>
               </Col>
               <Col xl={3}>
-              <img className='side-img' src='/assets/site/ready/OneFastCat.jpg' alt='Cat running on exercise wheel'/>
+              <img className='side-img' src='/assets/Site/Ready/OneFastCat.jpg' alt='Cat running on exercise wheel'/>
               </Col>
             </Row>
           </li>
@@ -160,8 +160,8 @@ const PrepareForKitten = () => {
               <p/>
             </Col>
             <Col xl={3}>
-              <img className='side-img' src='/assets/site/ready/royal_canin_mother_baby_cat.jpg' alt='Bag of Royal Canin Mother & Baby Cat dry food'/>
-              <img className='side-img' src='/assets/site/ready/royal_canin_kitten.jpg' alt='Bag of Royal Canin Kitten dry food'/>
+              <img className='side-img' src='/assets/Site/Ready/royal_canin_mother_baby_cat.jpg' alt='Bag of Royal Canin Mother & Baby Cat dry food'/>
+              <img className='side-img' src='/assets/Site/Ready/royal_canin_kitten.jpg' alt='Bag of Royal Canin Kitten dry food'/>
             </Col>
           </Row>
           </li><li>
@@ -171,8 +171,8 @@ const PrepareForKitten = () => {
               <p/>
             </Col>
             <Col xl={3}>
-              <img className='side-img' src='/assets/site/ready/wet_mother_baby.jpg' alt='Can of Royal Canin Mother & Baby Cat wet food'/>
-              <img className='side-img' src='/assets/site/ready/wet_kitten.jpg' alt='Can of Royal Canin Kitten wet food'/>
+              <img className='side-img' src='/assets/Site/Ready/wet_mother_baby.jpg' alt='Can of Royal Canin Mother & Baby Cat wet food'/>
+              <img className='side-img' src='/assets/Site/Ready/wet_kitten.jpg' alt='Can of Royal Canin Kitten wet food'/>
             </Col>
           </Row>
           </li><li>
@@ -182,8 +182,8 @@ const PrepareForKitten = () => {
               <p/>
             </Col>
             <Col xl={3}>
-              <img className='side-img' src='/assets/site/ready/BigCountryRaw_PureChicken.jpg' alt='Box of Big Country Raw Chicken'/>
-              <img className='side-img' src='/assets/site/ready/IronWillRaw.jpg' alt='Box of Iron Will Raw Chicken'/>
+              <img className='side-img' src='/assets/Site/Ready/BigCountryRaw_PureChicken.jpg' alt='Box of Big Country Raw Chicken'/>
+              <img className='side-img' src='/assets/Site/Ready/IronWillRaw.jpg' alt='Box of Iron Will Raw Chicken'/>
             </Col>
           </Row>
           </li>
