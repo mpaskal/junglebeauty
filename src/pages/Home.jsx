@@ -20,9 +20,13 @@ const Home = () => {
 
             <h1 className='page-header padded-header'>Hello! We are happy to welcome you to our website!</h1>
             <p>
-                Do you want to have a small and tame leopard at home? You have come to the right place. Welcome to our Junglebeauty Bengal Cattery. 
-                Our cattery is registered in the international felinology system TICA and certified as a trusted breeder by Bengal Cat Club. Also, we 
-                are an official partner of Royal Canin. Our Cattery is located in Kitchener, Ontario, Canada.
+                Welcome to Junglebeauty Bengal Cattery! We offer a wide selection of Bengal kittens, with a variety of colours and personalities.
+                Looking for a new family member? Look no further! We are located near Toronto, in Kitchener, Ontario, Canada.
+            </p>
+            <p>
+                Junglebeauty Bengal Cattery is commited to responsible breeding practices, ensuring excellent service for out customers and great health
+                and wellbeing for our kittens. Our cattery is registered in the international felinology system TICA and certified as a trusted breeder 
+                by the Bengal Cat Club.
             </p>
 
             <Row className='columns-container'>
