@@ -122,6 +122,15 @@ label {
   display: flex;
 }
 
+.item-container p {
+  width: 90%;
+  margin: auto;
+}
+
+.item-container img {
+  margin: auto;
+}
+
 .side-img {
   border-radius: 10pt;
   display: block;
