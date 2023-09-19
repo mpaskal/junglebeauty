@@ -127,14 +127,10 @@ label {
   margin: auto;
 }
 
-.item-container img {
-  margin: auto;
-}
-
 .side-img {
   border-radius: 10pt;
   display: block;
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
   margin: auto;
   margin-bottom: 20pt;
