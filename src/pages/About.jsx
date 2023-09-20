@@ -14,16 +14,11 @@ const About = () => {
           exceptionally high quality silver Queens. Our king Churchil is a TICA champion bloodline Bengal cat stud.
         </p>
         <p>
-          Kittens are raised indoors with love and attention from the first days of their life.
-        </p>
-        <p>
           The health of our cats and kittens is our top priority, so we do our best to support and develop their strong immune systems. Kittens 
           are socialized living and interacting with people and other pets (cats, parrot and dog) in a non-caged environment. All of them are 
           highly people-oriented and affectionate. Kittens are usually released at the age of 11-14 weeks when they feel comfortable to live 
           without their mom and are ready to explore the world. They exercise a lot playing on cat trees and cat pipes, jumping, running and climbing.
-        </p>
-        <p>
-          We also have a cat exercise wheel for adult cats to run and walk.
+          We even have an exercise wheel for adult cats to walk and run!
         </p>
       </div>
     );
