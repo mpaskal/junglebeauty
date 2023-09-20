@@ -18,10 +18,10 @@ const Home = () => {
         <div className='page-background paragraph-container'>
             <CatCardCarousel cats={cats} autoplay={true} />
 
-            <h1 className='page-header padded-header'>Hello! We are happy to welcome you to our website!</h1>
+            <h1 className='page-header padded-header'>Hello! Welcome to Junglebeauty Bengal Cattery!</h1>
             <p>
-                Welcome to Junglebeauty Bengal Cattery! We offer a wide selection of Bengal kittens, with a variety of colours and personalities.
-                Looking for a new family member? Look no further! We are located near Toronto, in Kitchener, Ontario, Canada.
+                We offer a wide selection of Bengal kittens, with a variety of colours and personalities.
+                Searching for a new family member? Look no further! We are located near Toronto, in Kitchener, Ontario, Canada.
             </p>
             <p>
                 Junglebeauty Bengal Cattery is commited to responsible breeding practices, ensuring excellent service for out customers and great health
@@ -31,8 +31,11 @@ const Home = () => {
 
             <Row className='columns-container'>
                 <Col sm={3}>
+                    <h2>
+                        Our best offers!
+                    </h2>
                     <p>
-                        Our best offers! <b>Please note:</b> we match the price for these kittens! This means if you see a TICA kitten of the same quality, 
+                        <b>Please note:</b> we match the price for these kittens! This means if you see a TICA kitten of the same quality, 
                         offered with the same options and benefits - we will make our price the same for you!
                     </p>
                     <div className='cat-card-column'>
@@ -50,16 +53,13 @@ const Home = () => {
                         Here you can buy a Bengal kitten, outwardly similar to a wild inhabitant of the jungle and savannah, but affectionate and tame, like all domestic cats.
                     </p>
                     <p>
-                        The Junglebeauty Cattery has been breeding Bengal cats since 2018. We have Bengal kittens of both rare and traditional colors. All of them are active, 
-                        affectionate, friendly with each other and cuddly with people. Our kittens grow up in love, and from an early age, they know how to respond to affection. 
+                        The Junglebeauty Cattery has been breeding Bengal cats since 2018. We have Bengal kittens of both rare and traditional colours. All of them are active 
+                        and affectionate; friendly with each other and cuddly with people. Our kittens grow up in love, and from an early age, they know how to respond to affection. 
                         Of course, the characters of Bengal kittens are different, but in general, they are human-oriented, sociable, and very smart.
                     </p>
                     <p>
                         If you decide to let a small tame leopard into your house, which will fill it with fun and love, you are taking on a great responsibility. 
                         Since we are responsible for those we have tamed, we care about where our kittens move!
-                    </p>
-                    <p>
-                        All our kittens are purebred, healthy and socialized, brought up in love and affection.
                     </p>
                     <p>
                         We will be in touch with you before and after you take your furry friend home. Please be advised that we are interested in
@@ -73,9 +73,9 @@ const Home = () => {
                     </Link>
                 </Col>
                 <Col sm={3}>
-                    <p>
+                    <h2>
                         Best videos of Junglebeauty Bengals Cattery!
-                    </p>
+                    </h2>
                     <VideoColumn />
                 </Col>
             </Row>
