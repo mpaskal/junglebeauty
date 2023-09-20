@@ -31,9 +31,7 @@ const Home = () => {
 
             <Row className='columns-container'>
                 <Col sm={3}>
-                    <h2>
-                        Our best offers!
-                    </h2>
+                    <h2>Our best offers!</h2>
                     <p>
                         <b>Please note:</b> we match the price for these kittens! This means if you see a TICA kitten of the same quality, 
                         offered with the same options and benefits - we will make our price the same for you!
@@ -73,9 +71,7 @@ const Home = () => {
                     </Link>
                 </Col>
                 <Col sm={3}>
-                    <h2>
-                        Best videos of Junglebeauty Bengals Cattery!
-                    </h2>
+                    <h2>Best videos of Junglebeauty Bengals Cattery!</h2>
                     <VideoColumn />
                 </Col>
             </Row>
