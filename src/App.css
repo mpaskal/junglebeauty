@@ -1,34 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
-  --background-green: rgba(26, 133, 79, 0.85);
-  --background-white: rgba(236, 236, 236, 0.85);
-  --background-black: rgba(16, 32, 16, 0.9);
+  --background-green: rgba(26, 133, 79, .85);
+  --background-white: rgba(236, 236, 236, .85);
+  --background-black: rgba(16, 32, 16, .9);
   --link-green: rgb(25, 223, 58);
   --link-active-green: rgb(25, 223, 58);
   --accent-green: rgb(4, 110, 27);
   --accent-orange: rgb(231, 181, 43);
-  --nav-black: rgba(16, 32, 16, 0.75);
+  --nav-black: rgba(16, 32, 16, .75);
   --nav-white: rgb(236, 236, 236);
   --text-white: rgb(250, 250, 250);
   --text-black: rgb(0, 0, 0);
-  --carousel-black: rgba(16, 32, 16, 0.4);
+  --carousel-black: rgba(16, 32, 16, .4);
 }
 
 .App {
-    background-attachment: fixed;
-    background-image: url('../public/assets/jungle-background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--text-white);
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    overflow-y: scroll !important;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  background-attachment: fixed;
+  background-image: url('../public/assets/jungle-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-white);
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  overflow-y: scroll !important;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /* Basic pages */
