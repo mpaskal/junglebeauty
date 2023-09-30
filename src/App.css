@@ -16,32 +16,32 @@
 }
 
 .App {
-    color: var(--text-white);
-    background-image: url('../public/assets/jungle-background.png');
     background-attachment: fixed;
-    background-size: cover;
+    background-image: url('../public/assets/jungle-background.png');
     background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--text-white);
     font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    overflow-y: scroll !important;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow-y: scroll !important;
-    height: 100vh;
 }
 
 /* Basic pages */
 
 .page-background {
-  text-align: center;
-  border-radius: 10pt;
   background-color: var(--background-black);
-  width: 95%;
-  padding: 10pt;
+  border-radius: 10pt;
   margin: auto;
   margin-top: 15pt;
   margin-bottom: 20pt;
+  padding: 10pt;
+  text-align: center;
+  width: 95%;
 }
 
 .paragraph-container > p {
@@ -288,7 +288,7 @@ label {
   text-align: center;
   width: 90%;
   margin-left: 5pt;
-  transition: margin 0.25s;
+  transition: margin .25s;
 }
 
 .cat-card:hover {
@@ -397,7 +397,7 @@ label {
 .accordion-button {
   background-color: var(--text-white);
   color: var(--accent-green);
-  transition: padding 0.25s;
+  transition: padding .25s;
 }
 
 .accordion-button:hover {
@@ -417,7 +417,7 @@ label {
 }
 
 .accordion-selection-count {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   margin-left: 10pt;
 }
 
@@ -425,7 +425,7 @@ label {
   color: var(--text-white);
   background-color: var(--background-black);
   text-align: left;
-  margin-bottom: 0pt;
+  margin-bottom: 0;
 }
 
 /* Kitten gallery */
