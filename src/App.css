@@ -5,7 +5,7 @@
   --background-white: rgba(236, 236, 236, 0.85);
   --background-black: rgba(16, 32, 16, 0.9);
   --link-green: rgb(25, 223, 58);
-  --link-active-green: rgba(25, 223, 58, 0.911);
+  --link-active-green: rgb(25, 223, 58);
   --accent-green: rgb(4, 110, 27);
   --accent-orange: rgb(231, 181, 43);
   --nav-black: rgba(16, 32, 16, 0.75);
