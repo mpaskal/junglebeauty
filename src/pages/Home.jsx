@@ -71,7 +71,7 @@ const Home = () => {
                     </Link>
                 </Col>
                 <Col sm={3}>
-                    <h2>Best videos of Junglebeauty Bengals Cattery!</h2>
+                    <h2>Best videos of Junglebeauty Bengal Cattery!</h2>
                     <VideoColumn />
                 </Col>
             </Row>
