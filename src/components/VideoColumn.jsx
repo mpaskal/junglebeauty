@@ -4,6 +4,7 @@ import VideoFrame from "./VideoFrame";
 
 const VideoColumn = () => {
     const [videos, setVideos] = useState([]);
+    const columnLength = 5;
 
     const getVideos = async () => {
         const videos = await getList('Videos-List.json');
@@ -16,7 +17,7 @@ const VideoColumn = () => {
     
     return (
         <div className='video-column'>
-            {videos.slice(0, 5).map((video) => {
+            {videos.slice(-columnLength).map((video) => {
                 return ( 
                     <div key={video.id}>
                         <VideoFrame id={video['video-id']} />
