@@ -373,10 +373,14 @@ label {
 
 .kitten-images-container {
   display: grid;
+  height: fit-content;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: auto;
+  width: 100%;
+}
+
+.kitten-images-container .cat-img {
   margin-bottom: 10pt;
-  row-gap: 2%;
 }
 
 .preview-link {
